@@ -1,0 +1,493 @@
+
+
+--- PAGE 1 ---
+Journal of
+Instrumentation
+       
+Characterisation of Redlen high-flux CdZnTe
+To cite this article: B. Thomas et al 2017 JINST 12 C12045
+ 
+View the article online for updates and enhancements.
+You may also like
+Comparison of the charge transport
+properties of low and high flux grade
+redlen CdZnTe crystals
+M. Bishop, M.C. Veale, S.L. Bugby et al.
+-
+Charge transport performance of high
+resistivity CdZnTe crystals doped with
+In/Al
+Xu Yadong, Xu Lingyan, Wang Tao et al.
+-
+Effect of transient space–charge
+perturbation on carrier transport in high-
+resistance CdZnTe semiconductor
+Yu Guo,  , Gang-Qiang Zha et al.
+-
+This content was downloaded from IP address 188.253.120.136 on 30/06/2026 at 06:53
+
+--- PAGE 2 ---
+2017 JINST 12 C12045
+Published by IOP Publishing for Sissa Medialab
+Received: August 31, 2017
+Revised: November 27, 2017
+Accepted: December 11, 2017
+Published: December 21, 2017
+/one.taboldstyle/one.taboldstyle/t.sc/h.scI/n.sc/t.sc/e.sc/r.sc/n.sc/a.sc/t.sc/i.sc/o.sc/n.sc/a.sc/l.sc C/o.sc/n.sc/f.sc/e.sc/r.sc/e.sc/n.sc/c.sc/e.sc /o.sc/n.sc P/o.sc/s.sc/i.sc/t.sc/i.sc/o.sc/n.sc S/e.sc/n.sc/s.sc/i.sc/t.sc/i.sc/v.sc/e.sc D/e.sc/t.sc/e.sc/c.sc/t.sc/o.sc/r.sc/s.sc
+/three.taboldstyle–/eight.taboldstyle S/e.sc/p.sc/t.sc/e.sc/m.sc/b.sc/e.sc/r.sc /two.taboldstyle/zero.taboldstyle/one.taboldstyle/seven.taboldstyle
+T/h.sc/e.sc O/p.sc/e.sc/n.sc U/n.sc/i.sc/v.sc/e.sc/r.sc/s.sc/i.sc/t.sc/y.sc, W/a.sc/l.sc/t.sc/o.sc/n.sc H/a.sc/l.sc/l.sc, M/i.sc/l.sc/t.sc/o.sc/n.sc K/e.sc/y.sc/n.sc/e.sc/s.sc, U.K.
+Characterisation of Redlen high-ﬂux CdZnTe
+B. Thomas,a,b,1 M.C. Veale,a M.D. Wilson,a P. Seller,a A. Schneidera and K. Iniewskic
+aRutherford Appleton Laboratories, Science & Technology Facilities Council
+Harwell Campus, U.K., OX11 0QX
+bDepartment of Physics, University of Surrey
+Guildford, U.K., GU2 7XH
+cRedlen Technologies,
+Saanichton BC, Canada, V8M 1X6, Canada
+E-mail: srvtt.thomrs@stft.rt.uk
+Abstract: CdZnTe is a promising material for the current generation of free electron laser light
+sources and future laser-drivenγ-ray sources which require detectors capable of high ﬂux imaging
+atX-rayand γ-rayenergies( > 10keV). However,athighﬂuxesCdZnTehasbeenshowntopolarise
+due to hole trapping, leading to poor performance. Novel Redlen CdZnTe material with improved
+holetransportpropertieshasbeendesignedforhighﬂuxapplications. SmallpixelCdZnTedetectors
+were fabricated by Redlen Technologies and ﬂip-chip bonded to PIXIE ASICs. An XIA Digital
+Gamma Finder PIXIE-16 system was used to digitise each of the nine analogue signals with a
+timing resolution of 10ns. Pulse shape analysis was used to extract the rise times and amplitude
+of signals. These were measured as a function of applied bias voltage and used to calculate the
+mobility (µ) and mobility-lifetime (µτ) of electrons and holes in the material for three identical
+detectors. The measured values of the transport properties of electrons in the high-ﬂux-capable
+materialwaslowerthanpreviouslyreportedforRedlenCdZnTematerial( µeτe∼ 1× 10−3cm2V−1
+and µe ∼ 1000cm2V−1s−1) while the hole transport properties were found to have improved
+(µhτh∼ 3× 10−4cm2V−1 and µh∼ 100cm2V−1s−1).
+Keywords: Charge induction; Materials for solid-state detectors; Gamma detectors (scintillators,
+CZT, HPG, HgI etc); X-ray detectors
+1Corresponding author.
+c⃝ 2017 IOP Publishing Ltd and Sissa Medialab https://doi.org/10.1088/1748-0221/12/12/C12045
+
+--- PAGE 3 ---
+2017 JINST 12 C12045
+Contents
+1 Introduction 1
+2 Theory 2
+2.1 Shockley-Ramo theorem 2
+2.2 Small pixel Hecht equation 2
+2.3 Mobility Calculation 3
+3 Experimental Details 4
+4 Pulse processing techniques 5
+5 Results 6
+5.1 Electron mobility-lifetime product 6
+5.2 Electron mobility 8
+5.3 Hole mobility-lifetime product 9
+5.4 Hole mobility 10
+6 Conclusion and discussion 11
+1 Introduction
+CdZnTe has become the semiconductor of choice as a direct conversion detection material for high
+energyX-raysand γ-rays,duetoawidebandgapof1.44eVat300Kandexcellentelectrontransport
+properties,leadingtoalowleakagecurrentandhighspectroscopicresolutionatroomtemperature.
+A high eﬀective atomic mass (Zeﬀ∼ 50) and density of 5.8gcm−3 provides good stopping power
+forhighenergyphotons,makingCdZnTethecurrentﬁrstchoiceforpixelatedx-rayandgamma-ray
+detectors at room temperature [1].
+High-ﬂux detection is desirable for use in several applications such as imaging at next gen-
+eration free electron light sources and medical imaging, in which detection of a photon ﬂux of
+> 108 photons cm−2s−1 is required. The ﬂux that can be achieved with standard CdZnTe is cur-
+rentlylimitedto ∼afewMcpsmm −2 [2]bypolarisation,inwhichholestrappedbydefectsgenerate
+space charge, resulting in a non-uniform electric ﬁeld [3]. Therefore, one method for improv-
+ing detection at high X-ray ﬂuxes requires the development of CdZnTe with better hole transport
+properties (e.g. charge carrier mobility and lifetime), in which hole trapping is reduced.
+Recently, Redlen Technologies have produced an alternate growth and fabrication process
+that allows production of CdZnTe with improved hole transport properties and reduced trapping
+optimised for high ﬂux applications. In order to characterise the charge transport properties of
+this material, small pixel CdZnTe devices were ﬂip-chip bonded to the PIXIE ASIC, which has
+– 1 –
+
+--- PAGE 4 ---
+2017 JINST 12 C12045
+been developed at STFC. [4] Pulse shape analysis was used to perform rise time and amplitude
+measurements as a function of applied bias. These measurements were used to extract the charge
+transport properties of the material, which are essential for understanding the performance and
+suitability of this CdZnTe for future high-ﬂux applications.
+2 Theory
+2.1 Shockley-Ramo theorem
+The Shockley-Ramo theorem describes the process of charge induction in a detector due to the
+motion of charge carriers using the concept of a weighting potential. The weighting potential,
+ϕ0(x), is derived by solving the Laplace equation for the conditions where the electrode of interest
+is at unity and the remaining electrodes are held at zero potential for no trapped charges [5, 6].
+Figure 1. Weighting potentials for small pixels at diﬀerent pitches, with a detector thickness of 2mm.
+In the simplest geometry with planar electrodes, the weighting potential rises linearly from
+cathodetoanode. Inadetectorinwhichthepixelsaresmallrelativetothethicknessofthedetector
+material,theweightingpotentialbecomesconstrainedclosetothepixel. Weightingpotentialsfora
+2mmthickdetectorwithdiﬀerentpixelpitches,showninﬁgure1,werecalculatedusingSentaurus
+TCAD, a branch of electronic design software used to model the operation of semiconductor
+devices[7]. Theinducedchargeonanelectrodeisproportionaltothechangeinweightingpotential
+that a charge experiences as it moves through the detector. If a negative bias voltage is applied to
+the large planar electrode then the signal in the detector pixels will be dominated by the transport
+of electrons. If the bias voltage is positive then it will be the transport of holes that dominates the
+signal. This is known as the small pixel eﬀect [8].
+2.2 Small pixel Hecht equation
+Theratioofchargecreatedbyaneventinthedetectormaterialtothechargecollectedattheelectrical
+contacts is known as the charge collectioneﬃciency (CCE). Due to trapping of charge carriers, the
+CCE is a function of the distance travelled by the charges and the drift time.
+– 2 –
+
+--- PAGE 5 ---
+2017 JINST 12 C12045
+The Single Carrier Hecht Equation for a planar detector [9], as given in equation (2.1), gives
+the CCE as a function of bias voltage, making the assumptions of no de-trapping and a uniform
+electric ﬁeld. In order to use the single carrier version of this equation, an assumption of a small
+interaction depth must also be made. For a photon energy of 60keV the mean free path in CdZnTe
+isoftheorder0.28mm. ThiswascalculatedusingXCOMdata[10]. Whencomparedtoadetector
+thickness of 2.00mm it is reasonable to assume that the interaction depth is negligible and the
+transport will be dominated by a single carrier type.
+CCE = Q
+q0
+=
+(µτ· V
+d2
+) [
+1− exp
+(
+− d2
+µτ· V
+)]
+(2.1)
+Here, q0 is the initial charge created by the X-ray,Q is the charge induced on the electrical
+contact (i.e. the amplitude of the charge pulse),µτ is the charge carrier mobility-lifetime product,
+V is the applied bias andd is the detector thickness. The Hecht relation can be used to study the
+charge transport properties of both electrons and holes. In this experiment, measurement of the
+properties of both charge carriers was achieved by switching the bias polarity.
+The Single Carrier Hecht Equation shown in equation (2.1) was derived for a planar detector
+in which the weighting potential is linear, as shown in ﬁgure 1. Carriers drifting in areas of the
+detector where the weighting potential is diﬀuse will only induce a small charge on each electrode.
+Charges trapped in these areas of the detector will result in a charge loss that appears greater than
+in the simple planar detector, which is unaccounted for by equation (2.1).
+To account for the non-linear weighting potential, which leads to an additional depth depen-
+dency of the CCE, a modiﬁed version of the equation was used [11].
+CCE = Q
+q0
+= N·
+[( d
+µτ· V
+)
+·
+¹ d
+0
+ϕ0(x)· e− d· x
+µτ· V· dx + e− d2
+µτ· V
+]
+(2.2)
+Here ϕ0(x) is the weighting potential introduced in section 2.1,x is the interaction position
+and N is a correction coeﬃcient, to correct for errors in the energy calibration or to act as a
+levelling constant when no calibration was used. In order to extractµτ for electrons and holes
+from experimental data, equation (2.2) was solved numerically using the simulation results shown
+previously in ﬁgure 1.
+A comparison of the two models withµτ = 1× 10−4cm2V−1 is presented in ﬁgure 2, which
+demonstrates the reduced CCE at lower biases. As seen in ﬁgure 2, the curve predicted by the
+modiﬁed Hecht equation is signiﬁcantly diﬀerent to that of the standard Hecht at voltages< 50V;
+thisisduetothemajorityofcarriersbecomingtrappedbeforedriftinginareasofthedetectorwhere
+the weighting potential has a signiﬁcant magnitude.
+2.3 Mobility Calculation
+By measuring the rise time of charge pulses created by X-ray interactions it is also possible to
+extract the charge carrier mobility for electrons and holes using equation (2.3).
+µ = v
+E = d
+′
+t · T
+V (2.3)
+– 3 –
+
+--- PAGE 6 ---
+2017 JINST 12 C12045
+Figure 2. A plot of equation (2.1) and equation (2.2) usingµτ = 1× 10−4cm2V−1, to demonstrate the
+diﬀerences between the models.
+Here, v represents the charge carrier velocity,E is the electric ﬁeld strength applied across the
+detector,µ is the charge carrier mobility,T is the thickness,d′ is the eﬀective distance over which
+the signal is induced andt is the rise time.
+In small pixel detectors, where the weighting potential is non-linear, charge is only induced
+whencarriersdriftinregionsofthedetectorwherethechangeinweightingpotentialhasasigniﬁcant
+value. Theeﬀectivedistanceisusedtoaccountforthedriftlengthoverwhichthedetectorsignalis
+induced. Detailsofthecalculationoftheeﬀectivedistancearegiveninsection5.2. Anassumption
+of a uniform electric ﬁeld is also made.
+3 Experimental Details
+An Application Speciﬁc Integrated Circuit (ASIC), known as the PIXIE ASIC, was developed at
+STFC RAL to study charge induction eﬀects in pixelated detectors. [4] The ASIC consists of four
+arrays of nine channels, three with pitches of 250µm and one with 500µm. Each pixel contains a
+charge sensitive pre-ampliﬁer, output buﬀers and leakage current compensation circuits designed
+toprovideimmunitytoleakagecurrentupto250pA.Thepixelsdonotcontainanyshapingcircuits
+— instead, the analogue waveform is sampled directly from the chip. The ASIC is also able to
+operateintworanges,highgain(formeasurementsupto150keV)andlowgain(formeasurements
+up to 1.5MeV). In high gain mode the ASIC is limited to a leakage current of∼ 250pA which, for
+the current detectors, limited the ASIC operation to the low gain mode [4].
+Whilst only one electrode on the CdZnTe detector was pixelated, by switching the polarity of
+the applied bias, both holes and electrons were detected. While the PIXIE ASIC can measure both
+positiveandnegativepolaritysignals, theleakagecurrentcompensationcircuithasbeenoptimised
+for the detection of electrons. This limited the measurement of hole signals to smaller biases than
+were used to study electrons.
+Onlyoneofthe 3× 3arraysisreadoutatanyonetimeandthiswasselectedusinga2-bitinput
+to the ASIC. The output from each of the pixels of the selected array was digitised using an XIA
+– 4 –
+
+--- PAGE 7 ---
+2017 JINST 12 C12045
+DGFPIXIE-16system,performing16-bitdigitisationatamaximumrateof100MHz. Thedigitiser
+was operated in list mode to allow simultaneous capture of pulse shapes from all nine pixels, with
+timing resolution of 10ns and a pulse length of 2µs and 7µs for electrons and holes respectively,
+with the longer pulse shapes for holes used to account for the slower rise times of these signals.
+The CdZnTe and electrical contacts were fabricated by Redlen Technologies from high-ﬂux-
+capablematerialusingaproprietarymethod. Detectorshavedimensionsof 4.9mm×4.9mm×2mm
+wereﬂip-chipbondedtothePIXIEASICusingagoldstudandlow-temperature-curingsilverepoxy
+technique developed at the STFC RAL [12]. During operation, the detector was placed into an
+enclosure to allow cooling in a dehumidiﬁed environment. The temperature and humidity in the
+enclosure were controlled using a Peltier cooler, chiller and dehumidiﬁer. Measurements were
+takenatatemperatureof 303± 1K,theintendedoperatingpointofthesedetectors,andtherelative
+humidity was kept below 10%. A bias was applied across the detector bulk using a Keithley
+2410-C, which was also used to measure current drawn by the entire detector. Data was recorded
+by uniformly irradiating the detector with an Am-241 source of activity 185MBq at a distance of
+100mm. This analysis was repeated for three identically bonded CdZnTe crystals and averaged to
+account for variations between individual crystals.
+4 Pulse processing techniques
+The PIXIE-16 system recorded the digitised pulse shape data in 16-bit binary data ﬁles. Data
+was recorded with detection thresholds of 22.0ADU (Analogue-to-Digital Units) (∼ 2.8keV) and
+40.0ADU(∼ 5.6keV)forelectronsandholesrespectively;thesewereimplementedinthePIXIE-16
+control software and were used to distinguish real events from low energy noise introduced by the
+electronics and cross-talk between pixels.
+Charge sharing (CS) in which the charge generated from one X-ray interaction is collected
+on multiple pixels due to charge carrier diﬀusion is undesirable as it incorrectly introduces low
+energyeventsinmultiplepixels. InordertoaccuratelyaccountforCS,onlyeventswherethepulse
+amplitude in the central pixel exceeds the set threshold were recorded. As the central pixel is fully
+surrounded by neighbouring pixels, CS events were accurately identiﬁed from use of coincidence
+timing. Any frames of data with two or more pixels over the set threshold were not included in the
+data analysis.
+BespokecodewaswritteninMatlabtoextractkeycharacteristicsofeachoftherecordedpulse
+shapeswhichareextractedfromthebinaryoutputofthedigitiser. Onceextracted,pulseshapeswere
+smoothed with a ﬁrst order Savitsky-Golay ﬁlter (SGF) using a frame length of 15 [13] as shown
+in ﬁgure 3a. This ﬁltering reduced the RMS noise by 4ADU (0.56keV). An interpolation of 10
+pointsbetweeneachdatapointwasalsoimplementedtoimprovethecalculationofpulserisetimes.
+The amplitude of each smoothed pulse was extracted and binned into pulse height spectra
+with a bin size of 0.5keV. Characteristic peak positions at 59.54keV (Am-241γ-ray), 17.72keV
+(Lβ Neptunium peak) and 13.95keV (Lα Neptunium peak) were identiﬁed from the electron pulse
+height spectra and centroids calculated using a Gaussian ﬁt to the spectral peaks. A linear ﬁt was
+usedtoconvertfromunitsofADUtokeVasshowninﬁgure3b. Thisgaveanenergycalibrationof
+∼ 0.14keV per ADU. Values of the FWHM of the 59.54keV peak were∼ 1.8keV for both pitches
+at−1000V, as previously reported [4].
+– 5 –
+
+--- PAGE 8 ---
+2017 JINST 12 C12045
+Figure 3. a (Left) — A typical pulse shape before and after SGF ﬁltering. b (Right) — A typical electron
+calibration spectra for an individual pixel, inlayed with a linear ﬁt to known energies, allowing conversion
+between ADU and keV.
+The calibration calculated from the electron data was not valid for holes as the preampliﬁer
+response varied for positive and negative charges. Calibration using hole measurements was not
+possible due to the poor spectroscopic performance of the detector at high positive biases, which
+was caused by increased leakage current at high biases. However, by usingN in equation (2.3) as
+an estimate of the energy at 100% CCE (in ADU), it was still possible to extractµhτh.
+Alowenergythresholdof2.8keVwasusedtodeterminewhetherasignalinapixelwasrealor
+simplynoise. AseparateMatlabscriptwasusedtore-binpulseheightspectraintoenergyusingthe
+calibrationdatausinga1keVbinwidth. TheAm-24159.54keVpeakwasﬁttedwithGaussiandis-
+tributionstoextractthefullwidthathalfmaximum(FWHM)andcentroidvalueasafunctionofbias
+voltage. The centroid at−1000V was assumed to be 100% CCE for electrons. The measured peak
+centroidswerethenconvertedtoCCErelativetothe −1000Vcentroid. Thiswasrepeatedforvoltages
+between−1000Vand−100Vandplottedasafunctionofappliedbias. Centroidsweremeasuredbe-
+tween100Vto400Vforholesandplottedagainstappliedbias,inADU.Thesmallerrangeforholes
+wasduetoanincreasedleakagecurrentathigherappliedbiases. Thesewerethenﬁttedusingthemod-
+iﬁed Hecht equation (equation (2.3), see section 2.2) and the mobility-lifetime was extracted.
+Additionally, the rise time of each event was measured. This was performed by ﬁnding the
+ﬁrst point at which 20% and 90% of the maximum amplitude was reached, measuring the time
+between them and linearly extrapolating for the 100% rise time. The 20% threshold was chosen
+to avoid system noise aﬀecting results. Pulse rise times were compiled into histograms with a bin
+width of 12.5ns whilst rejecting all CS events. The rise time histograms were ﬁtted with Gaussian
+distributions to extract the full width at half maximum (FWHM) and centroid value. The centroid
+risetimevaluewastakentobethemeanchargecarrierrisetime. Plotsofrisetimeasafunctionof
+appliedbiaswereﬁttedwithequation(2.3)toextractthechargecarriermobility. Thisanalysiswas
+repeated for arrays with pitches of 250µm and 500µm.
+5 Results
+5.1 Electron mobility-lifetime product
+Inordertocalculatetheelectronmobility-lifetime( µeτe),theamplitudeofpulseshapesintherange
+−100Vto−1000Vweremeasured. Figure4ashowstypicalelectronpulseshapesatdiﬀerentbiases
+– 6 –
+
+--- PAGE 9 ---
+2017 JINST 12 C12045
+Figure 4. a (Left) — Typical electron pulse shapes, showing the change of amplitude and rise time as a
+function of bias voltage. The voltages given in the legend are negative. b (Right) — Example of electron
+energyspectraproducedusingRedlenCdZnTeandPIXIEASICundervaryingappliedbiases. Dataforboth
+was taken at 303K on a 500µm pitch detector.
+Figure 5. Small pixel Hecht ﬁt for varying bias voltages on high-ﬂux CdZnTe. A multiplicative factor,N,
+was used to shift the ﬁt up, to account for the CCE at−1000V not being precisely 1.0.
+and the amplitude increasing as a function of bias. Figure 4b shows histograms of the measured
+pulse heights, calibrated in terms of energy, at diﬀerent voltages. These histograms show the
+reduction in the centroid energy and an increasing width of the photo-peak at lower biases. A plot
+of CCE against bias was ﬁtted with equation (2.3) andµeτe extracted — this is shown in ﬁgure 5.
+Fromtheseﬁts,valuesof µeτeweredeterminedtobe 5.2×10−4cm2V−1and 9.0×10−4cm2V−1
+for pixel pitches of 250µm and 500µm respectively.N values close to 1.0 indicate the calibration
+from energy to CCE was eﬀective and that only a small levelling coeﬃcient was required. The
+averageacrossthreedetectorsproducedavalueof1.1. Typicalliteraturevaluesof µeτe forstandard
+Redlen CdZnTe are of the order1.0× 10−2cm2V−1. This demonstrates that there is a reduction of
+over an order of magnitude in the value ofµeτe in high ﬂux Redlen CdZnTe when compared to
+standard Redlen material.
+– 7 –
+
+--- PAGE 10 ---
+2017 JINST 12 C12045
+Figure 6. a (Left) — Electron rise time spectra. b (Right) — Electron mobility ﬁts. The gradient of these
+lines gives the mobility. The eﬀective distance used,d′, is given for each pitch. Both graphs were taken at a
+temperature of 303K with the 500µm pitch array.
+Thesmallvariationin µeτe betweenpixelpitchesmaybeexplainedbyseveralfactorsincluding
+variations in the material properties between arrays due to material non-uniformity, non-uniform
+electric ﬁelds within the material and errors in the weighting potential simulation used to extract
+µeτe [14, 15].
+5.2 Electron mobility
+The electron rise times were extracted using the 20%–90% method described previously and had
+values of the order 50–100ns. A clear trend of decreasing rise time with increasing bias can be
+seen in ﬁgure 6a. As electron rise times at bias voltages with magnitude greater than−100V are
+fasterthanthatofthepre-ampliﬁer,themeasurementrangewaslimitedbetween −50Vand−100V.
+Theeﬀectivedistancefromequation(2.2)accountedforthedepthatwhichthechangeinweighting
+potential from a 60keV event was suﬃcient to induce a signal on the detector. This was performed
+bycalculatingthepointatwhichthechangeinweightingpotentialwasgreaterthanthe2.8keVlow
+energy threshold. Values are given in ﬁgures 6b and 9b for electrons and holes respectively.
+Figure 6b shows a plot of ﬁeld strength against velocity ﬁtted with equation (2.3). Using
+the gradient of these lines and the eﬀective thickness, mobility values ofµe = 804cm2V−1s−1 and
+µe = 1079cm2V−1s−1weredeterminedforpitchesof250 µmand500 µmrespectively. Similarlyto
+section5.1,thediscrepancybetweenpitchescouldbeexplainedbynon-uniformitiesinthematerial
+and simulation errors [14, 15].
+These measurements show that the electron mobility is unchanged in the high-ﬂux material,
+compared to a literature value of 1100cm2V−1s−1 [16]. As the previous measurement ofµeτe
+was more than an order of magnitude lower than that of standard Redlen CdZnTe, this indicates an
+increase in the amount of electron trapping in this material. A calculation of the electron lifetime
+(τe)fromthe µeτe andµe adatagivesavalueoftheorderof1 µscomparedto10 µsinthestandard
+CdZnTe.
+– 8 –
+
+--- PAGE 11 ---
+2017 JINST 12 C12045
+5.3 Hole mobility-lifetime product
+The same analysis as section 5.1 was performed with positive bias voltages in order to determine
+the mobility-lifetime of holes (µhτh). Figure 7a shows typical hole pulse shapes. By comparing
+ﬁgures4aand7a,thediﬀerenceinamplitudeandrisetimebetweenholesandelectronscanbeseen.
+The leakage current compensation circuit behaved diﬀerently for positive and negative charges and
+theincreasedleakagecurrentwithpositiveappliedbiasesreducedthedecaytimeofthepreampliﬁer.
+The range over which the compensation circuit is able to operate correctly is therefore limited to
+250pA per pixel, corresponding to a maximum applied bias of 400V. At biases greater than this,
+the rapid decay of the preampliﬁer caused loss of signal. The diﬀerence in decay time between
+electrons and holes can be seen by comparing ﬁgures 4a and 7a.
+Figure 7. a (Left) — Hole pulse shapes recorded at varying biases. The change in rise time and amplitude
+as a function of bias should be noted. b (Right) — Hole peak height histogram. The shift in peak position
+with decreasing applied bias should be noted. Both graphs were taken on the 500µm pitch array at 303K.
+Figure 8. Hole data taken at 303K in low gain mode. The ﬁts are produced using the small pixel Hecht
+relation (equation (2.3)) andµhτh values were extracted.
+Thechangeinholepulseheightasafunctionofbiasvoltageisdisplayedinﬁgure7b. Figure8
+shows the peak position as a function of bias. A direct calibration of this data was not possible
+– 9 –
+
+--- PAGE 12 ---
+2017 JINST 12 C12045
+due to poor spectroscopic performance at high bias voltages. Therefore, when measuring holes, no
+calibration was used. In this case,N acted as an estimate of 100% CCE in ADU.µhτh was still
+consistently extracted from the ﬁt.
+Values ofµhτh were calculated to be4.09× 10−4cm2V−1 and 4.26× 10−4cm2V−1 for pixel
+pitchesof250 µmand500 µmrespectively. Takinganaverageacrossthethreedetectorsproduceda
+valueof(2.9± 1.4)× 10−4cm2V−1. Literaturesourcesfor µhτh vary,withthehighestpreviousmea-
+surementof 2.4×10−5cm2V−1inRedlenCdZnTe[14]. ThevaluegivenforRedlenhigh-ﬂux-capable
+CdZnTe was at least an order of magnitude better than the standard Redlen CdZnTe and indicated
+signiﬁcantlylessholetrappinginthenewmaterial. Similarlytosection5.1,thediscrepancybetween
+pitches could be explained by non-uniformities in the material and simulation errors [14, 15].
+5.4 Hole mobility
+Acleartrendofdecreasingrisetimewithincreasingbiascanbeseenintherisetimehistogramsin
+ﬁgure9a. Therisetimesforholeswerelargerthanforelectrons,meaningitwaspossibletoevaluate
+mobility data over a larger range of bias voltages down to−1000V. Figure 9b shows a plot of the
+measured hole velocity as a function of applied ﬁeld strength which was ﬁtted with equation (2.3),
+givingmobilityvaluesof µh = 76cm2V−1s−1 andµh = 118cm2V−1s−1 forpixelpitchesof250 µm
+and500 µmrespectively. Italsogivestheeﬀectivedistancesused,whichwerecalculatedinthesame
+wayassection5.2forthegreaterlowenergythreshold. Similarlytosection5.1,thediscrepancybe-
+tweenpitchescouldbeexplainedbynon-uniformitiesinthematerialandsimulationerrors[14,15].
+Compared to a literature value of 88cm2V−1s−1 [16], these measurements show that the hole
+mobility in high-ﬂuxmaterial was similar to thatof standard Redlen CdZnTe. As themeasurement
+of µhτh in the previous section gave a value which was more than an order of magnitude higher
+than that of standard Redlen CdZnTe, the new material must have had reduced hole trapping. A
+calculation of the hole lifetime (τh) from theµhτh and µh measurements gives a value of the order
+of 3µs compared to <1µs in the standard CdZnTe.
+Figure 9. a (Left) — Hole rise time spectra. b (Right) — Hole mobility ﬁts. The gradient of these lines
+gives the mobility. The eﬀective distance,d′, is given in the inset table. The data for both graphs was taken
+at a temperature of 303K with the 500µm pitch array.
+– 10 –
+
+--- PAGE 13 ---
+2017 JINST 12 C12045
+6 Conclusion and discussion
+Table 1 summarises the results of the charge transport characterisation of three high-ﬂux CdZnTe
+crystals using these methods. It is clear that the electron charge carrier transport properties in the
+high-ﬂux material are approximately an order of magnitude poorer than the standard spectroscopic
+grade Redlen CdZnTe. In comparison, the hole lifetime is over an order of magnitude greater than
+that previously reported and is now very similar to that of the electrons.
+This improvement in the hole lifetime was likely due to a reduction in the concentration of
+deepholetrapswithinthematerial. However,thisimprovementinholelifetimeisassociatedwitha
+reductionintheelectronlifetimewhichwaslikelyduetoanincreasedconcentrationofdeepelectron
+traps. For applications like spectroscopy, where achieving the best possible energy resolution is
+desirable, standard Redlen CdZnTe is the most suitable material due to the better electron charge
+transportproperties. However,inhighﬂuxapplications,thehigherholelifetimeinthisnewCdZnTe
+materialwillprovidesuperiorperformanceduetoareductionintrapping/polarisation. Theseresults
+are consistent with that of Iniewski et al., which showed that the material performed well at ﬂuxes
+up to 200Mcps/mm2 for medical imaging applications [2].
+Table 1. A summary of the measured charge transport properties of three “high-ﬂux” Redlen CdZnTe
+detectors [14, 16].
+µeτe
+(×10−4cm2V−1)
+µe
+(cm2V−1s−1)
+τe
+(×10−6s)
+µhτh
+(×10−4cm2V−1)
+µh
+(cm2V−1s−1)
+τh
+(×10−6s)
+High Flux
+CdZnTe 11± 6 940 ± 190 1 .2± 0.8 2 .9± 1.4 114 ± 22 2 .5± 1.4
+Standard
+CdZnTe 100 1100 11 0.2 88 0.2
+Acknowledgments
+The author would like to thank STFC’s Centre for Instrumentation which funded this work and to
+Redlen Technologies for providing the high ﬂux detectors. Thanks are also given to Dr. Annika
+Lohstroh for supervision during my MPhys placement. The ﬁnancial support for the presentation
+of this work at the Position Sensitive Detector conference (PSD-11) by the IOP Instrumentation
+Science and Technology group and the conference organisers was also greatly appreciated.
+References
+[1] T. Takahashi and S. Watanabe,Recent progress in cdte and cdznte detectors,IEEE Trans. Nucl. Sci.
+48 (2001) 950 [rstro-ph@@zvro.rlt31@zvro.rlt37398].
+[2] K. Iniewski et al.,CZT sensors for Computed Tomography: from crystal growth to image quality, in
+proceedings of18th International Workshop on Radiation Imaging Detectors, Spain, 2016,
+2016 JINST 11C12034.
+[3] M. Niraula et al.,Stability issues of high-energy resolution diode type CdTe nuclear radiation
+detectors in a long-term operation,Nucl. Instrum. Meth.A 491 (2002) 168.
+– 11 –
+
+--- PAGE 14 ---
+2017 JINST 12 C12045
+[4] M.C. Veale et al.,An ASIC for the Study of Charge Sharing Eﬀects in Small Pixel CdZnTe X-Ray
+Detectors,IEEE Trans. Nucl. Sci.58(2011) 2357.
+[5] W. Shockley,Currents to Conductors Induced by a Moving Point Charge,J. Appl. Phys.9(1938) 635.
+[6] S. Ramo,Currents Induced by Electron Motion,Proc. IRE27(1939) 584.
+[7] M. Wilson et al.,Investigation of the small pixel eﬀect in CdZnTe detectors, in proceedings of2007
+IEEE Nuclear Science Symposium Conference Record, Honolulu, HI, U.S.A., 26 October – 3
+November 2007, pp. 1255–1259.
+[8] Z. He,Review of the Shockley-Ramo theorem and its application in semiconductor gamma-ray
+detectors, Nucl. Instrum. Meth.A 463 (2001) 250.
+[9] K. Hecht,Zum Mechanismus des lichtelektrischen Primärstromes in isolierenden Kristallen,Z. Phys.
+77(1932) 235.
+[10] E.B. Saloman et al.,X-ray Attenuation Cross sections for Energies 100eV to 100keV and Elements
+Z = 1 to Z = 92,Atom. Data Nucl. Data38(1988) 1.
+[11] U. Lachish,Electron Lifetime Determination in Semiconductor Gamma Detector Arrayes,
+rriiv:17@zvro.rlt31.@zvro.rlt33459.
+[12] A. Schneider et al.,Interconnect and bonding techniques for pixelated X-ray and gamma-ray
+detectors, 2015JINST 10C02010.
+[13] A. Savitzky et al.,Smoothing and diﬀerentiation of data by simpliﬁed least squares procedures,
+Anal. Chem.36(1964) 1627.
+[14] M. Amman et al.,Evaluation of THM-Grown CdZnTe Material for Large-Volume Gamma-Ray
+Detector Applications,IEEE Trans. Nucl. Sci.56 (2009) 795.
+[15] M.C. Veale et al.,Synchrotron characterisation of non-uniformities in a small pixel cadmium zinc
+telluride imaging detector,Nucl. Instrum. Meth.A 729 (2013) 265.
+[16] K. Suzuki et al.,Carrier Transport Properties of HPB CdZnTe and THM CdTe:Cl,IEEE Trans. Nucl.
+Sci. 49(2002) 1287.
+– 12 –

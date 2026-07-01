@@ -1,0 +1,508 @@
+
+
+--- PAGE 1 ---
+1854 IEEE TRANSACTIONS ON NUCLEAR SCIENCE, VOL. 63, NO. 3, JUNE 2016
+CdZnTe Detectors Operating at X-ray Fluxes of
+100 Million Photons/ (mm2.sec)
+Michael Prokesch, Stephen A. Soldner, Arunmozhi G. Sundaram, Michael D. Reed, Handong Li, John F. Eger,
+Jaqueline L. Reiber, Carrie L. Shanor, Corey L. Wray, Aaron J. Emerick, Alan F. Peters, and Corey L. Jones
+Abstract— C d Z n T es i n g l ec r y s t a l sg r o w nw i t ht h et r a v e l i n g
+heater method have been speciﬁcally engineered to support
+high-ﬂux x-ray photon counting applications. Pixelated detec-
+tor devices absorb hardened 120 kV
+p ﬂuxes up to
+108 photons/(mm2.sec) without any sign of electric ﬁeld polariza-
+tion at room temperature (23-28) °C. It is shown that detector
+functionality can be veriﬁed using photon counting electronics
+even under conditions of strong pulse pile-up. A non-paralyzable
+counting model satisfactory describes the average output count
+rate of the detector-electronics system as a function of the
+absorbed ﬂux. Good pixel-to-pixel count rate uniformity can be
+achieved.
+Index Terms — ASIC, Cd-based compound semiconductors,
+CdZnTe, high-ﬂux, photon counting, pile-up, polarization,
+traveling heater, x-ray detectors.
+I. I NTRODUCTION
+C
+dZnTe (CZT) and CdTe are currently considered the
+semiconductor materials of choice for high-efﬁciency,
+energy-resolved high-ﬂux x-ray photon counting applications
+like medical computed tomogra phy (spectral CT) or security
+applications like baggage screening [1]–[7].
+Various melt-, solvent- and vapor phase crystal growth
+techniques have been employed over the years to produce
+CZT and CdTe single crystals with improved electrical and
+structural properties [8]–[10].
+We have extensively employed several variants of the
+Bridgman technique including the high-pressure electrody-
+namic gradient method (HP-EDG) and more recently, the sol-
+vent based traveling heater method (THM), in which the ingots
+crystallize out of a solution well below the congruent melting
+point [11].
+With respect to the charge transport properties of the
+semi-insulating material, the smallest variations of the crys-
+tal defect structure, and in particular native point defect
+concentrations, can render the semiconductor more or less
+suitable for different application types [12]. High resolution
+Manuscript received February 8, 2016; revised March 30, 2016;
+accepted April 16, 2016. Date of current version June 21, 2016.
+The authors are with eV Products Inc., Saxonburg, PA 16056 USA
+(e-mail: Michael.Prokesch@evproducts.com; Steve.Soldner@evproducts.com;
+arunmozhi.sundaram@evproducts.com; drmichaelreed@hotmail.com;
+handong.li@gmail.com; John.Eger@evproducts.com; jackie.reiber@
+evproducts.com; Carrie.Shanor@evpr oducts.com; corey.wray@evproducts.
+com; aaron.emerick@evproducts.com; alan.peters@evproducts.com; Corey.
+Jones@evproducts.com).
+Color versions of one or more of the ﬁgures in this paper are available
+online at http://ieeexplore.ieee.org.
+Digital Object Identiﬁer 10.1109/TNS.2016.2556318
+spectroscopy/imaging with pixelated detectors, for instance,
+requires material with high electron-mobility lifetime product
+and uniformity, while high-ﬂux photon counting applications
+demand good hole transport to avoid excessive space charge
+build-up under intense x-ray radiation. Other requirements for
+the latter are fast temporal response and a high achievable
+charge sweep-out speed. This work is focused on the demon-
+stration of the high-ﬂux counting capabilities of our THM
+grown CZT.
+II. D
+ETECTOR AND ELECTRONICS CHALLENGES
+A typical sensor conﬁguration consists of a biased, low
+background carrier concentration semiconductor detector with
+pixelated anode and a read-out circuitry comprised of charge
+sensitive pre-ampliﬁers and analog pulse shaping ﬁlter stages
+at the front-end.
+Hence, one basic requirement for those applications is a fast
+resetting signal shaping electronics with short peaking times
+to push out the pile-up limitation when the frequency of
+absorbed photons with energies above threshold /Phi1
+abs per
+read-out channel detection area AD approaches the inverse
+resolution time (effective dead time τef f ) of the pulse counting
+chain:
+/Phi1abs AD −→ τ−1
+ef f . (1)
+Another requirement for counting with conventional signal
+chains is the fast collection of the photo-generated charge
+clouds to facilitate their separation, i.e., high sensor or
+charge sweep-out speed. This becomes critical when /Phi1
+abs AD
+approaches the inverse average transit time of the photo-
+generated electrons to the anode pixels. Assuming non-
+degeneration of the internal electric ﬁeld, this can be expressed
+as a minimum bias V
+min t h a tn e e d st ob ea p p l i e dt ot h e
+detector:
+Vmin ∼ /Phi1abs AD
+( d − 1
+λE
+) d
+μe
+, (2)
+where d is the detector thickness, λE is the x-ray energy
+dependent linear attenuation coefﬁcient, i.e., the inverse of
+mean free path or absorption depth and μe is the electron
+drift mobility.
+Given the limited drift mobility of the photo-generated
+electrons in the conduction band and the insigniﬁcant tem-
+perature dependence of this parameter in technically relevant
+temperature ranges, the semiconductor sensor speed can only
+be increased by reducing the detector thickness, increasing
+the bias voltage or shortening the effective induction distance
+0018-9499 © 2016 I EEE. Personal u se is perm itted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 05:44:14 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 2 ---
+PROKESCH et al.: CdZnTe DETECTORS OPERATING AT X-RAY FLUXES OF 100 MILLION PHOTONS/ (mm2.sec) 1855
+(side irradiation, smaller pixels, etc.). However, those
+approaches constitute trade-offs with respect to detection
+efﬁciency, dark leakage current, noise and charge sharing.
+Reducing the active sensor area per ASIC read-out channel, for
+instance, can help to reduce the rate of counts to be effectively
+handled at a given incident ﬂux density, however, this approach
+is limited by charge sharing effects if the size of the anode
+pixel pitch becomes small enough for a signiﬁcant fraction of
+charge clouds to be shared between multiple pixels.
+Arguably, the most fundamental technological challenge
+from a semiconductor materials development standpoint is
+to prevent high-ﬂux polarization [13]. This effect is caused
+by excessive space charge build-up due to trapping of
+photo-generated holes under intense x-ray irradiation causing
+dynamic, i.e., reversibly ﬂux dependent collapse of the internal
+electric ﬁeld [13]–[15]. This can increase the average transit
+time of the electron clouds beyond the effective peaking time
+of the shaping electronics. In this situation, pulses are recorded
+with reduced amplitudes (ballistic deﬁcit) and as the ﬂux
+further increases, the entire pulse height spectrum can shift
+gradually below the counting thresholds. The overall count
+rate will effectively decrease with further increasing photon
+ﬂux and eventually vanish completely. Pile-up effects due to
+increasing photon arrival frequency and slowing transients due
+to space charge can convolute with this trend.
+Note, that this radiation indu ced polarization mechanism
+must not be confused with the long time scale, bias induced
+(dark) polarization as observed, e.g., on slightly p-type CdTe
+Schottky-type detectors, which is due to negative space charge
+build up underneath the blocking anode contact [16], [17].
+Besides operational parameters like bias and temperature,
+which affect the overall hole transport (drift velocity in
+the valence band and detrapping rates), the mobility-lifetime
+product of the photo-generated holes is the single most
+critical materials parameter th at determines if the detector
+will catastrophically polarize above some critical x-ray ﬂux
+or stay functional for high-ﬂux counting. Hence, the ﬁrst
+challenge of CZT development from low-ﬂux spectroscopy/
+imaging optimized materials towards CZT for high-ﬂux
+x-ray applications is the controlled modiﬁcation of the crystals
+defect structure.
+III. E
+XPERIMENTAL DETAILS
+The detectors investigated in this study were fabricated
+from CZT ingots grown with the THM at eV Products. The
+crystal growth processes were modiﬁed to achieve improved
+hole transport in the crystals. Typical values of the achieved
+hole mobility-lifetime product as determined from alpha gain
+measurements on quasi-planar devices are now in the range
+of (1 − 7) × 10
+−5 cm2/V at room temperature. Though
+the absolute accuracy of this test may be somewhat limited
+given the still relatively weak charge signals this is about one
+order of magnitude up from our low-ﬂux spectroscopy/imaging
+optimized CZT.
+The monolithic test devices are 3 mm thick and feature
+16×16 anode pixel arrays at a pitch of 0.5 mm. The counting
+system is based on the eV-230B ASIC, which is an 8-channel
+Fig. 1. Channel output count rate as a function of x-ray tube current
+at 1,118 mm distance. All 256 pixel count rates are averaged for each tube
+current (diamonds). Each channel covers 0.25 mm2 detector area. The dashed
+line is the linear approximation and the solid line connecting the data points
+is a ﬁt according to (4).
+device with active leakage curre nt compensation and bi-polar
+shaping ampliﬁer circuitry with ∼ 150 ns peaking time as
+determined from low-ﬂux shaper output 1 and a single energy
+threshold which was set to 30 keV . The 256 pixel probe test,
+measurement electronics and data acquisition system were
+described in detail elsewhere [18]. The test system was placed
+in a 120 kV
+p x-ray beam hardened by a 1 mm thick brass
+ﬁlter resulting in a mean photon energy of ∼75 keV, which
+gives a mean free path for the x-ray photons of ∼0.5m m
+underneath the cathode. All x-ray measurements were carried
+out at nominally room temperature with some minor warm-up
+of the test box at longer operation (23-28) °C.
+IV . FLUX CALIBRATION
+The incident x-ray ﬂux was estimated using the detector-
+readout system itself: The detector was placed at a larger
+distance (>1m ) from the x-ray source, which was then
+ramped through a sequence of tube currents. The absorbed
+photon ﬂux was estimated from the lowest ﬂux levels for
+which the channel output count rate is about proportional to
+the ﬂux, which in turn is proportional to the tube current. This
+is shown in ﬁgure Fig. 1.
+Using the low-ﬂux proportionality constant c as obtained
+at distance d
+cal and assuming a quadratic dependence of the
+absorbed ﬂux /Phi1abs on the x-ray target-to-detector distance,
+the absorbed ﬂux at any distance d and tube current Itube can
+be estimated to:
+/Phi1abs ∼ cItube
+dcal 2
+d2 . (3)
+Note that without a calibrated reference system, a more
+accurate determination of the incident ﬂux can become rel-
+atively involved even at very low ﬂux and without count loss
+due to ballistic deﬁcit. For our speciﬁc detector geometry,
+1In [18], a peaking time of 190 ns was quoted from the ASIC data sheet.
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 05:44:14 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 3 ---
+1856 IEEE TRANSACTIONS ON NUCLEAR SCIENCE, VOL. 63, NO. 3, JUNE 2016
+Fig. 2. Average channel output count rates as a function of the absorbed
+ﬂux (symbol sets). The data are comp iled from the individual 256 channel
+count rates for 31 tube current steps at each of 10 different target-to-detector
+distances. Fit according to (4) (solid lin e) and pile-up correction according
+to (5) (dashed line).
+single low energy threshold and hardened incident x-ray spec-
+tral distribution, charge sharing effects should lead mostly to
+ﬂux overestimates due to multip le counting (rather than count
+loss). Our energy threshold was set to 30 keV and the brass
+ﬁlter effectively removes low-energy photons from the incident
+x-ray spectrum ( < 0.1% of primary photons below 36 keV).
+However, escape of ﬂuorescence photons will still lead to
+charge deposition well below energy threshold despite the
+ﬁlter. This can lead to underestimates of the incoming ﬂux
+while this “unaccounted” charge will still contribute to space
+charge build-up.
+V. O
+UTPUT COUNT RATE CORRECTION
+With our measurement conﬁguration, the highest attain-
+able x-ray ﬂux incident to the detector cathode is
+∼100 Mil. pps/mm2.2 At those ﬂux levels, the average photon
+deposition rate is ∼1 photon per channel every 40 ns
+(0.5 mm pixel pitch). This unavoidably leads to severe
+pile-up given the ∼ 150 ns peaking time of the shaper and
+even longer effective dead time of the system. The latter can be
+expected to be in the range of the width of the bipolar pulses
+that was determined from the shaper output signals at low
+ﬂ u xt ob e∼600 ns. In fact, the output count rate starts devi-
+ating from linearity alr eady at ﬂuxes below 1 Mil . pps/mm2
+(0.25 Mil. cps/channel) as can be seen in Fig. 1.
+Fig. 2 shows the non-linear response of the counting system
+coupled to a non-polarizing THM detector for absorbed ﬂuxes
+up to 30 Mil . pps/mm
+2. The data points are the averaged
+count rates of all 256 individual pixels. Thirty-one different
+x-ray tube currents have been applied at each of ten different
+target-detector distances. The x-axis was re-calibrated for each
+distance according to (3). The perfect line up of the combined
+data sets proves the correctness of the assumptions made for
+the ﬂux calibration.
+2We use “Mil. pps/mm2” to abbreviate “Million photons/ (mm2.sec)”.
+Fig. 3. (a) Output count ra tes from all 256 pixels at ﬁxed 457 mm target-
+to-detector distance, and (b) Averaged count rates (diamonds), ﬁt according
+to (4) (solid line) and pile-up correc tion according to (5) (dashed line).
+This counting system can be described by a non-paralyzable,
+ﬁxed dead-time model as outlined previously [19]. This time,
+we signiﬁcantly extend the ﬂux range and average the pixel
+counts to mitigate effects of pot ential ﬂux-dependent charge
+steering on the response analysis [20]. The solid line in Fig. 2
+shows the calculated ASIC channel output count rate Cch as
+a function of the absorbed photon ﬂux /Phi1abs according to:
+Cch(/Phi1abs ) ∼ τ−1
+ef f [1 − exp(−τef f κAef f /Phi1abs )]. (4)
+The major ﬁtting parameter is the effective dead time τef f
+of the signal chain. Aef f is the effective pixel area, which is
+about the square of the pixel pitch in our case andκ is a dimen-
+sionless correction factor for t he event rate in the detector,
+accounting for inaccuracies of the ﬂux calibration, energy
+and charge losses, charge sharing related double counting,
+etc. This ﬁt accurately describes the experimentally observed
+dependence in Fig. 2 for k = 1.03 and τef f = 600 ns.
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 05:44:14 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 4 ---
+PROKESCH et al.: CdZnTe DETECTORS OPERATING AT X-RAY FLUXES OF 100 MILLION PHOTONS/ (mm2.sec) 1857
+Fig. 4. (a) Flux dependence of the output count rates from the pixels
+of a polarizing test device made from a low-ﬂux spectroscopy/imaging
+CZT crystal ingot at 900 V bias. Dead and outer pixels removed and
+zero point added for clarity. (b) Low-ﬂux 241Am+57 Co pixel spectrum from
+a 5 mm thick, 1.6 mm pixel pitch witness detector from the same ingot shows
+good spectroscopic performance at room temperature.
+The pile-up correction for the output count rate as also plotted
+in Fig. 2 is straight forward:
+Ccor
+ch (/Phi1abs ) ∼ − ln(1 − τef f Cch)
+(τef f κ) . (5)
+At higher ﬂuxes, the output count rate according to (4)
+simply approaches the asymp totic value of the classical
+non-paralyzable model Cch(∞ ) ∼ τ−1
+ef f [19].
+Fig. 3(a) shows the output count rates from all 256 pixels
+of the same detector at one ﬁxed ta rget-to-detector distance.
+Fig. 3(b) shows the averaged count rates, the counting model
+ﬁt according to (4) and the pile-u p corrected rates according
+to (5).
+Fig. 5. Comparison of the channel out put count rates with a non-polarizing
+and a polarizing detector at 900 V bias and room temperature for absorbed
+x-ray ﬂuxes up to ∼ 100 Mil. pps/mm2. Dead and outer pixels removed for
+clarity.
+VI. T ESTS AT 100 Million Photons/(mm2.sec)
+While this acquisition electronics and speciﬁc detector
+conﬁguration cannot be used for accurate photon counting
+much beyond 10 Mil . pps/mm2, proper operation of the
+semiconductor detector itself can be still veriﬁed at absorbed
+ﬂ u xl e v e l su pt o1 0 0M i l. pps/mm2, which is the maximum
+we can currently apply with the existing x-ray setup.
+First, we veriﬁed the behavior of the counting system when
+a polarizing detector is connected to the front-end circuitry by
+preparing high-ﬂux test devises (3 mm thick, 0.5 mm pitch)
+from a low-ﬂux, spectroscopy/ imaging CZT crystal ingot.
+Fig. 4(a) shows the x-ray ﬂux dependence of the output
+count rates of the pixels, which collapses above a critical ﬂux
+of < 1M i l. pps/mm
+2 at 900 V bias. The otherwise good
+spectroscopic capability of this crystal material was conﬁrmed
+on separate witness samples (5 mm thick, 1.6 mm pitch) from
+t h es a m ec r y s t a l .F i g .4 ( b )s h o w sal o w - ﬂ u x
+241Am +57Co
+pixel spectrum obtained with such a device [12]. This
+spectroscopy material has a r elatively high electron
+mobility-lifetime product of ∼ 1 × 10
+−2cm2/V but the hole
+mobility-lifetime product is only ∼ 5 × 10−6cm2/V at room
+temperature, which makes the material prone to positive
+space charge accumulation and hence, polarization.
+Fig. 5 shows the channel output count rates obtained
+with a non-polarizing high-ﬂux detector at 900 V
+bias and room temperature for absorbed x-ray ﬂuxes
+up to ∼100 Mil . pps/mm
+2. Due to limitations of the tube
+current settings, ﬂux calibrated data sets from two different
+target-to-detector distances (813 mm and 187 mm) have been
+stitched together for this plot. This particular device is from
+a CZT crystal with a relatively low electron mobility-lifetime
+product of ∼ 1.5 × 10
+−3cm2/V but a higher hole mobility-
+lifetime product of ∼ 2 × 10−5cm2/V, which can obviously
+accommodate efﬁcient back drift of the photo-generated holes
+to the cathode without any sign of polarization.
+As predicted by (4), the average count rate saturates
+at ∼1.65 Mil . cps/channel when the absorbed ﬂux
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 05:44:14 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 5 ---
+1858 IEEE TRANSACTIONS ON NUCLEAR SCIENCE, VOL. 63, NO. 3, JUNE 2016
+Fig. 6. Sequences of pulses recorded from the bipolar shaper output at
+(a) ∼ 6M i l. pps/mm2 and (b) ∼ 100 Mil. pps/mm2 with a non-polarizing
+detector connected.
+approaches ∼30 Mil . pps/mm2. Further increasing the ﬂux
+beyond ∼50 Mil . pps/mm2, we observe a slight depression
+of the saturated average count rate. One possible reason is
+that τef f is not strictly a constant but the average width of
+the pulses becomes affected by the extreme pileup at higher
+ﬂuxes causing a slight increase of this parameter [19].
+For comparison, Fig. 5 also shows the behavior of the
+polarizing device from Fig. 4 under high ﬂux levels. Data sets
+for 762 mm (Fig. 4(a)) and 187 mm target-to-detector cathode
+distance have been stitched together for this plot. The nature
+of the signals causing the apparent count response at very high
+ﬂuxes, which was observed on all polarizing detectors, needs
+more investigation.
+Fig. 6 shows sequences of pulses recorded from the bipolar
+shaper output at ∼ 6M i l· pps/mm
+2 and ∼ 100 Mil · pps/mm2
+with a non-polarizing detector connected to the
+Fig. 7. (a) 2-D map of the channel count rates of all 256 pixels at
+/Phi1abs ∼ 1M i l. pps/mm2, and (b) Corresponding count rate histogram and
+distribution curve. Dead electronics channels were removed from statistics.
+front-end circuitry. While pile-up is clearly visible already
+at the lower ﬂux, the extremely piled up pulses at high ﬂux
+are completely distorted an d the amplitudes get clipped.
+However, the electronics does not paralyze and the system is
+still useful to verify non-polariza tion of the radiation detector.
+Note that the energy information is basically lost in this
+regime and pile up of reduced amplitude signals might
+still produce enough counts above threshold to saturate the
+counting electronics. A more detailed study would require
+the employment of faster counting electronics with energy
+binning capability and a modiﬁed device design to ensure the
+separation of the charge pulses itself. This can involve thinner
+devices and smaller pixels but while those approaches can help
+materials characterization, th ey are not necessarily an option
+for imaging applications due to compromises in efﬁciency and
+image contrast. Alternatively, the analyses could be done by
+complete elimination of signal shaping circuitry, i.e., direct
+evaluation of charge sensitive or trans-impedance preampliﬁer
+output.
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 05:44:14 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 6 ---
+PROKESCH et al.: CdZnTe DETECTORS OPERATING AT X-RAY FLUXES OF 100 MILLION PHOTONS/ (mm2.sec) 1859
+VII. C OUNT RATE UNIFORMITY
+The actual count rate distribution of all 256 pixels can be
+evaluated at lower ﬂuxes where the output count rate is not
+signiﬁcantly pile-up distorted. Fig. 7 shows the analysis for
+/Phi1abs ∼ 1M i l. pps/mm2, which corresponds to the lowest
+ﬂux in Fig. 3 (same detector). The standard deviation of the
+nearly Gaussian channel count rate distribution is ±6% for this
+detector. In general, the THM-CZT detectors from the ingots
+investigated so far are typically more uniform than what we
+observed previously from high-ﬂux capable HP-EDG grown
+material [18].
+Note that those pixel-to-pixel count rate variations can be
+easily corrected for as long as they are not ﬂux dependent,
+e.g., dynamic lensing [20].
+VIII. S
+UMMARY
+We developed a THM-based CZT crystal growth tech-
+nology to support high-ﬂux x-ray photon counting appli-
+cations. We veriﬁed that 3 mm thick monolythic array
+detectors fabricated from those ingots can be operated at
+∼100 Mil. pps/mm
+2 at room temperature without polarizing.
+The ASICs used in this study were relatively slow and a non-
+paralyzable counting model, based on ∼ 600 ns resolution
+time, perfectly describes the output count rates of the signal
+chains connected to the 0.25 mm
+2 anode pixels until saturation
+at an absorbed ﬂux of ∼ 30 Mil. pps/mm2. While no quan-
+titative analysis can be achieved with this test conﬁguration
+beyond that point, we demonstrate that the test system is still
+sufﬁcient for CZT materials evaluation up to the highest ﬂuxes
+we could apply, i.e., ∼100 Mil. pps/mm
+2.
+REFERENCES
+[1] J. P. Schlomka, E. Roessl, R. Dorscheid, S. Dill, G. Martens, T. Istel,
+C. Bäumer, C. Herrmann, R. Steadman, G. Zeitler, A. Livne,
+and R. Proksa, “Experimental feasibility of multi-energy photon-
+counting K-edge imaging in pre-clinical computed tomography,” Phys.
+Med. Biol., vol. 53, pp. 4031–4047, 2008.
+[2] P. M. Shikhaliev, “Energy-resolved computed tomography: ﬁrst experi-
+mental results,” Phys. Med. Biol. , vol. 53, pp. 5595–6613, 2008.
+[3] J. S. Iwanczyk, E. Nyg˚ard, O. Meirav, J. Arenson, W. C. Barber,
+N. E. Hartsough, N. Malakhov, and J . C. Wessel, “Photon counting
+energy dispersive detector arrays for x-ray imaging,” IEEE Trans. Nucl.
+Sci., vol. 56, pp. 535–542, 2009.
+[4] K. Taguchi and J. S. Iwanczyk, “Vision 20/20: single photon counting
+x-ray detectors in medical imaging,” Med. Phys. , vol. 40,
+p. 100901_1-19, 2013.
+[5] P. M. Shikhaliev, “Medical x-ra y and CT imaging with photon-counting
+detectors,” in Radiation Detectors for Medical Imaging . Boca Raton,
+FL, USA: CRC Press, 2015, pp. 47–80.
+[6] I. Blevis and R. Levinson, “Photon-counting detectors and clinical
+applications in medical CT imaging,” in Radiation Detectors for Medical
+Imaging. Boca Raton, FL, USA: CRC Press, 2015, pp. 169–192.
+[7] W. C. Barber, J. C. Wessel, E. Nyg˚ard, and J. S. Iwanczyk, “Energy
+dispersive CdTe and CdZnTe detectors for spectral clinical CT and
+NDT applications,” Nucl. Instrum. and Methods Phys. Res. A , vol. 784,
+pp. 521–537, 2015.
+[8] C. Szeles, S. E. Cameron, S. A. Soldner, J.-O. Ndap, and M. D. Reed,
+“Development of the high-pressure el ectro-dynamic gradient crystal-
+growth technology for semi-insula ting CdZnTe growth for radiation
+detector applications,” J. Electron. Mater. , vol. 33, pp. 742–751,
+2004.
+[9] H. Chen, S. A. Awadalla, J. Mackenzie, R. Redden, G. Bindley,
+A. E. Bolotnikov, G. S. Camarda, G. Carini, and R. B. James, “Char-
+acterization of traveling heater method (THM) grown Cd 0.9Zn0.1Te
+crystals,” IEEE Trans. Nucl. Sci. , vol. 54, pp. 811–816, 2007.
+[10] H. Shiraki, M. Funaki, Y . Ando, A. Tachibana, S. Kominami,
+and R. Ohno, “THM growth and characterization of 100 mm diameter
+CdTe single crystals,” IEEE Trans. Nucl. Sci. , vol. 54, pp. 117–1723,
+2009.
+[11] R. Triboulet, “CdTe and CdZnTe growth,” in CdTe and Related Com-
+pounds: Physics, Defects, Hetero- and Nano-structures, Crystal Growth,
+Surfaces and Applicant. Amsterdam, The Netherlands: Elsevier, 2009,
+pp. 19–73.
+[12] M. Prokesch, “CdZnTe for gamma and x-ray applications,” in Solid-State
+Radiation Detectors: Technol. and Applicant. Boca Raton: CRC Press,
+2015, pp. 17–48.
+[13] D. S. Bale and C. Szeles, “Natu re of polarization in wide-bandgap
+semiconductor detectors under high- ﬂux irradiation: Application to
+semi-insulating Cd 1−xZnxTe,” P h y s .R e v .B, vol. 77, pp. 35205_1–16,
+2008.
+[14] G. Prekas, P. J. Sellin, P. Veeramani, A. W. Davies, A. Lohstroh,
+M. E. Özsan, and M. C. Veale, “Investigation of the internal electric ﬁeld
+distribution under in situ x-ray irra diation and under low temperature
+conditions by the means of the pockels effect,” J. Phys. D , vol. 43,
+pp. 085102_1–6, 2010.
+[15] P. J. Sellin, G. Prekas, J. Franc, and R. Grill, “Electric ﬁeld distributions
+in CdZnTe due to reduced temperature and x-ray irradiation,”Appl. Phys.
+Lett., vol. 96, pp. 133509_1–3, 2010.
+[16] K. Okada, Y . Sakurai, and H. Suematsu, “Characteristics of both carriers
+with polarization in diode-type CdTe x-ray detectors,” Appl. Phys. Lett.,
+vol. 90, pp. 063504_1–3, 2007.
+[17] A. Cola and I. Farella, “The polarization mechanism in CdTe
+schottky detectors,” Appl. Phys. Lett. , vol. 94, pp. 102113_1–3,
+2009.
+[18] C. Szeles, S. A. Soldner, S. Vydrin, J. Graves, and D. S. Bale,
+“Ultra high ﬂux 2D CdZnTe monolithic detector arrays for x-ray
+imaging applications,” IEEE Trans. Nucl. Sci. , vol. 54, pp. 1350–1358,
+2007.
+[19] C. Szeles, S. A. Soldner, S. Vydrin, J. Graves, and D. S. Bale, “CdZnTe
+semiconductor detectors for spectroscopic x-ray imaging,” IEEE Trans.
+Nucl. Sci., vol. 55, pp. 572–582, 2008.
+[20] S. A. Soldner, D. S. Bale, and C. Szeles, “Dynamic lateral polarization
+in CdZnTe under high ﬂux x-ray irradiation,” IEEE Trans. Nucl. Sci. ,
+vol. 54, pp. 1723–1727, 2007.
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 05:44:14 UTC from IEEE Xplore.  Restrictions apply. 

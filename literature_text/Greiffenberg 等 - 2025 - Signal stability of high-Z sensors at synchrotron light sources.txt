@@ -1,0 +1,578 @@
+
+
+--- PAGE 1 ---
+2025 JINST 20 P01031
+P/u.sc/b.sc/l.sc/i.sc/s.sc/h.sc/e.sc/d.sc /b.sc/y.sc IOP P/u.sc/b.sc/l.sc/i.sc/s.sc/h.sc/i.sc/n.sc/g.sc /f.sc/o.sc/r.sc S/i.sc/s.sc/s.sc/a.sc M/e.sc/d.sc/i.sc/a.sc/l.sc/a.sc/b.sc
+Received:November 15, 2024
+Accepted:December 18, 2024
+Published:January 31, 2025
+Signal stability of high-Z sensors at synchrotron light
+sources
+D. Greiffenberg
+ ,𝑎,∗ K. A. Paton,𝑎 J. Mulvey,𝑎 A. Bergamaschi,𝑎 M. Brückner,𝑎 P. Busca,𝑏
+M. Del Mar Carulla,𝑎 R. Dinapoli,𝑎 S. Ebner,𝑎 E. Fröjdh,𝑎 V. Gautam,𝑎 S. Hasanaj,𝑎
+J. Heymes,𝑎 V. Hinger,𝑎 T. King,𝑎 K. Ferjaoui,𝑎 P. Kozlowski,𝑎 C. Lopez-Cuenca,𝑎 D. Mezza,𝑎
+K. Moustakas,𝑎 M. Müller,𝑎 A. Mozzanica,𝑎 Ch. Ruder,𝑎 M. Ruat,𝑏 B. Schmitt,𝑎 P. Sieberer,𝑎
+D. Thattil,𝑎 X. Xie𝑎 and J. Zhang𝑎
+𝑎Paul-Scherrer-Institut (PSI),
+Forschungsstrasse 111, CH-5232 Villigen PSI, Switzerland
+𝑏European Synchrotron Radiation Facility (ESRF),
+71. Av. Des Martyrs, 38000 Grenoble, France
+E-mail: dominic.greiffenberg@psi.ch
+Abstract:The use of high-Z sensors for scientific applications at synchrotrons will gain more
+importance due to the upgrade of many light sources around the world to diffraction limited light
+sources for which the photon flux at high photon energies (above 30keV) will significantly increase.
+Especially when illuminated with high photon fluxes, many established high-Z sensor materials like
+GaAs or Cd(Zn)Te are known to suffer from charge (de-)trapping effects in the bulk or at the contact
+interface which will ultimately lead to polarization and afterglow effects in the sensor. Commercially
+available high-Z sensors (Chromium-compensated GaAs, CdTe and CdZnTe) have been investigated
+at the Material Science beamline of the Swiss Light Source regarding their dynamic behavior when
+exposed to photon fluxes between106ph/mm2·s and≈ 5 · 1010ph/mm2·s. In this work, the signal
+stability during irradiation will be presented, and a follow-up publication will discuss the afterglow.
+Keywords:Hybrid detectors; X-ray detectors
+∗Corresponding author.
+© 2025 The Author(s). Published by IOP Publishing Ltd on behalf of
+Sissa Medialab. Original content from this work may be used under the
+terms of the Creative Commons Attribution 4.0 licence. Any further distribution of this
+work must maintain attribution to the author(s) and the title of the work, journal citation
+and DOI.
+https://doi.org/10.1088/1748-0221/20/01/P01031
+
+--- PAGE 2 ---
+2025 JINST 20 P01031
+Contents
+1 Introduction 1
+2 Experimental setup 2
+2.1 Sensors 2
+2.2 Readout chip 3
+2.3 Test systems 4
+2.4 Experimental setup and data treatment 4
+3 Results 7
+3.1 High-flux type CdZnTe sensors 8
+3.2 Spectroscopic type CdZnTe sensors 9
+3.3 Chromium-compensated GaAs 10
+3.4 CdTe (electron collecting Schottky type) 12
+3.5 CdTe (Quasi-ohmic type) 13
+4 Summary and conclusions 13
+1 Introduction
+The most common sensor material for X-ray detectors at light sources is silicon due to its outstanding
+crystalline quality and charge transport properties. The biggest drawback for using silicon for higher
+photon energies is that its stopping power drops dramatically for photon energies above 15keV due
+to its low atomic number of𝑍𝑆𝑖 = 14.
+High-Zsensors,suchaschromiumcompensatedGaAs( 𝑍Ga/As = 31/33)orCd(Zn)Te( 𝑍Cd/(Zn)/Te =
+48/(30)/52), have much higher atomic numbers and therefore provide reasonably high stopping
+powers (> 50%) for photon energies above 50keV for typical sensor thicknesses [1]. However, high-Z
+sensors are compound semiconductors and suffer from other short-comings compared to silicon like a
+reduced uniformity, worse charge transport properties and especially charge (de-)trapping leading to
+afterglow and polarization effects [2–5]. Moreover, heavy materials produce relatively long ranged
+auto-fluorescence photons which can affect both the energy and spatial resolution of the detector.
+Currently, many light sources around the world are being upgraded to diffraction limited light
+sources, increasing the monochromatic coherent photon flux for photon energies above 10keV
+significantly [6]. This motivates the development of high-Z sensors for detectors at light sources
+to increase the absorption efficiency for photon energies above 15keV. However, the signal quality
+may be reduced due to afterglow and polarization phenomena these sensors display which get more
+pronounced when they are exposed to high photon intensities [7–9].
+The aim of the work described in this paper was to evaluate the dynamic behavior of various
+high-Z sensor materials to identify the most suitable alternative to silicon sensors for photon energies
+above 15keV at synchrotron sources and FELs. The research goal was to investigate the dynamic
+behavior of the high-Z sensors which was separated into two phases: 1) the signal stability during the
+– 1 –
+
+--- PAGE 3 ---
+2025 JINST 20 P01031
+irradiation phase to see, if e.g., a sensor suffers from polarization effects and 2) the signal transient
+after the irradiation phase, such as measuring the magnitude and duration of the afterglow from
+irradiation after closing the beam shutter.
+2 Experimental setup
+2.1 Sensors
+Table 1 summarizes the sensors that have been investigated. Different variations of the high-Z
+sensors were used which will be explained in the following subsections. The employed silicon
+sensors were standard p-in-n sensors.
+2.1.1 GaAs:Cr
+Chromium compensated GaAs sensors were delivered by the Tomsk State University (TSU) in
+Russia. In order to obtain high-resistivity material, commercially available, low resistivity n-type
+GaAs wafer are annealed with chromium which diffuses into the GaAs wafer [10]. GaAs:Cr sensors
+work as photo resistors, meaning the dark current through the bulk is typically significantly higher
+compared to photo diodes. Extensive characterization results with GaAs:Cr sensors have previously
+been published [11, 12]. One of the main findings was the short lifetime of holes in the order of
+magnitude of a few ns.
+For this study, different types of sensors have been tested, which include variations of the
+production batch as well as the underlying growth technique of the commercially available n-type
+GaAs wafer. Sensors from the production batches from 2017, 2018 and 2019 were produced from
+LEC-grown (LiquidEncapsulated Czochralski) GaAs wafers. VGF-grown (Vertical Gradient Freeze)
+GaAs wafers were used for the 2021 production batch. The thickness of the sensors was 500μm
+and the typical sensor bias voltage is−300V.
+2.1.2 CdTe
+The CdTe sensors investigated in this study came from Acrorad [13]. Acrorad offers two contact
+configurations, which allow the operation of the sensors either as photo resistor (quasi-ohmic type)
+or as photo diode (Schottky type). In case of the Schottky type CdTe sensors, the Schottky contact,
+consisting of Al, was on the pixel side in order to be able to collect electrons. The backside contact
+was made of Pt. Two batches of Schottky sensors were investigated from 2017 and 2019. The
+quasi-ohmic type CdTe sensors have Pt contacts on both sides. All CdTe-based sensors are 750μm
+thick and were operated with−500V.
+2.1.3 CdZnTe
+The CdZnTe sensors were obtained from Redlen Technologies [14]. Two different kinds of sensors
+are available, called ‘spectroscopic type’ and ‘high flux type’, the latter is optimized to handle higher
+photon fluxes compared to the ‘spectroscopic type’ by better matching the𝜇 × τ products of electrons
+and holes [15, 16]. The thickness was 1500μm and the operating sensor high voltage−500V.
+– 2 –
+
+--- PAGE 4 ---
+2025 JINST 20 P01031
+Table 1.Overview of the sensor types used for investigating their dynamic behavior.
+Sensor
+material Supplier Thickness Typical sensor
+high voltage Variations
+Silicon Hamamatsu 320 μm +200V - p-in-n
+GaAs:Cr Tomsk State
+University (TSU) 500 μm −300V - LEC n-type wafer as base material in
+sensor batches from 2017/2018/2019
+- VGF n-type wafer as base material in
+sensor batch from 2021
+CdTe ACRORAD 750 μm −500V - Schottky type (electron collecting), two
+sensor batches 2017/2019
+- Ohmic type
+CdZnTe Redlen 1500 μm −500V - Spectroscopic type
+- High flux type
+2.2 Readout chip
+Thereadoutchip, thatwasusedfortheexperiments, wastheJUNGFRAUASIC.JUNGFRAUconsists
+of 256 × 256 pixels with a pixel pitch of75 × 75 μm2 [17]. It was designed having in mind the high
+intensities exhibited at free electron lasers, thus being able to automatically adjust the gain of the
+preamplifier to the number of incoming photons on a pixel level by means of three different gain
+ranges. This mode, called ‘dynamic gain switching’ mode, was initially not foreseen for electron
+collection, and hence high-Z sensors, such that dynamic gain switching in the earlier generation of
+JUNGFRAU only works for hole collection. At the time of writing this article, two different iterations
+of JUNGFRAU existed, JF1.0 and JF1.1, with the most relevant difference being the ability of JF1.1
+to automatically adjust the gain also in case of electron collection. For the experiments presented
+in this article, both iterations of the readout chips were used.
+Alternatively,itisalsopossibletogloballypredefineandfixthegainrangebeforeeachmeasurement
+which was the most common operating mode used in this study. In contrast to dynamic gain switching
+mode, where the CDS buffer (=Correlated Double Sampling) is only used for G0, the CDS buffer
+is always active in fixed gain mode having the advantage of an improved noise performance of the
+gain ranges G1 and G2 at the cost of a reduced dynamic range.
+In order to be able to simultaneously use hole-collecting sensors (like Silicon) and electron-
+collecting sensors (like high-Z sensors), the working point has been chosen to be in the middle of
+the dynamic range, thereby sacrificing the maximum dynamic range. For the fixed gain mode, the
+values for the maximum linear dynamic range and noise performance measured with a GaAs:Cr
+sensor are given in table 2.
+When using 20 keV photons and the typical integration time of 5μs used for this study,
+the maximum linear dynamic range in fixed G2 of 25000keV corresponds to a photon flux of
+4.4 ·1010 × 20keV photons per mm2 and second. If the pixel is operated in dynamic gain switching
+mode and the working point is optimized to collect only one kind of charge carrier, this maximum
+linear dynamic range will increase by roughly a factor of 4. (However, it is possible to measure higher
+photon fluxes, thereby sacrificing linearity of the readout electronics.)
+– 3 –
+
+--- PAGE 5 ---
+2025 JINST 20 P01031
+Table 2. Overview of the maximum dynamic range and noise performance for different integration times
+when using fixed gain mode using JUNGFRAU1.0 in combination with a GaAs:Cr sensor (𝑈Sensor = −300V,
+𝑇 = +15◦C) as in this work.
+Fixed Gain Dynamic range
+[in keV]
+Noise performance
+[ENC in keV, rms]
+HGO
+(Super High Gain) 50keV < 0.39keV (5μs)
+GO
+(High Gain) 120keV < 047keV (5μs)
+G1
+(Medium Gain) 2000keV < 3.9keV (5μs)
+< 5.2keV (300μs)
+G2
+(Low Gain) 25000keV < 49.5keV (5μs)
+< 50.5keV (300μs)
+2.3 Test systems
+The test systems consist of single chip assemblies, which refers to a single readout chip sized sensor of
+2 × 2cm2 bump bonded to a single readout chip. In case of silicon and GaAs:Cr sensors, the bump
+bonding has been done in-house at PSI, for all other sensors this has been done at ADVAFAB Oy [18].
+As shown in figure 1, the testbed for the experiments was a standard JUNGFRAU module, which was
+modified to house three single chip assemblies instead of a full size (4 × 8cm2 ) silicon sensor. Each
+sensor can be individually supplied with high voltage. More details can be found in [12, 19].
+Figure 1.Testbed consisting of three independent single chip assemblies. The test system is derived from a
+standard JUNGFRAU multi-ASIC module.
+2.4 Experimental setup and data treatment
+The measurements were performed at the Material Science (MS) beamline of the SLS [20]. Due to
+constraints of the beamline, the photon energy for all measurements was 20keV to ensure a maximum
+monochromatic photon flux of around1 × 1011ph/mm2·s. The photon flux was adapted to the needs
+of the experiment by means of different filters (mostly silicon filters of different thicknesses) to obtain
+intensitiesinarangebetween 1 × 106ph/mm2·sandaround 5 × 1010ph/mm2·s. Foreachmeasurement
+– 4 –
+
+--- PAGE 6 ---
+2025 JINST 20 P01031
+(signal stability and afterglow), eight different intensities were used and, in order not to interfere with
+the previous irradiation, each irradiation was performed on a previously unirradiated section of the
+sensor. Thatresultsinatotalof16regionsofinterest( 8×signalstability, 8×afterglow). Thedimension
+of a region of interest (=ROI) was defined by slits and the size was typically around1.2 × 2.0mm2,
+corresponding to roughly 400 pixels ensuring reasonable statistics for each irradiation region.
+Each sensor was measured with the same experimental procedure: initially the afterglow was
+probed by illuminating the sensors with three different exposure times (1sec, 10sec and 60sec),
+followed by the signal stability test. This procedure was then repeated for three different temperatures
+of 0◦C, +15◦C and +30◦C (see figure 2):
+•Afterglowmeasurements: oneirradiationcycleconsistsof8differentphotonfluxeson8different
+ROIs and a fixed irradiation time. The duration of the irradiation phase was 1 second in the first
+cycle, 10 seconds in the second cycle and 60 seconds in the third cycle. After each irradiation,
+thebeamshutterwasclosedandthesignalwasmeasuredforatleast100seconds,beforemoving
+to the next ROI. The frame rate was 500Hz, i.e., the acquisition period was 2ms.
+•Signal stability test:using the same 8 intensities that were used in the afterglow test, 8 new
+ROIs were irradiated for 20 minutes, measuring the signal with a frame rate of 200Hz. In few
+cases, the maximum irradiation time was reduced due to time limitations.
+Figure 2.Schematics of the dynamics test. On the left half of a sensor, three cycles of afterglow measurements
+using different irradiation times (= 𝑡irr) of 1 second, 10 seconds and 60 seconds, followed by a period with
+closed beam shutter of at least 100 sec were done. On the right half of the sensor, the signal stability test was
+performed. Each ROI was irradiated for (up to) 20 minutes.
+– 5 –
+
+--- PAGE 7 ---
+2025 JINST 20 P01031
+As mentioned earlier, this manuscript will only report on the results of the signal stability test.
+The results of the afterglow measurements will be published in a follow-up work.
+The analog signal output of the JUNGFRAU readout chip is digitized by means of an analog-
+digital-converter (ADC), providing a digital value in the unit of an analog-digital-unit (ADU). The raw
+data in units of ADU coming from the detector was corrected in the following order:
+•Pedestal correction:as JUNGFRAU is a charge-integrating detector, the raw dark signal is
+mainly defined by the working points of the various buffers and by the dark current being
+collected from the sensor which strongly depends on the sensor material. The dark signal is
+called pedestal and ideally a constant value. The pedestal is measured by acquiring (at least)
+1000 dark frames. For each pixel, the values of the dark frames are put into a histogram and
+the resulting distribution fitted by a Gaussian function. The mean value of the fit function
+corresponds to the pedestal value for the respective pixel. The r.m.s. from the Gaussian fit is the
+noise value of the pixel. To perform a pedestal correction, the pedestal value is subtracted from
+the measured pixel values on a frame-by-frame basis.
+A pixel was considered malfunctioning, if its pedestal value was out of a pre-defined range or if
+its noise value was above or below an acceptance window of±10×the r.m.s. of the global noise
+distribution. Malfunctioning pixels were excluded from the data analysis.
+•Common mode correction:common mode is a form of noise that is causing a temporal change
+of the pedestal value affecting several pixels at once and which is often correctable by tracking
+the pedestal. In JF1.0, the most occurring common mode contribution is a global shift of
+the pedestal value due to a readout buffer which was improved in the subsequent versions of
+the readout chip. For each assembly under test, the global pedestal shift of each frame was
+determined by measuring the difference of the five outermost pixel rows and columns from the
+previously obtained average pedestal value. The obtained correction value was then subtracted
+from the pedestal corrected image for all pixels.
+•Gain correction:the output of each frame is given in units of ADU. In order to convert the
+outputintokeVandtofurthermoretakeintoaccountvariationsofthegainofthedifferentpixels,
+the gain of each pixel is measured by illuminating the sensor with monochromatic X-rays. The
+photo peak position of the pedestal corrected monochromatic spectra (in ADU) was fitted for
+each pixel. By knowing the photon energies, a pixelwise conversion map from ADU into keV,
+called gain map, can be calculated. The pedestal corrected values of a pixel in ADU, giving the
+net collected charge of each pixel without contributions from dark/leakage current, are divided
+by the gain value to obtain the measured photo signal in units of keV.
+The previously described process of gain correction applies to pixels in high gain ‘G0’. In the
+dynamic gain switching case, for pixels in medium gain ‘G1’ or low gain ‘G2’, the gain value of each
+pixelwascalculatedbytakingthehighgainvaluedividedbythenominalgainratiosof G0/G1 = 28.6
+(gainratio: G0/G1)and G0/G2 = 364.0(gainratio: G0/G2)[ 21]. Incaseofusingthefixedgainmode,
+theaforementionedgainratiosneedtobedividedbytheCDSgainof1.66. Aspecificcalibrationofthe
+mediumandlowgainhasnotbeenperformed. Asmeasurementshaveshownthatthetemperaturehasa
+negligibleinfluenceonthepixelgain,bydefaultcalibrationdatasetsacquiredat +15◦Chavebeenused.
+– 6 –
+
+--- PAGE 8 ---
+2025 JINST 20 P01031
+Each frame was treated as mentioned above, providing frames with the net photo induced signal
+in units of keV. For each frame, the average signal of each ROI was calculated by summing up the
+signals of all pixels in the ROI and then dividing the value by the number of pixels.
+A MYTHEN strip detector was used to independently monitor the intensity of the incoming
+photon flux to be able to separate effects of varying incoming beam intensity from fluctuations of
+the measured signal in the sensor e.g., due to polarization effects. The MYTHEN strip detector with
+silicon sensor was placed out of the direct beam to measure air-scattered photons. MYTHEN is a
+single photon counting strip detector. The counting threshold was set to 50% of the incoming photon
+energy of 20keV and the number of photons was continuously counted in acquisition windows of
+10 seconds. As the MYTHEN detector sits outside of the beam, the number of counts obtained by
+the MYTHEN detector do not represent the absolute photon flux. However, the photon counts from
+MYTHEN provide two important pieces of information: first, the photon counts from MYTHEN were
+used to monitor the signal stability of the beam during the measurement (with a 10 second precision).
+Secondly, it provides a relative measurement of the eight different illumination settings by calculating
+the ratios of the photon counts between the different intensities. These ratios were then taken to obtain
+the absolute photon fluxes by using the two lowest intensities measured by the JUNGFRAU module in
+the direct beam as absolute intensity measurement. The two lowest intensities were chosen such that
+the JUNGFRAU detector under test could be operated in high gain (G0), thus being able to provide
+precise values of the incoming photon flux. Additionally, the lowest photon fluxes ranged in the order
+of 106–107ph/mm2·s, where no polarization effects were expected. If a silicon sensor was available
+in the hybrid module, the information of the silicon sensor (in direct beam) was used for the flux
+determination, considering the reduced absorption efficiency of the silicon sensor.
+3 Results
+As explained in previous sections, for each sensor under test, eight different signal transients (with
+photon fluxes between∼ 5 × 106ph per mm2·s and∼ 5 × 1010ph per mm2·s) have been recorded.
+Typically, the integration time of the JUNGFRAU readout chip was set to 5.0μs. However, in case
+of sensors with high dark current like GaAs:Cr or Ohmic CdTe the integration time was reduced
+at +30◦C to 2.0μs to retain enough dynamic range. It is worth noting that the integration times
+are relatively long compared to the charge collection times which are in the order of few tens of ns
+and the preamplifier settling time of 500ns. Therefore, in case of a partial shielding of the electric
+field in the sensor due to polarization, which would yield in prolongated charge collection times,
+most of the charge carriers would still be collected. In case of a single photon counting detector, the
+number of counts would decrease as the signal induction of the charge carriers would be extended
+in time, causing longer pulses with a reduced signal height.
+The signal stability of the measured signal can be plotted as a function of time after opening
+the beam shutter. The average measured signal in keV per pixel was converted into the respective
+photon flux per mm2 and second (ph/(mm2·s)) for each exposure. As the detector was operated at a
+rate of 200Hz, the temporal resolution was 5ms. The conversion allows to compare the measured
+photon flux with the incoming photon flux (which is measured independently by a photon counting
+strip detector in scatter mode, compare section 3.4).
+For each assembly under test, the dependence of measured signal as function of the incoming
+photon flux was plotted and fitted with a linear for times of 10ms, 100ms, 1s, 10s, 100s and 1000s
+– 7 –
+
+--- PAGE 9 ---
+2025 JINST 20 P01031
+after opening of the beam shutter. Additionally, the robustness of the charge collection over the
+whole irradiation time was determined by subdividing the irradiation phases into 1-second-long
+intervals. The 5ms long measurements within these 1-second-long intervals were averaged, then
+the dependence of measured signal to incoming photon flux fitted with a linear function. The linear
+fits have been applied up to a maximum incoming photon flux of around1.0 × 1010ph/(mm2·s), up
+to which the response of the detector is linear.
+From these linear fits, two conclusions can be drawn: (1) the linear relationship remains
+stable over time, indicating that charge collection is robust for photon fluxes up to approximately
+1.0 × 1010ph/(mm2·s), and (2) signal loss occurs for photon fluxes exceeding3.0 × 1010ph/(mm2·s).
+3.1 High-flux type CdZnTe sensors
+High-flux type CdZnTe sensors from Redlen are optimized for high photon flux applications by better
+matching the charge transport properties of electrons and holes compared to the more traditional
+spectroscopic type CdZnTe sensors [15, 16]. Compared to spectroscopic CdZnTe, where the ratio
+between the electron and the hole𝜇 × τ product is roughly 500, this ratio is reduced to 3.8 for
+high-flux type CdZnTe, which is mainly achieved by reducing the electron lifetime in favor of the
+hole lifetime which is increased.
+High-flux type CdZnTe performs close to the ideal behavior: throughout the irradiation time
+of 20 minutes, the measured signals remain stable (figure 3) for incoming photon fluxes between
+6.7 × 106ph/(mm2·s) and 3.3 × 1010ph/(mm2·s).
+Figure3. HighfluxtypeCdZnTesensor(JF1.1—Module-ID343): averagesignalperpixelinkeVofthedifferent
+ROIs which have been illuminated with photon fluxes between6.7 × 106ph/(mm2·s) and3.3 × 1010ph/(mm2·s)
+at a temperature of𝑇 = +15◦C.
+– 8 –
+
+--- PAGE 10 ---
+2025 JINST 20 P01031
+The dependence of measured photon flux as function of the incoming photon flux is linear, as
+depicted in figure 4 (left). The slight roll-off starting at photon fluxes above4 × 1010ph/(mm2·s) can
+be partly assigned to non-linearites as the dynamic range starts to saturate. For high-flux type CdZnTe,
+the measured signal drops to 94% and 85% (of the extrapolated signal) for incoming photon fluxes
+of 3.0 × 1010ph/(mm2·s) and5.0 × 1010ph/(mm2·s), respectively, at temperatures of𝑇 = +15◦C. It
+seems that the signal loss is slightly more pronounced at higher temperatures (table 2). The margin
+of error for the extrapolated measured signal is estimated to be between 5–10% due to the complex
+nature of the analysis, involving various cross calibration steps.
+Theslopesandoffsetsofthelinearfits,whichwereextractedfromtheaveragedsignalof1second
+of illumination, are close to the ideal values (𝑚ideal = 1, 𝑐ideal = 0) (figure 4, center/right). The slight
+deviations likely arise from uncertainties of the gain calibration. Remarkably, the fitting parameters
+show almost no dependence on temperature, suggesting that the charge collection in the sensor is
+highly effective and very little trapping/detrapping is taking place.
+Figure 4.CdZnTe high flux type sensor (𝑇 = +15◦C) (left) Measured photon flux as a function of the incoming
+photon flux for different time stamps after opening of the beam shutter. (center/right) Linear fits of the
+dependence of the measured photon flux vs. incoming photon flux of the averaged values over 1 second of
+illumination. The slopes (m) and offsets (c) are constant over time as well as temperature. The deviation from
+the ideal values (𝑚ideal = 1, 𝑐ideal = 0) is likely due to calibration uncertainties.
+3.2 Spectroscopic type CdZnTe sensors
+Spectroscopic type CdZnTe also shows promising characteristics regarding their signal stability,
+when irradiated with photon fluxes up to4.3 × 1010ph/(mm2·s). Similarly to high-flux CdZnTe, the
+transients indicate a robust measurement of the incoming photons without any signs of a collapse
+of the electric field (figure 5).
+The incoming photons are reliably measured up to photon fluxes in the1010ph/(mm2·s) range,
+the extrapolated measured signal for photon fluxes above1 × 1010ph/(mm2·s) show similar values as
+for high-flux CdZnTe. For a photon flux of3.0 × 1010ph/(mm2·s) a measured signal of 102% was
+estimated, which drops down to 86% for photon fluxes around5.0 × 1010ph/(mm2·s) at+15◦C.
+The fit parameters of the linear fit remain constant throughout the 20 minutes of irradiation with a
+slightly stronger temperature dependence compared to the high-flux CdZnTe.
+– 9 –
+
+--- PAGE 11 ---
+2025 JINST 20 P01031
+Figure 5. Spectroscopic type CdZnTe sensor (JF1.1 — Module-ID 401): average signal per pixel in keV
+of the different ROIs which have been illuminated with photon fluxes between8.9 × 106ph/(mm2·s) and
+4.3 × 1010ph/(mm2·s) at a temperature of𝑇 = +15◦C.
+Figure 6.Spectroscopic type CdZnTe sensor (𝑇 = +15◦C) (left) Measured photon flux as a function of the
+incoming photon flux for different time stamps after opening of the beam shutter. (center/right) Linear fits of
+the dependence of the measured photon flux vs. incoming photon flux of the averaged values over 1 second of
+illumination. The slopes (𝑚) and offsets (𝑐) are constant over time as well as temperature. The deviation from
+the ideal values (𝑚ideal = 1, 𝑐ideal = 0) is likely due to calibration uncertainties.
+3.3 Chromium-compensated GaAs
+Another promising, albeit with lower stopping power, high-Z sensor material for high-flux application
+is chromium-compensated GaAs, which has been intensively studied by the PSD Detector Group
+in the previous years [11, 12, 22].
+– 10 –
+
+--- PAGE 12 ---
+2025 JINST 20 P01031
+Compared to CdZnTe, the charge transport properties of GaAs:Cr are inferior, especially the low
+hole 𝜇 × τ product which is two to three orders of magnitude less and in the order of< 10−6cm2/V,
+causing negative signals in the vicinity of the collecting electrode due to incomplete positive charge
+collection. Another obvious disadvantage is the reduced stopping power of GaAs:Cr compared to
+Cd(Zn)Te due to its lower atomic number.
+Currently, the biggest advantage of using GaAs:Cr is the commercial availability of 4-inch
+wafers allowing to produce full-scale sensors with a dimension of8 × 4cm2. Being the standard
+size of modules for all detectors produced by the PSD Detector Group, they can be easily integrated
+using existing mechanics. If the sensor quality permits, they could be used in areas with a high
+photon flux at moderately high photon energies (12–40keV) instead of silicon sensors to prevent
+radiation damage to the readout chips.
+During the measurement campaign, eight different GaAs:Cr sensors have been tested, six used
+LEC-grown GaAs wafers as base material, two were VGF-grown material. The general behavior of all
+GaAs:Cr sensors was similar; therefore this behavior will be shown exemplarily for a LEC-grown
+GaAs:Crsensorfromthe2018productionrun,mountedonaJUNGFRAU1.1readoutchip(Module-ID
+357). Figure 7 shows how the sensor handles continuous illumination of 20keV photons in a range
+between 1.45 × 107ph/(mm2·s) and6.2 × 1010ph/(mm2·s) at a temperature of+15◦C. There is no
+obvious drop of the measured signal which remains stable during the 20 minutes of irradiation.
+The dependence of measured signal as function of the incoming photon flux is shown in figure 8,
+left. For photon fluxes up to< 1 × 1010ph/(mm2·s), the dependence is linear, while for higher
+photon fluxes, the dependence becomes sublinear. Remarkably, the reduction of measured signal
+appears to be an (quasi-) instantaneous effect, as no significant reduction over time of the measured
+signal for high photon fluxes is visible in figure 7. The general trend among all GaAs:Cr sensors
+Figure 7.Chromium-compensated GaAs (2018) (JF1.1 — Module-ID 357): average signal per pixel in keV
+of the different ROIs which have been illuminated with photon fluxes between1.45 × 107ph/(mm2·s) and
+6.2 × 1010ph/(mm2·s) at a temperature of𝑇 = +15◦C.
+– 11 –
+
+--- PAGE 13 ---
+2025 JINST 20 P01031
+indicates that the reduction of the measured signal is more pronounced compared to CdZnTe sensors
+(of both kinds). Moreover, there is a clearly visible difference of the linear fit parameters as function
+of the temperature, which was less apparent in case of CdZnTe (figure 8, center/right). It takes
+few seconds after the opening of the beam shutter at temperatures of0◦C and+15◦C to reach their
+equilibrium state. It is worthwhile to note that the deviation from the equilibrium state is significantly
+more pronounced for the0◦C dataset compared to the+15◦C dataset, while the+30◦C is stable
+from the beginning of the measurement.
+AsthetemperaturedependenceofthelinearfitparametersiscommonforallGaAs:Crsensors,but
+hardly present in CdZnTe, presumably the higher detrapping rate at elevated temperature is beneficial
+for the detector performance. However, due to the high dark current of GaAs:Cr sensors, operation
+at reduced temperatures is required, ideally below+15◦C, for using them with charge-integrating
+readout schemes [12]. On the other hand, the higher dark current at elevated temperature will be
+easily tolerated by single photon counting readout chips, therefore higher sensor temperatures might
+be preferable for a stable detector performance.
+Figure 8.GaAs:Cr from 2018 (JF1.1 — Module-ID 357): (left) Measured photon flux as a function of the
+incoming photon flux for different time stamps after opening of the beam shutter. (center/right) Linear fits of
+the dependence of the measured photon flux vs. incoming photon flux of the averaged values over 1 second
+of illumination.
+3.4 CdTe (electron collecting Schottky type)
+Electron collecting Schottky type CdTe sensors were also tested,the results of one sensor are depicted
+infigure9asanexampleofthebehaviourtypicalofthesesensors. Thetransientsover1000secondsof
+irradiationshowthatthemeasuredsignalsstronglyfluctuateovertimewhichwasageneralobservation
+in Schottky type CdTe sensors. However, in the log representation of the time axis (figure 9, right
+column), the signal in the first 100ms after opening the beam shutter is stable and propotional to the
+incoming photon flux which might allow for measurements at pulsed sources like FELs.
+In order to exclude a potential influence of bias-induced polarization effects, the measurements
+were performed with a continuously bias sensor (as it was the case for all other measurements) and
+with a refreshed sensor bias (30 seconds before each irradiation phase) [23]. However, the general
+observation of strongly fluctuating measured signals over time did not change.
+– 12 –
+
+--- PAGE 14 ---
+2025 JINST 20 P01031
+Figure 9.Electron collecting Schottky type CdTe (JF1.0 — Module-ID 295): transients of the average signal
+per pixel in keV of the different ROIs which have been illuminated with photon fluxes in the range between
+107ph/(mm2·s) and ≈ 5 · 1010ph/(mm2·s) at temperatures of𝑇 = +15◦C. In the top row, the sensor was
+continuously biased. In the bottom row, the bias has been refreshed before each irradiation phase to remove
+potential bias induced polarization effects which might occur in electron collection Schottky CdTe sensors.
+3.5 CdTe (Quasi-ohmic type)
+The transients of quasi-ohmic CdTe sensors exhibit a characteristic increase of the measured signal
+which starts to set in after few seconds of stable operation while continuously irradiated (figure 10).
+During irradiation, the signal never breaks down.
+The fit parameters are closer to the ideal values (𝑚 = 1, 𝑐 = 0) at the beginning of the irradiation,
+as especially the strong increase of measured signal at low intensities causes a significant deviation
+of the ideal linear response of the sensor. Moreover, a strong temperature dependence can be seen,
+it is unclear whether the fit parameters would converge to the same value after an extended period
+of time or whether a refresh of the sensor bias would have reverted the sensor performance to its
+behavior at the beginning of the irradiation.
+4 Summary and conclusions
+In conclusion, in none of the investigated regions of the various high-Z sensors the charge collection
+wasseverelyhamperedcausingasignificantbreak-downofthemeasuredsignalasitwouldbeexpected
+in case of a sensor polarization [8, 9].
+– 13 –
+
+--- PAGE 15 ---
+2025 JINST 20 P01031
+Figure 10.Quasi-ohmic type CdTe (JF1.0 — Module-ID 238): average signal per pixel in keV of the different
+ROIs which have been illuminated with photon fluxes between1.1 × 107ph/(mm2·s) and6.9 × 1010ph/(mm2·s)
+at a temperature of𝑇 = +15◦C.
+Figure 11.Quasi-ohmic type CdTe (JF1.0 — Module-ID 238): (left) Measured photon flux as a function of the
+incoming photon flux for different time stamps after opening of the beam shutter. (center/right) Linear fits of
+the dependence of the measured photon flux vs. incoming photon flux of the averaged values over 1 second
+of illumination.
+However, CdTe sensors of either kind, electron collecting Schottky type and quasi-ohmic type,
+suffer from disturbed charge collection during phases of continuous illumination creating instable
+signal transients. Potentially, CdTe based sensors might be used in applications with short photon
+pulses, but this would require further tests at pulsed sources.
+Both, chromium compensated GaAs and CdZnTe (high-flux type and spectroscopic-type),
+performed well during the high-flux illumination tests, while the latter performed better for photon
+fluxes above3.0 × 1010ph/(mm2·s) (see table 3). It is noteworthy that the signal loss for photon fluxes
+around 5 × 1010ph/(mm2·s) is already close to the limit of the linear dynamic range and therefore
+part of the observed signal loss is due to a beginning saturation of the readout buffers.
+The performance of the CdZnTe sensors regarding signal stability was very close to silicon
+sensors which are still considered the state of the art regarding their dynamic behavior. Remarkably,
+the 320–450μm thick silicon sensors which were used for reference measurements suffered severely
+from the induced radiation damage during the irradiation tests, while the CdZnTe (but also GaAs:Cr)
+sensors performance was unaltered.
+– 14 –
+
+--- PAGE 16 ---
+2025 JINST 20 P01031
+Table 3. Signal loss of measured signal from linearly extrapolated value for incoming photon fluxes of
+3.0 × 1010ph/(mm2·s) and5.0 × 1010ph/(mm2·s) (which is close to the limit of the linear dynamic range).
+Module-ID Sensor Bias voltage Measured signal (%)
+at 3.0 × 1010ph/mm2·s
+Measured signal (%)
+at 5.0 × 1010ph/mm2·s
+0◦C 15◦C 30◦C 0◦C 15◦C 30◦C
+#016 GaAs:Cr (2016) - LEC −300V 89 84
+#077 GaAs:Cr (2017) - LEC −300V 45 35
+#238 GaAs:Cr (2017) - LEC −300V 79 72 66 63 61 66
+#237 GaAs:Cr (2018) - LEC −300V 92 74 79 62 63 72
+#357 GaAs:Cr (2018) - LEC −300V 91 76 84 79 69 72
+#295 GaAs:Cr (2019) - LEC −300V 81 67 60 50 48 50
+#528C4 GaAs:Cr(2021) - VGF −300V 99 87 104 87 77 80
+#528C7 GaAs:Cr(2021) - VGF −300V 95 82 92 84 71 59
+#528C7 GaAs:Cr(2021) - VGF −450V 93 108 115 83 89 93
+#343 CdZnTe (High-flux) −500V 96 94 93 85 85 79
+#401 CdZnTe (Spectroscopic) −500V 102 102 97 87 86 81
+Acknowledgments
+The authors would like to thank Nicola Casati and Dominik Meister from the MS beamline at the
+SLS for their outstanding support during the beamtimes.
+K.A.PatonhasreceivedfundingfromtheEuropeanUnion’sHorizon2020researchandinnovation
+program under the Marie Skłodovska-Curie grant agreement no. 884104 (PSI-FELLOW-III-3i).
+References
+[1] M.J. Berger et al.,XCOM: Photon Cross Section Database (Version 1.5); National Institute of Standards
+and Technology, http://physics.nist.gov/xcom.
+[2] D. Pennicard et al.,The LAMBDA photon-counting pixel detector and high-Z sensor development,
+2014 JINST 9 C12026.
+[3] D. Greiffenberg,Charakterisierung von CdTe-Medipix2-Pixeldetektoren, Ph.D. thesis,
+Albert-Ludwigs-University, Freiburg, Germany (2010).
+[4] P.J. Sellin,Recent advances in compound semiconductor radiation detectors, Nucl. Instrum. Meth. A513
+(2003) 332.
+[5] M. Fiederle et al.,Overview of GaAs und CdTe Pixel Detectors Using Medipix Electronics,
+Crystal Research and Technology55(2020) 2000021.
+[6] P. Willmott, U. Flechsig and T. Schmidt, eds.,SLS2.0 Beamline conceptual design report,
+https://www.psi.ch/de/media/63347/download?attachment.
+[7] V. Astromskas, E.N. Gimenez, A. Lohstroh and N. Tartoni,Evaluation of Polarization Effects of
+e-Collection Schottky CdTe Medipix3RX Hybrid Pixel Detector,IEEE Trans. Nucl. Sci.63(2016) 252.
+[8] A. Cola and I. Farella,The polarization mechanism in CdTe Schottky detectors,Appl. Phys. Lett.94(2009)
+102113.
+[9] D. Greiffenberg et al.,Investigations of the high flux behavior of CdTe-Medipix2 assemblies at the
+synchrotron ANKA, in the proceedings of the2010 IEEE Nuclear Science Symposium, Medical Imaging
+Conference, and 17th Room Temperature Semiconductor Detectors Workshop, Knoxville, TN, U.S.A.,
+October 30–November 6 (2010) [DOI:10.1109/NSSMIC.2010.5874501].
+– 15 –
+
+--- PAGE 17 ---
+2025 JINST 20 P01031
+[10] M.C. Veale et al.,Chromium compensated gallium arsenide detectors for X-ray and𝛾-ray spectroscopic
+imaging,Nucl. Instrum. Meth. A752 (2014) 6.
+[11] D. Greiffenberg et al.,Characterization of GaAs:Cr sensors using the charge-integrating JUNGFRAU
+readout chip, 2019JINST 14 P05020.
+[12] D. Greiffenberg et al.,Characterization of Chromium Compensated GaAs Sensors with the
+Charge-Integrating JUNGFRAU Readout Chip by Means of a Highly Collimated Pencil Beam, Sensors21
+(2021) 1550.
+[13] https://www.acrorad.co.jp.
+[14] https://www.redlen.com.
+[15] S.M. Gruner, G. Carini and A. Miceli,Considerations about future hard x-ray area detectors, Front. Phys.
+11(2023) 1285821.
+[16] B. Thomas et al.,Characterisation of Redlen high-flux CdZnTe, 2017JINST 12C12045.
+[17] A. Mozzanica et al.,Characterization results of the JUNGFRAU full scale readout ASIC, 2016JINST 11
+C02047.
+[18] https:/advafab.com.
+[19] A. Mozzanica et al.,The JUNGFRAU Detector for Applications at Synchrotron Light Sources and XFELs,
+Synchrotron Radiat. News31 (2018) 16.
+[20] P.R. Willmott et al.,The Materials Science beamline upgrade at the Swiss Light Source, J. Synchrotron
+Radiat. 20(2013) 667.
+[21] S. Redford et al.,First full dynamic range calibration of the JUNGFRAU photon detector, 2018JINST 13
+C01027.
+[22] S. Chiriotti et al.,High-spatial resolution measurements with a GaAs:Cr sensor using the charge
+integrating MÖNCH detector with a pixel pitch of 25μm, 2022JINST 17P04007.
+[23] M. Meyer et al.,Observation of radiation damage in CdTe Schottky sensors created by 20keV photons,
+2022 JINST 17P06035.
+– 16 –

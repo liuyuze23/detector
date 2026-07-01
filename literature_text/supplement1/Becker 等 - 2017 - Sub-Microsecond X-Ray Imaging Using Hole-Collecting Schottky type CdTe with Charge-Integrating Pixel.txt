@@ -1,0 +1,790 @@
+
+
+--- PAGE 1 ---
+Prepared for submission to JINST
+Sub-Microsecond X-Ray Imaging Using Hole-Collecting
+Schottky type CdTe with Charge-Integrating Pixel Array
+Detectors
+Julian Becker,a,b Mark W. Tate,a Katherine S. Shanks, a Hugh T. Philipp, a Joel T. Weiss, a,b
+Prafull Purohit, a Darol Chamberlain, b and Sol M. Gruner a,b,c,1
+aLaboratory of Atomic and Solid State Physics, Cornell University, Ithaca, NY 14853,USA
+bCornell High Energy Synchrotron Source (CHESS), Cornell University, Ithaca, NY 14853, USA
+cKavli Institute at Cornell for Nanoscale Science, Cornell University, Ithaca, NY 14853, USA
+E-mail: smg26@tornell.euu
+Abstract: CdTe is increasingly being used as the x-ray sensing material in imaging pixel array
+detectorsforx-rays,generallyabove20keV,wheresiliconsensorsbecomeunacceptablytransparent.
+UnfortunatelyCdTesuﬀersfrompolarization,whichcanaltertheresponseofthematerialovertime
+and with accumulated dose. Most prior studies used long integration times or CdTe that was not
+of the hole-collecting Schottky type. We investigated the temporal response of hole-collecting
+Schottky type CdTe sensors on timescales ranging from tens of nanoseconds to several seconds.
+We found that the material shows signal persistence on the timescale of hundreds of milliseconds
+attributed to the detrapping of a shallow trap, and additional persistence on sub-microsecond
+timescales after polarization. The results show that this type of CdTe can be used for time resolved
+studies down to approximately 100 ns. However quantitative interpretation of the signal requires
+careful attention to bias voltages, polarization and exposure history.
+Keywords: Hybrid pixel detector, integrating detector, Hi-Z
+1Corresponding author
+arXiv:1703.02106v2  [physics.ins-det]  15 May 2017
+
+--- PAGE 2 ---
+Contents
+1 Introduction 1
+1.1 Detector systems 2
+1.2 Relevant material properties of CdTe 2
+2 Basic testing 3
+2.1 Eﬀects of changing the bias voltage 3
+2.2 Persistence on millisecond timescales 4
+2.3 Defect characteristics 5
+3 Charge transport measurements using a synchrotron source 7
+4 Polarization and persistence after high rate illumination 9
+4.1 Mathematical formalism 12
+4.2 Measurements 13
+5 Conclusions 16
+1 Introduction
+Pixel Array Detectors (PADs) have been used for x-ray science since the late 90s [1], and have
+arguablychangedthedetectorlandscapeatsynchrotronsources. OneofthecoreideasofPADsisto
+separate the sensor, which detects radiation, from the signal processing by introducing two distinct
+layers,keepingtheApplicationSpeciﬁcIntegratedCircuit(ASIC)apartfromthesensitivevolume.
+This approach has the advantage that sensor material and read out can be optimized independently.
+To date silicon is the most commonly used sensor material. Silicon sensors are readily available at
+low cost with excellent quality, however its stopping power for x-rays above approximately 20 keV
+is diminishing, which greatly reduces the probability to detect individual high energy photons.
+At energies above 20 keV other approaches exist [2], each having its own advantages and
+disadvantages. Cadmium Telluride (CdTe) is considered to be one of the most promising sensor
+materials for high energy application. Its quality and availability has increased signiﬁcantly [3, 4]
+and scientiﬁc x-ray imagers with CdTe sensors are available from several commercial vendors.
+Cornell University has developed multiple detector systems in the past (see below for details). For
+the present study we replaced the standard 500µm thick silicon sensors with 750µm thick CdTe
+sensors in order to enable experiments at higher x-ray energies [5]. Using CdTe sensors increases
+the quantum eﬃciency dramatically above 15 keV compared to the standard silicon sensors, as
+shown in Figure 1.
+Characterization of the static behavior of the resultant CdTe PADs has been previously pub-
+lished [5]. In this publication we present studies of the dynamic response of the CdTe PADs.
+– 1 –
+
+--- PAGE 3 ---
+Figure 1: Quantum eﬃciency of 750µm CdTe and 500µm silicon sensors.
+We performed the characterization with a range of tests using lab sources as well as synchrotron
+radiation from the Cornell High Energy Synchrotron Source (CHESS) and the Advanced Photon
+Source (APS) at Argonne National Lab.
+1.1 Detector systems
+Cornell University has developed several ASICs for charge integrating detectors using silicon
+sensors. ASICs developed for the Keck PAD detector [6–9] and the MM-PAD detector [10–12]
+havebeenhybridizedwithhole-collectingSchottkytypeCdTesensorsinsteadofsiliconsensorsfor
+this study. Both detectors (and their ASICs) feature 128×128 pixels of (150µm)2 per chip.
+The MM-PAD ASIC uses an in-pixel charge removal circuit to extend its dynamic range by
+manyordersofmagnitude, maintainingsinglex-raysensitivity[13,14]whileachievingadynamic
+range of> 4×107 8 keV x-rays/pixel/frame in addition to framing at> 1 kHz. This has proven to
+be very useful for coherent x-ray imaging [15].
+The Keck PAD ASIC features an array of conﬁgurable capacitors in each pixel that can be
+employed in multiple ways. The burst mode operation is most relevant for this study, as it allows
+therapidacquisitionofupto8distinctframesatupto10MHzframerateontoanin-pixelcapacitor
+array and readout of these stored frames at approximately 1 kHz frame rate.
+1.2 Relevant material properties of CdTe
+TheCdTematerialusedforthesensorinvestigatedhereis750 µmthickandwasproducedbyAcrorad
+Co., Ltd., Japan [16]. The sensors are In/Pt Schottky type with approximate layer thicknesses
+indicated in Table 1. The ohmic (Pt) contact was pixellated and connected to the ASIC by bump
+bondstocollectholes. Fabricatingthesensorswithohmiccontacts(Ptonbothsides)orpixellating
+the other contact was considered, but abandoned due to our requirements of hole collection and
+low leakage currents. Bump deposition and ﬂip-chip bonding was performed by Oy Ajat Ltd.,
+Finland [17]. Placement and gluing of the modules onto heat sinks was performed in-house and
+wire-bonding of the ASIC was done by Majelac Technologies LLC, USA [18]. The HV wire used
+– 2 –
+
+--- PAGE 4 ---
+Material Ti In CdTe Pt Au Ni Au AlN
+Thickness 30 nm 300 nm 750 µm 50 nm 30 nm 50 nm 80 nm 100 nm
+Table 1: Approximate layer thicknesses of the CdTe sensor. X-rays enter the sensor from the
+titanium passivated indium electrode.
+to bias the sensor was attached in-house using conductive silver paint (Leitsilber 200 from [19]).
+All adhesives were cured at room temperature.
+Using standard lab sources and low dose rate experiments at synchrotron light sources, the
+detectorsystemsusedinthisstudyhavebeencharacterizedpreviously[5],withtheexpectedﬁnding
+that the CdTe systems polarize after a given dose and/or time. Polarization manifests as changes of
+morethanonedetectorproperty. Typicaleﬀectsincludereductionofthecollectedchargecompared
+totheunpolarizedstateandthedegradationoftheresolution. Theseeﬀectshavebeencharacterized
+and reset schemes to remove these eﬀects were developed.
+2 Basic testing
+The measurements presented in this section were performed using an MM-PAD detector, to make
+use of the large dynamic range, with a freshly reset1, unpolarized CdTe sensor. All measurements
+were accompanied by corresponding measurements with a silicon version of the detector next to
+the version with CdTe sensor for comparison and to exclude any eﬀects from the x-ray tube. The
+overall gain of the MM-PAD system with CdTe sensor is approximately 0.63 keV per analog to
+digital unit (ADU) and varies with bias voltage and operating temperature as outlined in [5].
+MM-PADdetectorsarecurrentlylimitedtoamaximumbiasvoltageof300Vbythesupporting
+electronics, which were designed for use with silicon sensors at≤ 200 V.
+2.1 Eﬀects of changing the bias voltage
+Resetting the sensor after polarization involves a change of the detector bias voltage. To measure
+thesensorresponsetobiasvoltagechangeswetakeframesat100Hz(9.14msintegrationtimeper
+image plus 0.86 ms for readout) for a total duration of 10 seconds. Data acquisition starts close to
+the end of the reset phase (-5 V applied to HV side of the sensor). Applying the bias to the sensor
+is done in a gradual manner, utilizing the current limiting functionality of the employed Keithley
+2410 source meter. This results in a smooth ramping of the high voltage with a maximum current
+of105 µA.Theexactdurationoframpingthebiasvoltagedependsontemperatureandonthetarget
+bias and is about 1 s for 100 V, 1.7 s for 200 V and 2.2 s for 300 V ﬁnal bias voltage.
+Figure 2 shows the settling of the sensor response after the reset and the associated voltage
+ramp. Each data point is an average of the central part of each image, i.e., a rim containing the 15
+outermostrowsandcolumnswasexcluded. ThedisplayedADUsareoﬀsetcorrectedwithpedestal
+values determined pre-reset. Figure 2a shows a diﬀerent starting point of the settling depending on
+the duration of the bias ramp. All settling curves are generally of similar shape and can be ﬁt to a
+power law decay. Although not obvious for all displayed data, the sensor eventually settles to the
+pre-reset values.
+1We followed the procedure outlines in [5], applying a forward bias of 5 V for 1 minute to reset the diode.
+– 3 –
+
+--- PAGE 5 ---
+(a)Settlingofthesensorafterresetandbiasramp.
+Data for 100 V, 200 V and 300 V are marked by
+dash-dotted, solidanddashedlines, respectively.
+Sensor temperature is indicated by color. Black
+lines show ﬁts to the corresponding curves.
+(b) Settling time of the sensor as a function of
+ﬁnal bias voltage and temperature. The settling
+time was calculated as the time required for the
+signal to settle to 1% of the initial value.
+Figure 2: Response transients and settling time after bias ramps to diﬀerent voltages at diﬀerent
+sensor temperatures.
+As motivated in [5], we have chosen 0 C as the operating point of our detector. Figure 2b
+showstheresponsetransientsandsettlingtimefordiﬀerentrampvoltagesandsensortemperatures.
+Sincethesettlingsignalcouldbedescribedbyapowerlaw,wedeﬁnedthesettlingtimeasthetime
+required for the signal to decay to 1% of a given starting point. A general trend of faster settling
+at lower sensor temperatures and higher voltages is observed. The sensor response settles within
+10satlowtemperatures,at20Cthesettlingtimeincreasestoaboutoneminuteat100Vbias. The
+reason of this huge increase in settling time and its apparent inconsistency as a function of voltage
+remains unresolved at this point, but could be related to the increased dark current of the sensor at
+this temperature.
+The observed settling times for the investigated Schottky material are much faster than the
+commonly suggested settling wait of 30 – 60 minutes after applying a bias voltage to ohmic
+material [20].
+2.2 Persistence on millisecond timescales
+The persistence of the sensor signal after x-ray illumination was studied with a freshly reset,
+unpolarized sensor and a lab x-ray tube. We deﬁne persistence as a signal above background that
+is recorded immediately after, but in absence of, x-ray illumination. We used a 50 W silver (Ag)
+anode x-ray tube (Trufocus TCM-5000M) at an acceleration voltage of 47 kV in close proximity
+to the detector (about 5 cm). The spectrum was ﬁltered by 1 mm aluminum and the dose rate on
+the detector was 3.3 Gy/min and 2.0 Gy/min at 0.858 mA and 0.444 mA tube current, respectively.
+The tube is mounted to a shutter assembly that opens or closes by mechanically moving a tungsten
+disk into the beam. The shutter operates in less than 10 ms, however mechanical vibrations cause
+systematic eﬀects for about 100 ms after the shutter closes and this time was therefore excluded
+from the data analysis.
+– 4 –
+
+--- PAGE 6 ---
+(a)Signalremainingasafunctionoftemperature
+and corresponding exponential decay ﬁts (black
+lines) at 300 V bias and 0.858 mA x-ray tube
+current. Decaycurvesfor0.444mAtubecurrent
+are similar in amplitude and decay constant.
+(b) Decay constant of the persistence as a func-
+tion of bias voltage and temperature. Solid and
+dashed lines indicate data taken with 0.858 mA
+and 0.444 mA x-ray tube current, respectively.
+Figure 3: Persistence of the signal in response to x-rays after closing the shutter.
+Forcomparison,wemeasuredtheresponseofasilicondiodeafterclosingtheshutterandcould
+not observe a signal above background.
+At an x-ray tube current of 0.858 mA the response of the CdTe diode was measured for
+illumination times of 1 s, 10 s and 100 s. We obtained identical decay curves in each case, leading
+to the conclusion that the cause of the persistence saturates, possibly by reaching an equilibrium
+state between trapping and detrapping of the involved traps.
+Thedecayofthepersistentsignal, I(t),wasassumedtobecasuedbyasingleshallowtraplevel
+and ﬁt to a simple exponential decay:
+I(t) = Ae− t
+τ + b (2.1)
+where I(t) is the sensor response after the shutter closes,A is an amplitude constant,t is the
+time after closing of the shutter,τ is the decay time constant andb is an oﬀset introduced by the
+polarization of the sensor.
+Figure3showsselecteddecaytransientsandthedecaytimeconstantsobtainedfromtheﬁtsto
+allmeasureddatarangingfromapproximately150msat-30Ctoabout90msat+20C.Thedecay
+constant does not clearly indicate any dependence on applied bias or x-ray tube current.
+2.3 Defect characteristics
+The temperature dependence observed for the decay constant,τ, follows the Arrhenius equation,
+1/τ = C exp(−Ea/kbT), with C being an arbitrary constant,kb Boltzman’s constant andT the
+absolute temperature. The trap activation energy,Ea, is determined from a ﬁt to the data and has a
+value of 59.3± 7.2 meV, as shown in Figure 4. A similar defect level has been observed in the past
+in similar CdTe material [21].
+– 5 –
+
+--- PAGE 7 ---
+Figure 4: Logarithm of the inverse decay constant as a function of the inverse temperature. The
+data are consistent with an activation energy of 59.3 meV.
+We observe that the absolute magnitude of the persistence signal, deﬁned by the amplitude
+constant, AinEquation2.1,isindependentofilluminationtime(fortimes ≥ 1s),tubecurrent 2 and
+temperature, but depends on the applied voltage. This indicates that the total persistence signal is
+limited by the number of ﬁlled traps, with the equilibrium level of trapping and detrapping being a
+function of the applied voltage.
+Integrating the ﬁt to the measurement data we are also able to estimate how many traps
+were ﬁlled at the moment the shutter closes. This value is a function of the applied bias and is
+1.04× 109 cm−3± 8%, 1.78× 109 cm−3± 6% and 2.16× 109 cm−3± 10% at 100, 200 and
+300 V, respectively. For this we assumed that each trap is only trapping a single hole, and used
+the average deposited energy per created electron-hole pair, 4.43 eV/pair, a material constant. The
+a total charge, released over the whole decay time, is equivalent to approximately 77 – 161 keV
+deposited energy per pixel.
+The determined trap densities are unusually low for a bulk defect, as is the fact that the defect
+level does not seem to depend on the applied bias voltage. Thus we cannot exclude that other
+defects, e.g., interface states at the contacts, cause the observed behavior.
+2Since the photocurrent, I0, is proportional to the tube current the relative magnitude of the persistence,A/I0,
+decreases asI0 increases.
+– 6 –
+
+--- PAGE 8 ---
+Figure 5: Schematic of the photocurrent for 108 keV photons and timing properties for the APS
+experiment. The detector was triggered with an adjustable phase delay with respect to the x-ray
+pulsesarrivingevery153ns. Theredlinesdepictthex-raypulses,eachderivedfromasinglebunch
+of electrons in the APS ring. Timing is shown for the ﬁrst 3 of 8 frames in a single burst.
+3 Charge transport measurements using a synchrotron source
+CapitalizingonthefastimagingcapabilitiesoftheKeckPADsystem,westudiedthechargetransport
+intheCdTesensormaterialwithshortbutintensephotonpulsesattheDynamicCompressionSector
+beamline35IDEattheAdvancedPhotonSourceatArgonneNationalLaboratory. Thesedatawere
+takenwithafreshlyreset, unpolarizedsensor. TheoverallgainoftheKeckPADsystemwithCdTe
+sensor is approximately 5.5 keV/ADU and varies with bias voltage and operating temperature as
+outlined in [5].
+The storage ring was operated in 24 bunch mode with bunches evenly spaced 153 ns apart.
+The beamline was operated in unfocused pink beam mode with the undulator gap adjusted to
+produce a 7.1 keV x-ray fundamental. X-ray harmonics of this fundamental energy were produced
+to > 120 keV. A rotating chopper produced an isolated 20µs window of x-rays to limit the total
+exposure of the sensor.
+X-rayenergieswereseparatedutilizingdiﬀractionfroma0.5mmthicksheetofcopper. Crystal
+grainsinthissheetwererollaligned,producingaseriesofspatiallyisolated<200>diﬀractionspots,
+eachatadiﬀerentenergy. Datapresentedherearetakenfromdiﬀractionspotsat42,69,and108keV.
+The detector was operating at 0 C for the experiment. The start of a burst sequence was
+synchronized to the ring frequency with an estimated time jitter of less than 3 ns and the trigger
+was set up such that the phase delay between the detector and the photon pulses could be freely
+adjusted. As illustrated in Figure 5, burst framing was utilized to sample successive portions of
+single pulse photocurrent transients, which ultimately allows the reconstruction of these transients.
+Eachoftheeightframesinaburstsamplehasthesamelengthoftheintegrationwindow( ≈35ns).
+Although the photon pulses themselves are extremely short (≪ 1 ns typically), drift and diﬀusion
+processesinthesensormaterialslowthechargecollectionprocessdownto ≈100ns,dependingon
+– 7 –
+
+--- PAGE 9 ---
+parameter value unit
+CdTe sensor thickness 750 µm
+pixel size 150 µm
+eﬀective integration window 35 ns
+x-ray attenuation length 102 / 383 / 1257 µm
+beam width on detector 5.77 / 1.23 / 0.86mm
+mobility (electron/hole) 1100 / 82.6 cm2/Vs
+trapping time (electrons and holes) 3 µs
+space charge densityNe f f 0.03 / 3.11 / 4.901011 cm−3
+Table 2: Device parameters and material properties used in the numerical simulations. Values
+separatedby‘/’wereusedforthesimulationsofthe42keV,69keV,and108keVcases,respectively.
+the applied bias.
+TheresultsobtainedarecomparedtosimulationsdonewithacustomMATLABcode[5,22,23],
+which was further modiﬁed to account for an eﬀective RC delay of 5 ns (slew rate limitation of the
+pixel preampliﬁer in the ASIC) and the size of the beam spot on the detector.
+Table 2 summarizes the material properties and device parameters used for the simulations,
+andFigure6showsthatthemodelingandthemeasuredresponseareingoodagreement. Theresults
+are consistent with no eﬀective space charge density3 in the case of 42 keV and a positive eﬀective
+spacechargedensityof3 ×1011 cm−3 and5×1011 cm−3 forthe69and108keVcase,respectively.
+Weﬁndthatourderivedspacechargedensityisthesameorderofmagnitudeasobservedbyothers
+(1011–10 12cm−3[24],2.37–8.69×1011cm−3[25])forohmicmaterialfromthesamemanufacturer.
+The charge collection time is dominated by the hole mobility. For the best agreement between
+measurementsandsimulationsamobilityvalueof82.6cm 2/Vswasused. Thisvalueiscomparable
+to literature values of 88 cm2/Vs [26] and 72± 11 cm2/Vs [25] for material from the same
+manufacturer at room temperature.
+For investigations of fast processes on microsecond time scales it is mandatory that the charge
+collection time of the sensor is short compared to the timescale of interest. Figure 6d shows the
+measured charge collection time4 as a function of voltage compared to the charge collection time
+expected from literature values. For voltages above 600 V the charge collection time is below
+120 ns. Although the measured values are slightly larger than the expected values, they are small
+enoughtoallowimagingwithoutpileupeﬀectsinthesensoratrepetitionratesuptoapproximately
+8 MHz.
+3Eﬀective space charge density is deﬁned here as the diﬀerence of all immobile positive charges and all immobile
+negative charges within a pixel volume. Examples of immobile charges include certain defects and charged trap states.
+4Measuredchargecollectiontimeisdeﬁnedhereasthetimebetweenthepointswhere5%and95%ofthetotalcharge
+is collected.
+– 8 –
+
+--- PAGE 10 ---
+(a)Responsefor42keVbeamenergy. Thecurve
+for 400 V shows pulse pile up as the charge col-
+lection time exceeds 153 ns.
+(b)Responsefor69keVbeamenergy. Thecurve
+for 400 V shows pulse pile up as the charge col-
+lection time exceeds 153 ns.
+(c) Response for 108 keV beam energy. The
+curvefor400Vshowspulsepileupasthecharge
+collection time exceeds 153 ns.
+(d) Charge collection time (5% to 95%) and
+expected charge collection time for µh =
+88cm2/Vs. Thechargecollectiontimefor400V
+exceeds 153 ns for all energies.
+Figure 6: Response of the Keck PAD detector to short pulses of diﬀerent energies as a function of
+appliedbias. Blacklinesindicatetheexpectedsignalfromanumericalsimulationoftheexperiment.
+4 Polarization and persistence after high rate illumination
+ThefastframingcapabilityoftheKeckPADsystemwasusedtostudythesensorresponsetoshort,
+intensepulsesofphotons,astypicallyencounteredduringsynchrotronexperiments. Thefollowing
+experimentaldatawereobtainedattheA1beamlineoftheCornellHighEnergySynchrotronSource
+(CHESS).
+The CHESS beamline A1 receives x-rays produced by electrons passing through one of two
+1.5 m CHESS Compact Undulators [27, 28] installed in the west ﬂare of Cornell Electron Storage
+Ring (CESR). A1 is equipped with a switchable diamond monochromator that enables selection of
+either19.9keVor32.6keVx-rayenergybyusingeitherthediamond<111>orthediamond<220>
+Bragg condition.
+Mirrorsthatwouldreducetheharmoniccontentofthebeamwerenotused. Allbeamdeﬁning
+– 9 –
+
+--- PAGE 11 ---
+19.9 keV 32.6 keV
+before att. after att. before att. after att.
+fundamental (f) 3.67× 1011 6.38×107 1.27×1011 3.62× 108
+harmonic (h) 1.43× 1010 7.27×109 3.17×1010 6.92× 109
+ratio (h/f) 1/26 114 1/4 19
+Table 3: Flux estimate in photons per second for the experiment at CHESS beamline A1, in a
+footprint of about 1 mm× 1 mm. Aluminum pieces of 8.4 and 21.2 mm thickness were used to
+attenuate the 19.9 keV and 32.6 keV beam, respectively. The ratio indicates how many harmonic
+photons are present in the beam for every photon of the fundamental energy.
+Figure 7: Schematic of the photocurrent for 65.2 keV and the timing properties for the CHESS
+experiment. Thedetectorwastriggeredsuchthatthecapacitorssampleddiﬀerenttimeswithrespect
+to the photon pulse sequence.
+slits were fully opened. The beam was attenuated by aluminum absorbers of 8.4 and 21.2 mm
+thicknesstoincreasetherelativecontentofhigherharmonicsat59.7keV(threetimesfundamental
+at 19.9 keV) and 65.2 keV (two times fundamental at 32.6 keV), respectively.
+A ﬂux estimate was determined by using an ion chamber in front of the experimental setup in
+additiontothedetectorsignal. Byusingthetworeadingsandtheknownattenuationateachenergy,
+the ﬂux of both the fundamental and the harmonics could be determined at the same time. The
+results summarized in Table 3 represent typical values; actual values are modulated by the beam
+current in the ring, which continuously decays between injections.
+At the time of the experiments the electrons in the storage ring were arranged in 3 ‘trains’ of
+16 bunches each, where each bunch is of≪ 1 ns duration. Inside each train the electron bunches
+are separated by 4 ns each, resulting in a total duration of 60 ns for each train. The time between
+the ﬁrst bunch of the ﬁrst train and the ﬁrst bunch of the second train is 252 ns and is identical to
+the time between the ﬁrst bunches of second and third train. From the beamline’s point of view
+this pattern translates to photon pulses that are repeated every 2.56µs when the electrons have
+completed another orbit of the storage ring.
+Fortheexperimentthedetectorwassynchronizedtotheringfrequencysuchthatthephotocur-
+rentcausedbythelasttraininthepulsepatternwasrecorded,aswellasthedarkperiodinbetween
+– 10 –
+
+--- PAGE 12 ---
+(a) Average signal
+ (b) Zones with diﬀerent dose rates.
+Figure 8: Typical beam proﬁle at the CHESS beamline A1, as seen on the detector at the time of
+the experiment.
+59.7 keV 65.2 keV
+ﬂux [ph/mm2/s] dose rate [Gy/s] ﬂux [ph/mm2/s] dose rate [Gy/s]
+Zone 1 1.05×1010 8.5 1.44×1010 12.5
+Zone 2 1.43×1010 11.6 1.91×1010 16.6
+Zone 3 1.84×1010 14.9 2.37×1010 20.6
+Zone 4 2.56×1010 20.8 2.53×1010 22.0
+Table 4: Estimate of the average ﬂux and dose rate for the diﬀerent zones.
+repetitionsofthepattern,assketchedinFigure7. WithintheASIC,eachframewasintegratedonto
+a seperate storage capacitor for 250 ns with the time between the start of each acquisition equal to
+(2560+250)ns. Thiswaythetimesequenceissampledwithoutagapwithin8turnsoftheelectron
+bunches around the storage ring. The estimated time jitter between the start of the photon pulse
+sequence and the integration time was less than 10 ns.
+This sampling of the time sequence was done for a series of dose steps to study the inﬂuence
+ofpolarization. Eachdosestepilluminatedthesensorfor50ms,andatotalof500sequentialsteps
+(25 s total illumination time) were recorded before resetting the detector. Since the photon beam
+was not slit down or focused it spanned several pixels and showed a notable beam proﬁle, which
+allowed us to group several pixels into zones with diﬀerent dose rates as shown in Figure 8. The
+average ﬂux and corresponding dose rate for each zone is shown in Table 4.
+Dose series were acquired for a range of diﬀerent temperatures and bias voltages to study the
+eﬀect of these parameters on the deterioration due to the polarization.
+Previous investigations using a Keck PAD system with silicon sensor [9] determined that the
+resolution of the time response was limited by the charge collection time of the silicon, some ten
+nanoseconds, and not the electronic response of the system.
+– 11 –
+
+--- PAGE 13 ---
+4.1 Mathematical formalism
+We assume that the sensor response to the incoming photon bunch can be described by a prompt
+photocurrent, Ip(t),and,especiallyoncethesensorispolarized,adelayedreleaseoftrappedcurrent,
+Id(t). As shown in the previous section, the prompt photocurrent is well described by drift and
+diﬀusion simulations. Thus all of the prompt signal is collected in less than 250 ns, the integration
+time, ti, used in this experiment. Making the ansatz that the delayed photocurrent is predominately
+caused by the detrapping of charge from a single shallow trap level5, it can be expressed as:
+Id(t′) = I0e− t′
+τ (4.1)
+The above is valid for timest′ > 0, wheret′ is deﬁned ast′ = t− tend, the time passed since
+the charge collection process is ﬁnished, withtend being the time when the charge collection of the
+prompt response has ﬁnished with respect to the start of the integration window andI0 a constant
+that is proportional to the total number of trapped charges.
+The total sensor response (total signal charge received) is the sum of both responses, prompt
+and delayed, withRtot = Ptot + Dtot, and :
+Ptot =
+∫ te n d
+0 Ip(t) dt (4.2)
+Dtot =
+∫∞
+0 Id(t) dt = I0τ (4.3)
+Deﬁningδ1andδ2asthetimediﬀerencebetweentheﬁrstpulsesoftheﬁrstandthethird,orthe
+second and the third bunch train, 504 ns and 252 ns, respectively, and assuming that the incoming
+intensity per pulse is equal in every train, we can expressS(n), the signal collected on capacitorn,
+for n> 1 in the following way:
+S(n) = c +
+¹ t0+ti
+t0
+Id(t) + Id(t +δ1) + Id(t +δ2) dt (4.4)
+= c + I0τ
+(
+1− e− ti
+τ
+) (
+1 + e− δ1
+τ + e− δ2
+τ
+)
+e− t0
+τ (4.5)
+= ABCe− t0
+τ + c (4.6)
+We deﬁne c as an oﬀset compensating for shifts in the zero level due to polarization of the
+sensor, t0 = ti(n− 1)− tend as the time deﬁning the start of the integration window with respect to
+t′ = 0, A = I0τ = Dtot, B =
+(
+1− e− ti
+τ
+)
+a factor accounting for the ﬁnite width of the integration
+window, andC =
+(
+1 + e− δ1
+τ + e− δ2
+τ
+)
+a factor ranging from 1 to 3 for values ofτ ranging from zero
+to inﬁnity which accounts for the presence of 3 trains instead of a single train.
+As shown in Figure 9a, the signal of the delayed release (capacitors 2 - 8) can be described
+well by the exponential decay of equation 4.6. The values ofI0τ = Dtot and c can be determined
+from a ﬁt to the data since the values forti, tend,δ1, andδ2 are known.
+5Althoughdecribedbythesameequation,thissecondtrapisdiﬀerentfromthepreviouslydescribedﬁrsttrapcausing
+signal persistence on millisecond timescales.
+– 12 –
+
+--- PAGE 14 ---
+The intensity recorded by the ﬁrst capacitor,S(1), is the sum of the prompt responsePtot, the
+integral of the delayed response fromtend to the end of the integration window, and the delayed
+contributions from the previous pulses. It is possible to rewriteS(1) and solve forPtot in the
+following way:
+S(1) = Ptot + I0τ
+(
+1− e− ti−te n d
+τ
+)
++ I0τ
+(
+1− e− ti
+τ
+) (
+e− δ1
+τ + e− δ2
+τ
+)
++ c (4.7)
+Ptot = S(1)− I0τ
+[(
+1− e− ti−te n d
+τ
+)
++
+(
+1− e− ti
+τ
+) (
+e− δ1
+τ + e− δ2
+τ
+)]
+− c (4.8)
+Since Rtot, the response of CdTe to photons, decreases as polarization sets in, it is convenient
+to deﬁne the fraction of charge that is delayed,F, which can be expressed in the following way:
+F = Dtot
+Rtot
+(4.9)
+= Dtot
+Ptot + Dtot
+(4.10)
+= I0τ
+Ptot + I0τ (4.11)
+= I0τ
+S(1)− I0τ
+[(
+1− e− ti−te n d
+τ
+)
++
+(
+1− e− ti
+τ
+) (
+e− δ1
+τ + e− δ2
+τ
+)]
+− c + I0τ
+(4.12)
+= I0τ
+S(1)− I0τ
+[(
+1− e− ti−te n d
+τ
+)
++
+(
+1− e− ti
+τ
+) (
+e− δ1
+τ + e− δ2
+τ
+)
+− 1
+]
+− c
+(4.13)
+4.2 Measurements
+In the absence of polarization the decay time of the delayed response is very short and all signal
+is collected within the ﬁrst two integration intervals (capacitors 1 & 2). However as polarization
+buildsupinthesensorthesignalcollectedinthe‘dark’periodbetweenturnsoftheelectronbunches
+(capacitors 3 - 8) increases, see ﬁgure 9a.
+Correspondingly,thetotaldelayedcharge Dtot,theareaundertheﬁtcurveinFigure9a,changes
+with dose. As shown in Figure 9b, at ﬁrstDtot increases with increased dose until it reaches a
+peak value before decreasing slowly again. This is less obvious at low voltages, as the peak value
+is reached almost immediately.
+The detrapping time,τ, that is associated with the delayed release is shown in Figure 9c. It
+shows an almost bimodal distribution at higher bias voltages with a very sharp transition between
+the ‘unpolarized’ value of approximately 100 ns and the value after polarization of about 400 ns.
+The observed detrapping times are well above the experimental uncertainty of about 10 ns, and are
+not observed when using a silicon sensor instead of the CdTe sensor. The transition between the
+two detrapping times occurs at approximately the same dose as the peak value inDtot (see Figure
+9b). The nature of this transition remains unclear at this moment.
+The fraction of the total charge,F, that is released delayed with respect to the prompt pho-
+tocurrent and the total response are shown in Figures 9e and 9f.F follows the same qualitative
+– 13 –
+
+--- PAGE 15 ---
+(a)Averagedelayedsignalincapacitors2-8(data
+points in time) at a bias voltage of 400 V for
+diﬀerent accumulated doses and corresponding
+ﬁts. Dotted lines indicate the oﬀset level.
+(b) Total delayed responseDtot as calculated by
+equation 4.3 for diﬀerent bias voltages. The dot-
+ted lines represent a model independent estimate
+of Dtot by summing the oﬀset corrected signal
+of capacitors 2-8.
+(c) Time constant of the delayed responseτ de-
+rived from the ﬁt.
+(d) Total prompt responsePtot as calculated by
+equation 4.8 for diﬀerent bias voltages. The dot-
+ted lines the oﬀset corrected signal on the ﬁrst
+capacitor S(1)− c for comparison.
+(e)Fraction Fofthetotalresponsethatisreleased
+delayed with respect to the prompt photocurrent
+as calculated by equation 4.13 for diﬀerent bias
+voltages.
+(f)Totalresponse Rtot fordiﬀerentbiasvoltages.
+The dotted lines represent a model independent
+estimateof Rtot bysummingtheoﬀsetcorrected
+signals of all capacitors.
+Figure9: Measurementsresultsinzone4atatemperatureof0Cinresponseto65.2keVphotons.
+– 14 –
+
+--- PAGE 16 ---
+Figure 10: Dose for which the delayed charge reaches its maximum value as a function of temper-
+ature. Shown are results for 59.7 keV (‘x’) and 65.2 keV (‘o’) and all 4 zones. The dashed lines
+represent the averages for their respective bias voltage.
+behavior asDtot and converges to a common value of 11-12% for large doses6. For low doses and
+high voltages about 2-3% of the total charge is released in a delayed fashion, which corresponds
+roughly to the amount of charge that is trapped during the prompt response. The total response
+Rtot follows the characteristic pattern of polarization in CdTe reported previously [5]. The total
+response exhibits an almost7 ﬂat plateau-like behavior before reaching a ‘knee’ after which there is
+a rapid decline in response followed by a more gradual one.
+The position of the peak in the delayed current also marks the onset of the decline of the total
+response. As shown in Figure 10, within the investigated parameter ranges the amount of dose
+requiredtoreachthepeakdoesnotdependappreciablyontemperature,photonenergyordoserate,
+but only on the applied bias. We ﬁnd that the peak is reached at 1.4 Gy± 88%, 44.4 Gy± 17%
+and264Gy ± 22%at200V,400Vand600Vbias, respectively. Thelargespreadofmeasurement
+values at 200 V bias is caused by the fact that at low bias voltages polarization happened almost
+immediately, within the ﬁrst few data points, making a precise measurement diﬃcult.
+The position of the knee in Fig. 9f does not align well with the position of the knee when
+studied at a much lower dose rate of 11 Gy/min [5]. At the lower dose rate the position of the
+knee is dependent on temperature and is located, in general, at a much higher dose value. For an
+operating temperature of 0 C these values are 110 Gy, 275 Gy, and 1430 Gy for voltages of 200 V,
+400V,and600V,respectively. Wenotethatthelateraldisplacementeﬀectdescribedin[5]doesnot
+6In this case the largest dose in the respective data set, between 212.5 and 550 Gy.
+7For reasons unknown at this point the ﬁrst 2–3 data points appear especially large.
+– 15 –
+
+--- PAGE 17 ---
+(a) Histogram of the fraction of charge that is
+released delayed with respect to the prompt pho-
+tocurrent for large doses. F is independent of
+bias voltage and temperature and has an average
+value of 0.117± 11%.
+(b) Histogram of the time constant associated
+with the delayed release of charge with respect
+to the prompt photocurrent for large doses.τ is
+independent of bias voltage and temperature and
+has an average value of 389 ns± 13%.
+Figure11: Histogramsofallmeasurementvaluesfordetrappingfraction F anddetrappingtime τ.
+For large doses bothF andτ are independent of energy, temperature, dose rate and bias voltage.
+explainourﬁndingsathighdoserates. Althoughitseﬀectsappearatroughlyanorderofmagnitude
+less dose than the signal loss due to polarization. Lateral displacement would reduce the signal in
+the more heavily dosed regions of the detector, e.g., zone 4 in Figure 8b, by displacing it towards
+the less heavily dosed pixels surrounding the beam, e.g., zone 3. This would show as a dose rate
+dependence in the data, which we did not see. One possible explanation of this diﬀerence between
+high and low dose rate illumination could be an additional detrapping due to deeper traps on much
+longer time scales, e.g., milliseconds to seconds as reported in literature [29]. The contribution of
+these deeper traps would be collected during the longer integration times used in [5]. In the given
+experiment the detrapping from these deeper traps would contribute to the constant oﬀsetc in the
+measurements.
+Howeversinceweknowthatonlyasmall,ﬁxedamountofchargeisreleasedonthosetimescales
+(see section on basic testing), we conclude that the charge is lost due to recombination of charge
+carriers, which can reasonably be expected to be larger in presence of large currents.
+For large doses all measurements converge to a similar value,F, of the fraction of charge that
+is released delayed with respect to the prompt photocurrent (see Figure 11a) and correspondingly
+to a similar detrapping time constant (see Figure 11b). The average value ofF is 0.117± 11% and
+the average value ofτ is 389 ns± 13%. When applying large biases we could also determine the
+average detrapping time before polarization set in (not shown), which is 139 ns± 19%.
+5 Conclusions
+CdTe of 750µm thickness, with its high quantum eﬃciency, expands the usable energy range for
+detector systems from about 25 keV (≈20% QE with a 500µm silicon sensor) to about 150 keV
+(≈20% QE with a 750µm CdTe sensor), with>90% quantum eﬃciency to about 65 keV.
+– 16 –
+
+--- PAGE 18 ---
+Our characterization of the timing properties of CdTe sensors bonded to our previously devel-
+oped ASICs has led us to the conclusion that the material is suitable for use in a broad range of
+experimental applications requiring timing down to the sub-microsecond level. Most of the eﬀects
+describedinthisworkcanbeexplainedusingaccepteddriftanddiﬀusiontheoriesandsimplemodel
+assumptions for detrapping. As shown herein, an understanding of these eﬀects is important in
+order to understand the limitations of measurements taken with the investigted detectors. We note
+thatbothKeckPADandMM-PADdetectorswithCdTesensorshavealreadybeenusedinanumber
+of experiments at CHESS and the APS, and further experiments are planned for both detectors at
+both sources.
+WefoundthatinourholecollectingSchottkymaterialseveralshallowdefectsplayanimportant
+role. We observed signal persistence with an exponential decay with timescales ranging from
+approximately 150 ms at -30 C to about 90 ms at +20 C. An Arrhenius ﬁt of the time constant
+revealedanactivationenergyof59.3 ± 7.2meV,whichisconsistentwithdefectsthatwereobserved
+in this kind of material before [21]. The total magnitude of this persistence is determined by the
+numberofﬁlledtraps,whichisafunctionoftheappliedvoltage. Wewereabletoestimatethatatthe
+moment the shutter closes approximately 1.04–2.16× 109 cm−3 traps are ﬁlled. The total charge
+released from these traps is equivalent to the charge collected from approximately 77–161 keV
+x-ray energy per pixel. The persistence due to this shallow trap is insuﬃcient to explain signal
+loss observed on the microsecond time scale, where the signal loss is attributed to (trap-assisted)
+recombination, a non-linear process.
+We found the charge collection time in hole-collecting mode to be less than 120 ns for biases
+of 600 V and above. We showed that with such a short charge collection time we were able to
+fully separate the signal of two consecutive pulses at the APS with 153 ns bunch spacing, i.e.,
+6.5 MHz repetition frequency, thus avoiding pile-up eﬀects in the sensor. For hole trapping times
+of approximately 3µs, this leads to anticipated charge collection eﬃciencies exceeding 96%.
+Wefoundthatpolarizationoccursquicklyathighdoserates,infactmuchquickerthanexpected
+from investigations at low dose rates. The prompt response to the photons decreases almost
+immediately, and a delayed current, possibly due to detrapping of trapped charge carriers from
+another, even shallower defect, is observed. A higher bias voltage delays the onset of polarization,
+but ultimately an equilibrium situation is reached. For large accumulated doses approximately
+11.7% of the total response is released in a delayed fashion with a time constant of 389 ns. This
+indicates a diﬀerent type of mechanism is responsible for the delayed release of charge than for the
+persistence eﬀect on millisecond time scales, which saturates. Within the investigated range the
+results for the delayed release of charge were independent of beam energy, dose rate, temperature
+and bias, indicating that this second defect is unlikely to be a bulk defect.
+The reset procedure introduced in [5] was employed and found to be eﬀective at removing all
+the eﬀects of polarization described here.
+In summary, the Schottky type hole-collection CdTe studied here can be used for quantitative
+scientiﬁc hard x-ray imaging at time scales down to approximately 100 ns. However, precise x-ray
+measurementsrequiresigniﬁcantattentiontodetails: Itisimportantthatthesensorisresetpriorto
+the measurementandthat thesensor canbe biasedto suﬃcientlyhigh voltageto delaypolarization
+eﬀects as long as possible. Even then, it is important to account for signal persistence, as it might
+mask or mimic a very weak signal following a large pulse.
+– 17 –
+
+--- PAGE 19 ---
+Acknowledgments
+TheauthorswouldliketothankDominicGreiﬀenbergfromthePaulScherrerInstituteinSwitzerland
+forvaluablediscussionsandinput,TomKrawcyzkfromCHESSforhissupportduringthebeamtime
+at CHESS, the entire team of APS sector 35 for their help and support during the APS experiment,
+Wataru Inui at Acrorad, Co., Ltd for his contributions to the sensor design and production, and
+Klaus Harkonen, Limin Lin, and Konstantinos Spartiotis at Oy Ayad Ltd for the hybridization of
+the assemblies.
+This research is based on research conducted at the Cornell High Energy Synchrotron Source
+(CHESS), which is supported by the U.S. National Science Foundation and the U.S. National In-
+stitutes of Health/National Institute of General Medical Sciences via NSF award DMR-1332208,
+and by awards for x-ray detector research to S.M.G. from the U.S. Department of Energy (Award
+DE-SC0016035), and the W. M. Keck Foundation. The MM- PAD concept was developed col-
+laboratively by our detector group at Cornell University and Area Detector Systems Corporation
+(ADSC), Poway, CA, USA.
+This publication is also based upon work performed at the Dynamic Compression Sector
+supported by the Department of Energy, National Nuclear Security Administration, under Award
+NumberDE-NA0002442andoperatedbyWashingtonStateUniversity. Thisresearchusedresources
+oftheAdvancedPhotonSource,aU.S.DepartmentofEnergy(DOE)OﬃceofScienceUserFacility
+operated for the DOE Oﬃce of Science by Argonne National Laboratory under Contract No. DE-
+AC02-06CH11357.
+References
+[1] Rossi, G., et al. "Tests of a prototype pixel array detector for Microsecond time-resolved x-ray
+diﬀraction". J. Synchrotron Rad., 6, 1999,1096-1105. DOI: 10.1107/S0909049599009802.
+[2] Gruner, S. M., Eikenberry E. F., and Tate M. W. "Comparison of X-ray detectors." International
+Tables for Crystallography Volume F: Crystallography of biological macromolecules. Springer
+Netherlands, 2006. 143-147. DOI: 10.1107/97809553602060000667.
+[3] Sellin, P. J. "Recent advances in compound semiconductor radiation detectors." Nuclear Instruments
+and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated
+Equipment 513.1 (2003): 332-339. DOI: 10.1016/j.nima.2003.08.058.
+[4] Del Sordo, S., et al. "Progress in the development of CdTe and CdZnTe semiconductor radiation
+detectors for astrophysical and medical applications." Sensors 9.5 (2009): 3491-3526. DOI:
+10.3390/s90503491.
+[5] Becker, Julian, et al. "Characterization of CdTe sensors with Schottky contacts coupled to
+charge-integrating pixel array detectors for X-ray science." Journal of Instrumentation 11.12 (2016):
+P12013. DOI: 10.1088/1748-0221/11/12/P12013.
+[6] Lambert, P. K., et al. "Time-resolved x-ray diﬀraction techniques for bulk polycrystalline materials
+under dynamic loading." Review of Scientiﬁc Instruments 85.9 (2014): 093901. DOI:
+10.1063/1.4893881.
+[7] Koerner, L. J., et al. "An accumulating pixel array detector for single-bunch synchrotron
+experiments." IEEE TNS 56.5 (2009): 2835-2842. DOI: 10.1109/TNS.2009.2028733.
+– 18 –
+
+--- PAGE 20 ---
+[8] Koerner L. J., "X-ray analog pixel array detector for single synchrotron bunch time-resolved
+imaging". PhD Thesis, Cornell University, USA (2010). PDF.
+[9] Philipp, H. T., et al. "High-speed X-ray imaging pixel array detector for synchrotron bunch isolation."
+Journal of synchrotron radiation 23.2 (2016). DOI: 10.1107/S1600577515022754.
+[10] Tate, M.W., et al. "A medium-format, mixed-mode pixel array detector for kilohertz X-ray imaging."
+Journal of Physics: Conference Series. Vol. 425. No. 6. (2013). DOI:
+10.1088/1742-6596/425/6/062004.
+[11] Vernon, W., et al. "First results from the 128x128 pixel mixed-mode Si x-ray detector chip." Optical
+Engineering+ Applications. International Society for Optics and Photonics, 2007. DOI:
+10.1117/12.738663.
+[12] Schuette, D. "A mixed analog and digital pixel array detector for synchrotron x-ray imaging". PhD
+Thesis, Cornell University, USA (2008). PDF.
+[13] Ayyer, K., et al. "Real-Space x-ray tomographic reconstruction of randomly oriented objects with
+sparse data frames." Optics express 22.3 (2014): 2403-2413. DOI: 10.1364/OE.22.002403.
+[14] Green, K. S., et al. "Calibration and post-processing for photon-integrating pixel array detectors."
+Journal of Physics: Conference Series. Vol. 425. No. 6. IOP Publishing, 2013. DOI:
+10.1088/1742-6596/425/6/062009.
+[15] Giewekemeyer, K., et al. "High-dynamic-range coherent diﬀractive imaging: ptychography using the
+mixed-mode pixel array detector." J. Synchrotron Rad. 21.5 (2014): 0-0. DOI:
+10.1107/S1600577514013411.
+[16] Acrorad Ltd homepage:yttp:@@www.rtrorru.to.jp@us@tute.ytml
+[17] Oy AJAT Ltd homepage:yttp:@@www.rjrt.wi@
+[18] Majelac Technologies LLC homepage:yttp:@@www.mrjelrt.tom
+[19] Ted Pella, Inc homepage:yttps:@@www.teupellr.tom@semmistpytml@semprint.ytm
+[20] Pennicard,D.,etal."TheLAMBDAphoton-countingpixeldetectorandhigh-Zsensordevelopment."
+Journal of Instrumentation 9.12 (2014): C12026. DOI: 10.1088/1748-0221/9/12/C12026
+[21] Fiederle, M., et al. "Modiﬁed compensation model of CdTe." Journal of Applied Physics 84.12
+(1998): 6689-6692. DOI: 10.1063/1.368874.
+[22] Becker, J. "Signal development in silicon sensors used for radiation detection". PhD thesis, Hamburg
+University, Germany (2010). DESY-THESIS-2010-033.
+yttp:@@www-lisrrry.uesy.ue@uiss1@zero.rlt3.ytml.
+[23] Becker, J., Fretwurst E., and Klanner R. "Measurements of charge carrier mobilities and drift velocity
+saturation in bulk silicon of<111> and<100> crystal orientation at high electric ﬁelds." Solid-State
+Electronics 56.1 (2011): 104-110. DOI: 10.1016/j.sse.2010.10.009.
+[24] Uxa, ’tepán, et al. "Determination of electric-ﬁeld proﬁle in CdTe and CdZnTe detectors using
+transient-current technique." IEEE Transactions on Nuclear Science 59.5 (2012): 2402-2408. DOI:
+10.1109/TNS.2012.2211615.
+[25] Fink, Johannes, et al. "Characterization of charge collection in CdTe and CZT using the transient
+current technique." Nuclear Instruments and Methods in Physics Research Section A: Accelerators,
+Spectrometers, Detectors and Associated Equipment 560.2 (2006): 435-443. DOI:
+10.1016/j.nima.2006.01.072
+– 19 –
+
+--- PAGE 21 ---
+[26] Suzuki, K., et al. "Carrier transport properties of HPB CdZnTe and THM CdTe: Cl." Nuclear Science
+Symposium Conference Record, 2001 IEEE. Vol. 4. IEEE, 2001. DOI:
+10.1109/NSSMIC.2001.1009302.
+[27] Temnykh, A., et al. "Construction of CHESS compact undulator magnets at Kyma." SPIE Optics+
+Optoelectronics. International Society for Optics and Photonics, 2015. DOI: 10.1117/12.2186301.
+[28] Temnykh, A., et al. "Compact undulator for the Cornell high energy synchrotron source: design and
+beam test results." Journal of Physics: Conference Series. Vol. 425. No. 3. IOP Publishing, 2013.
+DOI: 10.1088/1742-6596/425/3/032004.
+[29] Suzuki, Kazuhiko, et al. "Time-of-ﬂight measurements on Schottky CdTe detectors." IEEE
+Transactions on Nuclear Science 59.4 (2012): 1522-1525. DOI: 10.1109/TNS.2012.2193599.
+– 20 –

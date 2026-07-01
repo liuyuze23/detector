@@ -1,0 +1,337 @@
+
+
+--- PAGE 1 ---
+An Autonomous CZT Module for X-ray Diffraction
+Imaging
+Guillaume Mont ´emont, Dirk Kosciesza, Olivier Monnet, Sylvain Stanchina,
+Jens-Peter Schlomka and Lo ¨ıck Verger
+Abstract—We present the development of a CZT-based detec-
+tion module dedicated to X-ray diffraction imaging. This kind
+of application requires a good energy and spatial resolution in
+order to resolve Bragg peaks.
+In a ﬁrst part, we present the detector conﬁguration used and
+dimensioning constraints. As the input energy range is comprised
+between 20 and 150 keV , we use 5 mm thick high resistivity CZT
+crystals. The 660 mm2 detection area is segmented on both sides
+into 192 anodes and 12 cathodes. Signals from both sides are read
+jointly in order to perform multiparametric event corrections
+(depth of interaction, charge sharing, induction sharing). In order
+to be integrated easily inside an X-ray imaging system, the system
+has been conceived to be completely autonomous: it is powered
+by a single 12V supply and is interfaced with the external system
+by Ethernet for communication and RS485 for synchronization.
+In a second part, we describe the system readout architec-
+ture and then the implementation of the data processing. An
+FPGA circuit embeds a digital processing chain that carries out
+readout ASIC interfacing and advanced multiparametric data
+corrections. Gain, offset but also depth of interaction and charge
+sharing are corrected on the ﬂow. Incoming events from different
+channels are clustered together by comparing their location and
+time of occurrence. The FPGA also embeds a processor running
+an operating system that controls the system, carries out all
+calibrations, automated tests and acquisitions.
+Eventually, we show the results obtained and demonstrate the
+relative inﬂuence of depth of interaction and charge sharing.
+Homogeneity of detector behavior is also discussed and the
+reproducibility of the performance between modules is presented.
+The average energy resolution at 25 oC is 2.4 % FWHM at 122
+keV and 3.8 % FWHM at 60keV and the average efﬁciency is
+73 %.
+I. I NTRODUCTION
+X
+-RAY diffraction (XRD) has been proven to be an
+effective technique for hold baggage screening in airport.
+X-ray diffraction imaging (XDi) is a new imaging architec-
+ture proposed by Morpho Detection in order to considerably
+improve throughput of diffraction baggage scanners and to
+enable XRD screening of cabin baggages [1]. The proposed
+XDi scanner design is based on the use of room-temperature
+operated CZT detectors in replacement of cooled Germanium.
+CZT detectors allows to build compact and modular detection
+units with an energy resolution compatible with diffraction
+pattern identiﬁcation [2], [3].
+The detection module, called IMADIF (by combination
+of IMAging and DIFfraction) was designed to be integrated
+Manuscript received November 22, 2013.
+G. Mont´emont, O. Monnet, S. Stanchina and L. Verger are with CEA-Leti,
+Minatec Campus, 17 Rue des martyrs, 38054 Grenoble Cedex 09, France
+D. Kosciesza and J.-P. Schlomka are with Morpho Detection Germany
+GmbH, Heselstcken 3, 22453 Hamburg, Germany
+inside the XDi cabin baggage screener and had to fulﬁll
+the following requirements: easy installation and replacement,
+simple interfacing and integration and good and stable spectral
+performance in the 20-150 keV range.
+As the system has to be integrated in a complex system,
+ease of use and autonomy were key design criteria. The whole
+system is a relatively compact device (see Fig. 1). The module
+features a high level software interface hiding complexities of
+detector calibration and multi-parametric corrections behind
+simple commands carried by TCP network packets.
+Fig. 1. External view of the detection module. It measures 170 mm ×
+75 mm × 78 mm for a power dissipation of 3.5 Watts.
+II. D ETECTOR DESIGN
+A. Motivation and requirements
+When diffraction signatures are collected, one probes elec-
+tron distribution. The cross-section with a single electron is
+given by the Thomson factor [4]:
+dσT
+dΩ (θ) =r2
+e · 1 + cos2θ
+2 (1)
+where re = µ0e2
+4πme
+is the classical electron radius. The
+cross-section with a given material depends on the electron
+distribution through the form factor F (∆p),
+dσ
+dΩ(E,θ ) = dσT
+dΩ (θ)F 2(∆p) (2)
+∆p being the momentum transfer between incident and scat-
+tered photon, given by Bragg law:
+∆p = 2E
+c sinθ
+2 (3)
+978-1-4799-0534-8/13/$31.00 ©2013 IEEE
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 03:03:57 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 2 ---
+In conclusion, to be able to accurately probe the material
+structure, indicated by the form factor, it is essential to
+combine a good energy and angular resolution. Moreover, both
+have to be consistent, as the ﬁnal resolution on momentum
+transfer results from the convolution of both uncertainties.
+Angular resolution results from a trade-off with sensitivity
+through collimation opening and thus it is limited to what
+is needed to discriminate threats from innocent material.
+As the spatial resolution is mainly needed to have a small
+angular uncertainty, spatial resolution is more important in
+one direction (the angular deviation direction deﬁned by the
+secondary collimation). Detector anode side is thus segmented
+in rectangular shaped electrodes.
+As angular resolution itself is limited by sensitiv-
+ity/resolution trade-off, the high energy resolution of a HPGe
+detector is not needed for a high throughput system and CZT
+detector resolution (few percents) is sufﬁcient. Count rate
+requirements are also relatively modest due to the low ﬂux
+of diffracted photon compared with the incident X-ray ﬂux.
+High ﬂux grade detector and electronics are thus not needed
+too and a conventional spectrometric chain is well adapted.
+B. Detector conﬁguration
+As efﬁciency is an important criterion and because most
+incident X-rays are in the 10-100keV range, 5 mm thick
+detector have been used. For such thickness, CZT high re-
+sistivity material are interesting and provide a good spectral
+behavior. We used a anode/cathode readout scheme to be
+able to correct depth of interaction effects. To deﬁne the
+anode size, we ﬁrst carried out simulations using Penelope
+[4] and our detector simulation tools [6]. Spectra of various
+conﬁguration have been simulated (Fig. 2), including effect of
+depth of interaction biparametric correction to deﬁne the most
+interesting conﬁgurations.
+Raw spectrum Corrected spectrum
+Fig. 2. Simulation of a Cobalt 57 and Americium 241 spectrum before and
+after biparametric correction. 5 mm thick CZT biased at 700V , 4.7 mm2
+electrode. Resolution before correction is 3.6 % and 1.9 % after (for an
+idealized detector).
+Afterwards, we used a CZT test device to experimentally
+compare performance of various conﬁguration (see Fig. 3).
+Spectral performance of CZT detector mainly depends on
+two factors: readout noise [5] and detector response non-
+uniformity, especially variability due to depth of interaction
+effect and charge sharing. Large electrodes suffer from peak
+tailing and high electric noise, while small electrodes suffer
+from charge sharing and are more challenging in terms of read-
+out integration and power dissipation. We have chosen to use
+3.4mm
+2 electrodes as a reasonable trade-off. Observed noise
+Channel
+Counts
+Channel
+Counts
+Channel
+Counts
+Fig. 3. Diffraction spectra of the same material obtained on a detection line
+subdivided in 1, 2 or 4 anodes. Corresponding anode area are 9.3, 4.7 and
+2.3 mm
+2.
+on these electrodes (Fig. 4) is typically between 170 and 220
+rms electrons at 500 V bias; the variability essentially comes
+from leakage current variability (0.2 to 1.5 nA). Additional
+stray capacitance due to CZT and PCB is around 2.5 pF and
+dielectric noise contributes to Equivalent Noise charge (ENC)
+for 60 rms electrons. Shaping time used is short (0.7 µs) to
+cope with shot noise contribution.
+The 660 mm
+2 detection area is thus divided in 192 anodes
+to limit readout noise to an acceptable value and have a good
+pixel effect. We decided to use cathode readout with a 12
+cathode segmentation to properly estimate depth of interaction.
+We also decided to handle multi-channel signal readout to
+correct charge-sharing effects. The system is operated at
+700 V bias in order to balance shot noise and charge sharing
+degradation effects.
+III. S
+YSTEM ELECTRONICS
+A. Readout integrated circuits
+The readout system is relatively complex as it uses two
+different kinds of ASIC: one for anode readout and one for
+cathode readout. These two ASICs were on-the-shelf and were
+designed prior the design of the detection module itself.
+The anode ASIC, called IDeFX-HD [8] is a low-noise low-
+power circuit designed to read a high number of small area
+electrodes with low stray capacitance and low leakage current
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 03:03:57 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 3 ---
+0.001
+0.01
+0.1
+1
+1 10 100 1000 10000
+Frequency (kHz)
+Board only
+95e
+CZT 500V
+187e
+CZT 0V
+ASIC only
+53e
+148e
+Noise Density (aC/√Hz)
+Fig. 4. Observed charge noise spectral density in four conﬁgurations. Red:
+with ASIC only and a internal 20pA source (ENC=53 rms electrons). Green:
+with ASIC and detector hybridization board (ENC=95 rms electrons). Blue:
+with unbiased detector (ENC=148 rms electrons). Purple: with 500V biased
+detector (ENC=187 rms electrons).
+(typically less than 2 pF and 1 nA). It dissipates 1 mW per
+channel.
+The cathode ASIC, called ALIGASPECT is a transient
+digitizing ASIC adapted to large electrodes, with typically
+10 pF capacitance and up to 20 nA leakage currents. The
+current driven through input transistor is notably higher and it
+dissipates 6 mW per channel.
+The total power dissipation for all ASICs is less than
+300 mW.
+B. Digital electronics
+The system is driven by a single FPGA that handle all
+system control, data processing and interfacing.
+We use a multi-electrode readout scheme [7] to enable
+advanced data corrections. Multiples anodes and cathodes
+signals can be read for a single interaction event. Depth of
+interaction is computed from cathode over anode ratio while
+charge sharing is computed by comparing charge collected
+between anodes. The hardware data processing pipeline (Fig.
+5) carries out real time corrections:
+• it communicates with ASICs,
+• performs gain and offset corrections,
+• sort and cluster coincident detected events,
+• corrects amplitudes from depth of interaction and charge
+sharing to compensate for CIE non-uniformities,
+• send photon data in Ethernet UDP packets.
+An embedded processor (Altera NIOS II) allows to perform
+complex test and calibration sequences, also handles system
+monitoring and conﬁguration. The module is then easy to
+manage and to integrate into the full system.
+IV. R
+ESULTS
+Thanks to the low noise of readout ASIC, the good quality
+of CZT crystals, and the applied correction, performance is
+good and reproducible at room temperature (modules are
+regulated to 25
+oC). Figure 6 shows two example spectra as
+ASIC ASIC...
+Mux
+Translation
+Channel:
+gain
+offset
+position
+Clustering
+BP correction
+Calibrations
+Depth
+Charge sharing
+Ethernet
+Processor
+- calibration
+- test
+- parameterizing
+- monitoring
+Fig. 5. Event processing pipeline
+measured from the output of the module. CIE corrections are
+applied on the event ﬂow and are then transparent for the end-
+user.
+Channel
+Counts
+59.5 keV
+Channel
+Counts
+122 keV
+Fig. 6. Spectral performance of the module (on one good performing
+anode) with Americium-241 (top) and Cobalt-57 (bottom) sources and full
+area irradiation. Energy resolution are here respectively 3.2 % and 2.3 %Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 03:03:57 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 4 ---
+TABLE I
+STATISTICS ON 83 DETECTORS
+Average Std deviation
+Dead pixels 1.7 2.8
+Resolution (pulser) 2.1 keV 0.1 keV
+Efﬁciency (60keV) 73 % 4 %
+Resolution (60keV) 3.8 % 0.2 %
+Resolution (122keV) 2.4 % 0.2 %
+Statistically speaking (Table I), a quite stable performance
+has been observed on a large amount of detectors (83 detectors
+of 192 anodes). In average, almost two dead pixels (badly
+connected or noisy) are present on each detector device. It can
+be tolerated in a certain limit but it impacts global efﬁciency.
+Room temperature energy resolution averaged on all module
+are comprised between 3.4 and 4.3 % at 60 keV and between
+1.9 and 2.7 % at 122 keV . Efﬁciency is in general quite
+reproducible between detectors (average between 68 and 75 %
+at 60 keV) but less homogeneous inside a given detector. Note
+that efﬁciency has been measured in a 10 % wide window (6
+keV) centered on 60 keV .
+V. C
+ONCLUSION
+We have developed a small but autonomous detection sys-
+tem to enable the production of innovative baggage scanners
+based on the new technology of X-ray diffraction imaging.
+Data processing, calibration and test functions are fully inte-
+grated inside the module, making it easy to use and manage.
+These modules perform correctly, with a good stability and re-
+producibility. They were integrated inside a scanner prototype
+that has demonstrated the feasibility of a XRD based baggage
+screener operating at high throughput (up to 600 bags per
+hour).
+R
+EFERENCES
+[1] G. Harding, H. Fleckenstein, D. Kosciesza, S. Olesinski, H. Strecker, T.
+Theedt, et G. Zienert, X-ray diffraction imaging with the Multiple Inverse
+Fan Beam topology: Principles, performance and potential for security
+screening, Applied Radiation and Isotopes, vol. 70, no. 7, p. 1228-1237,
+july 2012.
+[2] G. Harding, H. Strecker, D. Kosciesza, et J. Gordon, Detector con-
+siderations relevant to x-ray diffraction imaging for security screening
+applications, p. 730619-730619, mai 2009.
+[3] C. Cozzini, G. Harding, P. Edic, D. Beque, D. Kosciesza, Y . Du,
+et H. Strecker, Energy dispersive X-ray diffraction spectral resolution
+considerations for security screening applications, in 2010 IEEE Nuclear
+Science Symposium Conference Record (NSS/MIC), 2010, p. 3873-3876.
+[4] F. Salvat, J. Fernndez-Varea, and J. Sempau, PENELOPE-2008: A Code
+System for Monte Carlo Simulation of Electron and Photon Transport.
+Barcelona, Spain: Nuclear Energy Agency Organisation for Economic
+Cooperation and Development, 2008.
+[5] V . Radeka, Low-noise techniques in detectors, Ann. Rev. Nucl. Part. Sci.
+217–277, 1988.
+[6] G. Mont ´emont, M.-C. Gentet, O. Monnet, J. Rustique, and L. Verger,
+Simulation and Design of Orthogonal Capacitive Strip CdZnTe Detectors,
+IEEE Transactions on Nuclear Science, vol. 54, no. 4, p. 854-859, 2007.
+[7] G. Mont ´emont, S. Lux, O. Monnet, S. Stanchina and L. VergerEvaluation
+of a CZT Gamma-Ray Detection Module Concept for SPECT, in Nuclear
+Science Symposium Conference Record, 2012, NSS ’12 IEEE, 2012.
+[8] O. Gevin, O. Lemaire, F. Lugiez, A. Michalowska, P. Baron, O. Limousin,
+and E. Delagnes, Imaging X-ray detector front-end with high dynamic
+range: IDeF-X HD, Nuclear Instruments and Methods in Physics Re-
+search Section A: Accelerators, Spectrometers, Detectors and Associated
+Equipment, vol. 695, pp. 415419, 2012.Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 03:03:57 UTC from IEEE Xplore.  Restrictions apply. 

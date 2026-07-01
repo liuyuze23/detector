@@ -1,0 +1,613 @@
+
+--- PAGE 1 ---
+ViewOnline
+ExportCitation
+RESEARCH ARTICLE |  NOVEMBER 07 2012
+Time-dependent current-voltage characteristics of Al/p-
+CdTe/Pt x-ray detectors
+F. Principato; G. Gerardi; A. A. Turturici; L. Abbene
+J. Appl. Phys. 112, 094506 (2012)
+https://doi.org/10.1063/1.4764325
+Articles You May Be Interested In
+Study of asymmetries of Cd(Zn)Te devices investigated using photo-induced current transient
+spectroscopy, Rutherford backscattering, surface photo-voltage spectroscopy, and gamma ray
+spectroscopies
+J. Appl. Phys. (October 2012)
+Polarization effects in thallium bromide x-ray detectors
+J. Appl. Phys. (September 2010)
+The effects of deep level traps on the electrical properties of semi-insulating CdZnTe
+J. Appl. Phys. (January 2014)
+ 30 June 2026 07:56:47
+
+
+--- PAGE 2 ---
+Time-dependent current-voltage characteristics of Al/p-CdTe/Pt x-ray
+detectors
+F . Principato,a) G. Gerardi, A. A. T urturici, and L. Abbene
+Dipartimento di Fisica, Universit /C19a di Palermo, Viale delle Scienze, Ediﬁcio 18, 90128 Palermo, Italy
+(Received 26 June 2012; accepted 9 October 2012; published online 7 November 2012)
+Current-voltage (I-V) characteristics of Schottky Al/p-CdTe/Pt detectors were investigated in dark
+and at different temperatures. CdTe detectors with Al rectifying contacts, very appealing for high
+resolution x-ray and gamma ray spectroscopy, suffer from bias-induced polarization phenomena
+which cause current increasing with the time and severe worsening of the spectroscopic
+performance. In this work, we studied the time-dependence of the I-V characteristics of the
+detectors, both in reverse and forward bias, taking into account the polarization effects. The I-V
+measurements, performed at different time intervals between the application of the bias voltage and
+the measurement of the current, and the measured current transients show as the electrical instability
+manifests itself even in time intervals shorter (i.e., <1 s) than those are necessary to make evident
+the degradation of the spectroscopic properties. The results point out as this time interval is a critical
+parameter for correct investigations on the electrical properties of these devices. Although the
+detectors are typically classiﬁed as Schottky-type detectors, we ﬁnd that the thermionic emission is
+not the dominant transport mechanism, except at very low bias voltage values. Finally, the Schottky
+barrier height of the Al/p-CdTe contact was extracted by measuring the contact resistance at zero
+bias.
+VC 2012 American Institute of Physics .[ http://dx.doi.org/10.1063/1.4764325]
+I. INTRODUCTION
+The appealing potentialities of cadmium telluride
+(CdTe) and cadmium zinc telluride (CdZnTe) detectors for
+x-ray and gamma ray spectroscopy are now widely recog-
+nized.1–3 Among the traditional semiconductor spectrome-
+ters, CdTe detectors show high detection efﬁciency and good
+room temperature performance and are well suited for the
+development of compact and portable detection systems. 4
+Beside their successful astrophysical applications, 1,2 a great
+effort has recently been devoted to the development of CdTe
+detectors for medical applications, such as x-ray spectros-
+copy in mammography
+5,6 and energy resolved photon count-
+ing detectors in diagnostic medicine (mammography and
+computed tomography). 7–9 High-resolution CdTe detectors
+are generally fabricated with rectifying contacts, working as
+diodes with indium (In) as the anode electrode on a p-type
+CdTe wafer and platinum (Pt) as the cathode. 1 Rectifying
+contacts ensure low leakage currents, if compared with an
+ohmic electrode conﬁguration (Pt/CdTe/Pt), allowing high
+bias voltage operation and optimum charge collection. Due
+to the difﬁculties of dividing an In electrode into pixels, alu-
+minum (Al) has been recently found to be a good alternative
+electrode material for diode detectors.
+10–12 In addition to low
+leakage currents comparable to those of standard In/CdTe/Pt
+detectors, Al/CdTe/Pt detectors allow pixellization of anodes
+and then the possibility to realize electron-collecting-type
+diode detectors.
+As well known, CdTe detectors with rectifying contacts
+(Al and In) suffer from instability with time under bias
+voltage, causing dramatic worsening in the spectroscopic
+performance.
+13–15 Several studies demonstrated as this time
+instability in CdTe detectors, known as polarization, is
+mainly related to the accumulation of negative charge on
+deep acceptor levels during the application of the bias volt-
+age (charge accumulation model, CAM).
+13–19 Polarization
+produces a progressive increasing of the reverse current with
+the time which causes a severe degradation of the energy re-
+solution of the detectors. Studies on polarization phenomena
+in Schottky CdTe detectors are typically performed through
+an electrical approach.
+17–21 At the end of 2006, Toyama and
+co-workers17 presented some results on the physical proper-
+ties of deep acceptors and the Schottky barrier height (Al/
+CdTe) by measuring the current voltage curves of Al/CdTe/
+Pt detectors and on the basis of the CAM model. In this
+work, the time dependence of the leakage current is consid-
+ered only for long times (the order of minutes). In Ref. 17,
+the extraction of the barrier height of the Al/CdTe contact is
+obtained from the straight line intercept of a semi-log for-
+ward I-V plot at zero bias, supposing that the I-V curve at
+the starting time (t ¼ 0) is not affected by the polarization. In
+Ref. 22, the time instability of the leakage current of
+Schottky CdTe detectors was characterized by measurements
+in a 30 s =100 h time scale after the bias application. In
+Ref. 19, the polarization Schottky CdTe detectors were stud-
+ied in simulated structures, under dark bias, solving drift-
+diffussion and Poisson equations numerically. The results of
+the current transient after biasing for Al/CdTe/Pt and In/
+CdTe/Pt detectors were obtained with a starting time of the
+order of a few seconds and shorter times are not taken into
+account in order to speed up the simulation time.
+In this work, we presented electrical investigations
+on Schottky Al/p-CdTe/Pt detectors pointing out the
+a)Author to whom correspondence should be addressed. Electronic mail:
+fabio.principato@unipa.it.
+0021-8979/2012/112(9)/094506/7/$30.00 VC 2012 American Institute of Physics112, 094506-1
+JOURNAL OF APPLIED PHYSICS 112, 094506 (2012)
+ 30 June 2026 07:56:47
+
+
+--- PAGE 3 ---
+time-dependence of the current-voltage characteristics even
+at short times (i.e., <1 s) after the bias application. The time
+dependence of the I-V curves in both reverse and forward
+bias and at low temperature was showed. Due to the absence
+of time-dependence at low bias voltages (near zero Volt), we
+also estimated the barrier height of the Al/CdTe Schottky
+from the temperature dependence of the speciﬁc contact re-
+sistance. Furthermore, from the analysis of the reverse cur-
+rent transient, we obtained some clariﬁcations about the
+effect of the polarization on the transport mechanism.
+II. EXPERIMENTAL PROCEDURES
+The study was carried out on p-type CdTe planar detec-
+tors, manufactured by Acrorad (Japan) with 2 mm thickness
+and 4 :1 /C2 4:1m m2 area. The detectors are characterized
+by Au/Ti/Al/CdTe/Pt electrode conﬁguration. The anode
+(Schottky) contact was formed by deposition Au/Ti/Al on
+the Te-face of the crystal. A guard ring is placed ar ound the
+anode and 50 lm away from it. The cathode is a planar elec-
+trode (Pt) covering the entire d etector surface, which produces
+an nearly ohmic contact on the CdTe.23 A sample of three detec-
+tors was characterized. The detector was enclosed in a shielded
+box placed on a Peltier thermal stage with temperature control
+to within 0:1 /C14C, and ﬁlled with nitrogen gas to prevent conden-
+sation. The detector was mounted on Polytetraﬂuoroethylene
+(PTFE) substrate (byTaconic) to prevent leakage currents.
+The I-V curves were measured with the Keithley 2410,
+which provides the cathode bias voltage, and with the Keith-
+ley 236 conﬁgured as electrometer, which is connected to the
+pixel anode forced at zero bias and measures the pixel cur-
+rent with accuracy 0 :3%reading þ 100 fA with 61:0n A
+range. The guard ring of the detector is held at the same zero
+potential of the anode by connecting it at the HI Output
+guard of the triax connector of the 236 unit. Therefore, we
+prevent to measure the leakage currents that could ﬂow
+through any lateral conductive path of the detector.
+The I-V measurements were performed in sweep mode,
+with the 2410 and 236 units synchronized via external trigger
+link lines. In particular, when the 2410 unit set its source
+value send a trigger to the 236 unit, which starts the source-
+delay-measure cycle. At the end of the A/D conversion, the
+236 send the trigger to the 2410 unit to start the setting of
+the new value. The delay time t
+delay between the setting of
+the source voltage and the starting of the current measuring
+phase can be varied from 0 to 65 s. The measuring phase
+comprises the integration time of the A/D conversion, which
+was chosen equal to 17 ms, which was a good compromise
+between speed and noise immunity. The total measurement
+time obtained by measuring the lag between the two consec-
+utive trigger pulses with t
+delay ¼ 0i s /C2530 ms. Hence, the
+total time delay Tdelay between the time of the setting source
+voltage and the time of the end of the A/D conversion is
+Tdelay ¼ tdelay þ 30 ms. Tdelay includes the trigger latency
+(200 ls), source conﬁguration time (50 ls) and the settling
+time (100 ls) of both SMU units.
+In order to measure the transient current of the detectors
+at ﬁxed bias voltage, within a time less than 30 ms after the
+voltage bias is settled, we used a transimpedance ampliﬁer,
+realized with the AD549 ultra low bias current operational
+ampliﬁer, with 1.0 nA/V gain. The detector voltage bias was
+supplied with the ORTEC 456 H high voltage power supply.
+The current detector waveforms were acquired with the NI
+4551 16-bit data acquisition board, by using 10
+3 Sample=s.
+The input voltage range was varied according to the range of
+the detector current, which depends on the temperature. The
+waveform record length is /C251000 s. The transient measure-
+ments were performed by applying a step reverse voltage at
+the detector. Before the application of the step voltage, the
+detector is biased at zero volt for a time long enough to avoid
+residual polarization effects. The voltage step pulse was ﬁl-
+tered by means low-pass RC circuit with /C2550 ls rise time.
+III. MEASUREMENTS AND RESULTS
+A. DC characterization
+We performed the I-V measurements at various temper-
+atures and for different values of the Tdelay (40, 130, and
+1030 ms). In Fig. 1 are shown the I-V curves at different tem-
+peratures in the range /C025–40 /C14C and in the voltage range
+/C01000–100 V measured with a the delay time Tdelay ¼ 1:0s .
+The rectifying behavior of the detectors is clearly high-
+lighted. The reverse currents are very low, especially if com-
+pared to the Pt/CdTe/Pt detector ones, allowing high bias
+voltage operation of the detectors.
+24,25 We note that the I-V
+curves at forward bias and for all temperatures do not present
+a linear trend in the semi-log scale. Thus, the forward current
+IF not obey to the relation IF ﬃ I0 expðqVF=kBTgÞ valid for
+Schottky contacts, where VF is the forward bias voltage, q is
+the magnitude of electronic charge, kB is the Boltzmann con-
+stant, T is the absolute temperature, I0 is the reverse satura-
+tion current and g is the ideality factor, which usually
+assumes value close to 1 for metal-semiconductor Schottky
+contacts.26,27 The ideality factor g for the characterized
+detectors assumes values greater than 2 at VF /C25 1 V and
+increases with the increasing of the forward bias voltage.
+Fig. 2 shows the forward I-V curves of Fig. 1 on log-log
+scale. We note that at all temperatures the current tends
+towards a linear trend at high voltages. Thus, at high forward
+bias, i.e., VF > 40 V, the I-V curves follow a power law,
+FIG. 1. I-V curves of the Al/p-CdTe/Pt detector measured at T ¼ –25, –10,
+0, 10, 25, 35, and 40 /C14C, with Tdelay ¼ 1:0s .
+094506-2 Principato et al. J. Appl. Phys. 112, 094506 (2012)
+ 30 June 2026 07:56:47
+
+
+--- PAGE 4 ---
+IF / Vm
+F , where the exponent m depends on the bias voltage,
+the temperature and Tdelay . Generally, if m assumes values
+greater than 2 then the conduction mechanism is dominated by
+space charge limited current (SCLC). 28,29 By changing Tdelay
+the I-V curves maintain the power-law relation but with differ-
+ent m values. In Fig. 3 are presented the forward I-V character-
+istics at different temperatures and for the selected Tdelay .W e
+observe the change of the I-V with the time Tdelay .F r o mt h e
+linear ﬁtting in a log-log scale in the high voltage range
+VF > 40V, we obtain the values of the exponent m,w h i c ha r e
+time dependent. For example, at T ¼ 25/C14C we obtain the val-
+ues m ¼ 2:6360:03; 3:0560:03 and 3 :4460:02 for 40, 130
+and 1030 ms time delay, respectively. Moreover, the m versus
+T curves change with the acquisition time Tdelay ,f o re x a m p l e ,
+for Tdelay ¼ 1:0s , m increases monotonically from 2.8 to 3.6
+with the temperature, whereas at Tdelay < 140 ms the curve
+mðTÞ has a minimum at 10/C14C, where m /C25 2:5.
+Also in the reverse bias region the detectors are charac-
+terized by time-dependent I-V curves. In Fig. 4 are shown
+the measured I-V curves for different temperatures and delay
+times. We note that the reverse current I
+R is very sensitive to
+the delay time. At low temperatures IR decreases with the
+increasing of Tdelay in the whole voltage bias range. At high
+temperatures an increasing of the reverse current with the
+time delay was observed, due to the occurrence of the polar-
+ization. The results of this investigation show that the I-V
+curves measured with delay time greater than /C25 1 s and at
+high reverse bias voltages V
+R < /C0200 V follow the law
+IRðVÞ¼ a expðb
+ﬃﬃﬃﬃﬃﬃﬃﬃ
+jVRj4
+p
+Þ, predicted by the thermionic emis-
+sion model for reversed biased Schottky barriers, 27 although
+in our case the a and b are coefﬁcients depend on both time
+and the temperature.
+B. Transient characterization
+Transient measurements were performed in reverse by
+measuring the time dependence of the current IRðtÞ within a
+time window of approximately 1000 s after the detector is
+switched from zero to a speciﬁed reverse bias voltage.
+Because at reverse bias and at low temperatures the detector
+current is very small, we performed transient analysis only in
+the temperature and reverse voltages where the current is
+greater than resolution of the ampliﬁer AD549 ( /C2510 pA).
+Currents greater than 10 nA cause the saturation of the
+ampliﬁer. In Fig. 5 are shown the transient current at
+V
+R ¼/C0 500 V at different temperatures in the range
+10–35 /C14C. We note that at all temperatures an initial high
+current value is present, followed by a current decreasing.
+The current reaches a minimum value at the time tp, which
+we denote polarization time. For t > tp the current IR
+increases with the time. For t < 20 ms, the current is a con-
+stant due to the ampliﬁer saturation or to the clamping of the
+analog input stage of the acquisition board.
+FIG. 2. Forward I-V curves of Fig. 1 on log-log scale. The plateau at
+T ¼ 40/C14C and at low voltages is due to the high current range of the instru-
+ment Keithley 236.
+FIG. 3. Time evolution of the forward I-V
+curves at different temperatures and time
+Tdelay ,( /H17034) 1 s, ( þ) 130 ms and ( w) 40 ms.
+The straight lines are the ﬁtting obtained
+with the power-law IF / Vm
+F in the high
+bias voltage range, i.e., 40 < VF < 100 V.
+094506-3 Principato et al. J. Appl. Phys. 112, 094506 (2012)
+ 30 June 2026 07:56:47
+
+
+--- PAGE 5 ---
+C. Barrier height
+The time dependence of I-V curves occurring even for
+short ( <1 ms) delay times do not allow to extract the barrier
+height of the Schottky contact Al/CdTe by using the com-
+mon methods based on the I-V-T analysis. 17,26,27 We noted
+that at bias voltages less than ( /C25 1 V) the I-V curves do not
+depend on the time Tdelay . Hence, to extract the barrier height
+/Bp of the hole-blocking Schottky contact Al/CdTe, we use
+the speciﬁc contact resistance Rc deﬁned as:27
+Rc ¼ @J
+@V
+/C18/C19 /C01
+V¼0
+: (1)
+By considering that the Pt/CdTe junction is an hole-injecting
+contact15,19,30 we neglect its contribute to the contact resist-
+ance. If the thermionic emission dominates the current trans-
+port, the contact resistance can be expressed as:
+Rc ¼ kB
+qA /C3T exp q /Bp
+kB T
+/C18/C19
+; (2)
+where A/C3 is the effective Richardson constant for the thermi-
+onic emission. We performed current-voltage measurements
+in the /C00:1–0:1 V range with 5 mV step and in the tempera-
+ture range 25–60
+/C14C with 5 /C14C step. The measured I-V
+curves, excluding the values close to V ¼ 0, are interpolated
+with a third-degree polynomial, i.e., I ¼ q1V3 þ q2V2
+þq3V þ q4. The contact resistance is obtained from the ﬁt-
+ting polynomial by Rc ¼ 1=q3. In Fig. 6 are shown the I-V
+curves at different temperatures in /C00:1–0:1 V bias range
+and the ﬁtting curves. The contact resistance is 5 :94
+60:02 GX at 55 /C14C.
+The contact resistances are thermally activated and they
+are well described by an Arrhenius plot as shown in Fig. 7.
+From the linear ﬁtting, we obtained for the sample #1 of the de-
+tector the value of the barrier height /
+Bp ¼ 0:71860:004 eV.
+For the samples #2 and #3 of the Al/CdTe/Pt detectors, we
+obtained 0:73360:007 and 0:75160:008 eV, respectively.
+FIG. 4. Time evolution of the reverse I-V
+curves at different temperatures and delay
+times Tdelay .
+FIG. 5. Transient current curves under reverse bias VR ¼/C0 500 V.
+FIG. 6. I-V curves ( W) at different temperatures in the /C00:1–0:1 V bias
+range, ﬁtted with a third-degree polynomial (continuous lines).
+094506-4 Principato et al. J. Appl. Phys. 112, 094506 (2012)
+ 30 June 2026 07:56:47
+
+
+--- PAGE 6 ---
+IV . DISCUSSION
+The main result of the electrical characterization of the
+investigated Al/p-CdTe/Pt x-ray detectors is the time de-
+pendence of the I-V curves, even for short time intervals
+(<1 s) between the setting time of the source voltage and the
+start time of the current measurement. Indeed, the increase
+with time of current related to polarization effects is a well
+known critical issue of these Schottky CdTe detectors, con-
+trary to ohmic detectors, but usually this effect on the electri-
+cal characterization was taken into account only for long
+times (i.e., >1 s).
+15,17,18,20,21,31 This time dependence occurs
+both in forward and reverse bias, except at low voltages
+(<0:1 V). Generally, the polarization is ascribed to ionization
+of deep acceptor levels derived from defects (e.g., Cadmium
+vacancies), which generate a negative space charge near the
+anode contact after the application of the bias voltage. This
+space charge screens out the bias and the dead layer is
+formed near the cathode.
+13,14,17,19 Hence, the transport
+mechanism is dominated in a complicated way by the charge
+trapping and de-trapping from the deep levels. We noted that
+at low bias the polarization does not manifest itself and that
+the dependence of the contact resistance on the temperature
+obeys Eq. (2) valid for the thermionic emission model.
+Hence, the extracted barrier height values in the range
+0:71–0:73 eV for the investigated samples concerns the bar-
+rier for the holes at the Al/CdTe contact. These values are
+comparable with those obtained by Ref. 26 in Al/p-CdTe
+diodes, although they obtained two values for the barrier
+height, 0.69 eV when the thermionic emission model is sup-
+posed valid and 0.74 eV with the diffusion model and the ca-
+pacitance method. Toyama
+21 found for Al/p-CdTe/Pt
+detectors, produced by Acrorad, values of the Al/CdTe bar-
+rier height in the range 0 :2–0:6 eV as a function of the CdTe
+surface He plasma treatment. In this case, the method to
+extract the barrier height is based on the assumption that the
+reverse current, even at high bias voltage, is governed by the
+thermionic emission model. Moreover, Toyama does not
+taken into account the time dependence of the I-V curves for
+short times.
+We note that the hole-injecting nature of the CdTe/
+Pt
+15,19,30 contact allow us to neglect its contact resistance
+and that the carrier transport mechanism is governed both by
+the Al/CdTe Schottky barrier and by the ionization process
+of deep levels. Shallow levels do not contribute signiﬁcantly
+due to the compensation mechanism.
+15,19 The investigated
+detectors have low values of reverse current, in fact at
+VR ¼/C0 1000 V the pixel current is /C252 pA and /C253n A a t
+/C025/C14C and 40 /C14C, respectively. At low temperatures where
+the effect of polarization is minimized, we note that the
+reverse current increases with the decrease of the delay time
+and its value is almost independent of voltage for delay times
+up to the order of hundred milliseconds.
+With delay times T
+delay /C25 1 s or greater, where the effect
+of polarization is present, and for VR < /C0100 V and T > 0 /C14C
+the reverse current increases linearly with the voltage,
+whereas for higher bias voltages, as previously noted, the cur-
+rent shows an exponential trend consistent with the thermi-
+onic emission model,
+27 although due to the polarization the
+this transport mechanism does not dominate. As a result of
+the time dependence of the I-V curves shown in Fig. 4 the
+correct model of the charge transport mechanism in reverse is
+not clear. In order to clarify this issue we have investigated
+the time evolution of the reverse current when the detector is
+switched from zero to V
+R bias. In Fig. 5 are shown the transi-
+ents at different temperatures for VR ¼/C0 500 V within the
+time window 1 ms –1000 s. After biasing, the current
+increases so much as to cause the saturation of the ampliﬁer.
+In this case, the current is dominated by electrons emitted by
+the cathode. 19 Thereafter, the current decreases due to the
+emission of trapped charges which causes the reduction of
+the electric ﬁeld at the cathode. We note that in Ref. 19 the
+descending current transient is not observed in the simulated
+Al/CdTe/Pt Schottky detectors, because fast processes ( <1s )
+which occur in the detector shortly after biasing are not taken
+into account.
+We observe that the current reaches a minimum value,
+at the time t ¼ t
+p which we consider the onset of the polar-
+ization, thereafter begins to increase with the time. In partic-
+ular, after the polarization time ( t > t
+p) the current ﬁrst
+increases exponentially and then nearly linearly. In this case,
+the current is governed by the holes sweep out of the deple-
+tion volume from the deep acceptors level (detrapping).
+Hence, from the exponential component of the current we
+extracted by ﬁtting the detrapping time s
+d at each tempera-
+ture. These sd’s are thermally activated and they are well
+described by an Arrhenius plot as shown in Fig. 8, which
+shows the relation between ln( sd T2) versus 1 =kBT. From the
+linear ﬁtting of ln( sd T2) versus 1 =kBT we obtained the value
+of the activation energy 0 :57460:001 eV. This activation
+energy depends on both the deep acceptor energy levels and
+the position of the hole quasi-Fermi level which depends on
+the value of the reverse bias voltage. Indeed, we performed
+the same analysis at the reverse bias V
+R ¼/C0 700V, and we
+obtained an activation energy of 0 :61360:001. These values
+of activation energy are comparable to those reported in the
+previous studies 15,18,22 using different methods in similar
+CdTe detectors, which are in the range 0 :62–0:69 eV. These
+energy levels are attributed to acceptor levels responsible for
+FIG. 7. Arrhenius plot of the contact resistance temperature product for the
+sample #1 of the Al/p-CdTe/Pt detector.
+094506-5 Principato et al. J. Appl. Phys. 112, 094506 (2012)
+ 30 June 2026 07:56:47
+
+
+--- PAGE 7 ---
+polarization which might depend on the thermal treatment
+during the crystal growth. 32
+The linear trend of the reverse current for times t /C29 tp
+can be explained by considering that the reverse current is
+dominated by the hole current and is mainly governed by the
+electrical ﬁeld at the anode, which increases with the ioniza-
+tion of the deep levels. Thus, the increasing of the reverse
+current slows the ionization process which causes the slow-
+ing down of the speed with which the current increases with
+the time.
+18
+In Fig. 9 is shown the polarization time tp versus temper-
+ature under bias voltage VR ¼/C0 500, where results the
+increase of the polarization time ( tp) when the detector is
+cooled. The values of tp reported in Ref. 19 for a 1 mm long
+Al/CdTe/Pt simulated structures, are about two orders of
+magnitude greater than those shown in Fig. 9. This discrep-
+ancy is due to the different deﬁnition of the polarization
+time, indeed in Ref. 19 tp is deﬁned as the minimum time at
+which the space charge due to the ionized traps reaches the
+values imposed by the external bias when the ionization pro-
+cess has not yet started.
+Finally, the transient analysis has been also performed at
+other values of the reverse voltages bias greater than 500 V,
+and the results showed similar behavior of the transient
+current.
+Concerning the forward conduction mechanism, which
+is dominated by SCLC, the time dependence of the current-
+voltage curves complicates the analysis. Indeed, several
+methods exists (see, for example, Ref. 33) that allow to
+extract the density of states of the trap levels from the I-V
+curves analysis, in particular from the dependence of the
+local m on the voltage bias V
+F. In our case, the exponent m
+depends on the delay time TD, hence we leave out the appli-
+cation of these methods.
+V . CONCLUSION
+The electrical characterization of Al/p-CdTe/Pt Schottky
+detectors, fabricated by Acrorad for X and gamma ray spec-
+troscopy applications, performed at different temperatures
+reveals that the current, both in reverse and forward bias, is
+not only dependent on the temperature but also on the time
+between the setting time of the source voltage and the start-
+ing time of the current measurement. The current-voltage
+characteristics show the rectifying behavior of these detec-
+tors and that the forward current is governed by the time-
+dependent SCLC mechanism.
+The reverse I-V curves exhibit as well time dependence,
+even at low temperatures. This time dependence of the
+reverse current occurs in the whole investigated time scale
+1m s–1000 s, where the time evolution of current does not
+allow to obtain steady-state I-V curves, which generally are
+used to determine the transport mechanism. This behavior is
+related to the polarization phenomenon, which is characteris-
+tic for Schottky-type CdTe detectors, although usually the
+emergence of the polarization is assumed to occur a few sec-
+onds after the application of the bias voltage.
+The time dependence of the I-V disappears for low bias
+voltage ( <0:1 V), where the current is dominated by the
+thermionic emission model. Indeed, the contact resistance
+measured at different temperatures is consistent with that
+predicted by the thermionic emission model and allow us to
+extract the values of the Al/CdTe Schottky barrier height in
+the range 0 :71–0:73 eV.
+ACKNOWLEDGMENTS
+This work has been carried out with the partial support
+by the University of Palermo through the ex-60% funds.
+1T. Takahashi and S. Watanabe, IEEE Trans. Nucl. Sci. 48, 950 (2001).
+2S. Del Sordo, L. Abbene, E. Caroli, A. M. Mancini, A. Zappettini, and P.
+Ubertini, Sensors 9, 3491 (2009).
+3L. Abbene, S. D. Sordo, E. Caroli, G. Gerardi, G. Raso, S. Caccia, and G.
+Bertuccio, J. Appl. Phys. 105, 124508 (2009).
+4L. Abbene and G. Gerardi, Nucl. Instrum. Methods Phys. Res. A 654, 340
+(2011).
+5L. Abbene, G. Gerardi, F. Principato, S. D. Sordo, R. Ienzi, and G. Raso,
+Med. Phys. 37, 6147 (2010).
+6S. Miyajima, Med. Phys. 30, 771 (2003).
+7X. Wang, D. Meier, S. Mikkelsen, G. E. Maehlum, D. J. Wagenaar, B. M.
+W. Tsui, B. E. Patt, and E. C. Frey, Phys. Med. Biol. 56, 2791 (2011).
+FIG. 9. Temperature dependence of the polarization time tp for the Al/p-
+CdTe/Pt Schottky detector at VR ¼/C0 500 V.
+FIG. 8. Arrhenius plot of the time constant sd obtained from exponential ﬁt-
+ting of the reverse current transient at VR ¼/C0 500 V and after the polariza-
+tion time tp.
+094506-6 Principato et al. J. Appl. Phys. 112, 094506 (2012)
+ 30 June 2026 07:56:47
+
+
+--- PAGE 8 ---
+8D. Maneuski, V. Astromskas, E. Fr €ojdh, C. Fr €ojdh, E. N. Gimenez, J.
+Marchal, V. O Shea, G. Stewart, N. Tartoni, H. Wilhelm et al., J. Instrum.
+7, C01038 (2012).
+9E. Fr€ojdh, B. Norlin, G. Thungstrom, and C. Fr €ojdh, J. Instrum. 6, P02012
+(2011).
+10H. Toyama, A. Nishihira, M. Yamazato, A. Higa, T. Maehama, R. Ohno,
+and M. Toguchi, Jpn. J. Appl. Phys., Part 1 43, 6371 (2004).
+11L. Abbene, G. Gerardi, F. Principato, A. A. Turturici, S. Del Sordo, and G.
+Raso, in Nuclear Science Symposium and Medical Imaging Conference
+(NSS/MIC), 2011 IEEE (2011), pp. 4636–4641.
+12L. A. Kosyachenko, O. L. Maslyanchuk, V. M. Sklyarchuk, E. V.
+Grushko, V. A. Gnatyuk, T. Aoki, and Y. Hatanaka, J. Appl. Phys. 101,
+013704 (2007).
+13P. Siffert, J. Berger, C. Scharager, A. Cornet, R. Stuck, R. O. Bell, H. B.
+Serreze, and F. V. Wald, IEEE Trans. Nucl. Sci. 23, 159 (1976).
+14H. L. Malm and M. Martini, IEEE Trans. Nucl. Sci 21, 322 (1974).
+15I. Farella, G. Montagna, A. Mancini, and A. Cola, IEEE Trans. Nucl. Sci.
+56, 1736 (2009).
+16R. Bell, G. Entine, and H. Serreze, Nucl. Instrum. Methods 117, 267 (1974).
+17H. Toyama, A. Higa, M. Yamazato, T. Maehama, R. Ohno, and M.
+Toguchi, Jpn. J. Appl. Phys., Part 1 45, 8842 (2006).
+18A. Cola and I. Farella, Appl. Phys. Lett. 94, 102113 (2009).
+19R. Grill, E. Belas, J. Franc, M. Bugar, S. Uxa, P. Moravec, and P. Hoschl,
+IEEE Trans. Nucl. Sci. 58, 3172 (2011).
+20M. Ayoub, M. Hage-Ali, J. Koebel, R. Regal, C. Rit, F. Klotz, A.
+Zumbiehli, and P. Siffert, Mater. Sci. Eng., B 83, 173 (2001).
+21H. Toyama, M. Yamazato, A. Higa, T. Maehama, R. Ohno, and M. Toguchi,
+Jpn. J. Appl. Phys. 44, 6742 (2005).
+22N. Remou/C19e, D. Barret, O. Godet, and P. Mandrou, Nucl. Instrum. Methods
+Phys. Res. A 618, 199 (2010).
+23T. Takahashi, B. Paul, K. Hirose, C. Matsumoto, R. Ohno, T. Ozaki, K.
+Mori, and Y. Tomita, Nucl. Instrum. Methods Phys. Res. A 436, 111
+(1999).
+24V. Gostilo, V. Ivanov, S. Kostenko, I. Lisjutin, A. Loupilov, S. Nenonen,
+H. Sipila, and K. Valpas, Nucl. Instrum. Methods Phys. Res. A 460,2 7
+(2001).
+25S. Watanabe, S. nosuke Ishikawa, S. Takeda, H. Odaka, T. Tanaka, T.
+Takahashi, K. Nakazawa, M. Yamazato, A. Higa, and S. Kaneku, Jpn. J.
+Appl. Phys., Part 1 46, 6043 (2007).
+26T. L. Chu, S. S. Chu, and S. T. Ang, J. Appl. Phys. 58, 4296 (1985).
+27S. M. Sze, Physics of Semiconductor Devices , 2nd ed. (J. Wiley & Sons,
+1981).
+28A. Rose, Phys. Rev. 97, 1538 (1955).
+29M. Lampert, Rep. Prog. Phys. 27, 329 (1964).
+30C. Matsumoto, T. Takahashi, K. Takizawa, R. Ohno, T. Ozaki,
+and K. Mori, in IEEE Nuclear Science Symposium (1997), Vol.1,
+pp. 569–573.
+31M. Niraula, A. Nakamura, T. Aoki, Y. Tomita, and Y. Hatanaka, Nucl.
+Instrum. Methods Phys. Res. A 491, 168 (2002).
+32M. Ayoub, M. Hage-Ali, J. Koebel, A. Zumbiehl, F. Klotz, C. Rit, R.
+Regal, P. Fougeres, and P. Siffert, IEEE Trans. Nucl. Sci. 50, 229 (2003).
+33V. /C20Cech, Solid-State Electron. 41, 81 (1997).
+094506-7 Principato et al. J. Appl. Phys. 112, 094506 (2012)
+ 30 June 2026 07:56:47

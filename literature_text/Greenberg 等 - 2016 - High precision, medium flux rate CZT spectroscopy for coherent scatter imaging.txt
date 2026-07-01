@@ -1,0 +1,279 @@
+
+
+--- PAGE 1 ---
+High precision, medium ﬂux rate CZT spectroscopy for
+coherent scatter imaging
+Joel A. Greenberg a, Mehadi Hassan a, David J. Brady a, and Kris Iniewski b
+aDept. of ECE, Duke University, Durham, NC, USA
+bRedlen Technologies, Saanich, BC V8M 1X6S, Canada
+ABSTRACT
+CZT detectors are primary candidates for many next-generation X-ray imaging systems. These detectors are
+typically operated in either a high precision, low ﬂux spectroscopy mode or a low precision, high ﬂux photon
+counting mode. We demonstrate a new detector conﬁguration that enables operation in a high precision, medium
+ﬂux spectroscopy mode, which opens the potential for a variety of new applications in medical imaging, non-
+destructive testing and baggage scanning. In particular, we describe the requirements of a coded aperture
+coherent scattering X-ray system that can perform fast imaging with accurate material discrimination.
+Keywords: X-ray detectors, X-ray spectroscopy, X-ray diﬀraction
+1. INTRODUCTION
+Most digital radiation detectors are based on integrating charge of the X-ray photons emitted from the X-ray tube
+for each frame. Traditional systems use scintillator materials that convert X-ray photons into visible light and
+photo diode that in turn convert optical signals into electrical charge. 1 This technique is vulnerable to noise due
+to variations in the magnitude of the electric charge generated per X-ray photon and leads to a larger weighting
+of the higher energy photons and, consequently, reduced image contrast. X-ray photon counting detectors
+solve these problems by detecting directly the X-ray photons and assigning each a uniform weight. When photon
+counting is combined with energy discrimination, where the number of photons within a speciﬁc energy range are
+counted, one eliminates the noise associated with photon weighting and increases the information measurement
+capacity of the detector. Compared to energy integrating detectors, photon counting detectors oﬀer a variety
+of potential advantages, including improved signal to noise ratio (SNR), reduction of beam hardening artifacts,
+reduced electronic noise, reduced dose, and improved tissue diﬀerentiation and/or material discrimination.
+Over the last two decades, the II-VI semiconductor CdZnTe (CZT) has emerged as a material of choice for
+room temperature photon detection of hard X-rays and soft γ-rays. Due to improvements in crystal growth, the
+design of the detectors and the electronics used for reading out the detectors, CZT is now used in numerous
+applications including spectroscopy in astrophysics, industrial, medical imaging and security applications. 2, 3
+CZT-based detectors are typically operated in one of two modes: photon counting or spectroscopy. Photon
+counting mode oﬀers modest energy resolution (ER, typically on the order of 10-20%, see Fig. 1) and can work
+at very high incident count rates (CR) of up to 100 Mcps/mm 2. In contrast, spectroscopy mode involves the
+precise determination of each photon’s energy (with a precision of approximately 1%) but is limited to count
+rates of 1 kcps/mm 2 due to additional signal processing requirements. Nevertheless, there is a critical window
+between these two traditional modes in which the count rates are signiﬁcantly higher than spectroscopy ( e.g.,
+10 -100 kcps/mm 2) and the required energy resolution is much better than required for photon counting ( e.g.,
+2-3%). It is precisely this medium count rate range that is of interest to many new emerging applications in
+non-destructive X-ray testing, baggage scanning and medical imaging. 4–7
+In this paper, we focus on the development of a new CZT-based detector that operates in this high precision
+medium ﬂux regime for rapid coherent scatter X-ray tomography. While coherent scatter ( i.e., X-ray diﬀraction,
+XRD) has long been used for non-destructive examination of unknown objects due to its inherent molecular
+Further author information: (Send correspondence to J.A.G.)
+J.A.G.: E-mail: jag27@duke.edu, Telephone: 1 919 660 0183
+Invited Paper
+Anomaly Detection and Imaging with X-Rays (ADIX), edited by 
+Amit Ashok, Mark A. Neifeld, Michael E. Gehm, Proc. of SPIE Vol. 9847, 
+98470E · © 2016 SPIE · CCC code: 0277-786X/16/$18 · doi: 10.1117/12.2221913
+Proc. of SPIE Vol. 9847  98470E-1
+
+--- PAGE 2 ---
+20-
+18-
+16-
+14-
+12
+10
+8
+s
+4-
+2
+ol
+Precision Spectroscopy
+Né# Generation Forward Scatter Module
+for Baggage Scanning
+Photon Counting
+Imaging
+100 -1,000 cps/mm21 -100 kcpslmm'0.1 -10 Mcpslmm'10 - 50 Mcpslmm'
+Low Flux RangeMedium Flux RangeHigh Flux Range
+Lower EndHigher End
+Figure 1. Schematic of the tradeoﬀ between energy resolution and acceptable count rate in conventional CZT-based X-
+ray detectors. Spectroscopic detectors (left) provide good energy resolution at low count rates, whereas photon counting
+detectors (right) provide some energy resolution at high count rates.
+speciﬁcity, it has traditionally been a non-imaging modality. Due to coherent scatter’s potential for automatic
+anomaly detection in areas as diverse as cancer or explosives detection in situ, there has recently been much
+interest in performing coherent scatter tomography. Initial eﬀorts of realizing XRD tomography were success-
+ful in producing images but typically required long scan times and technically complicated collimators and/or
+mechanical scanning apparatuses. 8, 9 Recent advances in computational imaging and compressed sensing have
+enabled a new approach to XRD tomography through the use of coded apertures, which can increase the de-
+tectable scatter signal by several orders of magnitude. 6, 10 To realize the potential for fast and accurate material
+identiﬁcation with these systems, a new type of detector capable of both exquisite energy resolution and high
+count rates is required. Here we describe and characterize the ﬁrst 2D spectroscopic X-ray detector optimized
+for coded aperture X-ray scatter imaging (see Fig. 2).
+2. CZT DETECTOR OPTIMIZA TION
+For fast coherent scatter imaging systems, it is critical that the employed detector have both a small uncertainty
+in the energy and angle of the detected photons as well as the capacity to accept signiﬁcant count rates. The
+angular resolution is largely determined by the spatial resolution of the system, measurement geometry, and the
+detector pixel size; in general, smaller pixels yield better angular resolution. The energy resolution is determined
+by the response of the detector material and associated signal processing chain (both in software and hardware).
+Taken together, the energy and angular resolution directly impact the ability to identify diﬀerent materials,
+as they contribute to the uncertainty in the momentum transfer (or material lattice spacing). 6 Relatedly, the
+count rate (assuming suﬃcient quantum eﬃciency) determines the measurement time; a detector that can accept
+higher incident count rates can achieve a measurement of suﬃcient accuracy in a shorter time compared to one
+limited to lower count rates. The optimization of such a detector relies on the careful selection of CZT quality,
+pixel characteristics and layout, and signal processing components, as discussed below.
+2.1 Flux range considerations
+CZT detectors fabricated for low ﬂux applications (less that 100 cps/mm 2) traditionally have a good electron
+mobility-lifetime product ( µτ ∼10−2 cm2/V), but poor hole mobility-lifetime product ( µτ ∼10−5 cm2/V). For
+that reason, most detectors in this class use single polarity readout schemes, where the main information about
+Proc. of SPIE Vol. 9847  98470E-2
+
+--- PAGE 3 ---
+40 mm
+Pixel ]9T
+OO° ° ° ° ° ° ° °0 0°ó0ó®®::::::::®::::::::oo°o°o°o°o°o°o°o Óo 0 0 0 0 0 0 0é°ó o°o°o°o°o°o9,9:ó®®::::::..®::::::::Eo°o°óó ó ó ó ó óEF° ° ° ° o ° °
+° ° ° ° o ° o °° ° ° ° ° ° °
+° ° ° ° ° ° ° °
+.®®o°°° ° ° ° ° ° ° ° °°°o°°° ° ° ° ° ° ° ° °o o ° ° ° ° o 0°°°°°°°°o°°°o°° PE
+°°°°°°°°o°°°o°°°
+°°°°°°°°óo°000000
+°ó ó ó ó óó °ö°°°°°o°o°o°..°ó
+° ° ° ° °° °° °° o° °°a[
+° ° ° ° ° ° ° ° [° ° ° ° ° o ° ° a
+°°°°°°°°°[óo°o°°°°ooó ó[óó ó óo.... ®.®:7óó.°°°°°°°°°[°°°°°°°°on°°°o°oa
+Top View lm ough window coven/160e
+Figure 2. a) Three-dimensional representation of the CZT-based detector module. The yellow region is the active detector
+area. b) The pixel layout showing the 80 by 20 grid of 0.5 mm square pixels. Note that the pixels at the extreme left
+and right of the detector are arranged in a checkerboard pattern, whereas the pixels in the interior are arranged in a
+contiguous fashion. c) Photograph of the completed detector.
+the energy of the detected radiation is inferred from the anode signals. Coplanar grid detectors (CPG), pixelated
+detectors, and Frisch grid detectors can overcome the severe hole trapping problem and greatly improve the
+energy spectra resolution of large-volume CZT detectors. Some state-of-the-art detector systems also utilize
+cathode signals in order to improve energy resolution (ER) using various depth of interaction (DOI) correction
+algorithms.11 The continuous progress in CZT crystal growth and detector fabrication has lead to routinely
+realized energy resolutions of 1% with 10-15 mm thick pixelated detectors, with the best pixels achieving under
+0.5% ER (which is close to the fundamental limit given by the Fano factor).
+High ﬂux operation (greater than 1 Mcps/mm 2) of CZT detectors brings additional challenges due to the
+polarization of the CZT. The origin of this eﬀect can be traced back to high densities of crystal impurities and
+defects that, in turn, lead to severe charge-carrier trapping. Under high ﬂux conditions, the trapped charge
+builds up inside the detector and eﬀects its stability; in extreme conditions, this leads to complete collapse of
+the electric ﬁeld and failure of the device. Recent advances in traveling heater method (THM) growth that
+require additional processing steps have enabled dramatic improvements of the hole mobility-lifetime product by
+an order of magnitude. As a result, high ﬂux operation at count rates higher than 100 Mcps/mm 2 are routinely
+demonstrated. These improvements allow for the use of CZT in high ﬂux environments, such as in computed
+tomography (CT). While this leads to signiﬁcant advantages, such as reduced dose and improved image quality
+compared to scintillator-based detectors, these high ﬂux detectors typically use semi-Ohmic contacts to avoid
+polarization eﬀects which, in turn, results in higher dark currents and a degradation of the achievable energy
+resolution.
+Coherent scatter imaging based on coded apertures resides somewhere between these two ﬂux regimes. As-
+suming a nominal X-ray source voltage of 160 keV, a source current of between 1-10 mA (suﬃcient for scatter
+measurements on the time scale of a second or below), a coded aperture transmission of 50%, and a source-to-
+detector distance of 1 m, we typically ﬁnd that the measured scatter signal is between 1-100 kcps/mm 2. While
+this exceeds the low ﬂux regime by several orders of magnitude, we still require an energy resolution of only a
+few percent in order to maintain suﬃcient material discriminability. To meet these requirements, we targeted
+an energy resolution of 5% at 60 keV and a maximum count rate of 10 kcps/mm 2.
+Proc. of SPIE Vol. 9847  98470E-3
+
+--- PAGE 4 ---
+2.2 Pixel considerations
+Given the speciﬁcations decided upon above, we next consider the thickness of the CZT material. Typical
+baggage scanning applications use a source voltage of 160 keV; in order to stop 95% of the incoming radiation,
+at least 3 mm of CZT is required. While choosing thicker CZT would increase the overall quantum eﬃciency, it
+can become bulky, costly, and potentially degrade the overall system energy resolution. We therefore consider a
+material thickness of between 2-5 mm.
+For a given detector thickness, there is an optimum pixel size that maximizes energy resolution. If the pixel
+is too large, the small pixel eﬀect (which conﬁnes the induced charge to a given anode) cannot occur and the
+energy resolution suﬀers. However, if the pixel is too small, the electron cloud resulting from diﬀusion process
+becomes comparable to (or even larger than) the pixel resulting in excessive charge sharing and charge loss in
+the inter-pixel gap. Numerical results indicate that the optimum pixel size for 2-5 mm thick CZT sample is
+somewhere between 0.5mm and 2.5 mm depending whether the charge shared events are corrected or not. We
+choose to use 0.5 mm pixels with a 3 mm thick sample of CZT to ensure good angular resolution of the overall
+imaging system.
+2.3 Pixel layout
+It is well-known that coherent scatter from liquids and polycrystalline powders give rise to azimuthally symmetric
+scatter rings; in contrast, crystalline materials with ‘texture’ (i.e., a preferred orientation of the crystalline lattice)
+give rise to Bragg scatter that is concentrated at a particular angle for a given energy and lattice orientation.
+It is therefore necessary to employ 2D detectors to properly measure the coherent scatter signal for arbitrary
+objects. Relatedly, coherent scatter in the hard X-ray regime is usually limited to deﬂection angles of less than
+10 degrees, which therefore suggests that the range of angles that one is required to measure is relatively low.
+To accommodate a fan beam geometry, which is common in baggage scanners, one therefore requires a detector
+that spans the length of the fan beam while also having an extent in the direction normal to the fan beam plane.
+To accommodate these constraints, we decided to create a 2-side buttable detector using the pixel layout shown
+in Fig. 2 b). The detector consists of 80 x 20 pixels composed of two, tiled CZT elements (each with dimensions
+of 20 mm by 10 mm) to create 40 mm by 10 mm almost continuous detection area with a very small gap between
+the two).
+The ASIC is connected to the CZT via an interposer PCB board, which helps to provide thermal and
+structural isolation between the power dissipating ASIC and temperature sensitive CZT. At the same time, this
+extra element introduces additional stray capacitance, leading to a degradation of the system’s energy resolution.
+Furthermore, it requires careful signal routing to avoid signal cross-talk. Due to diﬀerences in the ASIC footprint
+(20 by 20 mm centered on the detector) and the pixel layout (40 by 10 mm), the routing of the 1600 potential
+pixels became problematic. We therefore chose to connect only 1200 of the pixels, resulting in a checkerboard
+pattern for the pixels at the sides of the detector (as shown in Fig. 2). While this allows the remaining pixels to
+be read out, the extra routing complexity and path length results in poorer energy resolution for the pixels in
+the checkerboard region.
+3. DETECTOR PERFORMANCE
+Given the design choices and speciﬁcations described above, several prototype detectors were built (see Fig. 2).
+To characterize the detector, we use an extended, 4.95 mCi source of Am-241 (dominant emission line at 59.54
+keV) placed approximately 100 mm from the detector. Figure 3 a) shows the recorded signal intensity ( i.e., total
+number of counts over all energies) in units of cps/mm 2. Note that the expected count rate is approximately
+1500 cps/mm 2, indicating an overall detected quantum eﬃciency of approximately 30-50%. We generally ﬁnd
+a uniform pixel response in the central region (except for some hot pixels) with reduced performance in the
+checkerboard regions, as expected.
+We next consider the energy resolution across the detector. Figure 3 b) shows the full width at half maximum
+(FWHM) energy resolution (in units of keV) at each pixel throughout the detector. In the central region, the
+average energy resolution is 5% at 60 keV (2.98 keV FWHM) with a minimum energy resolution of 3.2% (1.89
+keV FWHM). In the checkerboard region, the energy resolution ranges from 6-15% (roughly 4 to 10 keV FWHM).
+Proc. of SPIE Vol. 9847  98470E-4
+
+--- PAGE 5 ---
+1000
+500
+0
+b)
+5
+x 10
+15
+20
+40506070800
+pixel
+C
+E
+E
+c4
+s
+2
+406080100
+energy (keV)
+120406080
+energy (key)
+Figure 3. a) Distribution of pixel count rates across the detector in units of cps/mm 2. b) Energy resolution at each
+detector pixel at a count rate of approximately 500 cps/mm 2 in units of keV (FWHM) for a source at 60 keV. c) and d)
+show the recorded spectrum for Am-241 from pixels with good and poor energy resolution, respectively.
+While energy resolution gives a ﬁrst-order description of the spectroscopic response of the system, we show in
+Figs. 3 c) and d) examples of spectra from pixels with excellent and poor performance, respectively. For the pixel
+with low energy resolution, it can be seen that the spectrum falls oﬀ quickly above the photo peak, while residual
+counts at lower energies persist at approximately 10-20% of the photo peak amplitude. For the poorly performing
+pixel (Fig. 3 d), counts persist at a broader range of energies above and below the photo peak. Despite the
+anticipated poor performance at the ends of the detector, the energy resolution in the central portion of the
+detector is fairly uniform.
+While the detector characterization was performed here at only 500 cps/mm 2, we observe uniform results up
+to approximately 10 kcps/mm2, where this number refers to the incident count rate (rather than detected counts).
+We therefore achieved the target speciﬁcations of less than 5% energy resolution at count rates approaching 10
+kcps/mm2 in the central 800 pixels of the detector.
+4. CONCLUSIONS
+Advances in CZT technology make possible pixellated arrays of energy-sensitive detectors at room temperature
+and for hard X-rays. Such detectors are critical for real-time coherent scatter imaging in applications such as
+baggage inspection and medical imaging, but the introduction of new coded aperture scatter imaging architectures
+require detectors that can perform high-precision spectroscopy at medium ﬂux rates. To accommodate this new
+approach to coherent scatter imaging, we developed a detector capable of yielding excellent angular and energy
+resolution (less than 5%) as well as being able to operate at up to 10 kps/mm 2. While this detector will be an
+invaluable tool in next generation coherent scatter imaging systems, there are a number of future improvements
+that can be made to the detector. Examples of such revisions include implementing charge sharing corrections
+to reduce the amplitude of the spectral tails, revising the pixel layout to better match the ASIC footprint and/or
+Proc. of SPIE Vol. 9847  98470E-5
+
+--- PAGE 6 ---
+increasing the pixel pitch to mitigate routing issues and improve uniformity, and avoiding the necessity of the
+checkerboard pattern to allow for tiling of the detectors into a contiguous array. In addition, we plan to study
+directly coherent X-ray scatter with these detectors to better understand the the detector’s capabilities.
+ACKNOWLEDGMENTS
+We would like to thank Dr. Martin Tornai for his assistance in working in the radioactive source.
+REFERENCES
+[1] Wikibooks, “Basic physics of nuclear medicine/scintillation detectors — wikibooks, the free textbook
+project,” (2015). [Online; accessed 11-March-2016].
+[2] Harding, G. and Schreiber, B., “Coherent x-ray scatter imaging and its applications in biomedical science
+and industry,” Radiation Physics and Chemistry 56(12), 229 – 245 (1999).
+[3] Hogan, J., Gonsalves, R., and Krieger, A., “Fluorescent computer tomography: a model for correction of
+x-ray absorption,” Nuclear Science, IEEE Transactions on 38(6), 1721–1727 (1991).
+[4] Jacques, S. D. M., Egan, C. K., Wilson, M. D., Veale, M. C., Seller, P., and Cernik, R. J., “A laboratory
+system for element speciﬁc hyperspectral x-ray imaging,” Analyst 138, 755–759 (2013).
+[5] Harding, G. and Kosanetzky, J., “Status and outlook of coherent-x-ray scatter imaging,” J. Opt. Soc. Am.
+A 4, 933–944 (May 1987).
+[6] Greenberg, J. A., Krishnamurthy, K., and Brady, D., “Snapshot molecular imaging using coded energy-
+sensitive detection,” Opt. Express 21, 25480–25491 (Oct 2013).
+[7] Lakshmanan, M. N., Greenberg, J. A., Samei, E., and Kapadia, A. J., “Design and implementation of
+coded aperture coherent scatter spectral imaging of cancerous and healthy breast tissue samples,” Journal
+of Medical Imaging 3(1), 013505 (2016).
+[8] Lazzari, O., Jacques, S., Sochi, T., and Barnes, P., “Reconstructive colour x-ray diﬀraction imaging - a
+novel teddi imaging method,” Analyst 134, 1802–1807 (2009).
+[9] Bontus, C., Forthmann, P., and Stevendaal, U. V., “Coherent-scatter computed tomography,” US Patent
+US 7580499 B2 (2009).
+[10] MacCabe, K., Krishnamurthy, K., Chawla, A., Marks, D., Samei, E., and Brady, D., “Pencil beam coded
+aperture x-ray scatter imaging,” Opt. Express 20, 16310–16320 (Jul 2012).
+[11] Kim, J., Donmez, B., Nelson, K., and He, Z., “Three-dimensional signal correction on u1traperl czt de-
+tectors,” in [ Nuclear Science Symposium Conference Record, 2007. NSS ’07. IEEE ], 2, 1289–1293 (Oct
+2007).
+Proc. of SPIE Vol. 9847  98470E-6

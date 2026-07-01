@@ -1,0 +1,302 @@
+
+
+--- PAGE 1 ---
+Journal of
+Instrumentation
+       
+PAPER
+Characterization of High-Flux CdZnTe with
+optimized electrodes for 4th generation
+synchrotrons
+To cite this article: O. Baussens et al 2022 JINST 17 C11008
+ 
+View the article online for updates and enhancements.
+You may also like
+Characterisation of Redlen HF-CdZnTe at
+> 106 ph s-1 mm-2 using HEXITECMHz
+B.D. Cline, D. Banks, S. Bell et al.
+-
+Characterisation and quantification of the
+`Excess-Leakage-Current' effect in Redlen
+HF-CdZnTe at > 106 ph s-1 mm-2
+B.D. Cline, D. Banks, M. Bishop et al.
+-
+Characterisation of pixelated CdZnTe
+sensors using MAXIPIX
+S. Tsigaridas, C. Ponchut, S. Zanettini et
+al.
+-
+This content was downloaded from IP address 188.253.120.136 on 30/06/2026 at 06:55
+
+--- PAGE 2 ---
+2022 JINST 17 C11008
+Published by IOP Publishing for Sissa Medialab
+Received: August 25, 2022
+Revised: October 3, 2022
+Accepted: October 19, 2022
+Published: November 22, 2022
+23 rd International Workshop on Radiation Imaging Detectors
+26–30 June 2022
+Riva del Garda, Italy
+Characterization of High-Flux CdZnTe with optimized
+electrodes for 4th generation synchrotrons
+O. Baussens,𝑎,∗C. Ponchut,𝑎M. Ruat,𝑎M. Bettelli,𝑏S. Zanettini𝑐and A. Zappettini𝑏
+𝑎European Synchrotron Radiation Facility, 71 Avenue des Martyrs, 38000 Grenoble, France
+𝑏IMEM/CNR, Parco Area delle Scienze 37/A, Parma 43100, Italy
+𝑐Due2lab srl, Via Paolo Borsellino 2, Scandiano 42019, Italy
+E-mail: oriane.baussens@esrf.fr
+Abstract: In this collaboration work between IMEM-CNR and the ESRF, we explore the poten-
+tial of the Redlen Technologies High-Flux Cadmium Zinc Telluride (HF-CZT) material for direct
+X-ray detection at ﬂuxes ranging from 10+7 to 10+12 photons mm−2 s−1. HF-CZT single crystals
+with optimized electroless gold and sputtered platinum electrodes are characterized both under
+dark conditions and under X-ray irradiation. We report low leakage current under dark conditions
+(<100 pA/mm2 at 5 kV/cm). We also report good linearity (R2> 0.999) under moderate to high
+incident X-ray ﬂux (10+7 to 10+10 photons mm−2 s−1) as well as good stability and reproducibility
+for incident X-ray ﬂuxes up to10+12 photons mm−2 s−1. Finally, we study transient phenomena in
+the seconds time range and report fast stabilization time (<200 ms) and negligible afterglow in this
+time range.
+Keywords: Instrumentation for synchrotron radiation accelerators; X-ray detectors
+∗Corresponding author.
+© 2022 IOP Publishing Ltd and Sissa Medialab https://doi.org/10.1088/1748-0221/17/11/C11008
+
+--- PAGE 3 ---
+2022 JINST 17 C11008
+Contents
+1 Introduction 1
+2 Methods: HF-CZT detectors 2
+3 Dark conditions measurements 3
+4 Behaviour under X-ray irradiation 4
+4.1 Moderate to high X-ray ﬂux at the BM05 beamline 4
+4 . 2 H i g ht ov e r yh i g hX - r a yﬂ u xa tt h eI D 1 9b e a m l i n e 5
+4.3 Afterglow: preliminary results 6
+5C o n c l u s i o n 8
+1 Introduction
+With the rise of 4th Generation Synchrotron Light Sources such as the Extremely Brilliant Source
+(EBS) of the ESRF [1], the need for direct X-ray detection under high photon ﬂux (>10+7 photons
+mm−2 s−1) with moderate to high photon energy (30–100 keV range) has increased. Semiconductor
+materials with high atomic number that can be grown into thick ( ⩾1 mm) single crystals are
+needed for high energy detection. In that respect, Cadmium Zinc Telluride (CdZnTe or CZT)
+is a good candidate. The CZT single crystals grown with the Traveler Heat Method (THM)
+can be thicker than 10 mm and have demonstrated high electron transport properties (μτe> 10−2
+cm2/V) [2]. However, their poorer hole transport properties have been an issue at high ﬂux as they
+lead to radiation-induced polarization phenomena. Recently, Redlen Technologies succeeded in
+overcoming the issue by enhancing the hole transport properties (μτh> 10−4 cm2/V) for high-ﬂux
+applications [2]. This novel high-ﬂux CZT (HF-CZT) seems promising as it limits the polarizing
+phenomena observed in standard CZT at high photon ﬂux [ 2, 3]. However, when it comes to
+electrical contacts, it appears that the standard electroless gold blocking contacts lead to much
+higher leakage current in HF-CZT than in standard CZT. The IMEM-CNR laboratory (Parma) has
+been developing novel contacts more suited to the HF-CZT. In this work, Redlen Technologies HF-
+CZT single crystals with IMEM-CNR optimized electrodes are characterized at the ESRF under
+both dark conditions and high-ﬂux (>10+7 photons mm−2 s−1) X-ray irradiation. It is the ﬁrst time,
+to the best of our knowledge, that the Redlen Technologies HF-CZT has been characterized under
+X-ray ﬂuxes above10+6 photons mm−2 s−1 [4].
+– 1 –
+
+--- PAGE 4 ---
+2022 JINST 17 C11008
+2 Methods: HF-CZT detectors
+HF-CZT detectors were purchased from Redlen Technologies and re-processed in IMEM-CNR.
+Two samples, with approximate dimensions 5× 5 mm2 and thickness 1.5 mm, were fabricated
+with identical electrode layout: planar cathode and pixelated anode (ﬁgure1(a)). The anode layout
+consists of two single pixels and a2× 2 pixel matrix. All of the pixels are 500μms q u a r e s .O nt h e
+anode side, the two samples have sputtered platinum electrodes. On the cathode side, sample 1 has
+an electroless gold electrode while sample 2 has a sputtered platinum electrode. The main char-
+acteristics of the two samples are summarized in table1. Both samples were mounted onto PCBs
+using bicomponent epoxy glue. They were then bounded using copper wires previously soldered
+onto the PCBs and glued on the pixels with conductive silver epoxy (ﬁgure 1(b)). During mea-
+surements, the samples were placed in a custom made aluminium alloy shielding box (ﬁgure1(c)).
+The shielding box provided dark conditions, its entrance window was in opaque kapton tape. The
+temperature inside the shielding box was controlled using a Julabo FL300 recirculating cooler and
+measured with a Pt100 probe. To prevent water condensation, a nitrogen ﬂow was maintained
+inside the shielding box. All characterizations discussed in this paper were performed on single
+pixel 1 (pixel on the top left hand corner in ﬁgure1(a)). The cathode of the sample under test was
+negatively biased using a ISEG SHQ 224 high voltage power supply and its current was measured
+using a Keithley 6485 picoammeter.
+Figure 1. (a) On the left, the planar cathode. On the right, the pixelated anode layout. (b) Sample 2 mounted
+onto its PCB. (c) Shielding box.
+In the interest of improved readability, and because the results of sample 1 and 2 were equivalent
+for all the characterizations carried out, only the results of sample 2 will be presented throughout
+the paper. The results of sample 1 are available in the supplementary material and will be discussed
+alongside the results of sample 2 in the relevant sections of this paper.
+– 2 –
+
+--- PAGE 5 ---
+2022 JINST 17 C11008
+Table 1. Characteristics summary of the HF-CZT detectors.
+Cathode contact Anode contact Geometry (mm 2) Thickness (mm) Pixel size (mm 2)
+Sample 1 Au Pt 5 × 51 . 5 0 . 5 × 0.5
+Sample 2 Pt Pt 5 × 51 . 5 0 . 5 × 0.5
+3 Dark conditions measurements
+The I-V characteristics of both samples were measured at20 ◦C under dark conditions between 0
+and −1000 V using−10 V steps. Figure 2 displays the I-V characteristic of sample 2. Figure S1
+(supplementary material) displays the I-V characteristic of sample 1. For both samples, an
+unexpected peak of current is visible at low bias on the forward scan of the I-V characteristics.
+This peak is believed to be related to the inaccuracy of the instrumentation at low voltage. It
+can also be noted that the I-V characteristics of both samples present some hysteresis but this
+phenomenon is very limited with the deviation between the forward and reverse scans being less
+than 10%. The dark current densities at −1000 V (−5 kV/cm) of sample 1 and 2 (Au/CZT/Pt
+and Pt/CZT/Pt) are 90 pA/mm2 a n d6 0p A / m m2 respectively. These dark current density values
+constitute a 1 order of magnitude improvement compared with the standard Redlen Technologies
+pixelated HF-CZT (2 mm thick) [3] and a 4 orders of magnitude improvement compared with other
+electrode conﬁgurations (Au/CZT/Au and Pt/CZT/Au) previously tested on HF-CZT at IMEM-
+CNR. These comparisons underline the role of the platinum anode in the leakage current reduction.
+To conclude, the dark current results conﬁrm that the electrodes optimized by IMEM-CNR are
+successful blocking contacts.
+Figure 2. I-V characteristic of sample 2 at 20◦C under dark conditions.
+– 3 –
+
+--- PAGE 6 ---
+2022 JINST 17 C11008
+4 Behaviour under X-ray irradiation
+4.1 Moderate to high X-ray ﬂux at the BM05 beamline
+Both samples were characterized under moderate to high X-ray ﬂux ( 3× 10+7 to 8× 10+9
+photons mm−2 s−1) at the BM05 beamline of the ESRF using a 20 keV monochromatic syn-
+chrotron beam. The beam was collimated to the pixel size (500 μm × 500 μm). The incident ﬂux
+was adjusted using aluminium attenuators and measured with a 500μm silicon diode.
+Three measurements were performed on each samples using the setup described: ﬁrst, a pulsed
+irradiation measurement, then, anI-V characteristic measurement, and ﬁnally, a long term stability
+measurement at a given bias and ﬂux. The objective was to verify the stability and the linearity of
+the samples with the incident X-ray ﬂux.
+The pulsed irradiation measurement consisted in submitting the sample under test, biased at
+−1000 V, to increasing X-ray ﬂuxes. Seven X-ray ﬂuxes within the ﬂux range were tested. Each
+ﬂux was applied for 10 minutes. Between ﬂux steps, the beam was cut oﬀ for 5 minutes using the
+maximum thickness of Al attenuators available (11.5 mm). The current of the sample under test
+was recorded every 200 ms for the entire duration of the test. Figure3 shows the pulsed irradiation
+characterization of sample 2 as well as its linearity curve with incident ﬂux. The results of sample
+1 are available in ﬁgure S2 of the supplementary material. Both samples show good stability and
+good linearity for all the ﬂuxes tested.
+Figure 3. On the left, 20 keV pulsed irradiation of sample 2 measured on the BM05 beamline. In red, above
+each pulse, the corresponding incident ﬂux in photons per millimeter squared per second. On the right, the
+linearity curve of sample 2 with incident X-ray ﬂux.
+For the I-V characteristics and the time stability measurements three incident ﬂuxes were
+selected. The results of these measurements for sample 2 are shown in ﬁgure4. For sample 1, they
+are available in the supplementary material, ﬁgure S3. The I-V characteristics were measured for
+biases between 0 and −1000 V using−5 V steps. For both samples and for all ﬂuxes tested, the
+current reaches the saturation value corresponding to complete charge collection above −100 V
+bias. It is to be noted that, to improve readability, ﬁgure 4 only displays the forward scans of the
+– 4 –
+
+--- PAGE 7 ---
+2022 JINST 17 C11008
+I-V characteristics. The reverse scans show no signiﬁcant deviation from their forward counter-
+parts. For the time stability measurements, the samples were biased at−1000 V and their current
+was measured every 5 s for 80 min. Both samples showed good time stability regardless of the
+incident ﬂux.
+Figure 4. On the left, I-V characteristics of sample 2 under X-ray irradiation. On the right, time stability of
+sample 2 under X-ray irradiation.
+The characterizations performed on the BM05 beamline of the ESRF demonstrated that
+the samples are stable and linear under incident X-ray ﬂuxes ranging from 3× 10+7 to 8× 10+9
+photons mm−2 s−1. However, ongoing detector developments of the ESRF require sensors capable
+of sustaining ﬂuxes up to 10+10 photons mm−2 s−1. This ﬂux cannot be reached with the current
+setup available at the BM05 beamline. For this reason, another set of characterizations was carried
+out at the ID19 beamline of the ESRF.
+4.2 High to very high X-ray ﬂux at the ID19 beamline
+The ID19 beamline of the ESRF is capable of reaching ﬂuxes several orders of magnitude
+beyond10+10 photons mm−2 s−1. However, we could only access the beamline for a very limited
+amount of time and thus only platinum electrodes (sample 2) could be tested. Two characteriza-
+tions were performed: pulsed irradiation measurements andI-V characteristic measurements. Both
+characterizations were performed using a 19 keV 1% monochromatic synchrotron beam produced
+by the U32 insertion device of the beamline [5].
+The pulsed irradiation measurements were performed for four ﬂuxes ranging between2× 10+9
+and 1× 10+12 photons mm−2 s−1. The incident ﬂux was adjusted by varying the gap of the undulator.
+For each of the four ﬂuxes, sample 2 was irradiated during 10 s. Between ﬂux steps, the beam was
+cut oﬀ for 15 s. The pulsed irradiation measurement was repeated three times and was found to
+be reproducible. Figure 5 shows one pulsed irradiation characterization of sample 2. The current
+density of sample 2 is stable for all the incidents ﬂuxes tested.
+Please note that the four incident ﬂuxes were not measured but were estimated from the sample
+current, hypothesizing complete charge collection above−500 V. They were also estimated using
+– 5 –
+
+--- PAGE 8 ---
+2022 JINST 17 C11008
+Figure 5. Pulsed irradiation of sample 2 at 19 keV on the ID19 beamline. In red, above each pulse, the
+corresponding incident ﬂux in photons per millimeter squared per second.
+the beamline setup calculation software. Both estimations were consistent. However, since these
+are estimations, the ﬂux values given in ﬁgures 5 and 6 only illustrate the orders of magnitude
+involved and cannot be used to plot the linearity of the sample’s current with incident X-ray ﬂux.
+The I-V characteristics were measured between 0 and −1000 V with −10 V steps for the
+same four ﬂuxes used during the pulsed irradiation measurements (ﬁgure 6). The characteristics
+show stable and reproducible behaviour of both forward and reverse scans for ﬂuxes up to 10+11
+photons mm−2 s−1. Above this ﬂux, the I-V characteristics start getting deformed and a hysteresis
+phenomenon appears for the highest ﬂux tested. Possible explanations for these eﬀects include a
+complex time-evolution of the electric ﬁeld in the sample due to electron trapping and irradiation-
+induced polarization [ 6]. The study of these eﬀects is part of ongoing work and will not be
+discussed further in this paper.
+To summarize, the characterizations performed on the ID19 beamline of the ESRF demon-
+strated a stable and reproducible behaviour of sample 2 under 10 s X-ray irradiation with incident
+ﬂuxes up to
+10+12 photons mm−2 s−1. However, an hysteresis eﬀect starts to appear on the I-V
+characteristics above10+11 photons mm−2 s−1.
+4.3 Afterglow: preliminary results
+Afterglow (or residual photocurrent) measurements were not speciﬁcally performed on the samples.
+However, it is possible to make observations about afterglow from the pulsed irradiation results
+of ﬁgure 3. Because the frequency used to measure the current during the pulsed irradiation
+characterization was 5 Hz, the analysis of the afterglow can only be done for time constants above
+200 ms. Lower time constants will be investigated in future works.
+From ﬁgure 3, three observations can be made regardless of the incident X-ray ﬂux. Firstly,
+the rise time for all pulses is below or equivalent to the measurement limit of 200 ms. Secondly,
+the photocurrent is stable throughout irradiation, no transient phenomena that could be consistent
+with signiﬁcant trapping mechanisms are observed. And thirdly, after the irradiation is stopped, it
+– 6 –
+
+--- PAGE 9 ---
+2022 JINST 17 C11008
+Figure 6. I-V characteristics of sample 2. In red, above each plot, the corresponding incident X-ray ﬂux.
+takes 400 ms (2 measurement points) for the current to fall below dark current levels (10−11 A).
+Furthermore, ﬁgure7 shows the afterglow for each pulse 1s after the X-ray irradiation is stopped and
+compares them with the photocurrent values during irradiation. The afterglow measured is below
+0.5% of the photocurrent level measured during irradiation regardless of the incident X-ray ﬂux.
+The ﬁrst two observations, demonstrate that the HF-CZT has fast stabilization times (
+<200 ms)
+and is not aﬀected by polarization eﬀects for the ﬂux range tested. The third observation and the
+results of ﬁgure 7 demonstrate that, for applications with frame rates in the seconds time range,
+the afterglow of HF-CZT is negligible even after minutes long irradiation under a 10+10 photons
+mm−2 s−1 incident X-ray ﬂux. These conclusions are consistent with recent results presented in
+the IEEE NSS/MIC/RTSD 2021 conference [7].
+– 7 –
+
+--- PAGE 10 ---
+2022 JINST 17 C11008
+Figure 7. Comparison of the residual current 1 s after irradiation has stopped with the previous photocurrent.
+5C o n c l u s i o n
+The aim of this work was to characterize the high-ﬂux CZT material from Redlen Technologies
+under high X-ray ﬂuxes ranging from10+7 to 10+12 photons mm−2 s−1. Two devices with optimized
+electrode conﬁgurations (Au/CZT/Pt and Pt/CZT/Pt) were fabricated in IMEM-CNR from the
+HF-CZT material. Both of these optimized electrode conﬁgurations demonstrated signiﬁcantly
+reduced leakage current (<100 pA/mm2 at−5 kV/cm and at 20◦C) compared with standard Redlen
+Technologies pixelated platinum electrode conﬁguration. The linearity, stability and repeatability
+of HF-CZT sensors under incident X-ray ﬂux was demonstrated for both electrode conﬁgurations
+between
+10+7 to 10+10 photons mm−2 s−1. The Pt/CZT/Pt conﬁguration was also measured under
+even higher incident X-ray ﬂuxes. From these measurements, the stability and reproducibility of
+HF-CZT were demonstrated for X-ray ﬂuxes up to 10+12 photons mm−2 s−1 though a hysteresis
+eﬀect was observed on theI-V characteristics above10+11 photons mm−2 s−1. Finally, the afterglow
+and stabilization time of HF-CZT in the seconds time range were studied for both electrode
+conﬁgurations. In this time range, the afterglow was shown to be negligible and the stabilization
+time was shown to be below 200 ms. To conclude, the potential of Redlen Technologies HF-CZT
+material for the detection of high-ﬂux X-ray was demonstrated. Moreover, both conﬁgurations,
+with Au or Pt cathodes, were shown to be stable and successful blocking contacts, leaving the
+choice of a particular conﬁguration to purely technological considerations (deposition process
+availability, cost, time constraints. . . ). Future work will be dedicated to the study of the hysteresis
+eﬀect observed at very high X-ray incident ﬂux as well as to a more in depth study of the afterglow.
+Acknowledgments
+The authors would like to thank Phil Cook from the BM05 beamline and Bratislav Lukic from the
+ID19 beamline for their help and technical support.
+– 8 –
+
+--- PAGE 11 ---
+2022 JINST 17 C11008
+References
+[1] P. Raimondi, ESRF-EBS: the extremely brilliant source project, Synchrotr. Radiat. News 29 (2016) 8.
+[2] B. Thomas et al., Characterisation of Redlen high-ﬂux CdZnTe, 2017 JINST 12 C12045.
+[3] S. Tsigaridas, C. Ponchut, S. Zanettini and A. Zappettini,Characterisation of pixelated CdZnTe sensors
+using MAXIPIX, 2019 JINST 14 C12009.
+[4] M. Charles Veale et al., Characterization of the uniformity of high-ﬂux CdZnTe material, Sensors 20
+(2020) 2747.
+[5] ESRF, ID19 Beamline description—insertion devices (2017) Last Modiﬁed: Mon 09 January 2017
+08:29:22 GMT.
+[6] D.S. Bale and C. Szeles, Nature of polarization in wide-bandgap semiconductor detectors under
+high-ﬂux irradiation: application to semi-insulating Cd 1−xZnxTe, P h y s .R e v .B77 (2008) 035205.
+[7] D. Greiﬀenberg, M. Andrae, R. Barten and J. Zhang, High-Z Sensors for Synchrotron Sources and
+FELs (2021).
+– 9 –

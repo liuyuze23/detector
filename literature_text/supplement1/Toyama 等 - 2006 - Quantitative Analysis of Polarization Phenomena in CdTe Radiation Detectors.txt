@@ -1,0 +1,793 @@
+
+--- PAGE 1 ---
+Japanese Journal of
+Applied Physics
+       
+Quantitative Analysis of Polarization Phenomena
+in CdTe Radiation Detectors
+To cite this article: Hiroyuki Toyama et al 2006 Jpn. J. Appl. Phys. 45 8842
+ 
+View the article online for updates and enhancements.
+You may also like
+Huge photosensitivity gain combined with
+long photocurrent decay times in various
+polymorphs of Ga2O3: effects of carrier
+trapping with deep centers
+A Y Polyakov, E B Yakimov, I V
+Shchemerov et al.
+-
+Carrier removal rates in 1.1 MeV proton
+irradiated -Ga2O3 (Sn)
+A Y Polyakov, V I Nikolaev, A I Pechnikov
+et al.
+-
+Role of hole trapping by deep acceptors in
+electron-beam-induced current
+measurements in -Ga2O3 vertical rectifiers
+E B Yakimov, A Y Polyakov, N B Smirnov
+et al.
+-
+This content was downloaded from IP address 188.253.120.136 on 30/06/2026 at 08:39
+
+--- PAGE 2 ---
+Quantitative Analysis of Polarization Phenomena in CdTe Radiation Detectors
+Hiroyuki T OYAMA , Akira H IGA, Masaaki Y AMAZATO , Takehiro M AEHAMA ,
+Ryoichi O HNO1 and Minoru T OGUCHI
+Faculty of Engineering, University of the Ryukyus, 1 Senbaru, Nishihara, Okinawa 903-0213, Japan
+1Acrorad Co., Ltd., 13-23 Suzaki, Uruma, Okinawa 904-2234, Japan
+(Received March 7, 2006; accepted July 14, 2006; published online November 8, 2006)
+Polarization phenomena in a Schottky-type CdTe radiation detector were studied. We evaluated the distribution of electric
+ﬁeld in a biased CdTe detector by measuring the progressive change of Schottky barrier lowering with time. The parameters of
+deep acceptors such as detrapping time, concentration, and the depth of the energy level were quantitatively evaluated. In the
+case of applying the conventional model of charge accumulation, the obtained result shows that the CdTe bulk is never
+undepleted. We modiﬁed the charge accumulation model by taking account of the occupation state of the deep acceptor level.
+When a modiﬁed model is applied, the time that the depletion width in the bulk begins to diminish closely ﬁts the time that the
+photopeak position begins to shift in radiation measurements. In this paper, we present a distribution of electric ﬁeld during
+biasing and a simple method for the evaluation of the parameters of deep acceptors in CdTe bulk.
+[DOI: 10.1143/JJAP.45.8842]
+KEYWORDS: CdTe, X-ray and /C13-ray detector, polarization phenomena, Schottky barrier, deep acceptor
+1. Introduction
+Cadmium telluride (CdTe) is a compound semiconductor
+with a large band-gap energy ( Eg ¼ 1:47 eV) and a high
+atomic number (Cd: 48, Te: 52). Therefore, CdTe oﬀers
+room-temperature operation and a high absorption eﬃciency
+for application as X- and /C13-ray detectors. These devices have
+been used in a wide range of applications, such as medical
+1)
+and industrial imaging, 2) and X- and /C13-ray astronomy. 3) The
+energy resolution of X- and /C13-ray detectors is one of the
+important factors for practical use, but it strongly depends on
+the leakage current of the detector. To suppress the leakage
+current, Schottky-type (or diode-type) CdTe detectors have
+been fabricated.
+4,5) As a result, high energy resolutions such
+as the FWHMs of the 59.5, 122, and 662 keV photopeaks as
+small as 1.5, 2.1, and 10 keV, respectively, were obtained
+from the detectors.
+5)
+However, Schottky-type CdTe detectors suﬀer from an
+instability with time under bias voltage. 6,7) For the practical
+application of CdTe detectors, the time stability of the
+detectors is one of the most important issues. This instability
+phenomenon is generally termed as a polarization phenom-
+enon and characterized by a progressive degradation of
+energy resolution and a shifting of the photopeak toward low
+energy with time after applying the bias voltage. To our
+knowledge, the term ‘ ‘polarization’ ’ had been used to express
+the polarization of the space charge distribution which
+causes the disturbance of electric ﬁeld in crystal-type
+detectors.
+8) In the present day, the term ‘ ‘polarization’ ’ is
+used for the time instability phenomena in semiconductor
+detectors. Earlier works revealed that polarization phenom-
+ena result from the accumulation of negative charge on a
+deep acceptor level during the application of bias volt-
+age.
+9–12) As a result, the distribution of electric ﬁeld in CdTe
+bulk varies with time. In fact, the polarization phenomena
+were observed in several kinds of radiation detectors using
+compound semiconductors such as HgI
+2,13) PbI2,14) and
+TlBr.15) Deep acceptors can be evaluated using techniques
+such as deep-level transient spectroscopy (DLTS) and
+thermally stimulated current (TSC) measurements, but these
+methods are rather complicated.
+In this paper, we present a method for a quantitative
+evaluation of the parameters of the deep acceptors (detrap-
+ping time /C28, concentration N
+T and energy level ET /C0 EV)o f
+a Schottky-type CdTe detector through the measurement of
+Schottky barrier lowering, on the basis of the conventional
+model of charge accumulation. Additionally, we modiﬁed
+the charge accumulation model by taking account of the
+occupation state of the deep acceptor level. The time that the
+width of a depletion layer becomes smaller than the detector
+thickness was compared with the time that a photopeak shift
+occurs in energy spectra.
+2. Theory
+2.1 Extraction of Schottky barrier lowering
+The forward current–voltage ( I
+F–VF) characteristics of
+Schottky diodes are expressed by the familiar relationship 16)
+IF ¼ I0 exp qVF
+kT
+/C18/C19
+/C0 1
+/C20/C21
+ð1Þ
+’ I0 exp qVF
+kT
+/C18/C19
+for VF > 3kT=q; ð2Þ
+I0 ¼ AA/C3 T2 exp /C0 q/C30b0
+kT
+/C18/C19
+; ð3Þ
+A/C3 ¼ 4/C25qm/C3 k2
+h3 ; ð4Þ
+where I0 is the reverse saturation current, q is the magnitude
+of electronic charge, k is the Boltzmann constant, T is the
+absolute temperature, A is the area of contact, /C30b0 is the
+barrier height at zero bias, m/C3 is the hole eﬀective mass
+(0:35m0 for p-type CdTe, 17) m0 is the free-electron mass), A/C3
+is the Richardson constant (42 A cm /C0 2 K/C0 2 for p-type CdTe),
+and h is Planck’s constant. Using eq. (2), I0 can be
+determined from the straight line intercept of a semi- log
+IF–VF plot at VF ¼ 0. The value of /C30b0 is obtained from the
+equation
+/C30b0 ¼ kT
+q ln AA/C3 T2
+I0
+/C18/C19
+: ð5Þ
+The reverse current of Schottky contact IR has a dependence
+on the reverse bias VR due to the eﬀect of Schottky barrier
+Japanese Journal of Applied Physics
+Vol. 45, No. 11, 2006, pp. 8842–8847
+#2006 The Japan Society of Applied Physics
+8842
+
+--- PAGE 3 ---
+lowering /C1/C30 b. IR is expressed as
+IR ¼ I0 exp q/C1/C30 b
+kT
+/C18/C19
+: ð6Þ
+Therefore, /C1/C30 b can be obtained using
+/C1/C30 b ¼ kT
+q ln IR
+I0
+/C18/C19
+: ð7Þ
+/C1/C30 b is mainly attributed to the presence of an interfacial
+layer between metal and semiconductor, 18,19) and given by
+/C1/C30 b /C25 /C11E0; ð8Þ
+where /C11 is a constant having dimensions of length and E0 is
+the electric-ﬁeld strength at the Schottky barrier. We can
+estimate E
+0 by measuring /C1/C30 b.
+2.2 Conventional model of charge accumulation
+Many researchers have reported that the behavior of
+polarization phenomena can be explained by a model which
+considers the eﬀects of deep acceptors. 9–12) In general,
+compound semiconductors contain large numbers of deep
+acceptors derived from crystal defects. Malm and Martini
+9)
+consider that the application of a bias voltage to a CdTe
+detector with a Schottky contact sweeps the holes out of the
+depletion volume from the deep acceptor level (called
+detrapping). In this process, deep acceptors negatively ionize
+with a detrapping time /C28 given by
+/C28 ¼
+1
+NV/C27v exp ET /C0 EV
+kT
+/C18/C19
+; ð9Þ
+where NV is the eﬀective density of states for the valence
+band, /C27 is the acceptor capture cross section, v is the thermal
+velocity of a hole, ET is the energy of the deep acceptor
+level, and EV is the energy of the top of the valence band.
+When a bias voltage is applied at time t ¼ 0, the concen-
+tration of ionized deep acceptors N/C0 will change as
+N/C0 ðtÞ¼ NT 1 /C0 exp /C0 t
+/C28
+/C18/C19/C20/C21
+; ð10Þ
+where NT is the total concentration of deep acceptors. The
+accumulation of ionized deep acceptors changes the electric
+ﬁeld E in the depletion region. We assume that the deep
+acceptors are uniformly distributed throughout the CdTe
+bulk. In the conventional model of charge accumulation,
+whole deep acceptors begin to detrap with a detrapping time
+/C28 after applying the bias voltage. When the bias voltage is
+applied at time t ¼ 0, the potential V will be obtained by
+solving Poisson’s equation
+d2
+dx2 Vðx; tÞ¼ qN/C0 ðtÞ
+/C15 ¼ qNT
+/C15 1 /C0 exp /C0 t
+/C28
+/C18/C19/C20/C21
+; ð11Þ
+where x is the position from the interface of the Schottky
+contact, /C15 is the dielectric constant of the semiconductor
+(/C15 ¼ 10:2/C150 for CdTe, 20) where /C150 is the dielectric constant
+in vacuum). When the bulk is fully depleted, the distribution
+of the electric ﬁeld Eðx; tÞ in the CdTe bulk is obtained with
+the boundary conditions of Vð0Þ¼ V
+R and VðDÞ¼ 0.
+Eðx; tÞ¼/C0 dV
+dx
+¼ qNT
+2/C15 1 /C0 exp /C0 t
+/C28
+/C18/C19/C20/C21
+D /C0 2xðÞ þ VR
+D ; ð12Þ
+where D is the thickness of the CdTe bulk and VR is the
+reverse bias voltage. It should be noted that when the
+depletion width becomes smaller than the thickness of the
+bulk, D in eq. (12) must be replaced by the depletion width
+W given by
+WðtÞ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ ﬃ
+2/C15VR
+qNT 1 /C0 expð/C0 t=/C28Þ
+/C2/C3
+s
+/C20 D: ð13Þ
+The electric-ﬁeld strength at the Schottky contact E0 is given
+by
+Eð0; tÞ¼ E0ðtÞ¼ /C1/C30 bðtÞ
+/C11
+¼ qNT
+2/C15 1 /C0 exp /C0 t
+/C28
+/C18/C19/C20/C21
+D þ VR
+D :
+ð14Þ
+At t ¼ 0 and 1, E0 becomes
+E0ð0Þ¼ /C1/C30 bð0Þ
+/C11 ¼ VR
+D ; ð15Þ
+E0ð1Þ ¼ /C1/C30 bð1Þ
+/C11 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ ﬃ
+2qNTVR
+/C15
+r
+: ð16Þ
+From eqs. (15) and (16), the constant /C11 and NT are obtained
+by measuring /C1/C30 b at t ¼ 0 and 1. /C28 is obtained from the
+slope of /C1/C30 bðtÞ with time at t ¼ 0.
+/C28 ¼ qNT
+2/C15 /C11D /C1/C30 bðtÞ
+dt
+/C12/C12/C12/C12
+t¼0
+/C18/C19 /C0 1
+: ð17Þ
+Furthermore, the depth of the deep acceptor level ET /C0 EV
+can be determined by measuring the temperature depen-
+dence of /C28 using eq. (9).
+3. Experimental Procedure
+The CdTe single crystal used in this study was grown by
+the traveling heater method (THM) of Acrorad Co., Ltd. It
+has a p-type resistivity of /C24 10
+9 /C10cm.5) CdTe wafer was
+mechanically polished and then chemically etched with Br-
+methanol solution. A sample with an area of 8 /C2 8 mm
+2 and
+thickness of 0.5 mm was cut from the wafer. The sample
+was cleaned using trichloroethylene, acetone, and deionized
+water. To make a stoichiometric CdTe surface, He plasma
+treatment was carried out by the inductively coupled plasma
+(ICP) method. Details of the plasma treatment are described
+in our previous papers.
+21,22) An Al Schottky contact was
+formed on the CdTe(111)Te face by electron beam evapo-
+ration at a pressure of /C24 10
+/C0 6 Pa. The thickness of the Al
+layer was approximately 50 nm. The substrate temperature
+during the evaporation was room temperature. On the
+opposite side, a Pt ohmic contact was formed by electroless
+plating. Finally, the sample was cut to an area of 3 /C2 3 mm
+2
+and thickness of 0.5 mm, and mounted on an alumina plate.
+The current–voltage characteristics of the fabricated
+detector were measured in a shield box (Advantest
+R12706A) using an electrometer (Keithley 6517A) at 0,
+10, 20, 30, 40, and 50
+/C14C. The spectrometric performance of
+the detector was evaluated at 20 /C14C. The detector was
+irradiated with a 241Am /C13-ray source from the cathode (Pt
+contact) side. The measuring system consisted of a shaping
+Jpn. J. Appl. Phys., Vol. 45, No. 11 (2006) H. T OYAMA et al.
+8843
+
+--- PAGE 4 ---
+ampliﬁer (Clear-Pulse 4417), a charge sensitive ampliﬁer
+(Clear-Pulse 5102), and a pulse height analyzer (Clear-Pulse
+1217). The shaping time was set at 1
+ms. During the
+measurements, temperature was maintained constant within
+/C6 0:2
+/C14C using a thermostatic chamber and a temperature
+controller.
+4. Results and Discussion
+4.1 Electric-ﬁeld distribution based on conventional model
+Figure 1 shows the current–voltage characteristics of the
+fabricated CdTe detector. It is observed that a rectiﬁcation
+property is obtained, which indicates that a Schottky contact
+is produced between the Al and CdTe surface. From eq. (5),
+the barrier height at zero bias is found to be 0.973 eV.
+Figure 2 shows the time dependence of /C1/C30
+b measured at
+each temperature. The applied bias voltage is constant at
+100 V. As shown in this ﬁgure, /C1/C30
+b increases with time, and
+the rate of increase of /C1/C30 b becomes higher as the temper-
+ature increases. At 40 and 50 /C14C, the value of /C1/C30 b gradually
+saturates within the measuring time. These results seem to
+obey eqs. (9) and (10). /C1/C30
+b at t ¼ 0 is estimated to be
+0.0850 eV from the data of 50 /C14C, and the constant /C11 is
+determined to be 425 nm from eq. (15). The saturation value
+/C1/C30
+bð1Þ is determined to be 0.1298 eV from the value after
+5h a t 5 0 /C14C. Using eq. (15), NT is determined to be 2:63 /C2
+1011 cm/C0 3. The values of /C28 are determined using eq. (17)
+and are listed in Table I. It is found that /C28 is increased as
+temperature is decreased, in agreement with eq. (9).
+The energy level ET /C0 EV can be calculated from the
+temperature dependence of /C28. Figure 3 shows ln /C28 vs 1=T
+plots, which give a value of 0.73 eV. We consider that the
+obtained energy level arises from the cadmium vacancies, as
+reported by Vul et al. at E
+V þ 0:77 eV23) (from electro-
+absorption spectra) and Ayoub et al. at EV þ 0:6 eV24) (from
+photoinduced transient current spectroscopy). Ayoub et al.
+also described that this level can be responsible for polar-
+ization phenomena.
+24)
+Figure 4 shows the time dependence of the distribution of
+electric ﬁeld in the bulk of the CdTe detector calculated
+from eq. (12), using V
+R ¼ 100 V and the extracted param-
+eters NT and /C28. The position x is measured in a direction
+perpendicular to the Schottky contact. As shown in Fig. 4,
+the distribution of the electric ﬁeld is initially constant
+throughout the CdTe bulk, but begins to incline progres-
+sively with time after applying the bias voltage. The electric-
+ﬁeld strength at the Schottky contact increases with time,
+which leads to an increase in Schottky barrier lowering. As a
+result, leakage current increases with time, and thus the
+energy resolution of the detector deteriorates. This eﬀect
+agrees with actual observed spectra. On the other hand, a
+photopeak shift in the spectra occurs when the depletion
+width in CdTe bulk becomes less than the thickness of the
+bulk.
+9) However, the calculated distribution of the electric
+ﬁeld indicates that the bulk is never undepleted. This means
+that the detector shows no photopeak shift, which is
+inconsistent with the obtained spectra.
+-500 -400 -300 -200 -100 0 10010-12
+10-11
+10-10
+10-9
+10-8
+10-7
+10-6
+10-5
+10-4
+10-3
+10-2
+Voltage (V)
+Current (A)
+T = 20°C
+Reverse
+Forward
+Fig. 1. Current–voltage characteristics of CdTe detector. The measure-
+ment was performed at 20 /C14C. The barrier height at zero bias is extracted
+to be 0.973 eV.
+0 30 60 90 120
+0.08
+0.10
+0.12
+0.14
+Time  t  (min)
+b (eV)
+0°C
+10°C
+20°C
+30°C
+40°C
+50°C
+VR = 100 V
+∆
+φ
+Fig. 2. Time dependence of /C1/C30 b measured at each temperature. The
+applied bias voltage is constant at 100 V.
+Table I. Detrapping time /C28 at each temperature for two models.
+Temperature Detrapping time /C28 (min)
+(/C14C) Conventional Modiﬁed
+0 1719 4695
+10 944 2669
+20 260 836
+30 99.4 351
+40 40.9 149
+50 16.2 56.6
+3.0 3.2 3.4 3.6 3.80
+2
+4
+6
+8
+10
+1000/T  (1/K)
+ln
+τ
+VR = 100 V
+Conventional model
+ET –EV = 0.73 eV
+Modified model
+ET –EV = 0.69 eV
+Fig. 3. ln /C28 vs 1=T plots for two models.
+Jpn. J. Appl. Phys., Vol. 45, No. 11 (2006) H. T OYAMA et al.
+8844
+
+--- PAGE 5 ---
+This discrepancy is considered to be due to the inaccurate
+parameters of the deep acceptors and, therefore, an incorrect
+charge accumulation model. In the next subsection, we
+modify the charge accumulation model in consideration of
+the occupation state of the deep acceptor level.
+4.2 Modiﬁcation of charge accumulation model
+In the conventional model, it is assumed that all the deep
+acceptor levels are empty before applying the bias voltage,
+and will be occupied by electrons after applying the bias
+voltage. However, the occupation of the deep levels is
+actually determined by the Fermi–Dirac function. Assuming
+the zero-temperature approximation, a deep acceptor level is
+empty if it lies above the Fermi level E
+F and will be
+occupied by electrons below EF [Fig. 5(a)]. For the case of
+p-type CdTe, a deep acceptor level can cross the Fermi level
+when the bands are bent by the formation of a Schottky
+contact. The intersection point between a deep acceptor level
+and the Fermi level is symbolized by /C21. If the barrier height
+at zero bias /C30b0 is larger than a deep acceptor level in the
+vicinity of the Schottky contact, the deep acceptor level is
+supposed to be situated below E
+F. From our result,
+/C30b0 ¼ 0:973 eV is larger than a deep acceptor level, imply-
+ing that the deep levels in the region of /C21 are already
+occupied before the application of the bias voltage. If a
+reverse bias is applied, the Fermi level is split into quasi-
+Fermi levels for electrons and holes. As shown by Rhoderick
+and Williams,
+18) it is a very good approximation to assume
+that the hole quasi-Fermi level EFp is horizontal throughout
+the depletion region and coincides with the Fermi level in
+the semiconductor, while the electron quasi-Fermi level E
+Fe
+is also horizontal and coincides with the Fermi level in the
+metal [Fig. 5(b)]. When EFp is greater than the deep acceptor
+levels, they begin to be occupied at a rate with a detrapping
+time /C28, and negative space charge is accumulated.
+According to this model, the potential V and the electric
+ﬁeld E must be obtained by solving Poisson’s equations in
+two regions.
+d2
+dx2 Vðx; tÞ¼
+q
+/C15NT; 0 /C20 x /C20 /C21
+q
+/C15NT 1 /C0 exp /C0 t
+/C28
+/C18/C19/C20/C21
+;/C21 /C20 x /C20 D.
+8
+>>
+<
+>>
+:
+ð18Þ
+Using the boundary conditions
+Eð/C21 /C0 0; tÞ¼ Eð/C21 þ 0; tÞ;
+Vð/C21 /C0 0; tÞ¼ Vð/C21 þ 0; tÞ;
+Vð0; tÞ¼ V
+R;
+VðD; tÞ¼ 0;
+ð19Þ
+the electric ﬁeld is given by
+Eðx; tÞ¼
+/C0 qNT
+/C15 x þ qNT
+2/C15D D2 /C0ð D /C0 /C21Þ2 exp /C0 t
+/C28
+/C18/C19/C20/C21
+þ VR
+D ; 0 /C20 x /C20 /C21
+/C0 qNT
+/C15 1 /C0 exp /C0 t
+/C28
+/C18/C19/C20/C21
+x þ qNT
+2/C15D D2 /C0ð D2 þ /C212Þ exp /C0 t
+/C28
+/C18/C19/C20/C21
+þ VR
+D ;/C21 /C20 x /C20 D.
+8
+>>
+><
+>>>
+:
+ð20Þ
+EF EF
+x = 0 λ D
+EC
+EV
+EC
+EVET
+EFp
+EFn
+φ b0
+(a) (b) (c)
+x = 0      λ Dx  = 0 λ WD
+EF
+EV
+EC
+EFp
+EFn
+Fig. 5. Energy band diagram of Schottky-type CdTe detector taking account of deep acceptor level. (a) Zero bias, (b) after biasing, and
+(c) diminishing depletion width after biasing.
+0 0.1 0.2 0.3 0.4 0.50
+100
+200
+300
+400
+VR = 100 V
+D = 0.5 mm
+T = 20°C
+ = 260 minτ
+NT = 2.63 × 1011 cm–3
+4 h
+ t = 0
+Position  x  (mm)
+Electric field  (V/mm)ε
+Fig. 4. Time dependence of distribution of electric ﬁeld in bulk of CdTe
+detector calculated from eq. (12), using VR ¼ 100 V, NT ¼ 2:63 /C2 1011
+cm/C0 3 and /C28 ¼ 260 min. x ¼ 0 and 0.5 mm correspond to the anode and
+cathode of the detector, respectively.
+Jpn. J. Appl. Phys., Vol. 45, No. 11 (2006) H. T OYAMA et al.
+8845
+
+--- PAGE 6 ---
+In this case, the electric-ﬁeld strength at the Schottky contact
+E0 is given by
+Eð0; tÞ¼ E0ðtÞ¼ /C1/C30 bðtÞ
+/C11
+¼ qNT
+2/C15D D2 /C0ð D /C0 /C21Þ2 exp /C0 t
+/C28
+/C18/C19/C20/C21
+þ VR
+D :
+ð21Þ
+The depletion width is also modiﬁed as
+WðtÞ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2/C15VR /C0 qNT/C212 expð/C0 t=/C28Þ
+qNT 1 /C0 expð/C0 t=/C28Þ
+/C2/C3
+s
+/C20 D: ð22Þ
+At t ¼ 0, E0 becomes
+E0ð0Þ¼ /C1/C30 bð0Þ
+/C11 ¼ qNT
+2/C15D D2 /C0ð D /C0 /C21Þ2/C2/C3
+þ VR
+D : ð23Þ
+Using eq. (23), the constant /C11 is obtained from the straight-
+line slope of a /C1/C30 bð0Þ–VR plot. Figure 6 shows the /C1/C30 bð0Þ–
+VR plot, indicating that /C11 ¼ 102 nm. An expression of E0 at
+t ¼1 is the same as eq. (16) and gives NT ¼ 4:56 /C2 1012
+cm/C0 3. /C11 is lower by a factor of 4.2, and NT is higher by a
+factor of 17 than those of the conventional model. The
+straight-line intercept of the /C1/C30
+bð0Þ–VR plot yields /C21. From
+Fig. 6, /C21 is determined to be 0.087 mm. Equation (17) is
+modiﬁed as
+/C28 ¼ qNT
+2/C15
+/C11ðD /C0 /C21Þ2
+D
+/C1/C30 bðtÞ
+dt
+/C12/C12/C12/C12
+t¼0
+/C18/C19 /C0 1
+: ð24Þ
+The values of /C28 are determined from eq. (24) and are listed
+in Table I. The detrapping times in the modiﬁed model are
+3 – 4 times longer than those in the conventional model. The
+ln /C28 versus 1=T plots in the modiﬁed model are shown in
+Fig. 3, which give E
+T /C0 EV ¼ 0:69 eV.
+Figure 7 shows the time dependence of the distribution of
+electric ﬁeld calculated from eq. (20), using VR ¼ 100 V and
+modiﬁed parameters /C28, NT and /C21. As can be seen from the
+ﬁgure, the electric ﬁeld at t ¼ 0 rises in the region 0 /C20
+x /C20 /C21, while it is constant in the region /C21 /C20 x /C20 D.A st i m e
+passes, the distribution of the electric ﬁeld shifts vertically in
+the region 0 /C20 x /C20 /C21, while it inclines in the region /C21 /C20
+x /C20 D. The increase in electric-ﬁeld strength at the Schottky
+contact with time causes a deterioration of energy resolution.
+On the other hand, the electric ﬁeld at the cathode decreases
+with time and reaches zero at t ¼ 61 min, suggesting that the
+width of the depletion layer begins to diminish. The energy
+band diagram in which the depletion width becomes less
+than the thickness of the bulk is illustrated in Fig. 5(c).
+Holes near the cathode side are trapped after that time and an
+undepleted region is formed.
+It is considered that the shift of photopeak position in
+radiation measurements is due to the decrease in depletion
+width. We compared the time t
+s that the photopeak position
+begins to shift and the time tw that the depletion width begins
+to diminish. Figure 8(a) shows the time dependence of the
+position of the 59.5 keV photopeak observed in radiation
+measurements. It was found that the photopeak position
+begins to shift at a certain time t
+s, and that ts becomes longer
+as the bias voltage increases, as shown in Fig. 8(b). On the
+other hand, tw is calculated from eq. (22) and shown in
+Fig. 8(b). It is clear that ts closely ﬁts the calculated curve.
+This fact provides evidence for the validity of the modiﬁed
+0 50 100 150 2000
+0.1
+0.2
+Reverse bias VR (V)
+∆
+φ b(0) (eV)
+T = 50°C
+α  = 1020 Å
+Fig. 6. /C1/C30 bð0Þ vs VR.
+0 0.1 0.2 0.3 0.4 0.50
+200
+400
+600
+800
+1000
+1200
+Position  x  (mm)
+Electric field  (V/mm)ε
+VR = 100 V
+D = 0.5 mm
+T = 20°C
+ = 836 minτ
+NT = 4.56 × 1012 cm–3
+ = 0.087 mmλ
+λ
+t = 0
+4 h
+Fig. 7. Time dependence of distribution of electric ﬁeld in bulk of CdTe
+detector calculated from eq. (20), using VR ¼ 100 V, NT ¼ 4:56 /C2 1012
+cm/C0 3, /C28 ¼ 836 min and /C21 ¼ 0:087 mm. The positions of x ¼ 0 and 0.5
+mm correspond to the anode and cathode of the detector, respectively.
+0 30 60 90 120 150 180 210 240400
+500
+600
+Time  t  (min)
+80 V 100 V 120 V
+Peak position (ch.)
+VR = 60 V 140 V
+T = 20°C
+(a)
+0 50 100 150 2000
+50
+100
+150
+Reverse bias  VR  (V)
+Time 
+ts, tw  (min)
+ : ts
+ : tw
+(b)
+Fig. 8. (a) Time dependence of position of 59.5 keV photopeak observed
+in radiation measurements at 20 /C14C. (b) Time that photopeak position
+begins to shift ts and depletion width begins to diminish tw against VR.
+Jpn. J. Appl. Phys., Vol. 45, No. 11 (2006) H. T OYAMA et al.
+8846
+
+--- PAGE 7 ---
+model of charge accumulation and the resulting distribution
+of electric ﬁeld. Our method enables the simple evaluation
+of the parameters of deep acceptors as we only have to
+measure the current–voltage characteristics of a detector.
+5. Conclusions
+We investigated polarization phenomena in a Schottky-
+type CdTe radiation detector through the measurement of
+Schottky barrier lowering. On the basis of the conventional
+model of charge accumulation, the parameters of deep
+acceptors such as detrapping time /C28, concentration N
+T, and
+the depth of the energy level ET /C0 EV were extracted. It
+is considered that the obtained energy level arises from
+cadmium vacancies in the crystal. However, the simulated
+distribution of electric ﬁeld shows that the CdTe bulk will
+never be undepleted, which is inconsistent with the
+observation of photopeak shifts in spectra. On the other
+hand, the modiﬁed model corrects the parameters to /C28 ¼
+836 min, N
+T ¼ 4:56 /C2 1012 cm/C0 3, and ET /C0 EV ¼ 0:69 eV.
+In the modiﬁed model, the distribution of electric ﬁeld
+suggests that the depletion width begins to diminish at a
+certain time. It was found that the time that the depletion
+width becomes less than the thickness of the bulk coincides
+with the time that the photopeak position begins to shift.
+Our results show that the modiﬁed model of charge
+accumulation represents an accurate distribution of electric
+ﬁeld in CdTe bulk. In addition, our method for the
+evaluation of deep acceptors is simple as we only have to
+measure the current–voltage characteristics of a detector. We
+believe that this method will become useful in the ﬁelds of
+crystal growth and device fabrication not only for CdTe but
+also other compound semiconductors.
+Acknowledgment
+This work was supported in part by Takeda Science
+Foundation.
+1) S. Baba, K. Ohmori, Y. Mito, T. Tanoue, S. Yano, K. Tokumori, F.
+Toyofuku and S. Kanda: Nucl. Instrum. Methods Phys. Res., Sect. A
+458 (2001) 262.
+2) K. Spartiotis, A. Leppa ¨nen, T. Pantsar, J. Pyyhtia ¨, P. Laukka, K.
+Muukkonen, O. Ma¨nnisto¨, J. Kinnari and T. Schulman: Nucl. Instrum.
+Methods Phys. Res., Sect. A 550 (2005) 267.
+3) T. Takahashi et al. : Nucl. Instrum. Methods Phys. Res., Sect. A 541
+(2005) 332.
+4) T. Takahashi, B. Paul, K. Hirose, C. Matsumoto, R. Ohno, T. Ozaki,
+K. Mori and Y. Tomita: Nucl. Instrum. Methods Phys. Res., Sect. A
+436 (1999) 111.
+5) M. Funaki, T. Ozaki, K. Satoh and R. Ohno: Nucl. Instrum. Methods
+Phys. Res., Sect. A 436 (1999) 120.
+6) C. Matsumoto, T. Takahashi, K. Takizawa, R. Ohno, T. Ozaki and K.
+Mori: IEEE Trans. Nucl. Sci. 45 (1998) 428.
+7) M. Niraula, A. Nakamura, T. Aoki, Y. Tomita and Y. Hatanaka: Nucl.
+Instrum. Methods Phys. Res., Sect. A 491 (2002) 168.
+8) R. Hofstadter: Nucleonics 2 (1949) 29.
+9) H. L. Malm and M. Martini: IEEE Trans. Nucl. Sci. 21 (1974) 322.
+10) R. O. Bell, G. Entine and H. B. Serreze: Nucl. Instrum. Methods 117
+(1974) 267.
+11) P. Siﬀert, J. Berger, C. Scharager, A. Cornet and R. Stuck: IEEE
+Trans. Nucl. Sci. 23 (1976) 159.
+12) M. Hage-Ali, C. Scharager, J. M. Koebel and P. Siﬀert: Nucl. Instrum.
+Methods 176 (1980) 499.
+13) J. P. Ponpon, R. Stuck and M. Amann: Solid-State Electron. 44 (2000)
+29.
+14) J. P. Ponpon and M. Amann: Nucl. Instrum. Methods Phys. Res., Sect.
+A 526 (2004) 447.
+15) K. Hitomi, M. Matsumoto, O. Muroi, T. Shoji and Y. Hiratate: IEEE
+Trans. Nucl. Sci. 49 (2002) 2526.
+16) S. M. Sze: Physics of Semiconductor Devices (John Wiley & Sons,
+New York, 1981) 2nd ed., Chap. 5.
+17) G. Khlyap and P. Sydorchuk: Cryst. Res. Technol. 36 (2001) 1027.
+18) E. H. Rhoderick and R. H. Williams: Metal–Semiconductor Contacts
+(Clarendon Press, Oxford, 1988) 2nd ed., Chap. 1.
+19) S. Fujita, S. Naritsuka, T. Noda, A. Wagai and Y. Ashizawa: J. Appl.
+Phys. 73 (1993) 1284.
+20) A. Manabe, A. Mitsuishi and H. Yoshinaga: Jpn. J. Appl. Phys. 6
+(1967) 593 .
+21) H. Toyama, A. Nishihira, M. Yamazato, A. Higa, T. Maehama, R.
+Ohno and M. Toguchi: Jpn. J. Appl. Phys. 43 (2004) 6371 .
+22) H. Toyama, M. Yamazato, A. Higa, T. Maehama, R. Ohno and M.
+Toguchi: Jpn. J. Appl. Phys. 44 (2005) 6742 .
+23) B. M. Vul, V. S. Vavilov, V. S. Ivanov, V. B. Stopachinskii and V. A.
+Chapnin: Sov. Phys. Semicond. 6 (1973) 1255.
+24) M. Ayoub, M. Hage-Ali, J. M. Koebel, A. Zumbiehl, F. Klotz, C. Rit,
+R. Regal, P. Fouge`res and P. Siﬀert: IEEE Trans. Nucl. Sci. 50 (2003)
+229.
+Jpn. J. Appl. Phys., Vol. 45, No. 11 (2006) H. T OYAMA et al.
+8847

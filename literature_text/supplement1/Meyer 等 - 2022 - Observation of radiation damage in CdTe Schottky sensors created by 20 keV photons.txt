@@ -1,0 +1,734 @@
+
+
+--- PAGE 1 ---
+Journal of
+Instrumentation
+       
+PAPER • OPEN ACCESS
+Observation of radiation damage in CdTe Schottky
+sensors created by 20 keV photons
+To cite this article: M. Meyer et al 2022 JINST 17 P06035
+ 
+View the article online for updates and enhancements.
+You may also like
+Quantitative Analysis of Polarization
+Phenomena in CdTe Radiation Detectors
+Hiroyuki Toyama, Akira Higa, Masaaki
+Yamazato et al.
+-
+Improvement in -ray Detection Quality of
+Al/CdTe/Pt Schottky-Type Radiation
+Detector by Sulfur Treatment
+Masaaki Yamazato, Akira Higa, Yasumasa
+Fukuhara et al.
+-
+Charge collection properties of a CdTe
+Schottky diode for x- and -rays detectors
+L A Kosyachenko, O L Maslyanchuk, V A
+Gnatyuk et al.
+-
+This content was downloaded from IP address 188.253.120.136 on 30/06/2026 at 07:00
+
+--- PAGE 2 ---
+2022 JINST 17 P06035
+P/u.pc/b.pc/l.pc/i.pc/s.pc/h.pc/e.pc/d.pc /b.pc/y.pc IOP P/u.pc/b.pc/l.pc/i.pc/s.pc/h.pc/i.pc/n.pc/g.pc /f.pc/o.pc/r.pc S/i.pc/s.pc/s.pc/a.pc M/e.pc/d.pc/i.pc/a.pc/l.pc/a.pc/b.pc
+R/e.pc/c.pc/e.pc/i.pc/v.pc/e.pc/d.pc: March 21, 2022
+A/c.pc/c.pc/e.pc/p.pc/t.pc/e.pc/d.pc: May 16, 2022
+P/u.pc/b.pc/l.pc/i.pc/s.pc/h.pc/e.pc/d.pc: June 27, 2022
+Observation of radiation damage in CdTe Schottky
+sensors created by 20keV photons
+M. Meyer,𝑎 M. Andrä,𝑎 R. Barten,𝑎 A. Bergamaschi,𝑎 M. Brückner,𝑎 P. Busca,𝑏
+M. Carulla Areste,𝑎 S. Chiriotti,𝑎 R. Dinapoli,𝑎 P. Fajardo,𝑏 E. Fröjdh,𝑎 D. Greiﬀenberg,𝑎
+J. Heymes,𝑎 V. Hinger,𝑎 P. Kozlowski,𝑎 C. Lopez-Cuenca,𝑎 D. Mezza,𝑎 A. Mozzanica,𝑎
+S. Redford,𝑎 M. Ruat,𝑏 C. Ruder,𝑎 B. Schmitt,𝑎 D. Thattil,𝑎 G. Tinti,𝑎 S. Vetter𝑎 and J. Zhang𝑎
+𝑎Paul-Scherrer-Institute (PSI),
+Villigen PSI CH-5232, Switzerland
+𝑏European Synchrotron Radiation Facility (ESRF),
+Avenue des Martyrs, Grenoble F-38043, France
+E-mail: dominic.greiffenberg@psi.ch
+A/b.pc/s.pc/t.pc/r.pc/a.pc/c.pc/t.pc:Thepolarizationcharacteristicsofohmicand(Al-)SchottkytypeCdTesensorssupplied
+byAcroradhavebeencharacterizedwiththelownoise,chargeintegratingreadoutchipJUNGFRAU,
+revealing deﬁned areas in the Schottky type sensors, which were irradiated with 20keV photons in
+previous experiments more than one year ago. These areas, which have absorbed doses of up to
+1079kGy,showamorerobustchargecollectioncomparedtounirradiatedareas. Incontrasttothis,
+no alteration of the polarization characteristics could be found in ohmic type CdTe sensors after
+irradiation. Thepolarizationbehaviorofthesensorshasbeencharacterizedin-situovertimeandat
+diﬀerent temperatures by using an homogeneous, low ﬂux molybdenum ﬂuorescence illumination.
+An increase of the leakage current in the irradiated areas was found and quantiﬁed as a function of
+absorbeddoseaswellasitsinﬂuenceonthestabilityonthenumberofphotoncounts. Inadditionto
+theinﬂuenceofX-rayirradiation,theeﬀectofthermalannealingonthepolarizationcharacteristics
+of Schottky type CdTe sensors has been studied. Possible routes for the usage of Schottky type
+CdTe sensors in synchrotron applications are outlined in this publication.
+K/e.pc/y.pc/w.pc/o.pc/r.pc/d.pc/s.pc:Hybrid detectors; Instrumentation for FEL; Instrumentation for synchrotron radiation
+accelerators; X-ray detectors and telescopes
+Corresponding author.
+c 2022 The Author(s). Published by IOP Publishing Ltd on behalf of
+Sissa Medialab. Original content from this work may be used under the
+terms of the Creative Commons Attribution 4.0 licence. Any further distribution of this
+work must maintain attribution to the author(s) and the title of the work, journal citation
+and DOI.
+https://doi.org/10.1088/1748-0221/17/06/P06035
+
+--- PAGE 3 ---
+2022 JINST 17 P06035
+Contents
+1 Introduction 1
+2 Material and methods 3
+2.1 CdTe sensors under investigation and their irradiation history 3
+2.2 Operating conditions 3
+2.3 Data analysis 4
+3 Description of the eﬀect caused by bias-induced polarization 5
+4 Inﬂuence of irradiation and thermal annealing on polarization characteristics 11
+4.1 Eﬀect of irradiation with monochromatic20 keVphotons 11
+4.2 Eﬀect of irradiation at the X-ray tube with an acceleration voltage of25 kV 14
+4.3 Comparison with ohmic type CdTe sensors 15
+4.4 Eﬀect of thermal annealing at¸80C 17
+4.5 Comparison between diﬀerent batches of electron collecting Schottky CdTe sensors 18
+5 Conclusion 19
+1 Introduction
+High-ZsensorsareofgreatinterestforthedetectionofX-rayswithaphotonenergyabove20keV.In
+contrast to silicon, which is the most common sensor material for detectors at synchrotron sources
+and free electron lasers, the absorption eﬃciency of high-Z sensors is more adequate in a broader
+rangeofX-rayenergies. Suitableeﬃcienciescanbeachievedatphotonenergiesevenabove100keV
+dependingonthematerialcompositionandthethickness[1]. Possibleapplicationsarereportedfor
+astronomy, medicine, homeland security and material science [2]–[5].
+Thesematerials,however,suﬀerfromshortcomingslikedislocationlines,charge-trappingand
+high energy ﬂuorescence photons. They do not provide the same performance as silicon-based
+sensorsespeciallyintermsofchargetransportpropertiesandcrystalhomogeneity[6]–[8]. Among
+theavailablehigh-Zsemiconductorsensormaterials,thecrystalqualityofCdTeimprovedinrecent
+decades [9]–[11]. Sensors made from CdTe provide a high resistivity at room temperature as well
+as a large linear attenuation coeﬃcient.
+Two of the most common contact conﬁgurations used in combination with CdTe sensors
+are (quasi-) ohmic type (Pt/CdTe/Pt) and hole-blocking Schottky type (Al/CdTe/Pt) contacts (ﬁg-
+ure 1) [12]. Ohmic type CdTe sensors show a stable charge collection behavior in time, but have a
+high dark current, while the latter, which have a very low leakage current, suﬀer from polarization
+issues with increasing biasing time [13, 14].
+– 1 –
+
+--- PAGE 4 ---
+2022 JINST 17 P06035
+Figure 1. (Left) Quasi-ohmic type CdTe sensor with platinum contacts on both the backside and the pixel
+side. (Right) Electron collecting Schottky type CdTe sensor with a backside contact made of platinum and
+with aluminum pixel side contacts forming a hole blocking Schottky contact.
+CdTe sensors with ohmic contacts act as photoresistors, thus charge carriers of either polarity
+can be injected, which is the reason why ohmic type CdTe sensors show stable charge collection
+properties and typically do not suﬀer from polarization caused by solely biasing the sensor (bias-
+inducedpolarization). However,oneofthemajordrawbacksofohmicCdTesensorsistherelatively
+high dark current through the sensor, which is deﬁned by the resistivity of the CdTe [13].
+A rectifying behavior is achieved by replacing one of the ohmic contacts with a Schottky
+contact, thus reducing the current through the sensor. When collecting electrons, aluminum can be
+used as contact material on the pixel side, preventing the injection of holes from the pixel side. A
+drawbackofthiscontactconﬁgurationisthatSchottkytypeCdTesensorswithaluminumcontacton
+the pixel side suﬀer from bias-induced polarization. This is commonly attributed to the ionization
+ofdeepacceptorsclosetothereadoutcontacts,whichispresentafterbiasingthedetectorforseveral
+hours [14]–[16]. Negative space charges are left behind in the bulk because of hole detrapping
+(and a lack of re-injecting holes through the hole-blocking pixel side contact) causing changes in
+the electric ﬁeld distribution [17]. The resulting performance degradation is well-known since the
+1970s [18].
+A measurement campaign was performed at the MS beamline of the Swiss Light Source
+(SLS) [19], where 16 areas of roughly12 2mm2 have been irradiated with monochromatic
+20keV photons to 16 diﬀerent doses, ranging between 0.01kGy and 1079kGy. Remarkably, one
+year after these experiments took place, changes of the polarization behavior of the Schottky CdTe
+sensorswereobserved. Dependingontheabsorbeddose,theeﬀectofthebias-inducedpolarization
+was reducedin the areaswhich previously have beenirradiated and thecharge collection wasmore
+robust. On the contrary, measurements with ohmic type CdTe of the same thickness did not show
+anychangesofthechargecollectionbehavioroftheirradiatedareaswithrespecttotheunirradiated
+parts of the sensors.
+– 2 –
+
+--- PAGE 5 ---
+2022 JINST 17 P06035
+Thecharge-integratingJUNGFRAUreadoutchipproviding 256 256readoutchannelswitha
+pixel pitch of 75μm was used for the sensor characterization. Details on the JUNGFRAU readout
+application-speciﬁcintegratedcircuit(ASIC),developedatPSI,havebeenpublishedanddescribed
+in detail elsewhere [20]. The choice of using a charge integrating readout chip is motivated by its
+capability to precisely measure the charge induced in the contacts during a pre-deﬁned integration
+time thus enabling a detailed analysis.
+The paper is structured as follows: in the ﬁrst part of the paper the polarization behavior
+of unirradiated areas of the Schottky CdTe sensor is characterized and compared to ohmic CdTe
+sensors in order to deﬁne a standard polarization behavior. In the following, the change of the
+polarization behavior is evaluated for the irradiated areas as a function of temperature and dose.
+In order to exclude radiation eﬀects to the readout chip and/or the Schottky contact on the pixel
+side due to the higher penetration depth of higher harmonic photons at the beamline, a speciﬁc
+area was irradiated using an X-ray tube with an acceleration voltage of 25kV, so that a shallow
+absorption proﬁle of the photons is ensured. In an attempt to thermally anneal the Schottky CdTe
+sensorat¸80C,changesofthepolarizationbehavior(ofpreviouslyunirradiatedareas)werefound
+and subsequently characterized.
+2 Material and methods
+2.1 CdTe sensors under investigation and their irradiation history
+InthisstudyCdTesensorssuppliedbyAcroradCo.,Ltd.,Japanwereused[21]. Thethicknessofall
+CdTesensorspresentedinthisstudyis750 μm. Flip-chipbondingwasperformedbyAdvacam[22].
+High voltage with negative polarity was supplied by an external voltage source to the backside in
+order to collect electrons at the readout electrodes (ﬁgure 1).
+The electron collecting Schottky type sensors consist of a quasi-ohmic Pt-contact on the
+backsideandastructuredAlcontactonthepixelside( 256 256pixelsof 75 75 μm2). Theohmic
+type sensors are layered between two thin quasi-ohmic contacts made of Pt.
+Inthisstudy,Schottkytypesensorsdeliveredin2019wereinvestigatedindetailandcompared
+toohmictypesensors(alsofrom2019),aswellasSchottkytypesensorsobtainedearlierin2017. All
+presentedsensorshadalreadybeenusedinpreviousmeasurementcampaignsattheMSbeamlineof
+theSLS.Theresultsoftheseexperimentswillbepublishedlaterandarenotpartofthispublication.
+20keV monochromatic photons were used to irradiate well-deﬁned rectangular areas shaped by
+slits to sizes of around12 2mm2. The photon ﬂuxes were varied by means of silicon ﬁlters and
+covered ﬂuxes from11 107ph/mm2/s up to72 1010ph/mm2/s with integrated doses ranging
+from 0.01 to 1079kGy. An overview of the irradiation geometry with the estimated ﬂuxes and
+deposited doses in the respective areas is given in ﬁgure 2. Category A areas were irradiated for a
+total of 213 seconds, areas assigned to category B were irradiated for 2400 seconds.
+Bulk damage [23], as well as damage to the readout chip and/or an alteration of the pixel side
+contacts (being the rectifying contacts) can be excluded due to the low penetration depth of the
+20keV photons of around 80μm (absorption length) in CdTe.
+2.2 Operating conditions
+All test assemblies, consisting of single JUNGFRAU1.0 ASICs bump bonded to correspondingly
+sizedsensors,wereoperatedwitha500kJUNGFRAUsinglemodulesystemwithagentlenitrogen
+– 3 –
+
+--- PAGE 6 ---
+2022 JINST 17 P06035
+Figure 2. Geometrical arrangement of single2 2cm2 sensors of previous measurements performed at the
+MS beamline. The table (right) gives an overview on the estimated ﬂuxes and doses deposited in each area.
+ﬂow to avoid condensation on the front-end module (sensor + ASIC) also at temperatures down to
+0C. The operating temperature was controlled by a water-cooling system with set-values between
+0Cand30 C(0.1K).Thebiasvoltagewassuppliedbyanexternalhighvoltagesource(Keithley
+6487)toatypicalvalueof  500V,resultinginanaveragestrengthoftheelectricﬁeldof660kV/cm.
+Eachsensorwasnotbiasedforaperiodofatleast15minutesrightbeforethestartofeachexperiment
+to ensure comparability between the experiments. If not speciﬁed diﬀerently, data taking was
+performed at a frame rate of 500Hz. Due to the higher dark current of the ohmic type sensors and
+inordertoensureasuﬃcientdynamicrangeofthefront-endelectronics,anintegrationtimeof5 μs
+waschosenfortheohmictypesensors,shorterthanthe15 μsusedwithSchottkytypesensors. Most
+of the measurements presented in this publication rely on data obtained by a uniform illumination
+of the CdTe sensors with X-ray ﬂuorescence from molybdenum (17.4keV). The photon ﬂux was
+chosen low enough to ensure a low occupancy of photon hits on the pixel array.
+2.3 Data analysis
+Thedataoutputofthecharge-integratingJUNGFRAUASICwascorrectedonapixel-by-pixelbasis
+for the so-called pedestal, which is the value of the pixel output in a dark frame. The pedestal is
+mainlydeterminedbytheworkingpointoftheASICaswellasthesensorleakagecurrentcollected
+during the integration time. The observed dynamic ﬂuctuations in the pedestal are addressed by
+pedestal tracking (basic principle is described in [24]) and a common mode correction along the
+x- and y-axis. Pedestal tracking is useful for pedestal drift corrections during the experiment in a
+low photon ﬂux environment, when most pixels per frame are not hit by incoming photons. The
+mean value of the ﬁrst 2000 frames served as a starting point for the pedestal tracking in each
+experiment. The drift correction by pedestal tracking is necessary as the pedestal drift due to
+polarization eﬀects at higher temperatures is not negligible. While applying pedestal tracking and
+– 4 –
+
+--- PAGE 7 ---
+2022 JINST 17 P06035
+common mode corrections improves the energy resolution and noise of the system, the corrections
+are small (1keV), so no systematic errors are introduced.
+AlbeitJUNGFRAUisacharge-integratingreadoutchip,analgorithmwithanoﬀ-linethreshold
+was added to the data treatment to mimic a single photon counting detector (SPCD). This enables
+the comparison of our results to those obtained with SPDs [7, 11, 12].
+A cluster ﬁnding algorithm was used to detect photon hits and to assign the photon hits to
+the pixel with the highest signal within3 3 pixel clusters (details in [24]). A photon counting
+detector(withchargesharingsuppression)wasmimickedinsoftwaretotrackthenumberofphoton
+hits by deﬁning a threshold for the3 3 cluster sum of 450ADU (about 12.8keV) in the analysis.
+This threshold, corresponding to roughly 2/3 of the incoming photon energy, was held constant
+throughoutthisstudytosimulatepracticalmeasurementswhereastablesignalispresentandthusa
+ﬁxed threshold is applied. The photon hit ﬁnding was performed on a frame-by-frame basis and is
+valid only in a low-ﬂux environment. 2-dimensional photon hit maps were generated by summing
+up all photon hits identiﬁed on a pixel-by-pixel basis in a constant number of consecutive frames,
+typicallycorrespondingtothenumberofframesobtainedin1minute(30000frames). Additionally,
+the contribution of all pixels within the assigned3 3 cluster were excluded from the common
+mode correction as well as from the pedestal tracking.
+3 Description of the eﬀect caused by bias-induced polarization
+InthissectionwecomparethepolarizationbehaviorfoundintheCdTesensorswithdiﬀerentcontact
+conﬁgurations (Schottky: Al/CdTe/Pt, Quasi-ohmic: Pt/CdTe/Pt) supplied by Acrorad.
+AnX-raytubewasusedtoilluminateamolybdenumfoiltocreatealowﬂuxenvironment(i.e.,
+104–10 5ph/mm2/s) of 17.4keV ﬂuorescence photons in order to generate continuous and uniform
+photon hit maps of the biased sensors.
+In the following, when referring to the normalized number of photon hits, the number of
+photons counted by each pixel was normalized to the average number of photon hits within the 1st
+minute over the entire sensor (as the sensor was uniformly illuminated). Within the 1st minute the
+distribution of the normalized number of photon hits shows the expected Gaussian proﬁle, arising
+fromstatisticalPoissonﬂuctuationsaswellaspixeltopixelvariations. Astheimpingingirradiation
+fromtheX-raytubecanbeapproximatedtobeconstantovertime,deviationsmonitoredonapixel-
+by-pixel basis are therefore likely related to changes in the sensor response itself. This process was
+repeatedforSchottkyandquasi-ohmictypesensorsatdiﬀerenttemperaturesbycreatingnormalized
+photonhitmapsforeachminuteafterbiasingthesensor. Fromthenormalizedphotonhitmaps,the
+distribution of the normalized photon hits was plotted, and each pixel was assigned to a category
+[table 1] depending on its normalized number of counts with respect to the initial average value
+over the entire sensor.
+Figure 3 (left column) shows the normalized photon hit maps after 5h in low ﬂux conditions
+for a Schottky type sensor at three diﬀerent temperatures. The central column of ﬁgure 3 shows
+the distribution of the normalized number of hits over the sensor at diﬀerent times after the start
+of the experiment (0/60/120/180/240/300 minutes), extracted from the corresponding normalized
+photon hit maps (left column). This representation allows to visualize the trends over time which
+are present in the sensor during (low ﬂux) irradiation, so that the complex multidimensional data
+– 5 –
+
+--- PAGE 8 ---
+2022 JINST 17 P06035
+Table1. Assignmentofpixelstoacategoryaccordingtotheircountingbehavior,indicatedasacoloredarea
+in the central column and diﬀerently colored lines in the right column of ﬁgure 3 using the color code from
+this table.
+Assignment Normalized number of photon hitsColor code
+Very low 50% Blue
+Low 50%    80% Green
+Average 80%    120% Black
+High 120%    150% Orange
+Very high ¡150% Red
+canbeinterpreted. Dependingonthetemperatureofthesensor,thenormalizednumberofphotons
+hits decreases, globally over the pixel array, over time. This is a known eﬀect which is commonly
+attributed to bias induced polarization in CdTe Schottky sensors [25]. As can be seen in the
+normalized photon hit maps, this global decrease has strong local variability. The plots shown in
+ﬁgure3(rightcolumn)giveanoverviewofthenumberofpixelsassignedtotherespectivecategory
+for each minute.
+The observed polarization eﬀect in Schottky type CdTe sensors strongly depends on the tem-
+perature as presented in ﬁgure 3. The sensor shows a uniform distribution of photon hits in the
+ﬁrstminuteatallthreetemperatures,whenbeingirradiatedwith17.4keVphotonsoriginatingfrom
+molybdenumﬂuorescence. At0 C,afterﬁvehoursofoperation,hardlyanysignsofpolarizationare
+visibleinthephotonhitmap,aconclusionwhichisreﬂectedinanunvaryingstatisticaloutputover
+time. Vice versa, the investigated sensor shows an onset of polarization (indicated by a reduction
+of normally counting pixels in the range between 80% and 120%) after 35min at¸30C (black
+line, ﬁgure 3 right). Correspondingly, the number of pixels with very low photon counts increases
+and after around 70 minutes 99% of the pixels count less than 50% of the initial average value
+over the whole sensor (blue line). The situation observed at¸15C is in between these extremes,
+with the sensor showing clear signs of polarization taking eﬀect after 200 minutes of operation.
+Theseobservationsindicatethetemperaturerelateddependencyofthepolarizationprocess. More-
+over, it is noteworthy, that repetitions of the measurements lead to reproducible spatial patterns of
+the normalized photon hit maps which points to an unknown underlying local eﬀect inﬂuencing
+polarization.
+Figure4showsthesameﬁguresofmeritforanohmictypesensor. Incontrasttothebehaviorof
+a Schottky type CdTe sensor, no change in the overall photon hit distribution can be found (beyond
+statisticalvariations)evenafterbeingbiasedfor5hat ¸30C.Ourdatasetisingoodagreementwith
+literature, stating no signs of bias-induced polarization in CdTe sensors with ohmic contacts [26].
+Please note that the artifacts at the beginning of the data acquisition arise from the relatively slow
+transients of the dark current until the sensor equilibrium is reached and the data processing like
+pedestaltrackingworksreliably(i.e.,10min,tofullyrecoverallphotonhits). Aftertheequilibrium
+state of the dark current is reached after around 60 minutes, no further changes are observed in the
+overallsensorbehavior. Therefore,fortheohmictypesensorstheaveragephotonhitmapresponse
+at 60min serves as reference value for 100%.
+The observations in the present study are mainly assigned to bias-induced polarization (in
+contrasttophotoninducedpolarization). Inordertovalidatetheassumptionthatalowphotonﬂux
+– 6 –
+
+--- PAGE 9 ---
+2022 JINST 17 P06035
+Figure 3. (Left) Normalized photon hit maps of a Schottky type CdTe sensor at diﬀerent temperatures after
+5h operated at 500V in a low ﬂux environment. The z-axis shows the relative number of photon hits,
+normalized to the average photon hit rate within the ﬁrst minute of illumination, i.e. before polarization.
+White areas in the photon hit map represent values below 10% of the initial photon hits. (Center) The
+corresponding distribution of the normalized number of hits in percent (100% corresponds to the initial
+averagenumberofhitsperpixelovertheentiresensor)atcertaintimestamps. (Right)Evaluationofthepixel
+hitdistributionaccordingtothenormalizednumberofcountsversusexperimenttime: 0–50%ofinitialhits:
+very low — blue; 50–80%: low — green; 80–120%: nominal — black; 120–150%: high — orange; above
+150%: very high — red.
+does not alter the polarization characteristics, a reference measurement was set up by performing
+two measurements using the same biasing conditions: in the ﬁrst experiment the sensors were
+continuously irradiated by ﬂuorescence photons from the very beginning for a duration of ﬁve
+hours, whereas for the second measurement the ﬂuorescence was only turned on for 1 minute after
+ﬁve hours of biasing the sensor. In order to show the behavior of single pixels in terms of the
+evolution of their pedestal and pulse height, a small representative area (region of interest or ROI,
+1111 pixels) was chosen for the analysis (ﬁgure 5(a)).
+– 7 –
+
+--- PAGE 10 ---
+2022 JINST 17 P06035
+Figure 4. (Left) Pixel hit distribution of an ohmic type CdTe sensor operated at 500V in a low ﬂux
+environmentat¸30C.(Right)Evaluationofthepixelhitdistributionaccordingtodeﬁnedcategoriesversus
+experiment time: 0–50% of initial hits: very low — blue; 50–80%: low — green; 80–120%: nominal —
+black; 120–150%: high — orange; above 150%: very high — red.
+At the beginning of the ﬁrst experiment an overall uniform response of all pixels is observed
+as shown in ﬁgure 5(a) (3D-histograms with all 121 pixels unfolded on the x-axis with pulse
+height spectra in y direction and occurrence in z-direction). Besides a prominent pedestal peak, all
+pixels show charge sharing events up to the full photon charge, corresponding to an ADC value of
+about 610ADU. The inset in ﬁgure 5(a) shows a pulse height histogram (i.e., y-projection over all
+pixels for better statistics). For these measurements, the pedestal correction was applied using the
+respectivepedestalvaluesofthe1 stminuteofdatataking. Pedestaltrackingwasnotusedtoprevent
+the tracking mechanism to suppress the pedestal drift.
+Comparingthechangeof thepedestalcorrectedpulseheightspectra ofsinglepixelsovertime
+clearlyrevealstheimpactofpolarizationonaSchottkytypesensor(continuousillumination,0min:
+ﬁgure 5(a), 300min: ﬁgure 5(b)): the uniform response of all pixels within the region of interest at
+thebeginningturnsoverintomanycoldpixels(nophotopeakorchargesharingtailvisible),barely
+collectinganycharge. Ontheotherhand,asituationbestdescribedasasinkisformed(ﬁgure5(d)),
+where the pixels in the center of the region of interest continuously collect far more charge carriers
+than at the beginning, with one pixel in its center even saturating. A potential explanation could be
+that the photo generated charge carriers of the cold pixels are attracted and ultimately collected by
+the hot pixels.
+Figure 5(c) shows the resulting single pixel spectra of the same region of interest measured
+during 1 minute of X-ray illumination after being biased for ﬁve hours without X-rays. When
+comparing the pulse height spectra with the spectra recorded in a continuous low ﬂux condition
+(ﬁgure 5(b)), no obvious diﬀerences are noticeable: this strongly indicates that the observed
+phenomenon is to a large extent related to bias-induced polarization and the presence of the low
+photon ﬂux is negligible.
+– 8 –
+
+--- PAGE 11 ---
+2022 JINST 17 P06035
+Figure5. (a),(b)Pedestalcorrectedoutput(withoutpedestaltracking)ofaSchottkytypeCdTesensor(ROI)
+constantly operated for 5h at 500V and at¸30C in low ﬂux conditions, the corresponding pulse height
+spectra for all pixels (inset) and for each individual pixel at the beginning (a, 0min) and end (b, 300min).
+(c) For comparison, the pulse height spectra of the same sensor is shown right after turning on the X-rays
+after 5 hours of biasing. (d) 2D pedestal corrected output (pedestal value after 1 minute of being biased) of
+a Schottky type CdTe sensor (ROI) operated for 5h at 500V and at¸30C in low ﬂux conditions.
+Moreover,itisworthtonotethatallpixelscollectivelyshowahigherleakagecurrentafterﬁve
+hours as shown in ﬁgure 5(b) and 5(c), indicated by the slight increase of their pedestals.
+The increased pedestal values as a measure for a higher leakage current can also be conﬁrmed
+bythecurrentreadingofthehighvoltagesensorpowersupply(Keithley6487)monitoredovertime.
+As ﬁgure 6 shows, the evolution of the leakage current strongly depends on the temperature when
+only bias is applied to the sensor.
+Insearchoftheoriginofthelinesstructurevisibleinthephotonhitmapsofpolarizedsensors
+(ﬁgure 3, left), the observed polarization pattern was compared to a network of lines present in
+the Schottky CdTe sensors at the beginning of the polarization process, assigned by other authors
+to a network of sub-grain boundaries [13]. The sub-grain boundary network was extracted from a
+photon hit map plot shortly after the onset of polarization (example shown in ﬁgure 7(a)) sensing
+– 9 –
+
+--- PAGE 12 ---
+2022 JINST 17 P06035
+Figure 6. Increase of leakage current measured at 500V for Schottky type CdTe sensor at diﬀerent
+temperatures.
+Figure7. ResponsemapofaSchottkytypeCdTesensorat ¸30Coperatedat  500Vinlowﬂuxconditions;
+(a)after40minwithaclearlyvisiblenetworkof(green)lines,(b)after300minoverplottedwiththe(assumed)
+network lines extracted from the left plot and (c) after 300min without the overplotted extracted network
+lines.
+strong variations of photon counts (i.e., the normalized number of photon hits of a pixel exceeding
+the average of its9 9 environment). In a second step, hot pixels were excluded, and the rims
+of the areas heavily irradiated in the previous MS-experiments were excluded to be part of the
+line network. However, no correlation between the map of the dislocation line network and the
+structuresvisibleinapolarizedsensorcanbeseen,asshowninﬁgure7(b). Hotpixels(notshown)
+and no/low-count areas (white) are distributed and not predominantly linked to the network lines
+(black).
+– 10 –
+
+--- PAGE 13 ---
+2022 JINST 17 P06035
+Figure 8. Photon hit map after 300 minutes of low ﬂux irradiation and continuously applied high voltage.
+The16areasirradiatedinpreviousmeasurementsareindicatedwiththedashedboxesandthecorresponding
+dose. (Left) Stable counting behavior of the whole sensor after 300 minutes with a sensor temperature of
+0C. (Center/Right) Depending on the dose absorbed in the previous measurements, the photon counts in
+the irradiated areas are high after 300 minutes, in contrast to the unirradiated areas of the sensor (center:
+T=¸15C/right: T=¸30C).
+4 Inﬂuence of irradiation and thermal annealing on polarization characteristics
+In this section we report two factors that we found to inﬂuence the polarization characteristics
+signiﬁcantly: photon irradiation and thermal annealing of the sensor.
+4.1 Eﬀect of irradiation with monochromatic20 keVphotons
+Figure 8 shows the (previously shown) maps of the normalized photon counts after 300 minutes of
+continuouslowﬂuxirradiationandcontinuouslyappliedhighvoltageforthreediﬀerenttemperatures
+(like ﬁgure 3 (left)), marking the areas which were irradiated one year earlier. In the case where
+polarizationeﬀectsoccurat ¸15Cand+30 C,areaswhichwere(partlyintensively)irradiatedwith
+20keV photons one year earlier, can easily be identiﬁed as they reach signiﬁcantly higher photon
+counts compared to the unirradiated areas (see dashed boxes which mark the irradiated areas).
+Figure9showsthecountingbehavioraswellasthepulseheightspectrafortheareawhichhas
+received the highest dose of 1079kGy, indicating its altered polarization behavior compared to the
+(previously described) unirradiated areas. Pixels outside of the irradiated area (ﬁgure 9, left) serve
+as reference: after the onset of the polarization process (after around 35 minutes), the photo peak
+signal smears out and the number of detected photons decreases. In contrast, the irradiated area
+showsamorestablecountingbehavioraswellasbeingabletomaintainastablepulseheight. Note
+thatanincreaseinthenumberofphotonhitsfollowedbyastrongdecreaseismostlikelyduetothe
+handling of saturated pixels by the photon ﬁnder algorithm.
+The area irradiated at the beamline was divided in two regions: a 6 pixel wide rim region and
+the inner region. In the rim area (ﬁgure 9, center), many pixels register signiﬁcantly more counts
+after the onset of the polarization and collect more charge compared to the non-irradiated pixels.
+Thepulseheightplotsasafunctionoftimeshowaclear,relativelystablephotopeakatthenominal
+value of 610ADU with a relatively uniform distribution of (partially) collected charge, reaching
+pulseheightsupto1200ADUcorrespondingtothechargeoftwophotons( = 2 610ADU).Pixels
+locatedintheinterioroftheirradiatedareaappeartobemorestableovertimewithaslowdecrease
+– 11 –
+
+--- PAGE 14 ---
+2022 JINST 17 P06035
+Figure 9. Normalized number of photon hits per pixel (top) and the corresponding pulse height histogram
+(bottom)fortheinnerpartoftheirradiatedarea(right),therim(center)anditsdirectsurrounding(left)fora
+SchottkytypeCdTesensoratatemperatureof ¸30C.Pixelsattherimareacountsigniﬁcantlymorephoton
+hits after polarization. The area was irradiated with a dose of 1079kGy. Pedestal tracking was used for the
+data analysis.
+in the number of hits as well as in the pulse height (ﬁgure 9, right). A possible explanation of this
+behavior is that pixels in the border attract charge from polarized areas of the sensor.
+Figure 10 shows the collected charge of diﬀerent irradiated areas normalized to the average
+charge of the respective area collected within the ﬁrst minute of operation as a function of the
+measurement time. The diﬀerent areas (as depicted in ﬁgure 8) were irradiated to doses between
+0.16kGyand1079kGyatthebeamlineoneyearpriortothemeasurementspresentedinthispaper.
+Again,thesensorhasbeenprobedwithﬂuorescencephotonsfrommolybdenumwithalowphoton
+ﬂux for a total of 300 minutes at three diﬀerent temperatures (0C/¸15C/¸30C). In agreement
+with the previous measurements, a decrease of collected overall charge sets in after around 200
+minutes and after around 35 minutes forT =¸15C andT =¸30C, respectively. AtT =¸30C,
+the collected charge starts to decrease simultaneously for all regions after 35 minutes, however the
+regions with higher doses recover from this initial drop, and the regions which have collected the
+highest doses of 480kGy (light red) and 1097kGy (red) reach, after 300 minutes, 80% and 100%,
+respectively, of the nominal charge.
+Besides the higher charge collection of the irradiated areas in the polarized state, the develop-
+ment of the leakage current during polarization diﬀers signiﬁcantly from non-irradiated reference
+areas. As already stated before, an overall increase of the pedestal (corresponding to a higher
+leakage current) was found as a subsidiary eﬀect of polarization (ﬁgure 11).
+– 12 –
+
+--- PAGE 15 ---
+2022 JINST 17 P06035
+Figure 10. Normalized charge as function of irradiation time for regions irradiated to diﬀerent doses. The
+black dashed line corresponds to a reference area without prior irradiation at the beamline. The irradiation
+dosesvarybetween0.16kGyupto1079kGy. (Left)Sensortemperatureof0 C.(Center)Sensortemperature
+of¸15C. In accordance with the previous observations (the counts drops after 200 minutes), the collected
+charge starts to drop after around 200min. (Right) Sensor temperature of¸30C. The collected charge
+decreases rapidly after 35 minutes, but recovers depending on the previously absorbed dose.
+Figure 11. Change of the leakage current after 5h of operation of a biased Schottky type CdTe sensor in
+low ﬂux condition at¸15C (left) and¸30C (right). Hot spot areas as well as highly irradiated areas draw
+a signiﬁcantly higher dark current.
+Figure 11 shows that pixels in irradiated areas (dashed boxes) are much more likely to exhibit
+a strong increase in leakage current (more than 10pA) when the areas have been exposed to doses
+above 10kGy (also compare ﬁgure 12, right). In the interior of the irradiated area with the highest
+dose (1079kGy) the leakage current increases on average up to 58pA/pixel during the 5 hours of
+operationat¸30C.Besidestheirradiatedareas,alsosingleisolatedpixelscanbefoundshowinga
+signiﬁcanthigherleakagecurrentafter5hwithvaluesfarbeyond30pA(depictedfor ¸30C),with
+respecttothestartoftheexperiment,asshowninﬁgure11. Thesehotpixelsalsomaintainarobust
+charge collection while the counts in the other pixels break down.
+Figure12indicatesthattheremightbeacorrelationbetweentheincreaseoftheleakagecurrent
+and the normalized number of counts, which is also visible in the respective 2d representations
+– 13 –
+
+--- PAGE 16 ---
+2022 JINST 17 P06035
+(compare to ﬁgure 11, right and ﬁgure 8, right). However, the distribution of the leakage current is
+very broad, hence the leakage current is not the only indicator for polarization resilient pixels. It is
+worth mentioning that for all pixels an overall increase of the pedestal is observed after a biasing
+time of 300 minutes in agreement with the raw data analysis in ﬁgure 5. Figure 12 (right) depicts
+thedosedependencyoftheleakagecurrentincreasebydisplayingtheaveragechangeoftheleakage
+currentoftheareasirradiatedwithdiﬀerentdosesatdiﬀerenttimesafterthestartofsensorbiasing.
+Figure 12. (Left) Correlation plot between the leakage current increase (x-axis) and normalized number of
+counts (y-axis), after 300 minutes at¸30C. As the distribution of the leakage current is very broad there is
+nostrongcorrelationbetweenleakagecurrentandnumberofcounts. (Right)Increaseoftheaverageleakage
+current per pixel of each ROI as a function of deposited dose for diﬀerent times after biasing the sensor.
+Pixelswhichhavebeenexposeddrawasigniﬁcantlyhigherleakagecurrent. Pleasenote,thatthey-axisisin
+log scale.
+During these measurements, several cycles of ﬁve hours of sensor biasing were followed by
+periods of setting the sensor high voltage to 0V, called bias refresh, with increasing refresh times
+(5s, 30s, 60s), totaling an overall sensor biasing time of 20 hours. A bias refresh duration of
+at least 30 seconds was able to bring the pedestal values back to their initial values, followed by
+reproducible increase of the pedestal values over time, depending on the sensor temperature. This
+behavior after a bias refresh was unaltered by longer bias refresh durations.
+4.2 Eﬀect of irradiation at the X-ray tube with an acceleration voltage of25 kV
+Asbulkdamageduetotheirradiationwith20keVphotonsishighlyunlikely[23],thestudyfocuses
+on radiation eﬀects close to/at the contacts. In a proof-of-concept study, the direct beam of an
+X-ray tube was used to exclude irradiation eﬀects induced on the pixelated side or ASIC directly,
+potentially coming from third order harmonics at a beamline. The high voltage of the X-ray tube
+(with tungsten anode) was set to 25kV, implying a maximum photon energy of 25keV and a
+maximum penetration depth (absorption length 1/e) of about 100μm in CdTe. A region, deﬁned
+by a 4mm thick copper (Cu) plate with a pinhole (about 400μm in diameter), was irradiated at a
+temperatureof¸30Cfor4hourswithaphotonﬂuxofaround10 9ph/mm2/s,roughlycorresponding
+– 14 –
+
+--- PAGE 17 ---
+2022 JINST 17 P06035
+toadoseof660kGy(calculatedassumingamostprobablephotonenergyof16.7keV),comparable
+to the higher doses of the rectangular shaped areas damaged one year ago.
+The photon count and pulse height distributions were determined before and after irradiation,
+using low ﬂux ﬂuorescence photons from molybdenum in the same way as described before.
+Figure 13 shows the outcome, indicating clearly similar eﬀects upon irradiation as observed after
+irradiation at the beamline. The normalized number of hits per pixel (top row) and pulse height
+spectra(bottomrow)ofallpixelsintherespectiveareasareplottedasfunctionofthetime. Pedestal
+tracking is applied to correct for the steadily increasing leakage current.
+Theirradiatedpixelsshowsigniﬁcantlyhighercountsduringthepolarizationphase(ﬁgure13,
+center top), starting after around 35 minutes, indicating an increased charge collection in this area,
+potentially collecting charge from polarized areas close by (ﬁgure 13, right). The observed pulse
+heightpeakremainsrelativelystablewithastrongincreaseofthecollectedchargeabovethenominal
+valueoncethesensorispolarized,leadingtoasigniﬁcantlywidenedpulseheightdistributionabove
+and below the nominal value of around 610ADU (corresponding to 17.4keV Mo photons). The
+non-irradiatedareasurroundingtheirradiatedregionbehavesasnon-irradiatedareasintheprevious
+measurements (compare ﬁgure 9, left).
+Figure 13. Normalized number of photon hits per pixel (top) and the corresponding pulse height histogram
+(bottom)fortheirradiatedareabeforeirradiation(left)andafterirradiation(center)anditsdirectsurrounding
+(right) for a Schottky type CdTe sensor. The irradiated area shows higher charge attraction after the
+polarization onset after 35min.
+4.3 Comparison with ohmic type CdTe sensors
+In order to create a more comprehensive picture, an ohmic type CdTe sensor (Pt/CdTe/Pt) was
+irradiatedfor2hoursattheMSbeamlineusing20keVphotonswithﬂuxesupto 4 1010ph/mm2/s,
+– 15 –
+
+--- PAGE 18 ---
+2022 JINST 17 P06035
+resulting in an absorbed dose of 1800kGy. The ohmic type sensor has a platinum (Pt) contact on
+the irradiated backside, which is identical to the backside contact of the Schottky type sensor used
+in this study. For evaluating the potential eﬀects of the irradiation, the detector was again exposed
+to low ﬂux ﬂuorescence photons from molybdenum. Figure 14 shows the pedestal values (bottom)
+and the normalized number of hits of a sensor section at certain time stamps after the experiment
+(8h after the experiment, 2.5 weeks after the experiment, 2.5 month after the experiment). The
+irradiated area is highlighted in each image by a black rectangle.
+Apartfromachangeinthepedestal(ﬁgure14,toprow),nochangesinthenormalizednumber
+of photon hits were observed (ﬁgure 14, bottom row), in contrast to what was measured in this
+study with Schottky type CdTe sensors. Furthermore, the leakage current of Schottky type sensors
+increases as a function of deposited dose (cf. ﬁgure 11), whereas the ohmic type sensor shows a
+slight decrease in the pedestal although being exposed to an even higher dose.
+8h after the end of the irradiation (ﬁgure 14, left), all aﬀected pixels shift to higher values,
+indicating the collection of more electrons with respect to the situation before the irradiation,
+which is likely an afterglow phenomenon due to the detrapping of charge carriers from deep level
+traps. However, the pixel rows which have absorbed the highest doses due to a non-uniform beam
+proﬁle(pixelrows70–80),exhibitarelativelylowincreaseoftheirpedestalvalues. Afterstoringthe
+ohmictypesensorsinambientconditionsfor2.5weeks(ﬁgure14,center),theafterglowphenomena
+completely vanished. A lower pedestal value, corresponding to a lower dark current, is obtained
+for the high dose area (pixel rows 70–80) as a left over, with marginal changes in the longer-term
+(2.5 months, ﬁgure 14, right).
+Figure 14. Pedestal images (top) and normalized number of hits (bottom) for an ohmic type CdTe sensor
+after a high irradiation dose at diﬀerent times after the irradiation.
+– 16 –
+
+--- PAGE 19 ---
+2022 JINST 17 P06035
+Figure 15. Snap shots of the normalized photon hit maps of a Schottky type CdTe sensor before (top) and
+after (bottom) annealing operated at 500V in low ﬂux conditions at¸30C at diﬀerent time stamps.
+4.4 Eﬀect of thermal annealing at¸80C
+Thermal annealing, initially foreseen to investigate a possible recovery process of the irradiated
+areas,turnedouttoalterthepolarizationcharacteristicsofaSchottkytypeCdTesensor. ASchottky
+type CdTe sensor was annealed for 10h at¸80C in ambient conditions with a slow ramp up and
+cool down phase.
+Changes were found for the onset of the polarization process, which starts signiﬁcantly earlier
+in the annealed case. Figure 15 shows snapshots of the normalized photon hit maps for the same
+sensor before (top) and after annealing (bottom). Whereas the situation is still comparable 16min
+afterbeingbiasedat  500V,theannealedsensorshowsﬁrstclearsignsofpolarizationalreadyafter
+24min. After 32min, large areas of the thermally annealed sensor count signiﬁcantly less photons
+compared to the initial situation (and the situation before annealing) and after around 40min ﬁrst
+circular sinks, collecting signiﬁcantly less to no charge, appear.
+Regardless of a faster polarization and its potential drawback, the annealed sensor appears to
+reach a stable behavior. After 200min no signiﬁcant change in the pixel hit distribution is visible
+for the last hour as shown in ﬁgure 16. Although almost all pixels count below 50% (blue) of the
+initial hits after 60 minutes, the distribution of the number of counts remains relatively stable. On
+the contrary, before being annealed, the sensor gives rise to large areas with less than 10% of the
+initial photon hits (top left, white areas) when polarized and no stable state was reached in the 5h
+time (ﬁgure 16, center top). Note that no speciﬁc change is observed for the irradiated areas due to
+annealing.
+A change of the charge collection behavior can also be seen in ﬁgure 17. The same sensor
+has been analyzed before and after annealing, including all pixels from the pixel matrix except the
+irradiatedareas. Thetemporalevolutionofthepulseheightspectra(ﬁgure17,bottomrow)conﬁrms
+– 17 –
+
+--- PAGE 20 ---
+2022 JINST 17 P06035
+Figure 16. (Left) Response maps of a Schottky type CdTe sensor after 5h operated at 500V in a low
+ﬂux environment at¸30C, (top) before and (bottom) after annealing. (Center) Corresponding pixel hit
+distribution at diﬀerent time stamps. (Right) Evaluation of the pixel hit distribution according to deﬁned
+categories versus experiment time.
+the earlier onset of the polarization (post-annealing: 25min/pre-annealing: 35min). Additionally,
+a more robust photo peak can be observed (ﬁgure 17, bottom center) compared to the pre-annealed
+case, where the photo peak smears out during the measurement (ﬁgure 17, bottom left).
+That ﬁnding is also reﬂected in the plots of the evolution of the photon counts (ﬁgure 17, top
+right)andofthecollectedcharge(ﬁgure17,bottomright). Afterannealingthesensor,asigniﬁcant
+number of pixels reach a stable counting plateau of around 45% of the initial counts.
+4.5 Comparison between diﬀerent batches of electron collecting Schottky CdTe sensors
+In order to see if diﬀerences of the CdTe material change the polarization behavior in Schottky
+type CdTe sensors, a sensor from a batch from 2017 was tested, which went through the same
+measurement process at the MS beamline and was subsequently irradiated to similar doses as the
+sensor measured before. The results from the material from the 2017 batch diﬀer from recent
+materialfrom2019inseveralaspects,startingfromahigherleakagecurrent(cf.table2),asshown
+in ﬁgure 18: the onset of the polarization is more distinct in the 2019 batch material (after around
+35min),whereasadeteriorationofthenominalnumberofphotonhits(blackline)isobservedforthe
+2017batchmaterialfromtheverybeginning(rightcolumn). After60min,the2019batchmaterial
+stillshowsaGaussianlikedistributionproﬁle(withanaverageof20%oftheinitialaveragenumber
+of photon hits) retaining a pronounced shoulder over the full 5h time period (center column).
+Furthermore, the 2017 batch Schottky type CdTe sensor material shows a much higher gran-
+ularity of hot pixels compared to the more recent sensor material as shown in ﬁgure 18 (left
+column).
+– 18 –
+
+--- PAGE 21 ---
+2022 JINST 17 P06035
+Figure 17. Temporal evolution of the (top) photon counts and (bottom) pulse height spectra for all pixels
+(except the irradiated regions) (left) before annealing and (center) after annealing. The temperature of the
+sensor was¸30C. (Right) Direct comparison between (top) the normalized photon counts and (bottom) the
+average collected charge before and after thermal annealing.
+Table 2. Sensor current of Schottky type CdTe sensors (2017 and 2019 batch) biased at 500V and at
+¸30C, measured with a Keithley high voltage source.
+Batch 2017 2019
+Sensor current (after biasing at 0min)3.06 μA 0.92 μA
+Lowest sensor current (after 2–3min) 1.75 μA 0.65 μA
+Sensor current (after 5h) 9.39 μA 2.72 μA
+5 Conclusion
+A comprehensive study of the inﬂuence of irradiation with low energy X-rays on Schottky type
+CdTesensorsregardingitsbias-inducedpolarizationbehaviorispresented. Basedonin-situphoton
+hit maps the deterioration of the sensors capability to detect photons was monitored. Whereas
+no indication for bias-induced polarization was found in ohmic type sensors, a clear temperature
+dependencecouldbevisualizedforSchottkytypesensorswithasigniﬁcantincreaseoftheleakage
+current over the biasing time and a more robust charge collection of irradiated areas.
+Our results show that shallowly penetrating X-rays are capable to alter the polarization char-
+acteristics of a Schottky type CdTe sensor. A signiﬁcantly more robust charge collection and
+correspondingly higher photon counts were found in preirradiated areas. Furthermore, this study
+indicates that a fully irradiated Schottky type sensor could provide a suitable environment to mea-
+– 19 –
+
+--- PAGE 22 ---
+2022 JINST 17 P06035
+Figure 18. (Left) Response maps of two Schottky type CdTe sensor (2017 and 2019 batch) after 40min
+operated at 500V in a low ﬂux environment at¸30C. (Center) Corresponding pixel hit distributions at
+deﬁned time stamps. (Right) Evaluation of the pixel hit distribution according to deﬁned categories versus
+experiment time (right) 0–50% of initial hits: very low — blue; 50–80%: low — green; 80–120%: nominal
+— black; 120–150%: high — orange; above 150%: very high — red.
+sureonastableplateauwiththedrawbackofanincreasedleakagecurrent. Incontrasttoachanging
+polarizationenvironment,correctionscanbeappliedtocorrectforresponsenon-uniformitiesunder
+such stable circumstances.
+Furtherexperimentshavetorevealthelong-termstabilityoftheirradiationeﬀectsandwhether
+irradiation with doses beyond those investigated in this study might lead to overcompensation.
+The polarization process of Schottky type sensors is also inﬂuenced by thermal annealing.
+Even though sensor annealing triggers a faster polarization, an overall more stable situation is
+reached after 240min at¸30C.
+An ohmic type CdTe sensor with the same backside contact (Pt) as the Schottky type sensors
+shows no variation between heavily irradiated and non-irradiated areas regarding the number of
+photon hits. Whereas the radiation eﬀects in Schottky type sensors are still visible one year after
+the irradiation, the radiation eﬀects in ohmic type sensors are relatively short-term eﬀects lasting
+only a few weeks. As we used photon energies not exceeding 25keV (shallow penetration), thus
+being able to exclude bulk damage as well as radiation damage to the readout chip, we consider it
+worth to study the inﬂuence of the contacts on the polarization behavior in more detail in order to
+understand the substantial change upon irradiation in Schottky type CdTe sensors.
+Acknowledgments
+ThisprojecthasreceivedfundingfromtheEuropeanUnion’sHorizon2020researchandinnovation
+program under the Marie Skłodovska-Curie grant agreement no. 884104 (PSI-FELLOW-III-3i).
+– 20 –
+
+--- PAGE 23 ---
+2022 JINST 17 P06035
+References
+[1] M.J. Berger et al.,XCOM: Photon Cross Section Database. Version 1.5, National Institute of
+Standards and Technology, Gaithersburg, MD, U.S.A. (2010).
+[2] G. Nasser et al.,The use of Schottky CdTe detectors for high-energy astronomy: application to the
+detection plane of the instrument SVOM/ECLAIRs, Proc. SPIE9144 (2014) 91443X.
+[3] C. Ullberg, M. Urech, N. Weber, A. Engman, A. Redz and F. Henckel,Measurements of a
+dual-energy fast photon counting CdTe detector with integrated charge sharing correction, Proc.
+SPIE 8668 (2013) 86680P.
+[4] T. Hirono et al.,Development of a CdTe pixel detector with a window comparator ASIC for high
+energy X-ray applications, Nucl. Instrum. Meth. A650(2011) 88.
+[5] G. Sun, H. Samic, J. Bourgoin, D. Chambellan, O. Gal and P. Pillot,A comparison between GaAs and
+CdTe for x-ray imaging,IEEE Trans. Nucl. Sci.51 (2004) 2400.
+[6] D. Greiﬀenberg et al.,Characterization of GaAs:Cr sensors using the charge-integrating JUNGFRAU
+readout chip, 2019JINST 14P05020.
+[7] D. Greiﬀenberg,Charakterisierung von CdTe-Medipix2-Pixeldetektoren, Ph.D. Thesis,
+Albert-Ludwigs-University, Freiburg, Germany (2010).
+[8] E. Hamann,Characterization of high resistivity GaAs as sensor material for Photon Counting
+Semiconductor Pixel Detectors, Ph.D. Thesis, Albert-Ludwigs-University, Freiburg, Germany (2013).
+[9] P.J. Sellin,Recent advances in compound semiconductor radiation detectors,Nucl. Instrum. Meth. A
+513 (2003) 332.
+[10] S. Del Sordo, L. Abbene, E. Caroli, A.M. Mancini, A. Zappettini and P. Ubertini,Progress in the
+development of CdTe and CdZnTe semiconductor radiation detectors for astrophysical and medical
+applications, Sensors9 (2009) 3491.
+[11] P. Zambon et al.,Spectral response characterization of CdTe sensors of diﬀerent pixel size with the
+IBEX ASIC,Nucl. Instrum. Meth. A892 (2018) 106.
+[12] V. Gnatyuk, O. Maslyanchuk, M. Solovan, V. Brus and T. Aoki,CdTe 𝑋γ-ray detectors with diﬀerent
+contact materials, Sensors21 (2021) 3518.
+[13] M. Ruat and C. Ponchut,Defect signature, instabilities and polarization in CdTe X-ray sensors with
+quasi-ohmic contacts, 2014JINST 9 C04030.
+[14] A. Cola and I. Farella,The polarization mechanism in CdTe Schottky detectors,Appl. Phys. Lett.94
+(2009) 102113.
+[15] P. Siﬀert et al.,Polarization in Cadmium Telluride Nuclear Radiation Detectors, IEEE Trans. Nucl.
+Sci. 23(1976) 159.
+[16] H. Toyama, A. Higa, M. Yamazato, T. Maehama, R. Ohno and M. Toguchi,Quantitative analysis of
+polarization phenomena in CdTe radiation detectors,Jpn. J. Appl. Phys.45 (2006) 8842.
+[17] A. Meuris, O. Limousin and C. Blondel,Characterization of polarization phenomenon in Al-Schottky
+CdTe detectors using a spectroscopic analysis method,Nucl. Instrum. Meth. A654 (2011) 293.
+[18] R.O. Bell, G. Entine and H. Serreze,Time-dependent polarization of CdTe gamma-ray detectors,
+Nucl. Instrum. Meth.117 (1974) 267.
+[19] P.R. Willmott et al.,The Materials Science beamline upgrade at the Swiss Light Source, J.
+Synchrotron. Radiat.20(2013) 667.
+– 21 –
+
+--- PAGE 24 ---
+2022 JINST 17 P06035
+[20] A. Mozzanica et al.,The JUNGFRAU detector for applications at synchrotron light sources and
+XFELs, Synchrotron Radiat. News31(2018) 16.
+[21] M. Funaki, Y. Ando, R. Jinnai, A. Tachibana and R. Ohno,Development of CdTe detectors in
+Acrorad, (2007) and online pdf version at https://www.acrorad.co.jp/dcms_media/other/
+Development%20of%20CdTe%20detectors%20in%20Acrorad.pdf.
+[22] A. Gädda et al.,Advanced processing of CdTe pixel radiation detectors, 2017JINST 12 C12031.
+[23] M. Moll,Radiation Damage in Silicon Particle Detectors, Ph.D. Thesis, University of Hamburg,
+Hamburg, Germany (1999).
+[24] S. Cartier et al.,Micron resolution of MÖNCH and GOTTHARD, small pitch charge integrating
+detectors with single photon sensitivity, 2014JINST 9 C05027.
+[25] V. Astromskas, E.N. Gimenez, A. Lohstroh and N. Tartoni,Evaluation of Polarization Eﬀects of𝑒 
+Collection Schottky CdTe Medipix3RX Hybrid Pixel Detector, IEEE Trans. Nucl. Sci.63(2016) 252.
+[26] K. Okada, Y. Sakurai and H. Suematsu,Characteristics of both carriers with polarization in
+diode-type CdTe x-ray detectors,Appl. Phys. Lett.90 (2007) 063504.
+– 22 –

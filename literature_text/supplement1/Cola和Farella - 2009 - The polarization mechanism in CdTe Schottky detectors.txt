@@ -1,0 +1,218 @@
+
+
+--- PAGE 1 ---
+ViewOnline
+ExportCitation
+RESEARCH ARTICLE |  MARCH 13 2009
+The polarization mechanism in CdTe Schottky detectors
+Adriano Cola; Isabella Farella
+Appl. Phys. Lett. 94, 102113 (2009)
+https://doi.org/10.1063/1.3099051
+Articles You May Be Interested In
+Schottky Barrier CdTe(Cl) Detectors for Planetary Missions
+AIP Conf. Proc. (October 2002)
+Development of CdTe-based nuclear radiation sensors and related devices
+AIP Conf. Proc. (September 2018)
+Temporal and temperature evolution of electric field in CdTe:In radiation detectors
+J. Appl. Phys. (August 2014)
+ 30 June 2026 06:13:04
+
+
+--- PAGE 2 EXTRACTION_ERROR Stream has ended unexpectedly ---
+
+
+--- PAGE 3 ---
+space charge increases with time evolving toward saturation
+values, and that the behavior is clearly thermally activated.
+We remark that, according to the /H20849slightly/H20850p-type nature
+of CdTe material, the ﬁeld decreases from the anode side,
+where the majority carriers are blocked by the In contact, and
+the net space charge is negative. Such charge can be mainly
+attributed to acceptors negatively ionized. Just after biasing
+few negative charges become immediately available due to
+the partial ionization of acceptors under equilibrium, but then
+most of the charge increases due to the hole detrapping
+/H20849N
+A = NA
+− + h+/H20850. As a main consequence, the ﬁeld becomes
+more and more conﬁned near the anode. In agreement with
+the statistical nature of the detrapping process, the space
+charge follows an exponential behavior and the Poisson
+equation can hence be written at the anode as
+/H20879dE
+dx /H20879
+x=0
+=− q
+/H9255/H20875NA
+x=0,t=0
+−
++ /H9004NA
+x=0
+−
+/H208491− e−t//H9270/H20850/H20876, /H208492/H20850
+where /H9270is the hole detrapping time, N
+x=0,t=0
+A
+− and /H9004N
+x=0
+A
+− are
+the initial and incremental concentrations of ionized accep-
+tors at the anode, respectively. Figure 2 shows that the best
+ﬁt of these three parameters produces a good agreement with
+experimental data.
+The time constants are well described by an Arrhenius
+plot, as shown in Fig. 3. From the exponential ﬁtting
+of /H208491 /
+/H9270T2/H20850versus 1 / kT, an activation energy of EA
+= 0.62/H110060.02 eV is obtained. This energy is in good agree-
+ment with the value obtained by Toyama et al. 2 using a dif-
+ferent approach based on the correlation between current
+transients and the polarization phenomena observed in simi-
+lar CdTe detectors. This level could be ascribed to cadmium
+vacancies /H20849V
+Cd/H20850that are known 13,14 to be present as native
+defects in the crystals and to play a signiﬁcant role in the
+electrical resistivity. It has been suggested that this level
+could be also responsible for polarization phenomena.
+14 This
+is reasonable because this level is close to mid gap and,
+hence, to the equilibrium Fermi level. When reverse bias is
+applied, free carrier depletion mainly affects the charge oc-
+cupation of such mid gap levels through charge detrapping/
+space-charge buildup processes.
+The thermal activation of the observed polarization pro-
+cess accounts for the improved stability of Schottky detec-
+tors at low temperature. Matsumoto et al.
+1 observed stable
+performance for several days at −10 ° C. This experimental
+ﬁnding is consistent with the value we extrapolate from our
+experimental time constants /H208494 days at −10 ° C /H20850. Moreover, it
+has been often reported
+1,2,8 that longer detector stability is
+achieved when higher voltages are applied. This can be eas-
+ily understood taking into account that the detector is irradi-
+ated from the cathode side. The higher the bias and the de-
+tector overdepletion, the later the electric ﬁeld drops to
+negligible values at the cathode, which starts to degrade the
+detection performance.
+In Fig. 2 it can be seen that the stationary concentrations
+of ionized acceptors are relatively low /H20849between 10
+12 and
+1013 cm−3/H20850and they increase with temperature. This indi-
+cates that due to their deep energy level, acceptors do not
+become completely ionized, even at high temperature
+/H2084955 ° C/H20850. Full ionization is actually limited by the ﬂowing
+current that tends to neutralize these deep acceptors. In par-
+ticular, the effect of a high hole barrier is to decrease the
+current, and thus to enhance the acceptor ionization, with the
+consequent shrinking of the ﬁeld toward the blocking con-
+tact. An evidence of this behavior can be found in standard
+Pt/CdTe/Pt detectors, whose stability at room temperature
+can be correlated with the high Pt work function /H208495.65 eV /H20850
+compared to In /H208494.09 eV /H20850.
+Finally, the increase with time of the electric ﬁeld at the
+anode gives rise to current transients. This is due to the low-
+ering of the Schottky barrier height with time as a conse-
+quence of the increase in the electric ﬁeld at the anode. This
+effect has been previously observed
+2,8 in polarization phe-
+nomena and correlated with the evolution of the detection
+performance.
+2 Here, we are able to directly correlate the cur-
+FIG. 1. /H20849Color online /H20850Electric ﬁeld proﬁles from anode to cathode at dif-
+ferent times. Detector is biased at 500 V . Room temperature /H2084925 ° C/H20850.
+FIG. 2. /H20849Color online /H20850Time evolution of the space charge at the anode for
+the tested temperatures. Exponential ﬁt to the data are also shown /H20849solid
+lines/H20850.
+FIG. 3. /H20849Color online /H20850Arrhenius plot of the time constants.
+102113-2 A. Cola and I. Farella Appl. Phys. Lett. 94, 102113 /H208492009/H20850
+ 30 June 2026 06:13:04
+
+
+--- PAGE 4 ---
+rent transients to the electric ﬁeld Eint at the interface In/
+CdTe. It is well known that an interfacial layer is usually
+present at the metal/semiconductor interface, and that this
+results in the Schottky barrier to become ﬁeld dependent.
+The barrier variation /H9004/H9021is proportional to the ﬁeld at the
+interface
+15
+/H9004/H9021/H20849t/H20850= /H9251Eint/H20849t/H20850, /H208493/H20850
+where /H9251is a constant related to the interfacial layer thick-
+ness. Since the reverse current depends exponentially on the
+total Schottky barrier height /H9021= /H90210−/H9004/H9021/H20849t/H20850, the current tran-
+sient can be expressed as
+I/H20849t/H20850= I0e/H20851q/H9251Eint/H20849t/H20850/H20852//H20849kT/H20850, /H208494/H20850
+where I0 is a time-independent constant. Hence, a current
+increase with time is expected as a consequence of the ﬁeld
+increase in the interface.
+We compare in Fig. 4 the experimental current transients
+with those calculated inserting in Eq. /H208494/H20850the E
+int/H20849t/H20850values
+obtained from the previous Pockels analyses. Plotted data
+refer to T = 40 ° C with /H9251= 11.8 nm. The comparison in Fig.
+4 shows that from direct measurements of the electric
+ﬁeld at the anode, the current transient is well described by
+Eqs. /H208493/H20850and /H208494/H20850with no further assumption. Similar results
+have been obtained at different temperatures, with a slightly
+scattered distribution of the best ﬁtting
+/H9251value, namely, /H9251
+= 10.5/H110062.1 nm.
+It is worth to note that two competing effects are at
+work: the hole detrapping enhances the acceptor ionization
+leading to an increase in the electric ﬁeld at the anode; how-
+ever, such increase causes a current increase which in turn
+leads to an acceptor ionization decrease. Hence, the system
+attains stationary conditions at a speciﬁc acceptor ionization
+level. A further evidence of the correlation between polariza-
+tion and current transients comes from the very small current
+transients observed in the nonpolarizing Pt/CdTe/Pt detectors
+/H20849not shown here /H20850.
+In conclusion, exploiting the Pockel effect, we measured
+the electric ﬁeld proﬁles as a function of time and tempera-
+ture. This allows the monitoring of the space charge dynam-
+ics at the anode and the identifying of the mechanism leading
+to the observed polarization effect. The electric ﬁeld distri-
+bution is found to be governed by the ionized deep acceptors,
+which are bulk defects probably associated to native cad-
+mium vacancies. The interface at the anode plays a funda-
+mental role in controlling the ﬂowing current and therefore
+the extent of hole detrapping which is, ultimately, the cause
+of the polarization effect in CdTe detectors.
+This work is supported in part by the Italian Ministry for
+Education, University and Research /H20849MIUR/H20850by a Project of
+Relevant National Interest /H20849PRIN/H208502007.
+1C. Matsumoto, T. Takahashi, K. Takizawa, R. Ohno, T. Ozaki, and K.
+Mori, IEEE Trans. Nucl. Sci. 45,4 2 8 /H208491998/H20850.
+2H. Toyama, A. Higa, M. Y amazato, T. Maehama, R. Ohno, and M.
+Toguchi, Jpn. J. Appl. Phys., Part 1 45, 8842 /H208492006/H20850.
+3K. Okada, Y . Sakurai, and H. Suematsu, Appl. Phys. Lett. 90, 063504
+/H208492007/H20850.
+4H. L. Malm and M. Martini, IEEE Trans. Nucl. Sci. 21, 322 /H208491974/H20850.
+5P . Siffert, J. Berger, C. Scharager, A. Cornet, R. Stuck, R. 0. Bell, H. B.
+Serreze, and F. V . Wald, IEEE Trans. Nucl. Sci. 23, 159 /H208491976/H20850.
+6D. V artsky, M. Goldberg, Y . Eisen, Y . Shamai, R. Dukhan, P . Siffert, J. M.
+Koebel, R. Regal, and J. Gerber, Nucl. Instrum. Methods Phys. Res. A
+263, 457 /H208491988/H20850.
+7D. S. Bale and C. Szeles, Phys. Rev. B 77, 035205 /H208492008/H20850.
+8M. Niraula, A. Nakamura, T. Aokia, Y . Tomitab, and Y . Hatanaka, Nucl.
+Instrum. Methods Phys. Res. A 491,1 6 8 /H208492002/H20850.
+9M. Y amazato, A. Higa, Y . Fukuhara, H. Toyama, S. Y amanoha, I. Owan,
+R. Ohno, and M. Toguchi, Jpn. J. Appl. Phys., Part 2 45, L1263 /H208492006/H20850.
+10K. Okada, H. Y asufuku, H. Y oshikawa, and Y . Sakurai, Appl. Phys. Lett.
+92, 073501 /H208492008/H20850.
+11S. Namba, J. Opt. Soc. Am. 51,7 6 /H208491961/H20850.
+12A. Cola, I. Farella, A. M. Mancini, and A. Donati, IEEE Trans. Nucl. Sci.
+54, 868 /H208492007/H20850.
+13B. M. Vul, V . S. V asilov, V . S. Ivanov, V . B. Stopachinskii, and V . A.
+Chapnin, Sov. Phys. Semicond. 6, 1255 /H208491973/H20850.
+14M. Ayoub, M. Hage-Ali, J. M. Koebel, A. Zumbiehl, F. Klotz, C. Rit, R.
+Regal, P . Fougeres, and P . Siffert, IEEE Trans. Nucl. Sci. 50,2 2 9 /H208492003/H20850.
+15E. H. Rhoderick and R. H. Williams, Metal-Semiconductor Contacts
+/H20849Clarendon, Oxford, 1988 /H20850.
+FIG. 4. /H20849Color online /H20850Current transients recorded during Pockels measure-
+ments along with the values calculated following Eq. /H208494/H20850. Data are normal-
+ized at the initial value. T =4 0 °C.
+102113-3 A. Cola and I. Farella Appl. Phys. Lett. 94, 102113 /H208492009/H20850
+ 30 June 2026 06:13:04

@@ -1,0 +1,716 @@
+
+
+--- PAGE 1 ---
+Journal of Instrumentation
+      
+PAPER • OPEN ACCESS
+Characterisation of Redlen HF-CdZnTe at > 106
+ph s-1 mm-2 using HEXITECMHz
+To cite this article: B.D. Cline et al 2024 JINST 19 P04028
+ 
+View the article online for updates and enhancements.
+You may also like
+Characterisation of the performance of p-
+type Si detectors for hard X-ray
+spectroscopy
+B.D. Cline, M. Bullough, K. Richardson et
+al.
+-
+Spectroscopic X-ray imaging at MHz frame
+rates — the HEXITECMHz ASIC
+L. Jones, S. Bell, B. Cline et al.
+-
+Performance comparison of small-pixel
+CdZnTe radiation detectors with gold
+contacts formed by sputter and electroless
+deposition
+S.J. Bell, M.A. Baker, D.D. Duarte et al.
+-
+ 
+This content was downloaded from IP address 206.204.9.41 on 25/04/2024 at 13:50
+
+--- PAGE 2 ---
+2024 JINST 19 P04028
+P/u.sc/b.sc/l.sc/i.sc/s.sc/h.sc/e.sc/d.sc /b.sc/y.sc IOP P/u.sc/b.sc/l.sc/i.sc/s.sc/h.sc/i.sc/n.sc/g.sc /f.sc/o.sc/r.sc S/i.sc/s.sc/s.sc/a.sc M/e.sc/d.sc/i.sc/a.sc/l.sc/a.sc/b.sc
+Received:February 21, 2024
+Accepted:March 4, 2024
+Published:April 24, 2024
+Characterisation of Redlen HF-CdZnTe at
+> 106 ph s−1 mm−2 using HEXITEC MHz
+B.D. Cline
+ ,𝑎,∗ D. Banks, 𝑎 S. Bell, 𝑎 I. Church, 𝑎 A. Davis, 𝑎 T. Gardiner,𝑎 J. Harris, 𝑎 M. Hart, 𝑎
+L. Jones, 𝑎 T. Nicholls,𝑎 J. Nobes, 𝑎 S. Pradeep, 𝑎 M. Roberts, 𝑎 D. Sole, 𝑎 M.C. Veale,𝑎
+M.D. Wilson, 𝑎 V. Dhamgaye,𝑏 O. Fox𝑏 and K. Sawhney 𝑏
+𝑎UKRI STFC Rutherford Appleton Laboratory,
+Didcot, Oxfordshire, OX11 0QX, U.K.
+𝑏Diamond Light Source,
+Didcot, Oxfordshire, OX11 0DE, U.K.
+E-mail: ben.cline@stfc.ac.uk
+Abstract:In this paper, results are presented from the characterisation of Redlen Technologies
+high-flux-capable Cadmium Zinc Telluride (HF-CZT) hybridised to the HEXITECMHz ASIC, a
+novel 1MHz continuous X-ray imaging system. A 2mm thick HF-CZT HEXITECMHz detector was
+characterisedontheB16TestBeamlineattheDiamondLightSourceanddisplayedanaverageFWHM
+of 850eV for monochromatic X-rays of energy 20keV. Measurements revealed a shift in the baseline
+of irradiated pixels that results in a movement of the entire spectrum to higher ADU values. Datasets
+taken to analyse the effect’s dynamics showed it to be highly localised and flux-dependent, with the
+excess leakage current generated equivalent to per-pixel shifts of∼ 543pA (8.68nAmm −2) at a flux
+of 1.26 × 107phs −1mm−2. Comparison to results from a p-type Si HEXITECMHz device indicate
+this ‘excess leakage-current’ effect is unique to HF-CZT and it is hypothesised that it originates
+from trapping at the electrode-CZT interface and a temporary modification of the potential barrier
+between the CZT and metal electrode.
+Keywords:Hybrid detectors; Instrumentation for synchrotron radiation accelerators; Materials for
+solid-state detectors; X-ray detectors
+∗Corresponding author.
+© 2024 The Author(s). Published by IOP Publishing Ltd on behalf of
+Sissa Medialab. Original content from this work may be used under the
+terms of the Creative Commons Attribution 4.0 licence. Any further distribution of this
+work must maintain attribution to the author(s) and the title of the work, journal citation
+and DOI.
+https://doi.org/10.1088/1748-0221/19/04/P04028
+
+--- PAGE 3 ---
+2024 JINST 19 P04028
+Contents
+1 Introduction 1
+2 HEXITEC MHz detector system 2
+2.1 HEXITEC MHz ASIC 2
+2.2 Data acquisition and detector control 3
+2.3 HF-CZT HEXITEC MHz detector 3
+3 Method 4
+3.1 B16 test beamline experimental setup 4
+3.2 Data analysis 5
+4 Results 6
+4.1 Spectroscopic imaging characterisation 6
+4.2 Offset effect 8
+5 Conclusion 17
+1 Introduction
+Cadmium Zinc Telluride (CZT) is a compound semiconductor that has long drawn interest from the
+radiation-detection community. A high density (∼ 5.8gcm −3) and resistivity (∼ 1011 Ωcm) make
+it highly suited for both the detection of high-energy X-rays and the fabrication of thicker detectors
+(> 1mm) unlike traditional detector materials (e.g. Si, CdTe) [1].
+Despite these advantages, standard spectroscopic-grade CZT suffers poor performance at the high
+fluxes (> 106phs −1mm−2) demanded by medical applications such as Computed Tomography [2].
+This is a result of poor hole-transport properties which lead to charge trapping and polarization under
+such conditions [3]. In response to this issue, Redlen Technologies has developed high-flux-capable
+CZT (HF-CZT) [4]. The growth method for this material optimises hole lifetimes, enabling its use in
+high-energy applications (≤ 100keV) at fluxes of≤ 109phs −1mm−2. Early lower-flux measurements
+were unable to identify any polarization in the material [5–7], but more recent synchrotron-based
+X-ray measurements indicate polarization-like phenomena at fluxes> 106phs −1mm−2 [8].
+The development of the HEXITECMHz spectroscopic X-ray imaging system allows the dynamics
+of high-flux phenomena to be investigate on a< 1ms timescale. HEXITECMHz is the successor to
+the 2009 HEXITEC (High Energy X-ray Imaging Technology) ASIC, designed at the UKRI STFC
+Rutherford Appleton Laboratory (RAL) for the readout of high-Z sensors (CdZnTe, CdTe, GaAs:Cr)
+in hard-X-ray (> 20keV) spectroscopic-imaging applications [9,10]. To date, HEXITEC has been
+deployed across a range of sectors that utilise imaging techniques such as Compton X-ray Imaging and
+Hyperspectral X-ray Tomography [11,12]. Although HEXITEC continues to demonstrate the benefits
+of hyperspectral information, the 9.1kHz maximum frame rate limits the spectroscopic X-ray flux.
+Frame occupancies< 10% are required for energy-resolution-improving charge-sharing corrections,
+– 1 –
+
+--- PAGE 4 ---
+2024 JINST 19 P04028
+restricting HEXITEC to spectroscopic fluxes< 104phs −1mm−2. The limitations of the original
+system mean there is a demand for a continuous X-ray detector with a faster readout.
+HEXITECMHz, like its predecessor, provides fully-spectroscopic X-ray imaging on an80 × 80
+pixellated array. However, it bears several key differences to the original’s design. Most notably,
+HEXITECMHz utilises an integrating Front-End, 12-bit in-pixel digitisation, and twenty 4.1Gbps
+data-readout serialisers [13]. These enable a continuous 1MHz frame rate,> 100 times faster than
+HEXITEC, and thereby allows for fluxes> 106phs −1mm−2 in spectroscopic-imaging applications.
+Despite the technical challenges of delivering MHz-frame-rate imaging, early measurements indicate
+a similar spectroscopic performance to HEXITEC, with targeted full width at half maximum (FWHM)
+of < 1keV at 100keV in CZT [14–16]. Measurements using the HEXITECMHz ASIC currently utilise
+prototype detector hardware, with a productised camera system to be delivered in 2024.
+To analyse the performance of 2mm thick HF-CZT hybridised to HEXITECMHz, a prototype
+system was characterised on the Diamond Light Source (DLS) B16 Test Beamline. Results obtained
+using the uniform, monochromatic, and high-flux X-ray source are presented here.
+2 HEXITEC MHz detector system
+2.1 HEXITEC MHz ASIC
+The HEXITECMHz ASIC is designed for fully-spectroscopic X-ray imaging at a continuous 1MHz
+frame rate with electron-readout materials such as CZT, CdTe and p-type Si [13]. The ASIC is
+fabricated on a 180nm TSMC complementary metal-oxide semiconductor (CMOS) process and
+comprises an 80 × 80 array of 6400 channels on a 250μm pixel pitch. Two edges of the array
+are occupied by power and serialiser connections, resulting in a two-side buttable system with a
+maximum power consumption of∼ 15W.
+Charge induced on a pixel pad is integrated within the pixel Front End by a charge-sensitive
+amplifier (CSA) that is connected in parallel to∼ 7 fF and ∼ 14 fF feedback capacitors (C𝐶𝑆 𝐴1,
+C𝐶𝑆 𝐴2). These capacitors can be toggled by separate switches, enabling selection of one of three
+static dynamic ranges. These correspond to ranges of∼ 100keV,∼ 200keV and∼ 300keV in CZT.
+Stored charge is cleared using a reset switch and although the ASIC operates at a MHz rate, this reset
+can be impeded for multiple frames. This allows integration times of≤ 255 μs. Small variations in
+the CSA baseline occur following reset and a correlated double-sampling (CDS) amplifier removes
+these by sampling the CSA output twice, initially shortly after reset. To enable this, reset of the CDS
+amplifier is delayed relative to that of the CSA, resulting in a total reset time of∼ 100ns. The CDS
+output is stored on the sample-and-hold capacitor once per frame, ready for digitisation.
+To enable a continuous MHz frame rate, digitisation occurs on chip in time-to-digital convertors
+(TDCs). Here, the sampled voltage acts as one input to a comparator, with the other provided by a
+dynamic signal from a ramp generator. This signal slews at a defined rate and the comparator fires
+when the ramp matches the sampled voltage. This stops an incrementing ripple counter (1.64GHz
+clock) with the final 12-bit value proportional to the sampled signal. One ramp generator is shared
+between two pixel columns whilst the remaining TDC digital circuitry is shared withinsuper pixels,
+groups of 2 × 4 pixels.
+Digitised data is shifted down the pixel array to be output over the ‘fast-data stream’. The80 × 80
+array is subdivided into four-column divisions, each containing a packet assembler and dedicated
+– 2 –
+
+--- PAGE 5 ---
+2024 JINST 19 P04028
+serialiser. The packet assembler converts the data from all four columns, four rows at a time, into
+three 64-bit data packets. These are encoded using the proprietary Xilinx® Aurora 64b/66b protocol,
+written into FIFOs (First In, First Out) and read out of the 4.1Gb s−1serialisers. This results in
+a total raw-data rate of 10GB s−1.
+The described process is pipelined with the integration of frame𝑁 + 2, digitisation of frame
+𝑁 + 1 and readout of frame𝑁 occurring simultaneously. Further details on the ASIC design are
+given in L. Jones et al., 2022 [13].
+2.2 Data acquisition and detector control
+On-board Samtec Firefly𝑇 𝑀 modules transfer digitised data over optical fibre to an Alpha-Data
+ADM-PCIE-9V5 PCI Express card containing the Xilinx® Virtex UltraScale Plus VU9P-3 FPGA.
+Here, Aurora-encoded data is decoded and sent over 100Gbit Ethernet to a computer running ODIN
+data, a UKRI-STFC-developed scalable data-acquisition-and-processing network [17]. Data frames
+and the corresponding frame numbers are saved into a HDF5 file [18].
+These measurements utilised a beta version of the FPGA firmware, allowing readout of a single
+serialiser channel. This corresponded to a4 × 80 region of the pixel array. Any of the 20 channels
+could be selected however, and tests confirmed that all 20 Firefly-Alpha-Data links were active [13].
+The productised system will also implement a Xilinx® Alveo U50 Data Center Accelerator
+card as a second-stage FPGA. This will provide real-time per-pixel corrections (dark subtraction,
+linearity correction etc.) and per-event processing (charge-sharing corrections, histogramming etc.),
+reducing the data rate by orders of magnitude.
+Data acquisition and ASIC settings are controlled using the LOKI system, a Xilinx® Zynq
+system-on-chip (SOC) operating ODIN Control. LOKI communicates with HEXITECMHz over the
+Serial Peripheral Interface (SPI), writing to ASIC registers in 8-bit transactions (7-bit address, 1-bit
+value). These registers control the ASIC configuration and include user-defined settings such as
+the gain stage and integration time. They also configure the timing block, serialisers and TDCs.
+Optimising HEXITECMHz has involved establishing which register combinations provide the best
+spectroscopic performance.
+PCB sensors also enable LOKI to monitor environmental conditions including temperature
+and humidity. The detector is mounted on a Peltier within a humidity-controlled enclosure and
+temperature information from LOKI is fed back into its power supply for maintenance of a stable
+operating temperature.
+2.3 HF-CZT HEXITEC MHz detector
+Standard spectroscopic-grade CZT has been produced by Redlen Technologies since the early 2000s.
+Designed for lower-flux gamma-ray spectroscopy applications requiring thick detectors (> 2mm), this
+material utilise a growth process optimised to deliver excellent electron charge-transport properties
+and spectral resolution [19]. However, this results in short hole carrier lifetimes (𝜏ℎ ≈ 0.2 μs) and
+due to the poor hole mobilities inherent to CZT material (𝜇ℎ ≈ 0.1𝜇𝑒), this leads to significant hole
+trapping and polarization at high fluxes [3].
+Since 2017, Redlen have also started to provided high-flux capable CZT (HF-CZT), which
+was developed for operation at the high X-ray fluxes (≤ 109phs −1mm−2) required for medical
+computed tomography [2]. For this material grade, the growth method is modified to prioritise the
+– 3 –
+
+--- PAGE 6 ---
+2024 JINST 19 P04028
+hole-transport properties, resulting in an order-of-magnitude increase in hole lifetimes (𝜏ℎ ≈ 2 μs)
+and a high-flux-capable material [5].
+The HF-CdZnTe material tested for this report was grown by Redlen Technologies using a
+proprietary travelling-heater growth method [4]. The completed sensors were also fabricated and
+processed by Redlen and comprise two Pt electrodes — a planar cathode and a pixelated anode of
+80 × 80 pixels on a 250μm pitch (25μm inter-pixel gap). A guard ring surrounds the pixelated
+array — 100μm wide along three edges and 200μm along the final edge. This results in total sensor
+dimensions of20.35mm × 20.35mm × 2.00mm. Equivalent sensors have been previously tested
+using the original HEXITEC ASIC, with a reported FWHM of∼ 830eV at 59.54keV [20].
+A HF-CZT sensor was hybridised to HEXITECMHz by the UKRI STFC Interconnect team.
+Gold-studded ASIC pixels and silver-loaded-epoxy bump-bonded sensor pixels were flip-chip bonded
+(using a SET FC150) and cured in-situ (150°C), before ASIC I/O pads were Al-wedge-bonded to the
+PCB [21]. An image of the completed sensor, operated at a bias voltage of−1000V (500Vmm −1),
+is shown in figure 1.
+Figure 1.A 2mm thick HF-CZT sensor hybridised to the HEXITECMHz ASIC.
+3 Method
+3.1 B16 test beamline experimental setup
+Data was collected on the B16 Test Beamline at the DLS synchrotron using a water-cooled Si (111)
+double crystal monochromator with an energy resolution of< 100eV at 10keV (Δ𝐸/𝐸 < 10−2) [22].
+This provided monochromatic X-rays in the range of 12keV – 35keV, with the flux at a particular
+energy controlled using a selection of aluminium and carbon attenuators.
+ThetesteddevicesweremountedonanopticstablewithtwosetsofJJ-slitsusedtoremovescatter
+and define the X-ray beam size between limits of 20μm × 20 μm and 3000μm × 3000 μm. Devices
+were housed in a temperature-controlled die-cast enclosure and, unless stated, results were acquired at
+an ASIC temperature of 20◦C. For operation below ambient conditions, two solid-state de-humidifiers
+on the enclosure’s exterior prevented condensation forming on the ASIC.
+– 4 –
+
+--- PAGE 7 ---
+2024 JINST 19 P04028
+Datasetswerecollectedinallthreegainstagesandasdiscussedinsection2.2,comprisetheoutput
+of a single serialiser channel (4 × 80pixels). The incident flux was a function of both the beam energy
+and the attenuation used (C≤ 1.5mm and Al≤ 8mm). For spectroscopic characterisation, data was
+collectedatframeoccupanciesof < 10%toensurethat,stochastically,eventsinadjacentpixelswerea
+consequenceofchargesharing. Thisallowedtheapplicationofcharge-sharingcorrections(section3.2).
+Unless stated otherwise, X-ray fluxes were estimated by integrating the total energy above the
+per-pixelthresholdanddividingbytheproductofthebeamenergy(20keV)andthetotalsampleperiod
+(1s). This value was subsequently multiplied by a factor of 10/9 to account for the 10μs reset period
+(10% of total frame time). This correction is appropriate at lower occupancies as HEXITECMHz
+operates approximately as a nonparalyzable counting system with a dead time unaffected by events
+occurring within the ASIC’s reset window. Note that this method ignores the presence of higher-order
+photons within the beam.
+3.2 Data analysis
+Bespoke Python scripts were used for the analysis of all collected data [23–26].
+Priortoanalysis,devicecalibrationsweregeneratedforeachdatasettoenableconversionbetween
+raw-(ADU)andenergy-(keV)per-pixelspectra. Apeak-fittingalgorithmwasusedtoidentifyboththe
+noise (0𝛾) and primary harmonic (1𝛾) peaks, and a linear fit generated based on their ADU centroids
+and known energies. This resulted in per-pixel gradient and intercept coefficients and is shown for
+a single pixel within a 20keV high-gain dataset in figure 2.
+Figure 2.The calibration of pixel (13,37) within a high-gain 20keV dataset. (a) The raw spectrum of pixel
+(13,37) showing Gaussian fits to the0𝛾 and 1𝛾 (20keV) peaks — 1ADU bin width. (b) The linear calibration
+resulting from these fits.
+Thespectroscopicresolutionofadetectorcanbeimprovedbyimplementingcharge-sharingcorrec-
+tions to events shared across neighbouring pixels (signals above a threshold in adjacent pixels within a
+3×3matrix). Thesecorrectionsrequireframeoccupancies < 10%(section3.1)andonesuchtechnique
+is charge-sharing discrimination (CSD) [27]. CSD discards shared events, improving the resolution of
+– 5 –
+
+--- PAGE 8 ---
+2024 JINST 19 P04028
+individualpeaksthroughremovalofalow-energybackgroundcontinuum. TheeffectsofCSDareshown
+in figure 3, where summed raw and CSD-corrected spectra are shown for a high-gain 20keV dataset.
+Figure 3.A comparison between the calibrated summed raw (blue) and CSD (red) spectra of illuminated pixels
+within a high-gain 20keV dataset using 80mm Al attenuation (2.93 × 105phs −1mm−2) - 0.1keV bin width.
+Key spectroscopic features are labelled.
+Note that low-energy thresholds must be calculated for each exposed pixel to differentiate event
+signals from electronic noise. For this report, thresholds4𝜎 above the0𝛾 peak’s centroid (𝜇 + 4𝜎)
+were chosen. This is equivalent to∼ 1keV. Additionally, corrections cannot be applied to edge pixels
+as data from all 8 nearest neighbours is required. CSD analysis therefore only utilised the central
+two columns of the four-column readout from the single serialiser channel.
+Key features of the X-ray beam can also be identified within this figure. Alongside the 20keV
+photo peak, lower-intensity peaks are also identifiable at 60keV and 40keV. The former results from
+the generation of higher-order photons within the monochromator alongside the primary harmonic —
+60keV represents the 3rd harmonic. The intensity of this peak is> 100 times lower than the 20keV
+peakandincludescountsfromtheintegrationofthree20keVphotonsinteractinginboththesamepixel
+and integration window. The integration of two 20keV photons has resulted in the 40keV peak as the
+2nd harmonicisnottransmittedbythemonochromator. Thedeviationofthe3 rd harmonicfrom60keV
+is a result of limitations in the calibration method and the poorer statistics available at higher energies.
+4 Results
+4.1 Spectroscopic imaging characterisation
+The spectroscopic performance of the HF-CZT HEXITECMHz device was quantified through cal-
+culation of the primary-photo-peak FWHM at a beam energy of 20keV and 1.83% occupancy
+(2.93 × 105phs −1mm−2). Above this energy, X-ray fluxes from the double crystal monochromator
+rapidly decreased.
+– 6 –
+
+--- PAGE 9 ---
+2024 JINST 19 P04028
+Per-pixel FWHM in the analysed2 × 10 pixel region were calculated using a Gaussian fit to
+the 1𝛾 peak in the CSD spectra. This employed the same peak-fitting algorithm used in calibration
+(section 3.2) and is shown for pixel (13,37) within the high-gain dataset in figure 4.
+Figure 4. The calibrated high-gain CSD spectrum of pixel (13,37) showing a Gaussian fit to the 20keV
+photopeak - 0.2keV bin width.
+The FWHM distributions obtained in each operating mode at 20keV are shown in figure 5
+alongside a summary of these results in table 1. The average FWHM of 850eV and 920eV for the
+high- and medium-gain stages exceed the targeted 1keV spectroscopic resolution for continuous
+MHz imaging. For comparison, an average FWHM of 790eV at 59.54keV was measured using a
+HEXITEC ASIC hybridised to 2mm thick Redlen HF-CZT material from a different wafer [20].
+The HEXITEC Front End utilises a 2μs shaper for improved noise performance and consequently
+operates at a maximum frame rate of 9.1kHz. Additionally, datasets taken during the experiment at
+15keV using a 300μm thick p-type Si HEXITECMHz device gave high- and medium-gain resolutions
+of 682 ± 57eV and 814 ± 59eV respectively [16]. Here, the superior p-type Si resolutions are
+expected on account of the relative electron-hole-pair generation energies of these two materials
+(3.62eV for Si cf. 4.67eV for CZT) [28].
+Although the high- and medium-gain results lie within the targeted resolution, these values
+greatly exceed the 213eV fundamental Fano-limited resolution for CZT at 20keV (using a CZT
+Table 1.A summary of the spectroscopic results at 20keV. Errors quoted are the standard deviation in values
+obtained across the analysed2 × 10 pixel regions.
+Peak Energy
+[keV]
+High-Gain
+FWHM [eV]
+Medium-Gain
+FWHM [eV]
+Low-Gain
+FWHM [eV]
+20 850 ± 100 920 ± 110 1130 ± 120
+– 7 –
+
+--- PAGE 10 ---
+2024 JINST 19 P04028
+Figure 5.The FWHM distributions obtained at 20keV across the analysed2 × 10pixel region. (a) High-gain
+results. (b) Medium-gain results. (c) Low-gain results.
+Fano factor of 0.089) [29]. This limit results from stochastic variations in the number of charge
+carriers generated at a specified energy and can be used to approximate the ASIC’s electronic noise
+if material and electronic contributions to the overall device noise are assumed uncorrelated. This
+allows the summation of the individual components in quadrature, yielding an estimated electronic
+noise of ∼ 820eV in the high-gain stage.
+Further optimisation of ASIC register settings may improve the resolutions obtained. Register
+values were chosen using results from the electrical characterisation of a bare ASIC and this process
+should be repeated using a hybridised device to account for additional noise contributions (e.g.
+sensor leakage current).
+For these measurements only a single fast-data channel was readout, and it is therefore currently
+difficult to comment upon the variations in FWHM values measured across the analysed region.
+The delivery of the FPGA firmware required for a full80 × 80 pixel readout will allow for a better
+assessment of performance variations and device uniformity across the active area.
+4.2 Offset effect
+4.2.1 Identification
+As mentioned in section 3.2, a unique device calibration was generated for each dataset used in
+the above spectroscopic characterisation. This used a linear fit to the0𝛾 and 1𝛾 peaks within the
+per-pixel CSD spectra and inherently corrected for each pixel’s leakage current. Here, the0𝛾 peak is
+representative of the thermally-induced charge on a pixel within a frame in the absence of an X-ray
+(often referred to as the leakage or dark current). In an ideal detector, the location of the0𝛾 peak’s
+– 8 –
+
+--- PAGE 11 ---
+2024 JINST 19 P04028
+centroid should be identical in datasets taken in the absence of X-rays (dark datasets) and datasets
+in which the pixel is irradiated. This is indicative of a detector that fully recovers between frames,
+resulting in a response independent of the pixel’s radiation history.
+This ideal behaviour was not seen in the tested HF-CZT HEXITECMHz device, and figure 6
+compares a high-gain dark dataset to those collected at 20keV using 80mm and 55mm of Al
+attenuation. This attenuation resulted in respective X-ray fluxes of∼ 0.30 × 106phs −1mm−2 (1.85%
+occupancy) and∼ 3.15 × 106phs −1mm−2 (19.69% occupancy). As shown in the uncorrected pixel
+(13,37) spectra of Fig 6a, the0𝛾 peak was shifted to higher ADU values upon X-ray illumination with
+a centroid shift of 35ADU between the dark and∼ 0.30 × 106phs −1mm−2datasets. Comparison
+between irradiated datasets demonstrates that this offset was also dependent upon the X-ray flux.
+Relative to the∼ 0.30 × 106phs −1mm−2 dataset, the centroid was shifted by a further 136ADU
+upon an increase in X-ray flux of∼ 2.85 × 106phs −1mm−2.
+Thisphenomenonwasnotuniquetopixel(13,37)andshiftstowardshigherADUvaluesunderX-ray
+illuminationpersistacrosstheentiretyoftheilluminated 4×10pixelregion. Thisisshowninfigure6(b),
+whichmapsthedifferencein 0𝛾 peakpositionbetweenthedarkand ∼ 3.15 × 106phs −1mm−2 datasets
+across the entire serialiser channel. This map and the associated plot of the average ADU shift within
+each readout row (Fig 6c) reveals negligible shifts (< 2ADU) outside of the exposed detector area,
+providing an early indication that the effect was constrained to illuminated pixels.
+Figure 6.Results comparing 20keV high-gain datasets collected at fluxes of∼ 0.30 × 106ph s−1mm−2 (80mm
+Al) and∼ 3.15 × 106phs −1mm−2 (55mm Al). (a) The raw spectra obtained for pixel (13,37) — 1ADU bin
+width. (b) Map of the shifts in the position of the0𝛾 peak of the 55mm Al dataset relative to a dark dataset.
+(c) The average shift in the0𝛾 peak position measured in each readout row of the 55mm Al dataset.
+Importantly however, this behaviour was not observed in datasets taken at the B16 Test Beamline
+using a p-type Si HEXITECMHz device. This is shown in figure 7, a comparison of a high-gain dark
+dataset to those collected at 10keV under respective X-ray fluxes of∼ 0.63 × 106phs −1mm−2(3.94%
+occupancy) and∼ 1.13 × 106phs −1mm−2 (7.05% occupancy). Here, the choice of 10keV, compared
+to the higher-energy 20keV HF-CZT datasets, was driven by the lower density and X-ray attenuation
+– 9 –
+
+--- PAGE 12 ---
+2024 JINST 19 P04028
+of the p-type Si material. Across these datasets, the location of the0𝛾 peak in pixel (14,45) remained
+fixed and similar results are seen across the4 × 80 readout in figure 7(b). Here, any small shifts
+of magnitude < 3ADU were likely the result of minor ASIC power-supply fluctuations, causing
+variations in the slew rate of the ramp generator used during digitisation (section 2.1). The larger
+shifts seen for pixels (15,44) and (15,23) are the consequence of imperfections in the hybridisation
+process, resulting in their anomalous behaviour, and can be discounted.
+Figure 7. Results comparing 10keV p-type Si HEXITECMHz high-gain datasets collected at fluxes of
+∼ 0.63 × 106ph s−1mm−2 (15mm C+ 5mm Al) and∼ 1.13 × 106phs −1mm−2 (0mm C+ 5mm Al). (a) The
+raw spectra obtained for pixel (15,44) — 1ADU bin width. (b) Map of the shifts in the position of the0𝛾 peak
+of the 5mm Al dataset relative to a dark dataset. The position of the X-ray beam is highlighted in red.
+The comparison of the HF-CZT and p-type Si results suggests that this phenomenon is not a
+HEXITECMHz ASIC effect, but rather a sensor effect. More precisely, the shift in the position of
+the 0𝛾 peak is the result of excess leakage current generated within the detector following the initial
+application of a specific flux and is the result of specific material charge-trapping mechanisms.
+Assuming a CZT atomic Zn content of 10%, the penetration depth of 20keV X-rays within the
+material is∼ 80 μm [30]. Consequently, most of the incident flux at this energy interacts within a
+volume ∼ 100 μm below the pixelated cathode. Assuming a𝜇ℎ of 100cm2V−1s−1, an applied bias
+voltage of−1000V will result in the extraction of the generated holes within∼ 1ns [5]. This is orders
+ofmagnitudefasterthanthemeasuredholelifetime( 𝜏ℎ ≈ 2.5 μs)fortheHF-CZTmaterial, suggesting
+the phenomenon is not the result of hole trapping within the bulk CZT [5].
+Instead, it is hypothesised that the observed phenomenon is the result of trapping at the electrode-
+CZT interface, with such effects previously studied in relation to inter-pixel conductivity [31]. The
+surface of the CZT and the interface to the metal electrode are known to be regions containing higher
+concentrations of defects and trapping centres [32], resulting in an accumulation of space charge
+that modifies the electrode-CZT potential barrier. This would manifest in a change in the observed
+pixel leakage current. Additional datasets, taken at different energies and temperatures, but identical
+flux, are required to test this hypothesis further.
+– 10 –
+
+--- PAGE 13 ---
+2024 JINST 19 P04028
+For ease of reference, this effect will be referred to as the ‘excess leakage-current effect’ for the
+remainder of the paper. It is worth noting that a recent characterisation of the performance of HF-CZT
+usingelectrolessgoldandsputteredplatinumelectrodesatfluxesupto10 12phs −1mm−2alsoidentified
+a similar phenomenon [8]. The advantage of the results presented here are the high sensitivity of the
+measurements and the ability to study the phenomenon’s dynamics on a< 1ms time scale.
+4.2.2 Time dependence
+A series of dynamic datasets were collected following the identification of the ‘excess leakage-current
+effect’, during which experimental conditions were varied over an extended period (> 10s), to further
+investigate the processes governing this phenomenon.
+One 20s dataset, collected at 20keV in the low-gain stage, comprised cycling the opening and
+closing of the JJ-slits used to define the beam size. A schematic of this measurement is shown in
+figure 8(a), and results obtained for pixel (13,33) are presented in figure 8(b). Here, the shift in the0𝛾
+peak position relative to a dark dataset is plotted over a 104 frame (10ms) window (blue) alongside
+an estimate of the interacting X-ray flux within the pixel (red). The evolution of the estimated flux
+(section 3.1) indicates that pixel (13,33) was first exposed to radiation after∼ 4.50s and that the
+beam size was subsequently cycled twice fully and opened a third time after∼ 18.27s. A constant
+40mm of Al attenuation was used throughout the capture and, when exposed, an X-ray flux of
+∼ 1.18 × 106phs −1mm−2 (7.34% occupancy) was applied to the pixel.
+Figure 8.Results from a 20s low-gain dataset collected at 20keV whilst cycling the JJ slits. (a) Schematic of
+measurement protocol. (b) The evolution of the average0𝛾 peak position (blue) and estimated interacting X-ray
+flux (red) for pixel (13,33) over 20s — 104 frame sampling window.
+– 11 –
+
+--- PAGE 14 ---
+2024 JINST 19 P04028
+Prior to exposure, displacements in the0𝛾 peak were negligible and the small 1ADU fluctuations
+were at the noise level of the sensor.
+An immediate shift of 11ADU was measured upon irradiation, and its magnitude continually
+rose throughout the duration of the pixel’s∼ 4.16s initial exposure. During this period, the peak
+moved by a further 20ADU, resulting in a final displacement of 31ADU relative to the dark dataset.
+This is equivalent to a shift of∼ 3.07keV in the low-gain operating mode. However, the curvature of
+the plot at the instant of slit closure (∼ 8.66s) indicates that the offset had not yet stabilised, and a
+steady state had not yet been achieved. This is further evidenced by the second exposure, where a
+final shift of 32ADU was recorded following a shorter∼ 3.47s irradiation.
+Achievement of a larger offset following a shorter exposure was the consequence of the offset’s
+decay following a reduction in the applied flux. Although 50% of the shift was recovered in the
+initial ∼ 0.09s, the pixel’s0𝛾 offset returned only to a value of 4ADU during the∼ 3.15s separating
+the closing and reopening of the beam.
+Additional datasets are required to better understand the precise dynamics of this phenomenon.
+For example, longer exposures are needed to ascertain whether a steady-state leakage current is
+eventually achieved following the application of a specific flux. Additionally, a prolonged collection
+following the removal of an applied flux would allow better quantification of the offset’s decay and
+should track the detector’s behaviour until it returns to the original, unexposed state.
+These datasets demonstrate the capability of HEXITEC𝑀 𝐻 𝑧to track such material effects on a
+per-pixelbasisandMHztimescale. Crucially,theimplementationofaXilinx ® AlveoU50DataCenter
+Accelerator card as a second-stage FPGA (section 2.2) will enable such analysis to be performed
+during capture. For typical spectroscopic applications, HEXITECMHz will operate at fluxes of
+∼ 106phs −1mm−2, wheretheobserved ∼ 3keVshiftsinthepixeloutputcanbetrackedandcorrected
+for in real time by the FPGA. Hence, a typical end-user of HF-CZT HEXITECMHz devices would
+be unaffected by this phenomenon.
+4.2.3 Intensity dependence
+Figure9(a)showsaschematicforanadditionaldatasettakentoinvestigatethedynamicsofthe‘excess
+leakage-current effect’, in which Al attenuation was cycled in and out of the 20keV X-ray beam over
+20s. As in section 4.2.2, the evolution of the flux applied to pixel (13,33) and its corresponding
+0𝛾 peak position shift is plotted as a function of time in figure 9(b). Starting with 7.0mm of Al
+attenuation, the X-ray shutter was opened after∼ 2.64s and Al gradually removed and subsequently
+re-inserted into the beam (steps of 7.0mm, 6.5mm, 5.5mm, 3.5mm, 1.50mm) prior to the closing of
+the shutter after∼ 19.01s. When exposed, attenuation cycling resulted in the application of measured
+X-ray fluxes of∼ 8.12 × 104phs −1mm−2, ∼ 1.24 × 105phs −1mm−2, ∼ 3.10 × 105phs −1mm−2,
+∼ 1.85 × 106phs −1mm−2 and ∼ 9.60 × 106phs −1mm−2.
+These results corroborate the findings of section 4.2.2 and the application of a specific X-ray
+flux resulted in a continual rise of the0𝛾 peak position shift, indicative of an associated rise in the
+measured leakage current towards a supposed steady state. This was not achieved at the higher X-ray
+fluxes utilised, and the small offsets present at the lower fluxes make determination of a steady state
+difficult due to the maximum 1ADU resolution.
+The dataset also provides support for the hypothesis that the magnitude of the ‘excess leakage-
+current effect’ is dependent on the X-ray flux, with larger fluxes resulting in greater shifts in the
+– 12 –
+
+--- PAGE 15 ---
+2024 JINST 19 P04028
+Figure9. Resultsfroma20slow-gaindatasetcollectedat20keVwhilstcyclingtheAlattenuators. (a)Schematic
+of measurement protocol. (b) The evolution of the average0𝛾 peak position shift (blue) and measured X-ray
+flux (red) for pixel (13,33) over 20s — 104 frame sampling window.
+0𝛾 peak position. The lack of steady-state attainment, due to the short exposure time at each
+attenuation level, makes a quantitative analysis of the correlation between the X-ray flux and the
+effect’s magnitude difficult. However, a preliminary assessment of this relationship for pixel (13,33) is
+shown in figure 10(a). Here, the offsets used represent the final offset measured at each attenuation
+level during the initial∼ 12.05s, whilst Al was gradually removed from the beam. Additionally,
+values for the X-ray flux at each attenuation level have been calculated through extrapolation of the
+intensity measured with 7mm of Al, using the literature 20keV Al attenuation coefficient [30]. The
+deviations between these calculated intensities and those measured on HEXITECMHz are shown in
+figure 10(b) and are the consequence of a breakdown at higher occupancies in the assumption that
+HEXITECMHz operates as a nonparalyzable counting system (section 3.1).
+For the attenuation thicknesses used, offsets of 5ADU, 8ADU, 11ADU, 38ADU and 144ADU
+were measured respectively. Using the 99.0eV ADU−1 low-gain gradient calculated (section 3.2),
+the 0𝛾 peak offset of 144ADU measured at a calculated flux of1.26 × 107phs −1mm−2 is equivalent
+to 14.26keV. This represents 4.75% of the ∼ 300keV HEXITECMHz low-gain dynamic range.
+Equivalently, this value corresponds to a per-pixel leakage current of∼ 543pA (8.68nAmm −2),
+assuming a CZT electron-hole-pair generation energy of 4.67eV [28]. Although all pixels displayed
+shifts within the same order of magnitude, pixel-to-pixel performance differences were seen. This
+is a consequence of pixel-wise and sub-pixel variations within the device and will be investigated
+further when a 20-channel readout is available (section 3.1).
+– 13 –
+
+--- PAGE 16 ---
+2024 JINST 19 P04028
+Figure10. Resultsfroma20slow-gaindatasetcollectedat20keVwhilstcyclingtheAlattenuators. (a)The 0𝛾
+peak position shift at each attenuation level as a function of the calculated X-ray flux (red) for pixel (13,33). The
+vertical dashed line marks the maximum flux used for spectroscopic measurements with HEXITECMHz. (b) A
+comparison of the calculated and measured X-ray fluxes for the different thicknesses of Al attenuation used.
+However, fluences of 107phs −1mm−2represent single-pixel occupancies of 62.5%, far above
+the 10% upper limit for typical spectroscopic measurements (section 3.2). This corresponding flux,
+1.60 × 106phs −1mm−2, is marked by the vertical dashed line in figure 10(a). Here, the relative
+offsets seen are significantly lower and spectroscopic measurements are typically made far below
+the supposed limit (at occupancies of∼ 2%). At a calculated flux of3.21 × 105phs −1mm−2(∼ 2%
+occupancy), the0𝛾 peak position of pixel (13,33) is shifted by 11ADU (663pAmm−2). Any shifts
+of this magnitude will be corrected for using real-time FPGA processing.
+4.2.4 Spatial distribution
+An additional fundamental property of the ‘excess leakage-current effect’ is its spatial distribution
+across the active area.
+Upon identifying the effect at the B16 Test Beamline, results were compared to laboratory
+measurements taken using a continuous Comet MXR-160/22 Industrial X-ray source. Here, the
+identical HF-CZT HEXITECMHz device was mounted in the direct beam, with a line pair per mm
+slide placed over the active area to generate regions of higher and lower X-ray occupancy (figure 11).
+The FPGA firmware for readout of the high-speed serialisers (section 2.2) was unavailable at the
+time of these measurements and these tests therefore utilised the SPI interface for readout of the
+TDCs [15]. The 80 × 80mappings shown in the results were generated by cycling the sector sampled
+across the active area.
+Figure 12 shows a high-gain dataset obtained using an 80kV tube voltage and 2mA tube current.
+These settings resulted in a polychromatic tube output of mean energy∼ 23keV, with an average
+– 14 –
+
+--- PAGE 17 ---
+2024 JINST 19 P04028
+Figure11. AleadlinepairpermmslideplacedovertheHF-CZTHEXITEC MHzdevicewithinthetestenclosure.
+occupancy of∼ 1.94% (∼ 3.16 × 105phs −1mm−2) recorded across the80 × 80array. However, as
+shown in figure 12(a), regions of differing occupancy resulted from the geometry and design of the Pb
+linepairpermmslide. Forexample,pixel(60,40),situatedinanareaoflowerattenuation,experienced
+an applied flux of∼ 6.70 × 105phs −1mm−2. Conversely, the more-heavily-shielded pixel (40,66)
+faced a lower flux of∼ 0.68 × 105phs −1mm−2. These gradients in the applied flux strongly correlate
+to the shifts measured in each pixel’s0𝛾 peak relative to a dark dataset (Fig 12b). In general, higher-
+occupancy pixels displayed greater shifts, with many pixels in highly-exposed regions showing offsets
+> 50ADU,comparedtoshifts < 10ADUinthosemorehighly-attenuated. Thisisshownmoreclearly
+in the three dark-corrected histograms of figure 12(c). These chosen pixels displayed shifts of 6ADU,
+23ADU and 61ADU at respective fluxes of∼ 0.68 × 105phs −1mm−2, ∼ 5.23 × 105phs −1mm−2
+and ∼ 6.79 × 105phs −1mm−2. Overall, these correlations match earlier observations and the strong
+replication of the slide’s geometric features in Fig 12c suggest that the ’excess leakage-current effect’
+is highly localised, with pixels affected little by the radiation activity of their nearest neighbours.
+To test this latter hypothesis quantitatively, datasets were collected at DLS in which the Front
+End’s CSA reset was impeded for 10μs, the equivalent of ten 1MHz frame periods. The ASIC
+continued to output data at a MHz rate when operated in this manner, allowing measurement of the
+integrated charge within each pixel for ten integration periods (0.9μs, 1μs, 2μs, 3μs ... 10 μs).
+The first integration period (0.9μs) is shorter than the 1μs interval between subsequent integration
+lengths on account of the 100ns reset at the beginning of each 10 frame bunch. The collation of
+equivalent frames enabled a histogram to be generated for each integration length. This data was
+subsequently used to estimate a per-pixel leakage current through identification of the position of the
+0𝛾 peak within each distribution. These ADU values were converted into an equivalent charge using
+the CZT electron-hole-pair generation energy (4.67eV [28]) and the ADU-keV conversion factors
+calculated during calibration (section 3.2). The gradient of a linear fit to a plot of the integrated charge
+against integration time represents the estimated leakage current.
+The aforementioned process is shown for a single pixel in figure 13. The corresponding high-gain
+dataset was collected using a1mm × 2.5mm 60keV beam and attenuation comprising 0.5mm of
+– 15 –
+
+--- PAGE 18 ---
+2024 JINST 19 P04028
+Figure 12.High-gain results from laboratory direct X-ray illumination measurements of a lead line pair per mm
+slide at 80kV, 2mA. (a) Map of the interacting X-ray flux. (b) Map of the0𝛾 peak position shifts relative to the
+dark dataset. (c) Dark-corrected histograms of the signals measured in three pixels — 1ADU bin width. Pixels
+shown in (c) are highlighted in (a) and (b).
+stainlesssteeland2mmofAl. Thisresultedinanaverageoccupancywithinthe 4 × 10pixelirradiated
+area of∼ 4.37% (∼ 6.99 × 105phs −1mm−2). In order to allow the subsequent comparison of all
+read-out pixels, the average 37.04eV ADU−1 conversion factor of irradiated pixels was used for all
+320 channels. A per-pixel calibration was not possible for the unirradiated channels since the1𝛾
+peak is absent from the raw spectra (section 3.2).
+Examination of these results globally across the serialiser channel, as shown in figure 14, allows
+the spatial distribution of the ‘excess leakage-current’ effect to be assessed. Figure 14(a) shows the
+linear fits generated across all 320 channels, with red and blue lines used to represent irradiated and
+unirradiated pixels respectively. The single green plot corresponds to pixel (13,65), a defective pixel
+resulting from an imperfection in the hybridisation process (section 2.3). The clear separation of the
+red and blue distributions indicates distinct differences between pixels inside and outside of the beam,
+with irradiated pixels displaying notably higher leakage currents (gradients). In fact, the mean leakage
+current of irradiated pixels was 31.48pA (504pAmm−2), compared to the 9.51pA (152pAmm−2)
+value calculated for unirradiated channels. This ‘excess leakage current’ of 352pAmm−2 is reflected
+– 16 –
+
+--- PAGE 19 ---
+2024 JINST 19 P04028
+Figure 13.Results from a 60keV high-gain integration-length scan for pixel (14,40). (a) The raw histograms
+associated with each integration length — 1ADU bin width. The positions of the0𝛾 peak in each histogram
+are marked by the dashed red lines. (b) The linear fit generated from a plot of the integration time against the
+integrated charge equivalent to the0𝛾 peak’s centroid.
+in the leakage current map shown in figure 14(b). As above, these results imply that the ‘excess
+leakage-current effect’ is highly localised. This is further evidenced by the currents calculated for
+pixels (14,42) and (14,43), which span the exposed area’s boundary. Here, the irradiated pixel (14,42)
+showed a measured current of 30.29pA (485pAmm−2), 21.08pA (337pAmm−2) higher than the
+9.21pA (147pAmm −2) value calculated for its unirradiated neighbour.
+For comparison, the aforementioned characterisation of HF-CZT using electroless gold and
+sputtered platinum electrodes at the Extremely Brilliant Source of the ESRF reported excess leakage
+currents of∼ 10pA at fluxes of∼ 107phs −1mm−2 [8]. With pixel dimensions of 500μm × 500 μm,
+this is equivalent to a current density of∼ 40pAmm −2. The values reported here therefore greatly
+exceed those previously measured and may be explained by the differences in either the contact
+technologies or the interconnect processes used for a simple planar device and the HEXITECMHz
+pixelated sensor. However, further datasets are required to fully investigate these differences.
+5 Conclusion
+A 2mm thick HF-CZT sensor, manufactured by Redlen Technologies, was hybridised to the
+HEXITECMHz ASIC and characterised at the DLS synchrotron’s B16 Test Beamline using a uniform
+and monochromatic beam. The results obtained were presented.
+Under spectroscopic X-ray fluxes (< 1.6 × 106phs −1mm−2), resolutions of 850 ± 100eV,
+920 ± 100eVand 1130 ± 120eVweremeasuredat20keVinthehigh-,medium-andlow-gainoperating
+stages respectively. These results exceed the targeted< 1keV resolution of the medium-gain stage.
+– 17 –
+
+--- PAGE 20 ---
+2024 JINST 19 P04028
+Figure 14.Results from a 60keV high-gain integration-length scan. (a) The linear fits generated from plots of
+the integration time against the integrated charge equivalent to the0𝛾 peak’s centroid for all pixels in the single
+4 × 80 channel. Fits associated with pixels inside and outside the irradiated area are coloured red and blue
+respectively. The fit associated with the faulty pixel (13,65) is highlighted in green. (b) A map of the calculated
+leakage currents (i.e. fit gradients) across the4 × 80 channel.
+Measurements also indicated a phenomenon whereby excess leakage current was generated in the
+detector following the initial application of a specific X-ray flux. This manifested in a temporary shift
+in raw spectra to higher ADU values, shown throughout these results in the changing position of the
+0𝛾 peak. Datasets taken to analyse the effect’s dynamics showed it to be highly localised, with pixels
+unaffected by the irradiation of their nearest neighbours, and intensity-dependent. For example, at an
+X-rayfluxof 1.26 × 107phs −1mm−2, acharacteristicpixeldisplayedanoffsetequivalentto14.26keV
+or543pA(8.68nAmm −2). Comparisontop-typeSiHEXITEC MHzdatasuggeststhisisaCZT-specific
+phenomenon and it is hypothesised that it results from charge trapping at the electrode-CZT interface.
+This results in the localised build-up of space charge and modification of the contact potential barrier.
+Further datasets are required to fully test this hypothesis and develop more quantitative measures of
+the buildup and decay of leakage current and to establish whether a steady-state is eventually achieved.
+The ’excess leakage-current effect’ and its consequences clearly represent a complex problem that
+is of relevance to the entire photon-science community. A collaborative effort on multiple fronts is
+required to further investigate its origin and any potential solutions. Future work at RAL will look to
+build upon this initial analysis, facilitated by the delivery of the FPGA firmware for a full80 × 80
+readout which will enable an in-depth investigation into variations seen across the active area.
+Importantly, the identification and subsequent analysis of this phenomenon also demonstrates
+the capacity of HEXITECMHz to track and diagnose such material effects on a MHz timescale. This
+capability will also enable a real-time correction of the effect, facilitated by the implementation of
+a Xilinx® Alveo U50 Data Accelerator card as a second-stage FPGA.
+– 18 –
+
+--- PAGE 21 ---
+2024 JINST 19 P04028
+Acknowledgments
+ThedevelopmentoftheHEXITEC MHzASICwasfundedbytheUKRISTFCCentreforInstrumentation:
+Front End Electronics and Detectors for higher Energies and Rates (FEEDER) programme. We
+acknowledge Diamond Light Source for time on beamline B16 under proposal OM32772-1.
+References
+[1] T.E. Schlesinger et al.,Cadmium zinc telluride and its use as a nuclear radiation detector material,
+Mater. Sci. Eng. R: Rep.32(2001) 103.
+[2] K. Iniewski,CZT detector technology for medical imaging, 2014JINST 9 C11001.
+[3] D.S. Bale, S.A. Soldner and C. Szeles,A mechanism for dynamic lateral polarization in CdZnTe under
+high flux x-ray irradiation,Appl. Phys. Lett.92(2008) 082101.
+[4] K. Iniewski,CZT sensors for Computed Tomography: from crystal growth to image quality, 2016JINST
+11C12034.
+[5] B. Thomas et al.,Characterisation of Redlen high-flux CdZnTe, 2017JINST 12 C12045.
+[6] M.C. Veale et al.,Cadmium zinc telluride pixel detectors for high-intensity x-ray imaging at free electron
+lasers,J. Phys. D52(2018) 085106.
+[7] S. Tsigaridas and C. Ponchut,X-ray imaging with high-Z sensors for the ESRF-EBS Upgrade, 2019JINST
+14C04009.
+[8] O. Baussens et al.,Characterization of High-Flux CdZnTe with optimized electrodes for 4𝑡 ℎ generation
+synchrotrons, 2022JINST 17 C11008.
+[9] L. Jones, P. Seller, M. Wilson and A. Hardie,HEXITEC ASIC — a pixellated readout chip for CZT
+detectors, Nucl. Instrum. Meth. A604(2009) 34.
+[10] M.C. Veale, P. Seller, M. Wilson and E. Liotti,HEXITEC: A High-Energy X-ray Spectroscopic Imaging
+Detector for Synchrotron Applications,Synchrotron Radiat. News31 (2018) 28.
+[11] C.L.A. Leung et al.,Correlative full field X-ray compton scattering imaging and X-ray computed
+tomography for in situ observation of Li ion batteries,Mater. Today Energy31(2023) 101224.
+[12] R. Warr et al.,Quantifying multiple stain distributions in bioimaging by hyperspectral X-ray tomography,
+Sci. Rep.12(2022) 21945.
+[13] L. Jones et al.,Spectroscopic X-ray imaging at MHz frame rates — the HEXITECMHz ASIC, 2022JINST
+17C10012.
+[14] L. Jones et al.,Energy-Resolving X-ray Imaging at 1MHz Frame Rate — The HEXITECMHz ASIC,J. Phys.
+Conf. Ser.2380 (2022) 012092.
+[15] M.C. Veale et al.,Preliminary characterisation of the HEXITECMHz spectroscopic X-ray imaging
+detector, 2023JINST 18P07048.
+[16] B.D. Cline et al.,Characterisation of HEXITECMHz — A 1MHz continuous frame rate spectroscopic
+X-ray imaging detector system,Nucl. Instrum. Meth. A1057 (2023) 168718.
+[17] G. Yendell et al.,Odin — a Control and Data Acquisition Framework for Excalibur 1M and 3M Detectors,
+in the proceedings of the16th International Conference on Accelerator and Large Experimental Physics
+Control Systems, Barcelona, Spain, 8–13 October 2018 [DOI:10.18429/JACoW-ICALEPCS2017-TUPHA212].
+– 19 –
+
+--- PAGE 22 ---
+2024 JINST 19 P04028
+[18] N. Rees et al.,Developing HDF5 for the Synchrotron Community, in the proceedings of the
+15th International Conference on Accelerator and Large Experimental Physics Control Systems,
+Melbourne, Australia, 17–23 October 2015 [DOI:10.18429/JACoW-ICALEPCS2015-WEPGF063].
+[19] S.N. Pike et al.,Properties of Redlen cadmium zinc telluride with respect to x-ray spectroscopy, J. Astron.
+Telesc. Instrum. Syst.8 (2022) 046002.
+[20] M.C. Veale et al.,Characterization of the Uniformity of High-Flux CdZnTe Material, Sensors20(2020)
+2747.
+[21] A. Schneider et al.,Interconnect and bonding techniques for pixelated X-ray and gamma-ray detectors,
+2015 JINST 10C02010.
+[22] I.P. Dolbnya et al.,A water-cooled monochromator for the B16 Test beamline at the Diamond Light
+Source: capabilities and performance characterization, J. Synchrotron Radiat.26(2019) 253.
+[23] C.R. Harris et al.,Array programming with NumPy,Nature585(2020) 357 [arXiv:2006.10256].
+[24] J.D. Hunter,Matplotlib: A 2D Graphics Environment,Comput. Sci. Eng.9 (2007) 90.
+[25] P. Virtanen et al.,SciPy 1.0–Fundamental Algorithms for Scientific Computing in Python, Nature Meth.17
+(2020) 261 [arXiv:1907.10121].
+[26] W. McKinney,Data Structures for Statistical Computing in Python, in the proceedings of the9th Python
+Scientific Conference, Austin, TX, U.S.A., 10–16 July 2010 [DOI:10.25080/majora-92bf1922-00a].
+[27] M.C. Veale et al.,Measurements of charge sharing in small pixel CdTe detectors, Nucl. Instrum. Meth. A
+767 (2014) 218.
+[28] A. Owens and A. Peacock,Compound semiconductor radiation detectors,Nucl. Instrum. Meth. A531
+(2004) 18.
+[29] R.H. Redus et al.,Fano Factor Determination For CZT, MRS Proceedings487(1997) 101.
+[30] M.J. Berger and J.H. Hubbell,XCOM: Photon cross sections on a personal computer, Tech. Rep.
+NBSIR-87-3597 National Bureau of Standards, Washington, DC, U.S.A. (1987) [DOI:10.2172/6016002].
+[31] A.E. Bolotnikov et al.,Effects of bulk and surface conductivity on the performance of CdZnTe pixel
+detectors, IEEE Trans. Nucl. Sci.49(2002) 1941.
+[32] S.J. Bell et al.,Comparison of the surfaces and interfaces formed for sputter and electroless deposited
+gold contacts on CdZnTe, Appl. Surf. Sci.427 (2018) 1257.
+– 20 –

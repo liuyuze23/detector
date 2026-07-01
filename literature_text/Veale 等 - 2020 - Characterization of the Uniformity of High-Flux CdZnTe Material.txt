@@ -1,0 +1,846 @@
+
+
+--- PAGE 1 ---
+sensors
+Article
+Characterization of the Uniformity of High-Flux
+CdZnTe Material
+Matthew Charles Veale 1,*
+ , Paul Booker 1, Simon Cross 1, Matthew David Hart 1,
+Lydia Jowitt 1
+ , John Lipp 1
+ , Andreas Schneider 1, Paul Seller 1, Rhian Mair Wheater 1,
+Matthew David Wilson 1, Conny Christoﬀer Tobias Hansson 2, Krzysztof Iniewski 2,
+Pramodha Marthandam 2 and Georgios Prekas 2
+1 Rutherford Appleton Laboratory, UKRI Science & Technology Facilities Council, Oxon OX11 0QX, UK;
+paul.booker@stfc.ac.uk (P .B.); simon.cross@stfc.ac.uk (S.C.); matthew.hart@stfc.ac.uk (M.D.H.);
+lydia.jowitt@stfc.ac.uk (L.J.); john.lipp@stfc.ac.uk (J.L.); andreas.schneider@stfc.ac.uk (A.S.);
+paul.seller@stfc.ac.uk (P .S.); rhian-mair.wheater@stfc.ac.uk (R.M.W.); matt.wilson@stfc.ac.uk (M.D.W.)
+2 Redlen Technologies, Saanichton, BC V8M 1X6, Canada; conny-h@slac.stanford.edu (C.C.T.H.);
+kris.iniewski@redlen.com (K.I.); pram.marthandam@redlen.com (P .M.); g.prekas@live.co.uk (G.P .)
+* Correspondence: matthew.veale@stfc.ac.uk
+Received: 15 April 2020; Accepted: 9 May 2020; Published: 12 May 2020
+/gid00030/gid00035/gid00032/gid00030/gid00038/gid00001/gid00033/gid00042/gid00045/gid00001
+/gid00048/gid00043/gid00031/gid00028/gid00047/gid00032/gid00046
+Abstract: Since the late 2000s, the availability of high-quality cadmium zinc telluride (CdZnTe)
+has greatly increased. The excellent spectroscopic performance of this material has enabled the
+development of detectors with volumes exceeding 1 cm3 for use in the detection of nuclear materials.
+CdZnTe is also of great interest to the photon science community for applications in X-ray imaging
+cameras at synchrotron light sources and free electron lasers. Historically, spatial variations in
+the crystal properties and temporal instabilities under high-intensity irradiation has limited the
+use of CdZnTe detectors in these applications. Recently, Redlen Technologies have developed
+high-ﬂux-capable CdZnTe material (HF-CdZnTe), which promises improved spatial and temporal
+stability. In this paper, the results of the characterization of 10 HF-CdZnTe detectors with dimensions
+of 20.35 mm × 20.45 mm × 2.00 mm are presented. Each sensor has 80 × 80 pixels on a 250-µm pitch
+and were ﬂip-chip-bonded to the STFC HEXITEC ASIC. These devices show excellent spectroscopic
+performance at room temperature, with an average Full Width at Half Maximum (FWHM) of 0.83 keV
+measured at 59.54 keV . The eﬀect of tellurium inclusions in these devices was found to be negligible;
+however, some detectors did show signiﬁcant concentrations of scratches and dislocation walls. An
+investigation of the detector stability over 12 h of continuous operation showed negligible changes
+in performance.
+Keywords: CdZnTe; pixel detector; X-ray detector; X-ray spectroscopy; X-ray imaging; high ﬂux
+1. Introduction
+Cadmium zinc telluride (CdZnTe) is a compound semiconductor that has been studied for many
+years for its application in the detection of radiation, speciﬁcally X-rays and γ-rays. The advantage
+of this material over traditional direct conversion detector materials like silicon and germanium is
+its high density (~5.8 g cm−3) and high resistivity (~1011 Ω cm), which make it ideally suited for the
+detection of high energy X-rays and γ-rays without the need for cryogenic cooling. The resistivity
+of CdZnTe also exceeds that of CdTe, enabling the production of thicker detectors (>1 mm) that are
+needed to stop photons with energies >50 keV [1].
+One of the longest standing challenges that has faced CdZnTe detectors is their performance under
+irradiation with very high photon ﬂuxes (>106 ph s−1 mm−2). Under these conditions, detectors have
+Sensors 2020, 20, 2747; doi:10.3390/s20102747 www.mdpi.com /journal/sensors
+
+--- PAGE 2 ---
+Sensors 2020, 20, 2747 2 of 20
+been prone to the polarization phenomenon in which the electrical ﬁeld in the detector is modiﬁed
+over time due to a buildup of trapped charge in the crystal [2]. Historically, this has limited the use
+of CdZnTe detectors to application areas, such as nuclear material detection, where photon ﬂuxes
+are much lower [3]. In order for CdZnTe detectors to be of use in high photon ﬂux applications like
+Computed Tomography (CT) imaging and beam line instrumentation at synchrotrons and X-ray free
+electron lasers (XFELs), the polarization phenomenon needs to be suppressed or removed completely.
+Driven by the needs of the medical and security imaging communities, Redlen Technologies has
+developed a new ‘high-ﬂux-capable’ grade of CdZnTe material [4], referred to here as HF-CdZnTe.
+Results from this material were ﬁrst reported by Thomas et al. in 2017 [ 5] and it has since gone on
+to be tested at intense light sources like the LCLS XFEL [ 6] and at the ESRF synchrotron [7]. These
+measurements have demonstrated how this new HF-CdZnTe can operate at ﬂuxes > 106 ph s−1 mm−2,
+with no evidence observed for the onset of the polarization phenomenon. These successful results
+suggest that, for the ﬁrst time, the widespread use of CdZnTe-based detectors for high ﬂux applications
+may become a reality.
+One of the key areas of this material’s performance that is still to be studied is the repeatability of
+results across multiple detectors with a reasonable detection area (> 2 cm2). Previous measurements
+with large-area CdZnTe and CdTe detectors have demonstrated spatial variations in the detector
+response due to crystalline defects, such as tellurium inclusions, or due to local variations in the electric
+ﬁeld. If HF-CdZnTe devices are going to be suitable for imaging applications, then it is a prerequisite
+that large detection areas with a high degree of uniformity can be produced [8,9]. In this paper, the
+spatial uniformity of 10 2.0-mm-thick HF-CdZnTe detectors were characterized using the High Energy
+X-ray Imaging Technology (HEXITEC) spectroscopic imaging Application Speciﬁc Integrated Circuit
+(ASIC) [10] operating at a ﬂux of <104 ph s−1 mm−2. The spectroscopic information produced by the
+HEXITEC ASIC allows the spatial uniformity of the material to be quantiﬁed at sub-mm scales using
+key metrics, such as the pixel to pixel variations in the energy resolution and the number of counts.
+2. Materials and Methods
+In this paper, the results are reported for the characterization of a sample of 10 pixelated HF-CdZnTe
+detectors, each with an area of 4.2 cm2, which were fabricated by Redlen Technologies and are read
+out with the Science and Technology Facitlities Councils’s (STFC) HEXITEC ASIC [10]. Details on the
+individual components used to make these measurements are detailed below.
+2.1. High Flux CdZnT e Detectors
+In the commonly used spectroscopic-grade CdZnTe material, the growth process is optimized to
+deliver crystals with excellent electron charge transport properties, which is ideal for thick sensors
+(>5 mm) with large pixels (>1 mm) that are typically used for γ-ray spectroscopy applications [ 3].
+The disadvantage of this material is that the hole carrier lifetime is normally very short (τh ~ 0.2 µs)
+and leads to signiﬁcant numbers of carriers being trapped. At high photon ﬂuxes, the build-up of
+these trapped holes result in the polarization phenomenon. In this HF-CdZnTe material, a diﬀerent
+approach is taken where the hole lifetime is optimized, leading to an increase of an order of magnitude
+(τh ~ 2.0 µs) [5]. The increase in the hole lifetime enables detectors produced from HF-CdZnTe material
+to operate at the higher photon ﬂuxes used in many photon science applications.
+The HF-CdZnTe material used in this study was grown by Redlen Technologies using their
+proprietary THM growth process [4]. Redlen were also responsible for the processing and fabrication of
+the sensor electrodes for these detectors. The detectors consist of an array of 80 × 80 pixels on a 250-µm
+pitch with a pad size of 200 µm × 200 µm and a gap size of 25 µm surrounded by a 100-µm-wide guard
+ring along three edges and 200 µm along one edge. Platinum electrodes are used for both the pixelated
+anode and the planar cathode. The total sensor dimensions are 20.35 mm × 20.45 mm × 2.00 mm.
+An example of an optical image of the bare HF-CdZnTe sensor can be seen in Figure 1a. Individual
+HF-CdZnTe sensors are hybridized to a HEXITEC ASIC using the STFC’s interconnect facilities [11].
+
+--- PAGE 3 ---
+Sensors 2020, 20, 2747 3 of 20
+Bumps of silver-loaded epoxy are deposited on each pixel of the sensor using a stencil printing
+technique; typically, bumps have diameters of ~ 120 µm and heights of 30 µm. An image of a portion
+of a sensor following the deposition of the silver epoxy bumps can be seen in the inset in Figure 1a. In
+a separate process, a gold stud is produced on each of the pixel inputs of the HEXITEC ASIC each with
+a diameter of 50 µm and a height of ~ 30 µm. The sensor and ASIC are then ﬂip-chip-bonded together
+and cured in situ at 150 ◦C. The hybrid is then attached to the aluminum carrier and the ASIC I/O pads
+aluminum wedge-bonded to the PCB. A fully assembled HF-CdZnTe HEXITEC module can be seen
+in Figure 1b.
+Sensors 2020, 20, x FOR PEER REVIEW  3 of 17 
+ 
+of a sensor following the deposition of the silver epoxy bumps can be seen in the inset in Figure 1a. 
+In a separate process, a gold stud is produced on each of the pixel inputs of the HEXITEC ASIC each 
+with a diameter of 50 m and a height of ~ 30 m. The sensor and ASIC are then flip‐chip‐bonded 
+together and cured in situ at 150 °C. The hybrid is then attached to the aluminum carrier and the 
+ASIC  I/O  pads  aluminum  wedge‐bonded  to  the  PCB.  A  fully  assembled  HF‐CdZnTe  HEXITEC 
+module can be seen in Figure 1b. 
+ 
+ 
+Figure 1. Optical images of a 2‐mm‐thick HF‐CdZnTe HEXITEC detector: (a) An image of the 80 × 80 
+array of 250 m pitch pixels; (inset) a higher magnification image of a 1.25 mm × 1.75 mm region of 
+the detector after the deposition of silver‐loaded epoxy bumps during hybridization; (b) an image of 
+the final detector module after hybridization of the CdZnTe and HEXITEC ASIC. 
+2.2. The HEXITEC Detector System  
+The HEXITEC ASIC is a spectroscopic X‐ray imaging readout chip that has been used across a 
+broad  range  of  application  areas,  including  materials  science  [12,13],  solar  physics  [14],  and  laser 
+physics [15]. The HEXITEC ASIC consists of 80 × 80 channels on a 250‐m pitch. Each of these pixels 
+consists of a charge‐sensitive preamplifier, a shaping amplifier, and a peak‐track‐and‐hold circuit [10]. 
+The analogue outputs of the ASIC are read out using a roller‐shutter scheme. The magnitude of the 
+voltage read from the peak‐track‐and‐hold circuit is directly proportional to the energy of the photon 
+that is stopped in the CdZnTe sensor. As the ASIC was designed for the readout of high‐Z compound 
+semiconductors, it is only sensitive to the electron signals generated in the CdZnTe sensor. 
+Each HEXITEC module, see Figure 1b, is mounted in a HEXITEC ‘GigE’ data acquisition system 
+(DAQ) [16]. The DAQ contains the entirety of the readout electronics, including the analogue‐to‐digital 
+converters (ADCs) that digitize the analogue voltages readout from the chip. For all measurements, 
+the  GigE  DAQ  system  was  operated  at  a  frame  rate  of  1.6  kHz.  The  DAQ  also  delivers  the  high‐
+voltage  supply  that  biases  the  CdZnTe  sensor  as  well  as  the  temperature  control  system  that 
+maintains  the  ASIC  at  room  temperature  (28  °C).  Unless  stated  otherwise,  the  measurements 
+presented in this paper were collected with a bias voltage of 750 V (325 V mm−1). The higher resistivity 
+of the CdZnTe material means that, unlike CdTe detectors, there was no need to use periodic bias 
+cycling, which is typically used in CdTe to avoid bias‐induced polarization. 
+2.3. Energy Calibration Procedure 
+In  order  to  study  the  performance  of  the  HF‐CdZnTe  sensors,  each  of  the  detector  modules 
+requires an energy calibration, which is completed using the known emission lines of an 241Am‐sealed 
+source. The peaks used included the 13.94, 17.75, 26.34, 36.37, and 59.54 keV lines. It should be noted 
+that 36.37 keV is not an emission of the sealed source but an escape peak that is generated due to the 
+Figure 1. Optical images of a 2-mm-thick HF-CdZnTe HEXITEC detector: (a) An image of the 80 × 80
+array of 250 µm pitch pixels; (inset) a higher magniﬁcation image of a 1.25 mm × 1.75 mm region of the
+detector after the deposition of silver-loaded epoxy bumps during hybridization; (b) an image of the
+ﬁnal detector module after hybridization of the CdZnTe and HEXITEC ASIC.
+2.2. The HEXITEC Detector System
+The HEXITEC ASIC is a spectroscopic X-ray imaging readout chip that has been used across
+a broad range of application areas, including materials science [ 12,13], solar physics [14], and laser
+physics [15]. The HEXITEC ASIC consists of 80 × 80 channels on a 250-µm pitch. Each of these pixels
+consists of a charge-sensitive preampliﬁer, a shaping ampliﬁer, and a peak-track-and-hold circuit [10].
+The analogue outputs of the ASIC are read out using a roller-shutter scheme. The magnitude of the
+voltage read from the peak-track-and-hold circuit is directly proportional to the energy of the photon
+that is stopped in the CdZnTe sensor. As the ASIC was designed for the readout of high-Z compound
+semiconductors, it is only sensitive to the electron signals generated in the CdZnTe sensor.
+Each HEXITEC module, see Figure 1b, is mounted in a HEXITEC ‘GigE’ data acquisition system
+(DAQ) [16]. The DAQ contains the entirety of the readout electronics, including the analogue-to-digital
+converters (ADCs) that digitize the analogue voltages readout from the chip. For all measurements,
+the GigE DAQ system was operated at a frame rate of 1.6 kHz. The DAQ also delivers the high-voltage
+supply that biases the CdZnTe sensor as well as the temperature control system that maintains the
+ASIC at room temperature (28 ◦C). Unless stated otherwise, the measurements presented in this paper
+were collected with a bias voltage of 750 V (325 V mm−1). The higher resistivity of the CdZnTe material
+means that, unlike CdTe detectors, there was no need to use periodic bias cycling, which is typically
+used in CdTe to avoid bias-induced polarization.
+
+--- PAGE 4 ---
+Sensors 2020, 20, 2747 4 of 20
+2.3. Energy Calibration Procedure
+In order to study the performance of the HF-CdZnTe sensors, each of the detector modules
+requires an energy calibration, which is completed using the known emission lines of an 241Am-sealed
+source. The peaks used included the 13.94, 17.75, 26.34, 36.37, and 59.54 keV lines. It should be noted
+that 36.37 keV is not an emission of the sealed source but an escape peak that is generated due to the
+creation of a 23.17 keV cadmium ﬂuorescence X-ray in the CdZnTe sensor that subsequently escapes
+the sensor volume.
+Each of the detectors were irradiated with a 183 MBq 241Am sealed source positioned ~15 cm
+to ensure a ﬂat ﬁeld across the entire 4 cm 2 of the detector. Data were collected for 300 s for each
+detector, with ~105 events recorded per pixel (3 × 103 ph s−1 mm−2). At this distance, the occupancy of
+a single frame of data, Figure 2a, was <5% of pixels, which allows a charge sharing discrimination
+(CSD) algorithm to be used e ﬀectively [17]. Using CSD only events in a frame of data that occurs
+in a single pixel (i.e., no charge observed in immediate neighbor pixels) is included in the analysis.
+Using bespoke code written in Matlab R2019b, each frame is inspected in turn for charge sharing
+events and per-pixel spectra are compiled across the entire data set (~106 frames), only including single
+pixel events. The eﬀect of CSD on a typical single pixel spectrum can be seen in Figure 2b, where a
+continuous low-energy background is removed, making it easier to identify the individual calibration
+peaks. The CSD spectrum for each pixel is inspected and the location of the calibration peaks identiﬁed.
+The position of these peaks is then used to perform a linear calibration of each pixel, extracting a
+gradient and intercept for each channel as shown in Figure 3. The average values of the gradient and
+intercepts measured for these detectors were 29 eV ADU−1 and 790 eV , respectively. The most visible
+variations are in the values of the gradients, Figure 3b, which show four distinct regions of 20 × 80
+pixels. These variations are not due to the sensor material but are a result of small variations in the
+response of the 4 ADCs in the HEXITEC DAQ system, each of which reads out a block of 20× 80 pixels.
+In parallel to the energy calibration, the low energy threshold for each pixel is also calculated.
+For this analysis, the low energy threshold was calculated by ﬁrst determining the position of the noise
+peak at low channel numbers (< 100 ADU) and then determining its width. The pixel threshold was
+then deﬁned as the position 8σ away from the noise edge. Figure 3d shows the magnitude and spatial
+distribution of the threshold values for a typical detector. The average threshold per pixel was of the
+order of 2 keV , with pixels at the sensor edge displaying higher values of the order 3–5 keV .
+
+--- PAGE 5 ---
+Sensors 2020, 20, 2747 5 of 20
+Sensors 2020, 20, x FOR PEER REVIEW  4 of 17 
+ 
+creation of a 23.17 keV cadmium fluorescence X‐ray in the CdZnTe sensor that subsequently escapes 
+the sensor volume. 
+ 
+Figure 2. Examples of the data collected with the HF‐CdZnTe HEXITEC detector D185735: (a) a single 
+frame  of  data  captured  with  the  detector  system;  (b)  an  example  of  the  un‐calibrated  spectrum 
+recorded with a single pixel. The raw spectrum is shown in red while the spectrum after the removal 
+of charge sharing events is shown in black. 
+Each of the detectors were irradiated with a 183 MBq 241Am sealed source positioned ~15 cm to 
+ensure a flat field across the entire 4 cm2 of the detector. Data were collected for 300 s for each detector, 
+with ~105 events recorded per pixel (3 × 103 ph s−1 mm−2). At this distance, the occupancy of a single 
+frame of data, Figure 2a, was <5 % of pixels, which allows a charge sharing discrimination (CSD) 
+algorithm to be used effectively [17]. Using CSD only events in a frame of data that occurs in a single 
+pixel  (i.e.,  no  charge  observed  in  immediate  neighbor  pixels)  is  included  in  the  analysis.  Using 
+bespoke code written in Matlab R2019b, each frame is inspected in turn for charge sharing events and 
+per‐pixel  spectra  are  compiled across  the  entire  data  set  (~106  frames),  only  including  single  pixel 
+events.  The  effect  of  CSD  on  a  typical  single  pixel  spectrum  can  be  seen  in  Figure  2b,  where  a 
+Figure 2. Examples of the data collected with the HF-CdZnTe HEXITEC detector D185735: (a) a single
+frame of data captured with the detector system; (b) an example of the un-calibrated spectrum recorded
+with a single pixel. The raw spectrum is shown in red while the spectrum after the removal of charge
+sharing events is shown in black.
+
+--- PAGE 6 ---
+Sensors 2020, 20, 2747 6 of 20
+Sensors 2020, 20, x FOR PEER REVIEW  5 of 17 
+ 
+continuous low‐energy background is removed, making it easier to identify the individual calibration 
+peaks.  The  CSD  spectrum  for  each  pixel  is  inspected  and  the  location  of  the  calibration  peaks 
+identified.  The  position  of  these  peaks  is  then  used  to  perform  a  linear  calibration  of  each  pixel, 
+extracting a gradient and intercept for each channel as shown in Figure 3. The average values of the 
+gradient and intercepts measured for these detectors were 29 eV ADU−1 and 790 eV, respectively. The 
+most visible variations are in the values of the gradients, Figure 3b, which show four distinct regions 
+of 20 × 80 pixels. These variations are not due to the sensor material but are a result of small variations 
+in  the  response  of  the  4  ADCs  in  the  HEXITEC  DAQ  system,  each  of  which  reads  out  a  block  of  
+20 × 80 pixels. 
+ 
+ 
+Figure 3. An example of the calibration of an 80 × 80 pixel HF‐CdZnTe HEXITEC detector D185735 
+(a) the linear calibration of a single pixel of the detector using the known emissions of the 241Am ‐ray 
+sealed  source;  (b)  the  gradient  coefficient  extracted  for  each  pixel  of  the  array;  (c)  the  intercept 
+coefficient extracted for each pixel of the array, and (d) the low energy threshold calculated for each 
+of the pixels. 
+In parallel to the energy calibration, the low energy threshold for each pixel is also calculated. 
+For this analysis, the low energy threshold was calculated by first determining the position of the 
+noise peak at low channel numbers (< 100 ADU) and then determining its width. The pixel threshold 
+was then defined as the position 8 away from the noise edge. Figure 3d shows the magnitude and 
+spatial distribution of the threshold values for a typical detector. The average threshold per pixel was 
+of the order of 2 keV, with pixels at the sensor edge displaying higher values of the order 3–5 keV. 
+Figure 3. An example of the calibration of an 80 × 80 pixel HF-CdZnTe HEXITEC detector D185735
+(a) the linear calibration of a single pixel of the detector using the known emissions of the 241Am
+γ-ray sealed source; (b) the gradient coeﬃcient extracted for each pixel of the array; (c) the intercept
+coeﬃcient extracted for each pixel of the array, and (d) the low energy threshold calculated for each of
+the pixels.
+3. Results
+With the energy calibrated for each of the detector modules, the data sets were reprocessed by this
+time applying the per-pixel energy calibration calculated as described in Section 2.3. The calibrated
+data was then used to extract key indicators of the detector’s performance that included the energy
+resolution of the individual pixels, the percentage of interactions that displayed charge sharing, and if
+there were any crystalline defects present in the sensor volume. Each of these performance indicators
+are described below.
+3.1. Spectroscopic Performance
+An important indicator of the performance of compound semiconductor materials, such as
+CdZnTe, is their energy resolution, quantiﬁed here using the full width at half maximum (FWHM) of
+the main photo-peak. The energy resolution is dependent on a number of factors, including the charge
+transport properties of the material, the charge carrier mobility (µ), and the carrier lifetime (τ), as well
+as the detector geometry and electronics. The magnitude of spatial variations in the energy resolution
+also provides an excellent indicator of the uniformity of the HF-CdZnTe material.
+The ultimate limit of the energy resolution of direct conversion detectors is described by the
+Fano-limited energy resolution. When an X-ray is absorbed in the semiconductor, the processes
+
+--- PAGE 7 ---
+Sensors 2020, 20, 2747 7 of 20
+that give rise to individual charge carriers are not independent events. The band structure of the
+material limits the numbers of ways that the semiconductor may be ionized and, as a result, the energy
+resolution that is achievable is better than that predicted by simple statistical considerations. The
+Fano-limited energy resolution (∆EFano) is described by Equation (1):
+∆EFano = 2.35
+√
+FWEγ, (1)
+where F is the Fano factor and W is the electron hole pair creation energy; these have values of 0.1
+and 4.62 eV ehp-1 in CdZnTe material [18]. In recent years, the spectroscopic performance of CdZnTe
+and CdTe detectors has improved dramatically, with FWHM measured at 59.54 keV of the order
+1–2 keV [9,16,19,20], compared to the theoretical Fano-limited minimum of 0.39 keV .
+The spectroscopic performance of the HF-CdZnTe material was evaluated using the 241Am
+sealed source as shown in Figure 4, where each channel of the spectra was 200 eV wide. The charge
+sharing-discriminated 241Am γ-ray spectrum of a single pixel is compared to that of the global spectrum
+(all the channels summed together) in Figure 4a; Figure 4b shows how the distribution of FWHM
+values for 59.54 keV photo-peak across the entire detector. The average value of the FWHM across
+all 6400 pixels of this detector was found to be 0.79 keV with a standard deviation in the values of
+±0.15 keV . In the best performing pixels, the FWHM was as low as 0.54 keV , which is approaching the
+noise limitations of the HEXITEC ASIC (~0.50 keV). For the lowest energy line of the sealed source,
+13.94 keV , the FWHM was measured to be 0.61 keV with a standard deviation in the values of±0.13 keV .
+These FWHM values are some of the best measured with CdZnTe material and compare favorably to
+the Fano-limited energy resolution of 0.39 keV as well as measurements by other groups using Acrorad
+CdTe detectors that have long been considered the gold standard within the community [9,19,20]. As
+seen in the map of the spatial variation in the FWHM values, the detector also shows a high degree of
+uniformity, with 99.93% of pixels having an FWHM of less than 2 keV . The poorest performing pixels
+for this detector were found at the edge of the sensor and are consistent with the increased leakage
+current and uncorrected charge sharing that occurs in these regions [21].
+The spectroscopic performance of all 10 of the HF-CdZnTe detectors were evaluated using the
+same method and the results are summarized in Table 1. Across the sample of 10 detectors, an average
+FWHM of 0.83 keV was measured, which is comparable to the best energy resolution previously
+measured with the Acrorad Schottky-anode CdTe using the HEXITEC ASIC [16]. It is worth noting
+that one of the key advantages of the CdZnTe is that, unlike the CdTe, it does not require the bias
+voltage to be cycled periodically to avoid bias-induced polarization.
+
+--- PAGE 8 ---
+Sensors 2020, 20, 2747 8 of 20
+Sensors 2020, 20, x FOR PEER REVIEW  7 of 17 
+ 
+ 
+Figure 4. The spectroscopic performance of the HF‐CdZnTe HEXITEC detector D185735 (a) the 241Am ‐
+ray spectrum after energy calibration and the removal of charge sharing events, a single pixel spectrum is 
+shown in red while the global spectrum is shown in black; (b) a histogram of the measured FWHM of the 
+241Am ‐ray across the entire detector array; (inset) the spatial distribution of the FWHM values. 
+Table 1. A summary of the spectroscopic performance of the 10 Redlen HF‐CdZnTe HEXITEC devices 
+as measured with the 59.54 keV 241Am ‐ray. The error in the FWHM value is the standard deviation 
+measured across the 6084 bulk pixels. 
+Serial Number  Pixel Yield (%)  counts (%)  FWHM (keV)  Charge Sharing (%) 
+D180265  95.52  8.2  0.86 ± 0.22  56.8 
+D185734  99.93  5.9  0.79 ± 0.14  55.1 
+D185735  99.93  5.5  0.79 ± 0.15  55.9 
+D185736  99.98  6.6  0.87 ± 0.17  62.2 
+D185738  99.92  9.0  0.85 ± 0.17  60.0 
+D185739  99.98  8.7  0.84 ± 0.13  56.1 
+D185740  99.93  12.2  0.89 ± 0.19  59.1 
+D185745  99.93  7.1  0.78 ± 0.13  56.5 
+D186747  99.89  5.7  0.82 ± 0.16  61.3 
+D185749  99.98  7.7  0.80 ± 0.13  56.6 
+AVERAGE  99.50  7.7  0.83  58.0 
+Figure 4. The spectroscopic performance of the HF-CdZnTe HEXITEC detector D185735 (a) the 241Am
+γ-ray spectrum after energy calibration and the removal of charge sharing events, a single pixel
+spectrum is shown in red while the global spectrum is shown in black; (b) a histogram of the measured
+FWHM of the 241Am γ-ray across the entire detector array; (inset) the spatial distribution of the
+FWHM values.
+
+--- PAGE 9 ---
+Sensors 2020, 20, 2747 9 of 20
+Table 1. A summary of the spectroscopic performance of the 10 Redlen HF-CdZnTe HEXITEC devices
+as measured with the 59.54 keV 241Am γ-ray. The error in the FWHM value is the standard deviation
+measured across the 6084 bulk pixels.
+Serial Number Pixel Yield (%) σcounts (%) FWHM (keV) Charge Sharing (%)
+D180265 95.52 8.2 0.86 ± 0.22 56.8
+D185734 99.93 5.9 0.79 ± 0.14 55.1
+D185735 99.93 5.5 0.79 ± 0.15 55.9
+D185736 99.98 6.6 0.87 ± 0.17 62.2
+D185738 99.92 9.0 0.85 ± 0.17 60.0
+D185739 99.98 8.7 0.84 ± 0.13 56.1
+D185740 99.93 12.2 0.89 ± 0.19 59.1
+D185745 99.93 7.1 0.78 ± 0.13 56.5
+D186747 99.89 5.7 0.82 ± 0.16 61.3
+D185749 99.98 7.7 0.80 ± 0.13 56.6
+A VERAGE 99.50 7.7 0.83 58.0
+3.2. Charge Sharing
+During data processing, each frame of data was inspected and events that displayed charge
+sharing identiﬁed. Figure 5a shows the distribution of the number of pixels involved in interactions,
+the event multiplicity, measured for sensor D185735. The magnitude of the number of shared events
+is a result of the detector geometry, the energy of the incoming photon, and the bias voltage applied
+across the detector [ 17]. The geometric contribution to the overall charge sharing was described
+by Iniewski [22] and predicts that 34.8% of the interactions should experience sharing under these
+operating conditions. In reality, a charge sharing percentage of 55.9% was measured for the detector in
+Figure 5a, and across the sample of 10 detectors the average was 58.0%, see Table 1. The di ﬀerence
+between the prediction and the measurement is likely to be due to the generation of cadmium and
+tellurium X-ray ﬂuorescence photons during interactions. These ﬂuorescence photons have ranges in
+the detector of 60–120 µm in the CdZnTe, which are comparable to the pixel size. When generated, the
+Cd and Te XRF photons are emitted in 4π and have a high probability of stopping in the neighboring
+pixels, leading to an increase in the number of shared events relative to the prediction from the detector
+geometry alone. It is also worth noting that there is very little spatial variation in the charge sharing
+percentage across the entire detector, see Figure 5a, with only major variations observed at the physical
+edge of the sensor. The spatial uniformity of the charge sharing suggests that the electric ﬁeld across
+the detector is also very uniform and does not contain the electric ﬁeld variations that have been
+observed previously in spectroscopic-grade CdZnTe material from Redlen [23].
+
+--- PAGE 10 ---
+Sensors 2020, 20, 2747 10 of 20
+Sensors 2020, 20, x FOR PEER REVIEW  8 of 17 
+ 
+3.2. Charge Sharing 
+During  data  processing,  each  frame  of  data  was  inspected  and  events  that  displayed  charge 
+sharing identified. Figure 5a shows the distribution of the number of pixels involved in interactions, 
+the event multiplicity, measured for sensor D185735. The magnitude of the number of shared events 
+is a result of the detector geometry, the energy of the incoming photon, and the bias voltage applied 
+across the detector [17]. The geometric contribution to the overall charge sharing was described by 
+Iniewski  [22]  and  predicts  that  34.8%  of  the  interactions  should  experience  sharing  under  these 
+operating conditions. In reality, a charge sharing percentage of 55.9% was measured for the detector 
+in Figure 5a, and across the sample of 10 detectors the average was 58.0%, see Table 1. The difference 
+between the prediction and the measurement is likely to be due to the generation of cadmium and 
+tellurium X‐ray fluorescence photons during interactions. These fluorescence photons have ranges in 
+the detector of 60–120 m in the CdZnTe, which are comparable to the pixel size. When generated, 
+the  Cd  and  Te  XRF  photons  are  emitted  in  4  and  have  a  high  probability  of  stopping  in  the 
+neighboring pixels, leading to an increase in the number of shared events relative to the prediction 
+from the detector geometry alone. It is also worth noting that there is very little spatial variation in 
+the charge sharing percentage across the entire detector, see Figure 5a, with only major variations 
+observed at the physical edge of the sensor. The spatial uniformity of the charge sharing suggests that the 
+electric field across the detector is also very uniform and does not contain the electric field variations that 
+have been observed previously in spectroscopic‐grade CdZnTe material from Redlen [23]. 
+ 
+Figure 5. The role of charge sharing in the performance of a HF-CdZnTe detector; ( a) a histogram
+showing the distribution of the number of pixels, the multiplicity, involved in an interaction; (inset) a
+map indicating the spatial variation in the percentage charge sharing per pixel; (b) the global spectrum
+without correction (dashed black line), with all charge sharing events removed (black solid line) and
+the spectrum of the m = 2 events after charge sharing addition (solid red line).
+As the HEXITEC system records each frame of data, any charge sharing corrections are applied
+during data processing, allowing diﬀerent algorithms to be used. Figure 5b shows the global spectra
+from detector D185735 that is produced using three diﬀerent techniques. Without any correction, the
+spectrum sits upon a broad distribution of lower energy events that are a result of the sharing of charge
+between multiple pixels that erroneously appear as separate events. The lower energy background
+is removed in the charge sharing discriminated spectrum that only includes the events detected in a
+single pixel (m = 1). The use of a charge sharing discrimination algorithm is eﬀective in producing the
+highest resolution spectroscopy but at a cost of 55.9% of the total counts. An alternative is to use a
+charge sharing addition algorithm where the charge in neighboring pixels are summed together in
+an attempt to recover the original energy of the event. In Figure 5b, the reconstructed spectrum is
+shown for those events that were shared between two pixels (m = 2). The charge sharing addition
+reconstructed spectrum is much broader than that of the single pixel events, with a Gaussian ﬁt of the
+photo-peak yielding an. FWHM of 1.7 and 0.7 keV , respectively. The broadening cannot merely be
+
+--- PAGE 11 ---
+Sensors 2020, 20, 2747 11 of 20
+explained by the addition of noise sources; instead, it is due to the loss of charge that occurs between
+pixels. The charge loss is a result of a lower ﬁeld region between pixels that results in additional charge
+trapping. This phenomenon has been studied previously in HEXITEC devices and is beyond the scope
+of this paper [24–26].
+3.3. Detector Defects
+Exceptional spectroscopic performance was measured in each of the 10 HF-CdZnTe detectors;
+however, some pixel to pixel variation was observed in the number of counts detected. Figure 6
+compares the intensity maps produced across all 10 detectors when exposed to a ﬂat ﬁeld exposure
+with the 59.54 keV emission of the 241Am-sealed source. While some of the detectors show little to no
+defects, notably sensor D185735, a number do show areas of considerable variation. The uniformity of
+these detectors can be quantiﬁed by calculating the variation in the number of counts in the 59.54 keV
+peak per pixel ( σcounts), see Table 1. The best performing detectors show pixel to pixel variations
+of 5.5% (D185735) while the worst shows 12.2% (D185740). The uniformity of the best HF-CdZnTe
+detectors compares well to that of Schottky CdTe detectors, which have previously been tested with
+HEXITEC that also show pixel to pixel variations of ~5% [16]. In the rest of this section, the diﬀerent
+types of non-uniformity observed in the HF-CdZnTe detectors will be examined in more detail.
+Figure 7a compares an optical image of the pixelated anode of sensor D180265 taken prior to
+hybridization to the measured X-ray response, Figure 7b. Of all of the 10 devices tested, D180265 had
+the poorest bond yield, with 4.48% of pixels having little to no spectroscopic performance. As can
+clearly be seen in the X-ray image, the majority of these poor pixels are in one corner of the detector and
+this appears to be consistent with an area of increased reﬂectance in the optical image of the surface.
+The area of low bond yield may be due to poor surface ﬂatness in this region of the sensor that results
+in the silver bumps and gold studs on the ASIC failing to mate.
+
+--- PAGE 12 ---
+Sensors 2020, 20, 2747 12 of 20
+Sensors 2020, 20, x FOR PEER REVIEW  10 of 17 
+Sensors 2020, 20, x; doi: FOR PEER REVIEW  www.mdpi.com/journal/sensors 
+ 
+ 
+Figure 6. Maps of the intensity per pixel measured for each of the CdZnTe detectors (a)–(j) under a flat field irradiation with an 241Am‐sealed source. The maps were 
+normalized to the median number of counts detected in each detector. The pixel to pixel variations in counts were in the range 5.5%–12.2%.
+Figure 6. Maps of the intensity per pixel measured for each of the CdZnTe detectors (a–j) under a ﬂat ﬁeld irradiation with an 241Am-sealed source. The maps were
+normalized to the median number of counts detected in each detector. The pixel to pixel variations in counts were in the range 5.5–12.2%.
+
+--- PAGE 13 ---
+Sensors 2020, 20, 2747 13 of 20
+Sensors 2020, 20, x FOR PEER REVIEW  11 of 17 
+Sensors 2020, 20, x; doi: FOR PEER REVIEW  www.mdpi.com/journal/sensors 
+ 
+Figure 7. A comparison of an optical image of the 80 × 80, 250 m pitch, pixels of sensor D180265 prior 
+to hybridization (a), and the intensity map produced by a flat field X‐ray exposure of the detector 
+module (b). The total area of the sensor is 20.35 mm × 20.45 mm. Some correlation between defects in 
+the optical and X‐ray images can be observed. 
+A number of features in the optical image shown in Figure 7a can be correlated with the X‐ray 
+image in Figure 7b. These defects include a deep scratch across a block of 3 × 4 pixels that results in 
+a region of little to no X‐ray response corresponding to the scratched pixels. As clear damage can be 
+seen to the electrode material, it is not surprising that this results in a large reduction of the number 
+of counts in these pixels. A number of other large features seen in the right‐hand side of the optical 
+image in Figure 7 can also be correlated with the X‐ray response. While at first these defects may 
+appear  to  be  scratches  of  the  electrode,  closer  inspection  of  both  images  demonstrates  that  these 
+features do not perfectly align. The optical image also suggests the feature is either a scratch to the 
+sub‐electrode CdZnTe surface or some other crystalline defect. It is also notable that these features 
+display local increases in the measured intensity rather than the decrease observed in the large scratch 
+that pierces the electrode; this suggests that these features are influencing the local electric field. 
+The same features are also observed in some of the other HF‐CdZnTe devices, see Figure 6, but 
+the highest densities are in detectors D185740 and D185749. Figure 8 compares the spatial variation 
+in the counts measured to the energy resolution (FWHM) and charge sharing percentage for each of 
+the pixels. These measurements demonstrate, at least at this pixel pitch, that the energy resolution of 
+a pixel is independent of the density of these features. However, a correlation with the magnitude of 
+the charge sharing experienced by a pixel and these defects can be observed. Pixels showing higher 
+than  average  counts  in  the  intensity  maps  also  show  less  charge  sharing;  this  suggests  that  these 
+features are causing local variations in the electric field that increase the effective collection volume 
+of the pixels that are coincident with the defects. 
+Similar features in CdZnTe material have been reported previously by Veale et al. [27] in Redlen 
+spectroscopic‐grade CdZnTe and more recently by Tsigaridas et al. [7] in Redlen HF‐CdZnTe. Similar 
+defects have also been studied in other material systems, such as CdTe [28] and GaAs [29], where 
+they  have  been  described  as  ‘dislocation  walls’.  These  defects  are  formed  due  to  the  stresses  the 
+crystal experiences during growth [30] and the distribution of these dislocation networks result in 
+local variations in both the photo‐ and dark‐currents in the sensor. While the presence of these defects 
+is not ideal, they are static and the use of flat fielding is effective in removing the effect they have on 
+their  imaging  performance  [7,29].  The  results  from  this  sample  of  10  detectors  suggest  that  both 
+scratching of the sub‐electrode CdZnTe surface and dislocation walls plays a role in the performance 
+of this HF‐CdZnTe material.  
+Figure 7. A comparison of an optical image of the 80 × 80, 250 µm pitch, pixels of sensor D180265
+prior to hybridization (a), and the intensity map produced by a ﬂat ﬁeld X-ray exposure of the detector
+module (b). The total area of the sensor is 20.35 mm × 20.45 mm. Some correlation between defects in
+the optical and X-ray images can be observed.
+A number of features in the optical image shown in Figure 7a can be correlated with the X-ray
+image in Figure 7b. These defects include a deep scratch across a block of 3 × 4 pixels that results in a
+region of little to no X-ray response corresponding to the scratched pixels. As clear damage can be
+seen to the electrode material, it is not surprising that this results in a large reduction of the number of
+counts in these pixels. A number of other large features seen in the right-hand side of the optical image
+in Figure 7 can also be correlated with the X-ray response. While at ﬁrst these defects may appear
+to be scratches of the electrode, closer inspection of both images demonstrates that these features do
+not perfectly align. The optical image also suggests the feature is either a scratch to the sub-electrode
+CdZnTe surface or some other crystalline defect. It is also notable that these features display local
+increases in the measured intensity rather than the decrease observed in the large scratch that pierces
+the electrode; this suggests that these features are inﬂuencing the local electric ﬁeld.
+The same features are also observed in some of the other HF-CdZnTe devices, see Figure 6, but the
+highest densities are in detectors D185740 and D185749. Figure 8 compares the spatial variation in
+the counts measured to the energy resolution (FWHM) and charge sharing percentage for each of the
+pixels. These measurements demonstrate, at least at this pixel pitch, that the energy resolution of a
+pixel is independent of the density of these features. However, a correlation with the magnitude of the
+charge sharing experienced by a pixel and these defects can be observed. Pixels showing higher than
+average counts in the intensity maps also show less charge sharing; this suggests that these features
+are causing local variations in the electric ﬁeld that increase the eﬀective collection volume of the pixels
+that are coincident with the defects.
+Similar features in CdZnTe material have been reported previously by Veale et al. [27] in Redlen
+spectroscopic-grade CdZnTe and more recently by Tsigaridas et al. [7] in Redlen HF-CdZnTe. Similar
+defects have also been studied in other material systems, such as CdTe [ 28] and GaAs [ 29], where
+they have been described as ‘dislocation walls’. These defects are formed due to the stresses the
+crystal experiences during growth [30] and the distribution of these dislocation networks result in
+local variations in both the photo- and dark-currents in the sensor. While the presence of these defects
+is not ideal, they are static and the use of ﬂat ﬁelding is e ﬀective in removing the e ﬀect they have
+on their imaging performance [7,29]. The results from this sample of 10 detectors suggest that both
+scratching of the sub-electrode CdZnTe surface and dislocation walls plays a role in the performance of
+this HF-CdZnTe material.
+
+--- PAGE 14 ---
+Sensors 2020, 20, 2747 14 of 20
+Sensors 2020, 20, x FOR PEER REVIEW  12 of 17 
+Sensors 2020, 20, x; doi: FOR PEER REVIEW  www.mdpi.com/journal/sensors 
+ 
+Figure 8. A comparison of the performance of detectors D185740 (a–c) and D185749 (d,e); the maps show the number of counts per pixel (a,d), the FWHM of the 59.54 keV 
+photo peak (b,e) and the charge sharing percentage (column and f). 
+Figure 8. A comparison of the performance of detectors D185740 (a–c) and D185749 (d,e); the maps show the number of counts per pixel (a,d), the FWHM of the
+59.54 keV photo peak (b,e) and the charge sharing percentage (column and f).
+
+--- PAGE 15 ---
+Sensors 2020, 20, 2747 15 of 20
+One of the other defect types that have historically had a large impact on the performance of
+CdZnTe and CdTe detectors, and as a result have been the focus of intense study, are tellurium
+inclusions [31]. Of the 10 detectors characterized in this study, only one, D185734, showed evidence for
+inclusions of appreciable size, suggesting that the concentration is low in the HF-CdZnTe material.
+Figure 9 compares the spectrum measured in a pixel that is suspected to contain an inclusion within its
+volume and the spectrum from an unaﬀected pixel in its vicinity. The eﬀect of the inclusion is two-fold:
+First, there is an impact on the spectroscopic performance of the pixel due to signiﬁcant low-energy
+tailing caused by charge trapping and the second is an increase in the frequency of charge sharing.
+These ﬁnding suggests that not only are impurities in and around the inclusion resulting in charge
+trapping but also that its presence is leading to a local reduction in the electric ﬁeld and, as a result,
+an increase in the proportion of charge sharing. These e ﬀects are consistent with previous results
+measured in CdZnTe and CdTe detectors [27,31].
+Sensors 2020, 20, x FOR PEER REVIEW  13 of 17 
+Sensors 2020, 20, x; doi: FOR PEER REVIEW  www.mdpi.com/journal/sensors 
+One of the other defect types that have historically had a large impact on the performance of 
+CdZnTe  and  CdTe  detectors,  and  as  a  result  have  been  the  focus  of  intense  study,  are  tellurium 
+inclusions [31]. Of the 10 detectors characterized in this study, only one, D185734, showed evidence 
+for  inclusions  of  appreciable  size,  suggesting  that  the  concentration  is  low  in  the  HF‐CdZnTe 
+material. Figure 9 compares the spectrum measured in a pixel that is suspected to contain an inclusion 
+within its volume and the spectrum from an unaffected pixel in its vicinity. The effect of the inclusion 
+is two‐fold: First, there is an impact on the spectroscopic performance of the pixel due to significant 
+low‐energy tailing caused by charge trapping and the second is an increase in the frequency of charge 
+sharing. These finding suggests that not only are impurities in and around the inclusion resulting in 
+charge trapping but also that its presence is leading to a local reduction in the electric field and, as a 
+result,  an  increase  in  the  proportion  of  charge  sharing.  These  effects  are  consistent  with  previous 
+results measured in CdZnTe and CdTe detectors [27,31]. 
+ 
+Figure  9.  A  comparison  of  the  spectroscopic  performance  of  a  standard  pixel  (black  solid  line)  in 
+detector D185734  and  a  pixel in  the  same device  that  is  suspected  to contain  a  tellurium  inclusion 
+within its volume; (inset) a map of the charge sharing percentage measured in the area surrounding 
+the inclusion. 
+3.4. Temporal Stability 
+Another important consideration in accessing the performance of the HF‐CdZnTe material is its 
+temporal  stability.  For  techniques  like  computed  tomography  that  are  widely  used  for  materials 
+science, security, and medical imaging, detectors may be exposed to high fluxes of X‐rays for many 
+hours at a time and must remain stable for the duration of the measurements. Temporal variations in 
+the performance of CdTe and CdZnTe detectors have commonly been reported. These phenomena 
+are typically caused by flux‐induced [2,32] and bias‐induced polarization [33,34] in which a buildup 
+of space charge, caused by the trapping of carriers, leads to a progressive modification of the electric 
+field.  These  changes  in  electric  field  result  in  a  reduction  in  both  the  counting  efficiency  and  the 
+spectroscopic performance of detectors. The rates of these changes are dependent on a number of 
+factors, such as the photon flux, detector electrode type, the bias voltage, and temperature. 
+In  the  case  of  bias‐induced  polarization,  the  use  of  a  blocking  (Schottky)  electrode  prevents 
+carriers  leaving  the  sensor,  resulting  in  the  formation  of  space  charge  under  the  electrode 
+independent  of  the  photon  flux.  The  presence  of  bias‐induced  polarization  is  normally  addressed 
+Figure 9. A comparison of the spectroscopic performance of a standard pixel (black solid line) in
+detector D185734 and a pixel in the same device that is suspected to contain a tellurium inclusion
+within its volume; (inset) a map of the charge sharing percentage measured in the area surrounding
+the inclusion.
+3.4. T emporal Stability
+Another important consideration in accessing the performance of the HF-CdZnTe material is
+its temporal stability. For techniques like computed tomography that are widely used for materials
+science, security, and medical imaging, detectors may be exposed to high ﬂuxes of X-rays for many
+hours at a time and must remain stable for the duration of the measurements. Temporal variations in
+the performance of CdTe and CdZnTe detectors have commonly been reported. These phenomena are
+typically caused by ﬂux-induced [2,32] and bias-induced polarization [33,34] in which a buildup of
+space charge, caused by the trapping of carriers, leads to a progressive modiﬁcation of the electric ﬁeld.
+These changes in electric ﬁeld result in a reduction in both the counting eﬃciency and the spectroscopic
+performance of detectors. The rates of these changes are dependent on a number of factors, such as the
+photon ﬂux, detector electrode type, the bias voltage, and temperature.
+
+--- PAGE 16 ---
+Sensors 2020, 20, 2747 16 of 20
+In the case of bias-induced polarization, the use of a blocking (Schottky) electrode prevents carriers
+leaving the sensor, resulting in the formation of space charge under the electrode independent of the
+photon ﬂux. The presence of bias-induced polarization is normally addressed through the use of a
+bias refresh scheme, where the detector bias is periodically set to 0 V for a short time of the order of a
+second in order to allow the space charge to recombine. The period of bias refreshing can be on the
+order of minutes or hours depending on the detector conditions [16,33–35]. In the case of ﬂux-induced
+polarization, the large number of photo-generated carriers results in excessive numbers of trapped
+holes that form the space charge within the sensor. Once polarization occurs, only a large reduction or
+removal of the photon ﬂux will allow the detector to recover [2,32].
+Recent encouraging results from the characterization of HF-CdZnTe material coupled to single
+photon counting [7] and integrating detector ASICs [6] have demonstrated that the material is capable
+of operating at high photon ﬂuxes, with negligible changes detected in detector performance. These
+results suggest that the polarization phenomenon in this material is reduced or suppressed. The
+advantage of the spectroscopic information provided by the HEXITEC ASIC is that it allows any
+small changes in the detector material under extended operation to be studied; it is worth noting
+that HEXITEC is limited to use for low X-ray ﬂuxes ( <105 ph s −1 mm−2). In order to study the
+detector stability in more detail, data was collected for 300 s at 900-s intervals for a total of 9–12 h
+with detector D185735. Measurements were made with the detector temperature ﬁxed at the standard
+28 ◦C operating temperature as well as at a reduced temperature of 18 ◦C. A constant bias of 750 V
+(325 V mm−1) was applied to the detector and no bias refresh scheme was used. Figure 10 shows the
+evolution of the global spectrum at 28 ◦C over the course of a 9-h exposure. The change in the number
+of counts, position and width of the 59.54 keV photo-peak, as well as the percentage of charge sharing
+events were evaluated for each acquisition, see Figure 11.
+Sensors 2020, 20, x FOR PEER REVIEW  14 of 17 
+ 
+through the use of a bias refresh scheme, where the detector bias is periodically set to 0 V for a short 
+time  of  the  order  of  a  second  in  order to  allow  the space  charge to  recombine.  The  period of  bias 
+refreshing can be on the order of minutes or hours depending on the detector conditions [16,33−35]. 
+In  the  case  of  flux‐induced  polarization,  the  large  number  of  photo‐generated  carriers  results  in 
+excessive numbers of trapped holes that form the space charge within the sensor. Once polarization 
+occurs, only a large reduction or removal of the photon flux will allow the detector to recover [2,32].  
+Recent encouraging results from the characterization of HF‐CdZnTe material coupled to single 
+photon counting [7] and integrating detector ASICs [6] have demonstrated that the material is capable 
+of operating at high photon fluxes, with negligible changes detected in detector performance. These 
+results  suggest  that  the  polarization  phenomenon  in  this  material  is  reduced  or  suppressed.  The 
+advantage  of  the  spectroscopic  information  provided  by  the  HEXITEC  ASIC  is  that  it  allows  any 
+small changes in the detector material under extended operation to be studied; it is worth noting that 
+HEXITEC  is  limited  to  use  for  low  X‐ray  fluxes  (<105  ph  s−1  mm−2).  In  order  to  study  the  detector 
+stability in more detail, data was collected for 300 s at 900‐s intervals for a total of 9–12 h with detector 
+D185735.  Measurements  were  made  with  the  detector  temperature  fixed  at  the  standard  28  °C 
+operating temperature as well as at a reduced temperature of 18 °C. A constant bias of 750 V (325 V 
+mm−1)  was  applied  to  the  detector  and  no  bias  refresh  scheme  was  used.  Figure  10  shows  the 
+evolution of the global spectrum at 28 °C over the course of a 9‐h exposure. The change in the number 
+of counts, position and width of the 59.54 keV photo‐peak, as well as the percentage of charge sharing 
+events were evaluated for each acquisition, see Figure 11. 
+ 
+ 
+Figure  10.  The  variation  in  the  spectroscopic  performance  of  detector  D185735  as  a  function  of 
+exposure time. (inset) the small changes observed in the 59.54 keV photo peak.   
+At both of the operating temperatures measured, small changes in the overall performance of the 
+detector were observable. For example, the average FWHM measured in the detector over 9 h was found 
+to change from 770 to 840 eV at 28 °C and 760 to 780 eV at 18 °C. These levels of changes are negligible and 
+show no clear spatial correlation within the detector. As with previous studies at higher photon fluxes, 
+this suggests that the response of the HF‐CdZnTe material shows a high degree of stability over many 
+hours, which is more than sufficient for the typical operation conditions of these detectors. 
+ 
+Figure 10. The variation in the spectroscopic performance of detector D185735 as a function of exposure
+time. (inset) the small changes observed in the 59.54 keV photo peak.
+
+--- PAGE 17 ---
+Sensors 2020, 20, 2747 17 of 20
+Sensors 2020, 20, x FOR PEER REVIEW  15 of 17 
+ 
+ 
+Figure 11. The stability of D185735 over a period of 12 h. Key indicators of the detectors spectroscopic 
+performance are shown. (a) the average number of counts detected per pixel; (b) the average charge 
+sharing percentage per pixel; (c) the centroid of the 59.54 keV photo‐peak and (d) the average FWHM 
+of the 59.54 keV photo‐peak. Data are shown at a temperature of 28 (red) and 18 °C (blue). 
+4. Conclusions 
+A set of 10 HF‐CdZnTe detectors grown and processed by Redlen Technologies were assembled 
+and characterized using the HEXITEC ASIC by UKRI STFC. The characterization of these detectors 
+has  demonstrated  the  exceptional  spectroscopic  performance  of  the  HF‐CdZnTe  material,  with 
+energy resolutions of < 900 eV measured at 59.54 keV across all 10 devices. The spatial uniformity of 
+the best performing detectors was comparable to that of Acrorad Schottky CdTe detectors, with pixel 
+to pixel variations in the number of counts of <6%. In some of the detectors, the spatial uniformity of 
+the detectors was poorer, with pixel to pixel variations in the number of counts detected of >10%. 
+These detectors showed evidence for a high concentration of scratching of the CdZnTe crystal surface 
+prior to electrode deposition as well as the presence of crystalline defects, such as dislocation walls. 
+These defects lead to local variations in the counting performance and the proportion of events that 
+demonstrate  charge  sharing;  however,  this  had  little  effect  on  the  energy  resolution  of  individual 
+pixels.  Measurements  also  showed  that  9  out  of  the  10  detectors  were  free  of  large  inclusions, 
+suggesting  that  the  overall  inclusion  concentration  is  low  in  the  HF‐CdZnTe  material.  An 
+investigation  of  the  detector  response  over  a  12‐h  period  under  constant  bias  showed  negligible 
+changes  in  performance,  providing  further  evidence  for  the  excellent  temporal  stability  of  this 
+material. These results suggest that HF‐CdZnTe material is an excellent candidate for the production 
+of a new generation of X‐ray imaging cameras at synchrotrons, FELs, and beyond.  
+Author  Contributions:  The  co‐author  M.C.V.  led  the  experimental  measurements,  data  analysis  and  paper 
+writing;  L.J.,  M.D.H.,  P.S.,  R.M.W.  and  M.D.W.  contributed  to  the  experimental  measurements  and  paper 
+writing; P.B., S.C., J.L. and A.S. were responsible for the hybridisation of the CdZnTe sensors to HEXITEC ASICs; 
+C.C.T.H., K.I., P. M. and G. P. were responsible for the fabrication of the HF‐CdZnTe detectors and provided 
+advice  on  the  interpretation  of  the  experimental  results.  All  authors  have  read  and  agreed  to  the  published 
+version of the manuscript. 
+Figure 11. The stability of D185735 over a period of 12 h. Key indicators of the detectors spectroscopic
+performance are shown. (a) the average number of counts detected per pixel; (b) the average charge
+sharing percentage per pixel; (c) the centroid of the 59.54 keV photo-peak and (d) the average FWHM
+of the 59.54 keV photo-peak. Data are shown at a temperature of 28 (red) and 18 ◦C (blue).
+At both of the operating temperatures measured, small changes in the overall performance of
+the detector were observable. For example, the average FWHM measured in the detector over 9 h
+was found to change from 770 to 840 eV at 28 ◦C and 760 to 780 eV at 18 ◦C. These levels of changes
+are negligible and show no clear spatial correlation within the detector. As with previous studies at
+higher photon ﬂuxes, this suggests that the response of the HF-CdZnTe material shows a high degree
+of stability over many hours, which is more than su ﬃcient for the typical operation conditions of
+these detectors.
+4. Conclusions
+A set of 10 HF-CdZnTe detectors grown and processed by Redlen Technologies were assembled
+and characterized using the HEXITEC ASIC by UKRI STFC. The characterization of these detectors
+has demonstrated the exceptional spectroscopic performance of the HF-CdZnTe material, with energy
+resolutions of <900 eV measured at 59.54 keV across all 10 devices. The spatial uniformity of the
+best performing detectors was comparable to that of Acrorad Schottky CdTe detectors, with pixel to
+pixel variations in the number of counts of <6%. In some of the detectors, the spatial uniformity of
+the detectors was poorer, with pixel to pixel variations in the number of counts detected of >10%.
+These detectors showed evidence for a high concentration of scratching of the CdZnTe crystal surface
+prior to electrode deposition as well as the presence of crystalline defects, such as dislocation walls.
+These defects lead to local variations in the counting performance and the proportion of events that
+demonstrate charge sharing; however, this had little eﬀect on the energy resolution of individual pixels.
+Measurements also showed that 9 out of the 10 detectors were free of large inclusions, suggesting
+that the overall inclusion concentration is low in the HF-CdZnTe material. An investigation of the
+detector response over a 12-h period under constant bias showed negligible changes in performance,
+providing further evidence for the excellent temporal stability of this material. These results suggest
+
+--- PAGE 18 ---
+Sensors 2020, 20, 2747 18 of 20
+that HF-CdZnTe material is an excellent candidate for the production of a new generation of X-ray
+imaging cameras at synchrotrons, FELs, and beyond.
+Author Contributions: The co-author M.C.V . led the experimental measurements, data analysis and paper writing;
+L.J., M.D.H., P .S., R.M.W. and M.D.W. contributed to the experimental measurements and paper writing; P .B., S.C.,
+J.L. and A.S. were responsible for the hybridisation of the CdZnTe sensors to HEXITEC ASICs; C.C.T.H., K.I., P .M.
+and G.P . were responsible for the fabrication of the HF-CdZnTe detectors and provided advice on the interpretation
+of the experimental results. All authors have read and agreed to the published version of the manuscript.
+Funding: This research was funded by the UKRI STFC Centre for Instrumentation: Front End Electronics and
+Detectors for higher Energies and Rates (FEEDER) and Advanced Detectors for Science (ADviSe) Managed
+Programmes 2019−2020.
+Conﬂicts of Interest: The authors declare no conﬂict of interest.
+References
+1. Schlesinger, T.E.; Toney, J.E.; Yoon, H.; Lee, E.Y.; Brunett, B.A.; Franks, L.; James, R.B. Cadmium zinc telluride
+and its use as a nuclear radiation detector material. Mat. Sci. Eng. Rep. 2001, 32, 103–189. [CrossRef]
+2. Bale, D.S.; Soldner, S.A.; Szeles, C. A mechanism for dynamic lateral polarization in CdZnTe under high ﬂux
+x-ray irradiation. Appl. Phys. Lett. 2008, 92, 082101. [CrossRef]
+3. Streicher, M.; Brown, S.; Zhu, Y.; Goodman, D.; He, Z. Special Nuclear Material Characterization Using
+Digital 3-D Position Sensitive CdZnTe Detectors and High Purity Germanium Spectrometers. T ran. Nucl. Sci.
+2016, 63, 2649–2656. [CrossRef]
+4. Iniewski, K. CZT sensors for Computed Tomography: From crystal growth to image quality. J. Inst. 2016, 11,
+C12034. [CrossRef]
+5. Thomas, B.; Veale, M.C.; Wilson, M.D.; Seller, P .; Schneider, A.; Iniewski, K. Characterisation of Redlen
+high-ﬂux CdZnTe. J. Inst. 2017, 12, C12045.
+6. Veale, M.C.; Angelsen, C.; Booker, P .; Coughlan, J.; French, M.J.; Hardie, A.; Hart, M.; Lipp, J.; Nicholls, T.;
+Schneider, A.; et al. Cadmium zinc telluride pixel detectors for high-intensity x-ray imaging at free electron
+lasers. J. Phys. D Appl. Phys. 2018, 12, 085106. [CrossRef]
+7. Tsigaridas, S.; Ponchut, C. X-ray imaging with high-Z sensors for the ESRF-EBS Upgrade. J. Inst. 2019, 14,
+C04009. [CrossRef]
+8. Wilson, M.D.; Dummott, L.; Duarte, D.D.; Green, F.H.; Pani, S.; Schneider, A.; Scu ﬀham, J.W.; Seller, P .;
+Veale, M.C. A 10 cm × 10 cm CdTe Spectroscopic Imaging Detector based on the HEXITEC ASIC. J. Inst.
+2015, 10, P10011. [CrossRef]
+9. Zambon, P .; Radicci, V .; Trueb, P .; Disch, C.; Rissi, M.; Sakhelashvili, T.; Schneebeli, M.; Broennimann, C.
+Spectral response characterization of CdTe sensors of diﬀerent pixel size with the IBEX ASIC. Nucl. Instrum.
+Methods Phys. Res. Sect. A 2018, 892, 106–113. [CrossRef]
+10. Jones, L.; Seller, P .; Wilson, M.; Hardie, A. HEXITEC ASIC – A pixelated readout chip for CZT detectors.
+Nucl. Instrum. Methods Phys. Res. Sect. A 2009, 604, 34–37. [CrossRef]
+11. Schneider, A.; Veale, M.C.; Duarte, D.D.; Bell, S.J.; Wilson, M.D.; Lipp, J.D.; Seller, P . Interconnect and bonding
+techniques for pixelated X-ray and gamma-ray detectors. J. Inst. 2015, 10, C02010. [CrossRef]
+12. Liotti, E.; Lui, A.; Connolley, T.; Dolbnya, I.P .; Sawhney, K.J.S.; Malandain, A.; Wilson, M.D.; Veale, M.C.;
+Seller, P .; Grant, P .S. Mapping of multi-elements during melting and solidiﬁcation using synchrotron X-rays
+and pixel-based spectroscopy. Sci. Rep. 2015, 5, 15988. [CrossRef] [PubMed]
+13. Egan, C.K.; Jacques, S.D.M.; Wilson, M.D.; Veale, M.C.; Seller, P .; Beale, A.M.; Pattrick, R.A.D.; Withers, P .J.;
+Cernik, R.J. 3D chemical imaging in the laboratory by hyperspectral X-ray computed tomography. Sci. Rep.
+2015, 5, 15979. [CrossRef]
+14. Baumgartner, W.H.; Christe, S.D.; Ryan, D.F.; Inglis, A.R.; Shih, A.Y.; Gregory, K.; Wilson, M.D.; Seller, P .;
+Gaskin, J.; Wilson-Hodge, C. The HEXITC hard x-ray pixelated CdTe imager for fast solar observation. Proc.
+SPIE 2016, 9915, 99151D.
+
+--- PAGE 19 ---
+Sensors 2020, 20, 2747 19 of 20
+15. Golovin, G.; Banerjee, S.; Liu, C.; Chen, S.; Zhang, J.; Zhao, B.; Zhang, P .; Veale, M.; Wilson, M.; Seller, P .; et al.
+Intrinsic beam emittance of laser-accelerated electrons measured by x-ray spectroscopic imaging. Sci. Rep.
+2016, 6, 24622. [CrossRef] [PubMed]
+16. Veale, M.C.; Seller, P .; Wilson, M.; Liotti, E. HEXITEC: A High-Energy X-ray Spectroscopic Imaging Detector
+for Synchrotron Applications. Sync. Rad. News 2018, 31, 28–32. [CrossRef]
+17. Veale, M.C.; Bell, S.J.; Duarte, D.D.; Schneider, A.; Seller, P .; Wilson, M.D.; Iniewski, K. Measurements of
+charge sharing in small pixel CdTe detectors. Nucl. Instrum. Methods Phys. Res. Sect. A 2014, 767, 218–226.
+[CrossRef]
+18. Owens, A.; Peacock, A. Compound semiconductor radiation detectors. Nucl. Instrum. Methods Phys. Res.
+Sect. A 2004, 531, 18–37. [CrossRef]
+19. Maier, D.; Blondel, C.; Delisle, C.; Limousin, O.; Martignac, J.; Meuris, A.; Visticot, F.; Daniel, G.; Bausson, P .-A.;
+Gevin, O.; et al. Second generation of portable gamma camera based on Caliste CdTe hybrid technology.
+Nucl. Instrum. Methods Phys. Res. Sect. A 2018, 892, 106–113.
+20. Watanabe, S.; Ishikawa, S.-N.; Aono, H.; Takeda, S.; Odaka, H.; Kokubun, M.; Takahashi, T.; Nakazawa, K.;
+Tajima, H.; Onishi, M.; et al. High Energy Resolution Hard X-Ray and Gamma-Ray Imagers Using CdTe
+Diode Devices. IEEE T rans. Nucl. Sci. 2009, 56, 777–782. [CrossRef]
+21. Duarte, D.D.; Bell, S.J.; Lipp, J.; Schneider, A.; Seller, P .; Veale, M.C.; Wilson, M.D.; Beaker, M.A.; Sellin, P .J.;
+Kachkanov, V . Edge eﬀects in a small pixel CdTe for X-ray imaging. J. Inst. 2013, 8, P10018. [CrossRef]
+22. Iniewski, K.; Chen, H.; Bindley, G.; Kuvvetli, I.; Budtz-Jorgensen, C. Modeling charge-sharing e ﬀects in
+pixelated CZT detectors. In Proceedings of the 2007 IEEE Nuclear Science Symposium Conference Record,
+Honolulu, HI, USA, 26 October−3 November 2007; pp. 4608–4611.
+23. Veale, M.C.; Bell, S.J.; Duarte, D.D.; Schneider, A.; Seller, P .; Wilson, M.D.; Kachkanov, V .; Sawhney, K.J.S.
+Synchrotron characterization of non-uniformities in a small pixel cadmium zinc telluride detector. Nucl.
+Instrum. Methods Phys. Res. Sect. A 2013, 729, 265–272. [CrossRef]
+24. Bugby, S.L.; Koch-Mehrin, K.A.; Veale, M.C.; Wilson, M.D.; Lees, J.E. Energy-loss correction in charge sharing
+events for improved performance of pixelated compound semiconductors. Nucl. Instrum. Methods Phys. Res.
+Sect. A 2019, 940, 142–151. [CrossRef]
+25. Veale, M.C.; Jones, L.L.; Thomas, B.; Seller, P .; Wilson, M.D.; Iniewski, I. Improved spectroscopic performance
+in compound semiconductors for high rate X-ray and gamma-ray imagig applications: A novel depth of
+interaction correction technique. Nucl. Instrum. Methods Phys. Res. Sect. A 2019, 927, 37–45. [CrossRef]
+26. Abbene, L.; Gerardi, G.; Principato, F.; Bettelli, M.; Seller, P .; Veale, M.C.; Fox, O.; Sawhney, K.;
+Zambelli, N.; Benassi, G.; et al. Dual-polarity pulse processing and analysis for charge-loss correction in
+cadmium-zinc-telluride pixel detectors. J. Sync. Rad. 2018, 25, 1078–1092. [CrossRef]
+27. Veale, M.C.; Bell, S.J.; Seller, P .; Wilson, M.D.; Kachkanov, V . X-ray micro-beam characterization of a small
+pixel CdTe detector. J. Inst. 2012, 7, P07017. [CrossRef]
+28. Buis, C.; Marrakchi, G.; Laﬀord, T.A.; Brambilla, A.; Verger, L.; Gros d’Aillon, E. Eﬀects of Dislocation Walls
+on Image Quality When Using Cadmium Telluride X-ray Detectors. T ran. Nucl. Sci. 2013, 60, 199–203.
+[CrossRef]
+29. Ponchut, C.; Cotte, M.; Lozinskaya, A.; Zarubin, A.; Tolbanov, O.; Tyazhev, A. Characterisation of GaAs:Cr
+pixel sensors coupled to Timepix chips in view of synchrotron applications. J. Inst. 2017, 12, C12023.
+[CrossRef]
+30. Rudolph, P . Dislocation cell structures in melt-grown semiconductor compound crystals.Cryst. Res. T echnol.
+2005, 40, 7–20. [CrossRef]
+31. Bolotnikov, A.E.; Babalola, S.; Camarda, G.S.; Cui, Y.; Egarievwe, S.U.; Hawrami, R.; Hossain, A.; Yang, G.;
+James, R.B. Te Inclusions in CZT Detectors: New Method for Correcting Their Adverse Eﬀects. T ran. Nucl.
+Sci. 2010, 57, 910–919. [CrossRef]
+32. Prokesch, M.; Soldner, S.A.; Sundaram, A.G.; Reed, M.D.; Li, H.; Eger, J.F.; Reiber, J.L.; Shanor, C.L.; Wray, C.L.;
+Emerick, A.J.; et al. CdZnTe Detectors Operating at X-ray Fluxes of 100 Million Photons/(mm2.sec). T ran.
+Nucl. Sci. 2016, 63, 1854–1859. [CrossRef]
+33. Cola, A.; Farella, I. The polarization mechanism in CdTe Schottky detectors. Appl. Phys. Lett. 2009, 94,
+102113. [CrossRef]
+
+--- PAGE 20 ---
+Sensors 2020, 20, 2747 20 of 20
+34. Astromskas, V .; Gimenez, E.N.; Lohstroh, A.; Tartoni, N. Evaluation of Polarization eﬀects of e- Collection
+Schottky CdTe Medipix3RX Hybrid Pixel Detector. T ran. Nucl. Sci. 2016, 63, 252–258. [CrossRef]
+35. Gimenez, E.N.; Astomskas, V .; Horswell, I.; Omar, D.; Spiers, J.; Tartoni, N. Development of a Schottky CdTe
+Medipix3RX hybrid photon counting detector with spatial and energy resolving capabilities. Nucl. Instrum.
+Methods Phys. Res. Sect. A 2016, 824, 101–103. [CrossRef]
+© 2020 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access
+article distributed under the terms and conditions of the Creative Commons Attribution
+(CC BY) license (http://creativecommons.org/licenses/by/4.0/).

@@ -1,0 +1,375 @@
+
+
+--- PAGE 1 ---
+X-ray diffraction imaging system for the detection of 
+illicit substances using pixelated CZT-detectors  
+D. Kosciesza, J.-P. Schlomka, J. Meyer, Morpho Detection Germany GmbH, 
+G. Montemont, O. Monnet, S. Stanchina, L. Verger,  CEA-Leti, MINATEC
+    Abstract–The use of energy-dispersive X-ray diffraction (XRD) 
+in security screening applications allows for highest detection and 
+lowest false-alarm rates. So far, only Germanium-detectors have 
+been used in commercially available XRD baggage-scanning 
+systems, limiting the available detection area due to technical and 
+commercial reasons, and as a consequence, the achievable 
+throughput.  Morpho Detection has built an innovative X-ray 
+diffraction imaging (XD i) system equipped with 17 pixelated 
+Cadmium-Zinc-Telluride (CZT) detector modules for increased 
+detection-area to alleviate this limitation.  A multi-focus X-ray 
+source (MFXS) allows for high X-ray flux and makes any other 
+mechanical movement, except for the bags, obsolete.  In 
+conjunction with a dedicated collimation system the detectors 
+measure the scatter from the bag spatially and energetically 
+resolved, allowing for a voxelized reconstruction of the bag’s 
+scatter-signature. The detector-array is required to deliver 
+spectra of high quality, calling for very good energy-resolution 
+and efficiencies, which is why signal-corrections are performed 
+on-board.  Each module is a completely independent unit to 
+ensure service friendliness, receiving just one voltage, a trigger 
+and Ethernet for control and data-transfer. We will explain the 
+functional principle of the XD i -system, present the performance 
+of the detectors with respect to stability and show spectra of 
+different materials and reconstructed 3-D feature maps.  
+I. I NTRODUCTION 
+-RAY  diffraction (XRD) is a powerful method for 
+screening airport baggage  with respect to containing illicit 
+substances such as commercial, military and home-made 
+explosives, which are mostly polycrystalline and therefore give 
+very distinct diffraction signals [1], but also liquids, aerosols 
+and gels have an internal molecular order, and therefore 
+produce characteristic diffraction signals as well [2].   
+XRD probes the structure of a material by measuring the 
+coherently scattered rays that obey Bragg’s law, which states 
+that constructive interference can be observed from diffracted 
+waves of wavelength λ under the scattering angle Θ, if the 
+phase-difference of the waves diffracted at lattice planes with 
+lattice constant d is a multiple n of the wavelength λ [3]:  
+2sin 2Θ= d nλ                                      (1) 
+Substituting λ by the relation E=hc/λ, with h being Planck’s 
+constant and c the speed of light, and rewriting (1) yields (2),  
+                                                          
+Manuscript received November 22, 2013.  
+D. Kosciesza, J.-P. Schlomka and J.Meyer are with Morpho Detection 
+Germany GmbH, Hamburg, Germany (telephone: +49-40-82315-212,  e-mail: 
+dirk.kosciesza @morphodetection.com).  
+G. Montemont, O. Monnet, S. Stanchina and L. Verger are with   CEA-
+Leti, MINATEC Campus, 17 rue des Martyrs, 38054 Grenoble Cedex 9, 
+France. 
+d
+n
+hc
+E
+22sin =Θ⋅
+                                  (2) 
+which infers, that for constant energy E, signals from different 
+lattice spacings d can be measured at different scattering 
+angles (monochromatic method), or, the same can be measured 
+by using a broad band of  incoming energies and measuring 
+the energy-resolved signal under constant angle Θ. 
+This so-called Laue- or energy-dispersive method is employed 
+in baggage-inspection, since only sources with a broad 
+bremsstrahlungs-spectrum, like X-ray tubes, provide enough 
+photon-flux to inspect bags in a reasonable amount of time.   
+Due to XRD’s material specificity, it allows for high 
+probability of detection at low false alarm rates. So far, only 
+two commercial products have existed on the market, the first 
+one introduced in 1999 by Heimann using a pencil-beam 
+geometry [4]. Its obvious drawback was the limited object-
+coverage, which is why it was used for clearing false-alarms at 
+specific locations in a bag only. The second system was 
+introduced in 2000 by Yxlon as XES3000 employing a cone-
+beam scatter-geometry for increased object-coverage allowing 
+for complete bag-scans in about 60s. Its successor, the 
+XRD3500 [5], employs the same diffraction geometry, but X-
+ray source and detector are not rigidly coupled via a big C-
+arm, but instead are electronically geared via linear motors. It 
+has an imaging stage for identification of threat regions 
+detected by other up-stream scanners, and, hence, is mostly 
+used for clearing false-alarm bags as well. Despite certification 
+by the most demanding authorities for highest detection and 
+lowest false-alarm rates, these systems have never been sold in 
+high volume because of their high price at given throughput. 
+Cost factors are the precise and bulky drive-mechanics  
+X
+Fig. 1: Picture of the XDi  cabin-baggage screener.
+978-1-4799-0534-8/13/$31.00 ©2013 IEEE
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 03:01:00 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 2 ---
+associated with the need for a big and heavy led-plated cabin, 
+precision collimators, a 12kW rotating-anode tube, and, as the 
+most expensive single part, a 100 mm diameter Germanium-
+detector.  
+In order to address the problems of cost and throughput, a 
+completely new geometry has been proposed that just requires 
+the movement of the bag, eliminating the bulky mechanics 
+required for alignment of source and detector. The concept 
+foresees stationary components only, i.e. a multi-focus X-ray 
+source (MFXS) allowing for high instantaneous focal spot 
+power with efficient anode cooling, and an array of room-
+temperature semi-conductor detectors (cf. Fig. 2) to maximize 
+detection area and thus the capture of scatter photons to 
+increase throughput [6]. This innovative concept allows to 
+build an X-ray diffraction imaging (XD i) system that is so 
+significantly reduced in size as compared to the XRD3500, 
+that it can operate as cabin-baggage scanner at a security 
+checkpoint (cf. Table 1).  
+TABLE I.  COMPARISON OF XRD3500 AND XDI
+ Property Unit XRD3500 XD i
+ Length m 7 3.3 
+ Width m 2.5 1.65 
+ Height m 2.5 2 
+ Weight t 9.8 2 
+ Tunnel cm² 100 x 52  62 x 42 
+ Max. Power kW 25 10 
+II. F UNCTIONAL CONCEPT OF XDI 
+The MFXS is designed to run at a power of 6 kW and has 16 
+focal spots that fire sequentially for 125 µs, repeating the cycle 
+every 2.1 ms. A dedicated primary collimation system lets 17 
+small beamlets pass each time a focus fires, so that after one 
+complete focus-sequence a web of X-rays has swept through a 
+0.21 mm thick slice of a bag when that one is moving at a 
+speed of 10 cm/s. The beamlets nearly ensure full coverage of 
+the whole tunnel section (cf. Fig 3, left). Some X-rays interact 
+with the object generating scatter-radiation, which eventually 
+passes through the slits of the secondary collimator under the 
+scattering-angle defined by system-geometry. The secondary 
+collimator principally consists of a stack of thin metal plates of 
+1.3 m length underneath the conveyor and images the scatter 
+from the object topographically onto the 17 detector-modules’ 
+pixel-lines (cf. Fig. 3, right). In this way the object’s 
+diffraction signature is measured spatially and energetically 
+resolved. Whenever a focus fires, a trigger-logic sends focus-
+number and belt-position to all detectors via a daisy-chain, 
+initiating a data-acquisition period that ends after 125 µs. All 
+detected photons are immediately corrected for charge-sharing, 
+depth of interaction, energy-gain and offset, are accumulated 
+in a data-package together with trigger-information, module-
+number, pixel-location and photon energy-value, to then be 
+sent to the host-PC via Ethernet. The photon-information 
+arriving from the detector-array is pre-processed, 
+reconstructed into the voxels that the photons are originating 
+from, and then post-processed for threat identification.  
+III. CZT-  INSTEAD OF GERMANIUM-DETECTORS 
+The most compelling reason for employing room-temperature 
+semi-conductors is the need for having detector-areas 
+distributed over a width of 130 cm. This would be costly to 
+realize with Ge-detectors, not only for the price of detectors 
+and associated read-out electronics alone,  but also because of 
+the required large vacuum-vessel, or several smaller ones,  and  
+sufficient, reliable, cooling power for keeping cryogenic 
+temperatures. An easy and quick exchange of such a detector 
+seems impossible, and therefore is not suitable for a security 
+checkpoint environment. This is also the reason, why our 
+CZT-detector array consists of completely autonomous sub-
+units for imaging diffraction signatures. They just need a 12V 
+supply-voltage and a trigger input for synchronization with the 
+source. Both are daisy-chained among the modules. Control 
+Fig. 2: Array of 17 CZT-modules with trigger and ethernet cables connected.
+Fig. 3: Left: Schematic of XDi  set-up, indicating only 7 of the 16 foci and 
+13 of the 17 detector-modules. The bag is transported into the z-direction. 
+Also shown are the meshs of beamlets that would sequentially penetrate the 
+object space when the foci are switched on (here all at once). Right: View 
+onto the diffraction plane. At different heights of object-space scatter is 
+generated and seen by those lines of detector S that look through the 
+secondary collimator into the respective direction.
+S
+Θ
+MFXS
+Primary 
+collimator
+Bag
+Belt
+Scatter
+Collim.
+Scatter Detectors
+x
+y
+z
+y
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 03:01:00 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 3 ---
+and data-transmission are realized via Ethernet. The modules 
+have been developed by Leti-Minatec for Morpho Detection 
+and consist of a pixelated CZT-crystal, although spatial 
+resolution is only required in z-direction, but of course the 
+pixelation is necessary for utilizing the small pixel-effect [7].  
+Anodes are read out by the IdeF-X –ASIC [8] and cathodes by 
+the ALIGASPECT-ASIC (designed by Leti). Heart of the 
+system is an FPGA running a NIOS operating system, 
+controlling all read-out and performing on the fly charge 
+sharing and depth of interaction (DOI) corrections [9]. 
+Characteristics of the module are given in table 2 or can be 
+found in [10].  In order to maintain stable performance, the 
+modules are held at a temperature of 22±1°C. 
+TABLE II.  CHARACTERISTICS OF IMADIF MODULE
+ Key Feature    Characteristic 
+ Crystal   CZT 5mm 
+ Number of pixels  192 
+ Number of lines  22 
+ Anode read-out ASIC  IDeF-X  
+ Cathode read-out ASIC  ALIGASPECT 
+ Avg.  energy-resolution   2.26 keV± 0.13 keV (σ) 
+ at 59.5 keV (40 modules) 
+ Peak-efficiency (59.5±3keV) 73 ±4% (σ)   
+IV. CALIBRATION OF MODULES 
+The detector-module has on-board calibration capability for 
+energy- and DOI-calibration, which is performed in the last 
+manufacturing stage with Am241- and Co57-sources.  
+However, once the modules are installed in the XDi-system,  
+sources cannot be used efficiently due to the tight collimation 
+in front of them, and sources would probably not be tolerated 
+in an airport environment. Hence, for calibration in the field 
+the tungsten characteristic K /g302-line at 59.31 keV is used, 
+dominant in the X-ray tube spectrum. 
+We irradiate a foam-cube to simultaneously generate a scatter-
+signal in each height of object space, and consequently on each 
+relevant detector line that looks into object space. The 
+resulting intensity in cts/mm²/s for each pixel, integrated over 
+all foci, energy-range from 10 to 140keV for a 600s 
+measurement is shown in Fig. 4. Pixels that don’t look into 
+object-space or are defective have been drawn white. High 
+scatter-intensities in detector lines 20 and 21 originate from 
+the conveyor-belt. Lines from 5 to 20 show the scatter-
+intensities of the foam-cube with an average of 10 cts/mm²/s. 
+Differences in intensity between pixels can be explained by the 
+fact that not all regions in object space are equally often hit by 
+a beamlet during the sweep, as well as variations in CZT-
+detector performance.  
+In energy-calibration mode the detector-module uses such a 
+measurement to perform its respective calibration. The 
+algorithms are not perfect, yet, mainly suffering from low 
+statistics spectra at the edges of object-space that make peak-
+determination prone to errors. Two pixel-spectra that the 
+algorithm operates on are shown in Fig. 6. A histogram of 
+Fig. 4: Intensity on the array of 17 detectors in counts/mm²/s on each 
+respective pixel integrated over all foci and 10-140keV. High intensities in 
+detector line 21 originate from the conveyor-belt. Pixels that receive scatter 
+from outside the tunnel-region are not shown and are white, as well as dead 
+pixels. Inbetween is the scatter from the foam-cube. 
+Fig. 5: Histogram of peak-positions on 2175 pixels considering all values 
+between 55 to 65 keV. 89 pixels are out of this range. 
+Fig. 6: Example of  two pixel spectra with high and low number of counts.
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 03:01:00 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 4 ---
+those pixels that look through the secondary collimator into 
+object-space (2264) is shown in Fig. 5. Mean and standard 
+deviation have been calculated from pixels with a peak-
+position between 55 and 65 keV. 89 pixels are out of this 
+range due to wrongly determined peak-position, assumably 
+caused by low statistic spectra, or simply because they are 
+dead. The mean value is with 59.35 keV close to the target of 
+59.31 keV at a standard deviation of 0.61 keV. 
+V. T EMPERATURE STABILTY OF CALIBRATION  
+The modules have been developed for operating at 
+temperatures from 20-25°C with a target at 22°C. A long 
+cooling-plate attached to the modules from underneath is 
+keeping them at this temperature. However, in order to 
+investigate the modules’ peak-stability within the 
+abovementioned temperature-range, the cooling-plate 
+temperature is varied in about 0.5°C steps to generate different 
+internal module-temperatures that can be measured with a 
+dedicated sensor. At each temperature a foam-cube 
+measurement is conducted and peak-positions are determined 
+from spectra as shown in Fig. 6. The temperature-values and 
+peak-positions are averaged for all modules at each cooling-
+plate temperature. The resulting measurements are shown in 
+Fig. 7 together with their standard deviations. A peak-shift 
+gradient of 0.1 keV/°C can be deducted, which means that 
+module temperature variations within the specified range are 
+acceptable. 
+Long-term stability of detector-characteristics is currently 
+under investigation and is important in determining the 
+necessary interval for repeating calibration or replacing 
+modules.  
+VI. F IRST BAG-SCAN
+The XD i–system is a fully functional prototype unit allowing 
+to routinely scan bags. A bag is prepared with four different 
+substances, a water-bottle and acetone-bottle above a pack of 
+salt and a cuboid of acrylic glass (PMMA) (Fig. 8), and then 
+screened with the XD i –system. Knowing focus-number, belt-
+position and pixel-position for each photon, the 
+topographically measured scatter-data can be back-projected 
+into the voxelized object-space, reconstructing its scatter-
+signature in all three dimensions in this way. A 3D-
+representation of the bag’s scatter-signal strength is rendered 
+from the voxels and shows the four objects and faintly the 
+wheels and walls of the bag (cf. Fig 9).  
+Adding up the voxels’ spectra over the regions of interest and 
+available slices yields the characteristic momentum-spectra of 
+the four materials that can already be distinguished by eye (cf. 
+Fig. 10).  Automatic threat-detection software will operate on 
+these spectra to identify threats. 
+Fig. 7: Detector-array peak-positions at different module temperatures. For 
+each measurement the peak-positions determined on 2175 pixels are 
+averaged and plotted against the average of the 17 modules internal 
+temperature. The bars indicate the standard deviation. The resulting 
+temperature-gradient for the peak-shift corresponds to 0.1 keV/°C. 
+Fig. 8: Bag prepared for scanning with 4 substances, a cetone, water, 
+acrylic glass (PMMA) and salt. 
+Fig. 9: Three-dimensionally reconstructed distribution of scatter-strength of  
+the scanned bag. . Top left is water, right acetone, bottom left is PMMA and 
+right salt. The wheels and walls of the bag can also be identified. 
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 03:01:00 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 5 ---
+VII. C ONCLUSION
+A novel baggage-screening system for carry-on baggage based 
+on X-ray diffraction has been developed. Its photon yield at 
+0.6kW tube-power per 1 cm/s belt-speed is sufficient to scan 
+bags and to reconstruct the bag’s contents’ scatter-signatures 
+for threat-identification.  
+The increase in photon-flux as compared to the XRD3500 is 
+achieved by a more efficient diffraction geometry, a high-
+power MFXS and an increase in detector-area by a factor 4.5 
+by employing 17 CZT-detector modules, of which each works 
+as an autonomous unit. The modules’ average peak-stability 
+with temperature is 0.1 keV/°C within the range of 20-25°, and 
+thus gives no reason to worry about temperature drifts in that 
+range. 
+We have demonstrated in a bag-scan that photon-flux and 
+spectral quality are sufficient to generate data that allows for 
+distinction of liquids and crystalline substances. Also, we have 
+used the spatially resolved scatter-information to reconstruct 
+the 3-dimensional scatter-signature of the bag’s objects. 
+We are currently working on industrializing the XD i-system 
+and realizing the automation of threat detection. 
+VIII. A CKNOWLEDGEMENTS
+We thank Sondre Skatter from Morpho Detection, Inc. for 
+providing the volume rendering software. 
+We thank G. Harding for inventing XDi and his enthusiastic 
+support in realizing this system. 
+REFERENCES
+[1] G. Harding and J. Kosanetzky, Scattered X-ray beam nondestructive 
+testing, Nuclear Instruments and Methods in Physics Research A280, 
+517-528, 1989. 
+[2] G. Harding,, J. Delfs,  Liquids Identification by x-ray diffraction, Proc. 
+SPIE 6707, pp. 67070T, 2007, doi:10.1117/12.740290 
+[3] B.E. Warren, “X-ray diffraction” , 1 st ed, 1990, Dover, p. 18 
+[4] M.Marshall, J.Oxley, "Aspects of explosives detection”, 1st ed, 2009, 
+Elsevier, p. 103 
+[5] http://www.morpho.com/detection/see-all-products/xrd-explosives-
+detection/xrd-3500-tm/?lang=en 
+[6] G. Harding, “The design of direct tomographic energy-dispersive x-ray 
+diffraction imaging (XDI) systems”, Proc. SPIE 5923, Penetrating 
+Radiation Systems and Applications VII, 59230R (September 16, 2005); 
+doi:10.1117/12.616941  
+[7] Z. He, "Review of the Shockley-Ramo theorem and its application in 
+semiconductor gamma-ray detectors," Nucl. Instr. Meth. A, 463, pp. 
+250-267, 2001. 
+[8] O. Gevin, O. Lemaire, F. Lugiez, A. Michalowska, P. Baron, O. 
+Limousin, and E. Delagnes, Imaging X-ray detector front-end with high 
+dynamic range: IDeF-X HD, Nuclear Instruments and Methods in 
+Physics Research Section A: Accelerators, Spectrometers, Detectors and 
+Associated Equipment, vol. 695, pp. 415419, 2012. 
+[9] G. Montemont, S. Lux, O. Monnet, S. Stanchina and L. Verger 
+Evaluation of a CZT Gamma-Ray Detection Module Concept for 
+SPECT, in Nuclear Science Symposium Conference Record, 2012, NSS 
+’12 IEEE, 2012. 
+[10] G. Montemont, D. Kosciesza, O. Monnet, S. Stanchina, J.-P. Schlomka 
+and L.Verger, An Autonomous CZT Module for X-ray Diffraction 
+Imaging, this conference proceedings. 
+Fig. 10: Several voxels of each object in the bag are summed up to yield the 
+spectra as shown above.
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 03:01:00 UTC from IEEE Xplore.  Restrictions apply. 

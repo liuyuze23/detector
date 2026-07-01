@@ -1,0 +1,1088 @@
+
+
+--- PAGE 1 ---
+2-mm-Thick Large-Area CdTe Double-sided Strip Detectors for High-Resolution
+Spectroscopic Imaging of X-ray and Gamma-ray with Depth-Of-Interaction
+Sensing
+Takahiro Minamia,b,∗, Miho Katsuragawab, Shunsaku Nagasawaa,b, Shin’ichiro Takedab,d, Shin Watanabec,b, Yutaka
+Tsuzukie, Tadayuki Takahashib,a
+aDepartment of Physics, University of Tokyo, 7-3-1 Hongo, Bunkyo, Tokyo 113-0033, Japan
+bKavli Institute for the Physics and Mathematics of the Universe (Kavli IPMU, WPI), University of Tokyo5-1-5 Kashiwanoha, Kashiwashi, Chiba
+277-8583, Japan
+cInstitute of Space and Astronautical Science, Japan Aerospace Exploration Agency (ISAS /JAXA), 3-1-1 Yoshinodai, Chuo-ku, Sagamihara,
+Kanagawa 252-5210, Japan
+diMAGINE-X Inc., 604 ILA Shibuya Mitake Building, 1-12-8 Shibuya, Shibuya-ku, Tokyo 150-0002, Japan
+eNishina Center , RIKEN, 2-1 Hirosawa, Wako, Saitama 351-0198, Japan
+Abstract
+We developed a 2-mm-thick CdTe double-sided strip detector (CdTe-DSD) with a 250µm strip pitch, which has high
+spatial resolution with a uniform large imaging area of 10 cm 2 and high energy resolution with high detection e ffi-
+ciency in tens to hundreds keV . The detector can be employed in a wide variety of fields for quantitative observations
+of hard X-ray and soft gamma-ray with spectroscopic imaging, for example, space observation, nuclear medicine, and
+non-destructive elemental analysis. This detector is thicker than the 0.75-mm-thick one previously developed by a
+factor of ∼2.7, thus providing better detection efficiency for hard X-rays and soft gamma rays. The increased thickness
+could potentially enhance bias-induced polarization if we do not apply sufficient bias and if we do not operate at a low
+temperature, but the polarization is not evident in our detector when a high voltage of 500V is applied to the CdTe
+diode and the temperature is maintained at -20 ◦C during one-day experiments. The “Depth Of Interaction” (DOI)
+dependence due to the CdTe diode’s poor carrier-transport property is also more significant, resulting in much DOI
+information while complicated detector responses such as charge sharings or low-energy tails that exacerbate the loss
+in the energy resolution.
+In this paper, we developed 2-mm-thick CdTe-DSDs, studied their response, and evaluated their energy resolu-
+tion, spatial resolution, and uniformity. We also constructed a theoretical model to understand the detector response
+theoretically, resulting in reconstructing the DOI with an accuracy of 100 µm while estimating the carrier-transport
+property. First, we evaluated the energy resolution using22Na, 133Ba, and 57Co reconstructing the DOI effect from the
+energy correlation on both the anode and cathode sides. We obtained an energy resolution of 4.3 keV (FWHM) at 356
+keV . Second, we formulated a theoretical detector-response model that reproduced the experimental data. Using the
+model, we determined the mobility-lifetime products of carriers µτe,h = (4 ± 1) × 10−3, (1.15 ± 0.05) × 10−4 [cm2/V]
+with the space charge density of nsp = −6.0 × 1010 [1/cm−3] and then reconstructed the DOI with an accuracy of 100
+µm. Finally, we evaluated the spatial resolution and demonstrated to resolve patterns of 250- µm-width slits with an
+X-ray test chart. We found no positional variation in the detector response. We realized the detector that has high
+energy resolution and high 3D spatial resolution with a uniform large imaging area.
+Keywords: Hard X-rays, Soft gamma rays, CdTe, Strip detector
+1. Introduction
+Spectroscopic imaging in tens to hundreds of keV are
+ever more extensively used in recent decades in a variety
+∗Email Address: takahiro.minami@ipmu.jp
+of research fields, such as X-ray astronomy [1, 2], non-
+destructive elemental analysis [3], and in vivo imaging
+in nuclear medicine [4]. Cadmium telluride (CdTe) is
+one of the attractive elements for hard X-ray and soft
+gamma-ray detectors owing to the generally high atomic
+arXiv:2312.07915v2  [astro-ph.IM]  18 Dec 2023
+
+--- PAGE 2 ---
+numbers and density of the detectors of these types [5].
+In addition, high-purity CdTe single crystals with a di-
+ameter of 5 cm were produced by Acrorad Co., Ltd.,
+using the Traveling Heater Method [6]. The recent de-
+velopment of CdTe Schottky diodes achieved very low
+leakage current and high energy resolution [7, 8, 9].
+CdTe Double-sided Strip Detectors (CdTe-DSDs)
+with the CdTe Schottky diodes [10] were originally de-
+veloped for astrophysical applications [11, 12] and are
+employed in various fields [13, 14, 15]. Notably, the
+CdTe-DSD with a large area and high energy and spa-
+tial resolution [16] is suitable in medical imaging, in
+particular, to observe small animals in combination with
+parallel-hole collimators, enabling multi-isotope imag-
+ing and identification of small organs and tissues [17].
+However, the previously developed CdTe-DSD with a
+thickness of 750 µm has insufficient detection efficiency
+for energies above 80 keV .
+An intuitive method to improve the detection e ffi-
+ciency is to employ thicker CdTe diodes; however, there
+is a potential downside in the energy and spatial res-
+olution. First, the CdTe is known to have a relatively
+poor transport property of carriers, especially holes,
+which causes the dependence of the charge collection
+efficiency of the detector on the “Depth Of Interaction”
+(DOI). The dependence increases in the thicker CdTe
+diodes, resulting in more significant low-energy tails
+that exacerbate the loss in energy resolutions [5]. Sec-
+ond, the direction of incident photons cannot be eval-
+uated with su fficient accuracy for specific applications
+if the position of DOI in the thick detector is not de-
+termined. The angular resolutions of imaging systems,
+such as SPECT, Compton camera, and coded aperture
+camera, could be exacerbated if the direction is uncer-
+tain [18]. Recently, the analysis method of reconstruct-
+ing the energy spectrum and the DOI position for CdTe
+or CdZnTe detectors [19, 20, 21, 22, 23, 24, 25, 26] for
+the previous CdTe-DSDs was reported and can be clues
+to solving the downside.
+Here we present the 2-mm-thick CdTe-DSD that we
+have developed with the aim of improving the detec-
+tion efficiency over 80 keV (Section 2) and the method
+that we implemented for reconstructing the energy spec-
+trum, and we evaluated its energy resolution (Section
+3). Further, we also developed a simulated model of the
+detector to understand its response and verified its relia-
+bility by comparing the model results with experimental
+data. By using this model, we build a new method to re-
+construct the DOI (Section 4). The spatial resolution
+and the potential dependence of the detector response
+on the detected position were investigated (Section 5).
+These new methods could be applicable to thick double-
+sided strip detectors of CdTe or CdZnTe in general.
+ASICs
+CdTe-DSD
+e-
+X/gamma-ray
+⇑Cathode(Pt)
+Anode(Al)2	mm50	µm200	µmh+⇑
+128	strips						/each	side
+Figure 1: (upper) Photograph of the 2-mm-thick CdTe-DSD and
+(lower) schematic view of the electrode configuration. The detector
+is connected to a V ATA-SGD ASIC [27] for pulse-height measure-
+ment. Electrons and holes generated by incident photons travel along
+the electric field to the anode and cathode electrodes, respectively.
+2. Detector configurations
+Figure 1 shows a photograph and schematic view of
+the 2-mm-thick CdTe-DSD we developed. The detector
+has 128 strip electrodes on each side. The anodic strips
+are orthogonal to the cathodic ones. Each strip has a
+width of 200 µm and is placed with a gap of 50 µm
+from the immediately adjacent strips. The imaging area
+is 32 × 32 mm2 with 16384 pixels. The cathode and an-
+ode electrodes are made of platinum (Pt) and aluminum
+(Al), respectively, and are powered with voltages of 0
+and 500 V , respectively. The DSD configuration enabled
+us to acquire energy information on both the electrodes
+(anode and cathode sides).
+When the CdTe interacts with X/gamma rays, pairs of
+electrons and holes are produced and move to the anode
+and cathode, respectively. Thus, the detected energies
+on both sides and the two-dimensional X/gamma-ray in-
+teraction position are calculated using the information
+2
+
+--- PAGE 3 ---
+Cathode(Pt)	side	energy	[keV]
+Anode(Al)	side	energy	[keV]
+133Ba
+Anode(Al)	side	energyCathode(Pt)	side	energy
+383	keV
+31	keV
+356	keV303	keV276	keV
+81	keV133BaEnergy	[keV]
+Figure 2: (left) Correlation of the detected energies of 133Ba between the anode and cathode sides for single-strip events. (right) Spectra of the
+cathode (red line) and anode-side (blue line) events. Each energy peak shows a significant tail toward the lower energy on the cathode side.
+on the pulse height and position of the strips on which
+the signal is detected.
+The DSD configuration also helped us realize com-
+pact readout in combination with specially designed
+Application Specific Integrated Circuits (ASICs) [27]
+The CdTe and ASIC for pulse-height measurement are
+placed on a front-end card (FEC). The strip electrode
+and the ASIC are DC-coupled with wire bonding for
+the cathode side and bump bonding for the anode side.
+To ensure accurate signal transmission from the detec-
+tor, we use a method of floating bias operation, which
+was originally established for the Hard X-ray Imager of
+the Hitomi (ASTRO-H) satellite [28]. The ASICs on
+each side are mounted separately in areas isolated by
+digital isolators on the FEC. When we supply a voltage
+between the isolated areas on the FEC, a bias voltage is
+applied to the CdTe-DSD.
+The CdTe-DSD is equipped with four ASICs (V ATA-
+SGD [27]). Each channel of each ASIC has a Charge
+Sensitive Amplifier (CSA) and two CR shaping circuits,
+which shape the pulse amplified with the CSA with a
+fast time constant (∼ 0.6 µs) to form a trigger signal and
+with a slow time constant (∼ 3 µs) to acquire the height
+of the pulse. After an appropriate fixed time delay from
+the trigger signal that we determined experimentally to
+hold the peak of the pulse with a slow time constant, the
+holding signal is generated, and the pulse height shaped
+with a slow time constant is sampled, held, and output.
+3. Spectroscopic Performance
+3.1. Cathode (Pt) and Anode (Al) Spectra and Their
+Correlation
+To evaluate the detector’s spectroscopic performance,
+we measured the energy spectra using radioactive
+sources of 22Na, 133Ba, and 57Co with an operating tem-
+perature of about −20 ◦C. In the analysis, the event
+threshold for each strip on the anode and the cathode
+side was set to 3σped (∼ 3 keV) of each pedestal width.
+Events in which the signal value of only one strip out
+of all strips on one side exceeded their event threshold
+value were selected and used for energy calibration of
+each channel. We call those events ”single-strip events”.
+By using those events, each energy calibration function
+for each channel was created to convert the digital value
+of the pulse height to keV using each peak of the ra-
+dioisotopes in the spectrum and applied to all events.
+We called the calibrated value in units of keV “anode or
+cathode-side energy” for single-strip events. When the
+signals over the analytical threshold were detected in
+two or more (adjacent) strips on one side, we regarded
+the sum of the energies on all the adjacent strips as the
+“anode or cathode-side energy” of the event and called
+it an “multi-strip event”.
+The detected energies obtained through independent
+energy measurements on both sides depend on the
+DOI. Figure 2 shows the correlation plot between the
+cathode-side energy Ecathode and the anode-side energy
+Eanode for 133Ba events detected on only one strip on
+the anode side and its spectra of the anode and cathode
+sides. The correlation plot (left panel) clearly shows a
+3
+
+--- PAGE 4 ---
+relationship of detected energies on both sides for a spe-
+cific incident photon energy, the structure of which ex-
+tends roughly horizontally (i.e., along the Ecathode axis)
+and is slightly curved in the vertical direction (i.e., along
+the Eanode axis). The broadness of these structures cor-
+responds to the broadness of each peak in the spectra
+(Figure 2 right panel), characterized with a low-energy
+tail. The structure is also a visualization of the fact that
+the spectral peaks at the cathode side are much broader
+than those at the anode side. A closer look finds that
+the higher the incident photon’s energy is, the more ex-
+tended the structure is. This fact means that the low-
+energy tail is more pronounced at the higher incident
+photon energy, resulting in a poorer energy resolution.
+3.2. Incident energy dependence on the number of si-
+multaneously detected strips
+The distributions of multi-strip events vary with the
+energy of the incident photon and also di ffer between
+the anode and cathode sides. Figure 3 shows the distri-
+butions of single or multiple strip events (n-strip events)
+for 511 keV ( 22Na), 356 keV ( 133Ba), and 122 keV
+(57Co). The distribution on the anode side is dominated
+by 1-strip and 2-strip events, which account for more
+than 90% of the distribution at 511 keV and below, with
+the fraction of 2-strip events increasing as energy in-
+creases. This trend can be attributed to the larger size of
+the charge cloud for higher energies [19]. By contrast,
+the distribution on the cathode side is much broader, es-
+pecially at 356 and 511 keV .
+To investigate the cause of the broad distribution in
+the cathode, we examined the distributions of the energy
+deposits at the cathode electrode for individual multi-
+strip events. The distribution had a high-deposit cen-
+tral peak spreading for only a couple of strips and a
+much lower-deposit, broad part spreading over periph-
+eral strips. The central strips in the energy distribution
+of the cathode accounted for ∼ 90% of the overall de-
+posited energy, while the peripheral strips account for
+only about 10%. Hence, considering that the distribu-
+tion on the anode side has a peak at two strips, the en-
+ergy deposits on the cathode side and the distribution
+of the anode side are consistent. We conjecture that the
+central peak in energy deposits at the cathode electrode
+is determined by the initial charge cloud size and the
+thermal diffusion of carriers, and the spreading of the
+charges over the peripheral part mainly from the hole
+trapping phenomena rather than the thermal diffusion of
+carriers.
+The	number	of	detection	stripsThe	number	of	detection	strips
+Ratio	[%]
+Ratio	[%]
+Anode(Al)Cathode(Pt)Incident	photon	energy511	keV356	keV122	keVIncident	photon	energy511	keV356	keV122	keV
+Figure 3: Distribution of the number of strips that detected signals at
+the (left) cathode (Pt) side and (right) anode (Al) side for incident pho-
+tons, whose energies are 511 keV (22Na, black line), 356 keV (133Ba,
+blue line) and 122 keV(57Co).
+3.3. Reconstruction of incident photon energies
+To obtain good resolution over a wide energy range,
+we need to accurately estimate the relationship between
+each point in the correlation map shown in Figure 2
+and incident photon energy. Having noticed that the ex-
+tended structure generated by a given energy incident on
+the single anode strip events follows a certain curve (see
+Figure 2), we devised an empirical function to model
+the curve because creating theoretical functions to repli-
+cate the structures across all energy bands is challeng-
+ing. The function was given by
+Eave = aE0
++ aquad(Ediff/2 − acenter)2
++ ahyp−s
+q
+(Ediff/2 − acenter)2 + ahyp−c,
+(1)
+which the Ediff/2 and Eave are half of the di fference of
+the detected energies at the cathode and anode sides and
+the average of those energies, respectively. Each term of
+the function is, in order, a constant, a quadratic function
+representing a curve of the structure, and a hyperbolic
+function representing a straight line of the structure. The
+aE0, aquad, ahyp−s,c, and acenter(∼ 0) are fitting parameters.
+We also found that the structures in events detected on
+multiple strips on the anode side can be expressed by
+the above function with different parameter sets.
+For each of the anode single-strip and anode multi-
+strip events, we used the function to fit the structures
+corresponding to an incident photon energy of 81, 122,
+356, and 511 keV , and calculated the contour lines using
+these four fitted functions. Figure 4 shows the correla-
+tions plot with summing the experimental data of 133Ba
+and 122Co data, the contour lines, and the fitted values
+of aE0, aquad, ahyp−s,c, and acenter for each of the anode
+single-strip and anode multi-strip events. The contour
+lines every 20 keV were created by dividing internally
+the neighboring fitted functions expressed by equation
+4
+
+--- PAGE 5 ---
+511	keV
+356	keV
+122	keV81	keVEnergy	difference	/	2	[keV]
+356	keV
+122	keV81	keV
+Energy	average[keV]
+Anode	1-strip	eventAnode	multi-strip	event
+Energy	difference	/	2	[keV]
+Energy	average[keV]
+Anode single-strip event
+Einc [keV] aE0 acenter aquad ahyp−s ahyp−c
+81 81.09 0.50 -0.01 -0.91 0.65
+122 121.84 0.50 -0.01 -0.90 1.0
+356 354.48 0.45 -0.01 -0.72 0.00
+511 509.43 -0.15 -0.01 -0.76 0.00
+Anode multi-strip event
+Einc [keV] aE0 acenter aquad ahyp−s ahyp−c
+81 81.18 0.26 -0.02 -0.97 1.0
+122 122.11 0.49 -0.02 -0.86 1.0
+356 354.74 0.38 -0.02 -0.65 0.00
+511 509.77 -0.10 -0.02 -0.67 0.06
+Figure 4: (upper) Correlation of both-side energies with summing the experimental data of 133Ba and 122Co in the (upper left) anode single-strip
+events and (upper right) anode multi-strip events and the contour lines (red dotted line). The X-axis and Y-axis are an average of the detected
+energies at the cathode and anode sides Eave = (Ecathode + Eanode)/2 and a half of the di fference Ediff/2 = (Ecathode − Eanode)/2, respectively. The
+contour lines are calculated from fitted functionsEave = aE0 +aquad(Ediff/2 −acenter)2+ahyp−s
+q
+(Ediff/2 − acenter)2 + ahyp−c with the structures whose
+incident photon energy Einc are 81, 122, 356 and 511 keV (black line) The interval of the contour line is 20 keV . (bottom) The fitted parameters of
+the fitted functions with each structure of Einc = 81, 122, 356, and 511 keV .
+(1) by the ratio of each incident photon energy. In ad-
+dition, the contour lines whose incident photon energy
+was below 81 keV or above 511 keV were calculated
+by translating parallelly the fitted function of 81 keV or
+511 keV , respectively.
+We interpolated between the counter lines with the
+Delaunay triangulation [29] to reconstruct the incident
+photon energies for all data points in the correlation
+plot. Owing to the limited number of available X- or
+gamma-ray lines, interpolation is necessary to deduce
+the response for energies that have not been directly
+measured. While an analytical 2D response function
+could be constructed, using interpolation is simpler and
+allows for a more flexible description of the response
+changes. The Delaunay diagrams are a well-known
+technique to represent a three-dimensional surface as a
+triangular mesh. Given that Eave and Ediff/2 obtained
+from experimental data are inside a certain triangle, the
+interpolated value of the reconstructed energy Ereconst is
+easily calculated from an average weighted by the in-
+verse of length in the Ediff/2 − Eave plane from each ver-
+tex of the triangle. Then, the incident photon energies
+are able to be reconstructed if we know the average of
+both-side energies and the half of the di fference from
+experimental data.
+Figure 4 also shows the di fferences in the structures
+between the anode single-strip events and the anode
+multi-strip events. The structures observed in multi-
+strip events are more abbreviated and exhibit greater
+curvature compared to those in single-strip events.
+5
+
+--- PAGE 6 ---
+Count
+FWHM(Reconstructed)	:	2.8	keV	@122	keV	FWHM(Reconstructed)	:	4.8	keV	@356	keV
+FWHM(Reconstructed)	:	7.3	keV	@511	keV	
+Energy	[keV]
+Count
+Count
+Energy	[keV]Energy	[keV]
+FWHM(Al)	:	3.1	keV	@122	keV	FWHM(Al)	:	5.9	keV	@356	keVFWHM(Al)	:	10.0	keV	@511	keV	
+Energy	[keV]Energy	[keV]Energy	[keV]
+Count
+Count
+CountAnode(Al)	side	energyCathode(Pt)	side	energy
+22Na133Ba57Co
+Reconstructed	energy
+Figure 5: (upper row) Energy spectra on the cathode side (red line) and anode side (blue line) and (lower row) reconstructed spectra (black line)
+of (left) 57Co, (center) 133Ba, and (right) 22Na, respectably. We used the single and multi-strip events.
+Specifically, the detected energy on the anode side in
+multi-strip events tends to decrease near the edges of the
+structures. This decrease is attributed to charge loss oc-
+curring near the gaps between neighboring strips, which
+is where multi-strip events are typically detected.
+Applications of this method that utilize the energy de-
+tected by both sides of the detector improved the en-
+ergy resolutions as demonstrated in Figure 5 where the
+reconstructed energy spectra using all events data, in-
+cluding both single and multiple strip events are shown.
+We succeeded in improving energy resolutions. The
+resultant energy resolutions ∆EFWHM were 2.6 keV at
+122 keV , 4.3 keV at 356 keV , and 7.2 keV at 511 keV .
+The improvement in energy resolution, as expected, in-
+creases as the energy increases. Under the conditions of
+the high voltage of 500 V and the temperature of about
+-20 ◦C, we also confirmed the change of the energy res-
+olution in 20 hours is less than 1 %.
+4. Reconstruction of the Depth Of Interaction (DOI)
+4.1. Modeling theoretical responses of the CdTe-DSD
+In CdTe detectors, carriers generated by incident pho-
+tons are not fully collected because of the poor charge
+transport properties of CdTe. In this section, we de-
+scribe our method of calculating the charge induced on
+electrodes to correct the incomplete charge collection.
+𝑮=	50	µm𝑈=	250	µm
+𝒛=𝑳	=	2	mm(Anode)
+𝒛=𝟎	𝐦𝐦(Cathode)
+𝑧
+𝒙𝒙=𝟎	𝐦𝐦 𝒙=𝒂=𝟑𝟐	𝐦𝐦𝒙𝒄𝒙𝒄−𝑼−𝑮𝟐𝒙𝒄+𝑼−𝑮𝟐𝒚
+𝝓𝒘=1𝝓𝒘
+𝒙𝝓𝒘=0𝒙𝒄−𝑼−𝑮𝟐𝒙𝒄+𝑼−𝑮𝟐
+𝑮𝑮
+Geometry
+Boundary	condition
+𝒙=𝒂=𝟑𝟐	𝐦𝐦𝒙=𝟎	𝐦𝐦
+Figure 6: The Schematic view of (upper) the geometry of the CdTe-
+DSD for the simulation and (bottom) the boundary condition of an
+interest strip on the installed plane.
+Our calculation is based on the Shockley-Ramo theo-
+rem and the effect of the mobility-lifetime product (µτ)
+is taken into account [30, 31]. In the theorem, when
+charge q(⃗r) moves from the interaction position⃗ri to an-
+other position ⃗r f , the induced charge Q at an electrode
+6
+
+--- PAGE 7 ---
+is given by
+Q = −
+Z ⃗r f
+⃗ri
+q(⃗r)∇ϕw(⃗r) · d⃗r, (2)
+where ϕw(⃗r) is the weighting potential and is calcu-
+lated by solving the Poisson equation ∆ϕw(⃗r) = 0 with
+boundary conditions of 1 for the readout electrode and
+ϕw(⃗r) = 0 for all the other electrodes. The potential
+is assumed to be a linearly decreasing function from 1
+at the edge of the interest electrode to 0 at the nearest
+edge of the adjacent electrode shown in Figure 6. The
+weighting potential of the electrode in a double-sided
+strip detector [32] is
+Cathode-side strip:
+ϕw(x, z) =
+∞X
+m=1
+Am(xc) sin
+ mπ
+a x
+
+sinh
+ mπ
+a z
+
+, (3)
+Anode-side strip:
+ϕw(y, z) =
+∞X
+m=1
+Am(yc) sin
+ mπ
+a y
+
+sinh
+ mπ
+a (L − z)
+
+,
+(4)
+Am(rsc) = 8a
+(mπ)2G sinh
+ mπ
+a L
+
+× sin
+ mπ
+a rsc
+
+sin
+ mπ
+a
+U
+2
+
+sin
+ mπ
+a
+G
+2
+
+,
+where a is the detector size, U is the width of the strip
+pitch, G is the width of a gap, and L is the thickness
+of the detector. The center of an interest strip electrode
+is x = xc, z = 0 for the cathode side and y = yc, z =
+L for the anode side shown in Figure 6. In addition,
+we assumed the center position of the electrode xc, yc
+for each side is the center of the detector a
+2, where the
+detector response could be regarded as the average one
+of all the strips.
+For the sake of simplicity, we assumed that the charge
+cloud is point-like at the initial stage, that the electric
+field E is parallel, and that there is no di ffusion. Under
+these conditions, the carrier velocity v = µE was con-
+stant, and the charge qe,h of each carrier produced by an
+incident photon was given by
+qe,h(t) = (±e)n exp
+ 
+− |z − zi|
+, (µτ)e,hE
+!
+, (5)
+where n is the number of carriers, which is proportional
+to the incident energy in the keV band, andzi is the DOI.
+If we set the position of the cathode side at z =0, the
+electric field in CdTe is
+E(z) = − ensp
+ϵCdTe
+
+z − L
+2
+
++ H.V.
+L , (6)
+where ϵCdTe is the permittivity of CdTe, nsp is the den-
+sity of the space charge of ionized acceptors, and H.V.
+is the applied voltage. The space charge could be neg-
+ative [33, 34], and all the volume of the CdTe crystal
+is depleted when a bias voltage is applied. Finally, we
+calculated the induced charges Q on the anode and cath-
+ode by using the equations (2-6). We also calculated
+the charge collection e fficiency on both sides, dividing
+the induced charges Q by the product of the number of
+electron-hole pairs and the elementary charge.
+4.2. Reproducing the DOI dependence of the experi-
+mental data using the theoretical detector response
+We attempted to reproduce the extended structure in
+the anode-cathode detected energy correlation map us-
+ing a model incorporating mobility and lifetime. For ar-
+bitrary three-dimensional interaction positions, we cal-
+culated the charge collection efficiency of each strip on
+the anode and cathode sides. The e fficiency multiplied
+by an incident photon energy is the theoretical detected
+energy when the photon interacts with the detector at
+a given position. Thus, we reproduced the relationship
+between detected energies on the cathode and the anode
+side.
+To make comparisons between the calculation result
+of the theoretical modeling and the experiment data, we
+regarded the sum of energies of the two strips with the
+first and second highest detected energies among the
+strips with significant signals as the cathode-side en-
+ergy to reduce the e ffect caused by the di fference in
+the energy threshold, and hereafter refer to it as the
+“cathode1st+2nd energy”. The cathode1st +2nd energy
+is considered to depend on DOI significantly and be
+nearly independent of the 2D position from the simu-
+lation results of our model. For the anode-side energy,
+we selected single-strip events only (i.e., a type of event
+where only one strip shows a signal significantly over
+the threshold for an incoming photon), of which we con-
+sidered that the interaction position of the photon with
+CdTe is near the center of a strip and the diameter of the
+diffused charge cloud is smaller than the width of the
+strip. In addition, we also considered the detector re-
+sponse does not depend on the interaction position along
+the strip (the direction of the strip width) if the interac-
+tion position is inside the strip. Therefore, we consider
+the anode single-strip events are observed when their
+interaction positions are near the strip center, which is
+7
+
+--- PAGE 8 ---
+𝜇𝜏!=1.2×10"#𝜇𝜏!=1.0×10"#𝜇𝜏!=0.8×10"#(𝜇𝜏$=4.0×10"%is	fixed)[cm2/V]
+𝜇𝜏$=1.0×10"&𝜇𝜏$=4.0×10"%𝜇𝜏$=2.0×10"%(𝜇𝜏!=1.0×10"#is	fixed
+[cm2/V]
+356	keV(133Ba) 356	keV(133Ba)Dependance	of	𝝁𝝉𝒉Dependance	of	𝝁𝝉𝒆
+Cathode(Pt)	side	energy	[keV]
+Anode(Al)	side	energy	[keV]
+Anode(Al)	side	energy	[keV]
+Cathode(Pt)	side	energy	[keV]
+Figure 7: Comparison between theoretical curves with varying µτ values for nsp = 0 and the extended structure whose incident photon energy is
+356 keV in single-strip events from experiments. The points for normalization were set at the highest counts in the structure, corresponding to the
+peak of the energy spectrum.
+consistent with the assumptions of the parallel electric
+field and point-like initial charge cloud. Thus, the cath-
+ode1st+2nd energy in the anode single-strip events is
+optimal for comparing our model and the experimental
+data.
+To determine the parameter values of µτe,h, we com-
+pared the measured extended structure whose incident
+photon energy is 356 keV and the result of the theoret-
+ical modeling. Figure 7 shows the result of a compar-
+ison between theoretical curves with varying µτ values
+for nsp = 0 and the structure of 356 keV in single-strip
+events from experiments. We set the step size of ∆µτe,h
+value to 1×10−3, 5×10−6 cm2/V , respectively. We calcu-
+lated a difference between a center of peak in a slice of
+the structure at an arbitrary x (cathode1st+2nd) and the
+y (anode energy) of the theoretical curves at an arbitrary
+x (cathode1st+2nd) shown in Figure 7 and summed the
+squared differences varying x values (cathode1st+2nd).
+While changing the µτe,h values with intervals of the
+∆µτe,h independently, we determined the µτ values as
+the best-matched parameter for a certain space charge
+with accuracy of ∆µτe,h when the sum is the smallest.
+The best-matched parametersl were µτe = 4 × 10−3,
+µτh = 1.0 × 10−4 cm2/V for nsp = 0.0. We also per-
+formed comparisons for nsp = −6.0 and −11×1010 cm−3
+and list the best-matched values in Table 1.
+Table 1: Space charge density and optimal µτ values
+nsp [/cm3] µτe [cm2/V] µτh [cm2/V]
+0.0 4 × 10−3 1.0 × 10−4
+−6 × 1010 4 × 10−3 1.15 × 10−4
+−11 × 1010 5 × 10−3 1.15 × 10−4
+4.3. Reconstruction of Depth Of Interaction(DOI)
+We created functions from a theoretical relationship
+between the DOI and a certain observable quantity.
+Given experimental data corresponded to the observable
+quantity, the function returns the DOI. As an observable
+quantity, we selected the induced charge e fficiency of
+cathode1st+2nd using our response model, correspond-
+ing to the ratio of the cathode1st +2nd energy to the re-
+constructed energy in the experimental data because the
+reconstructed energy does not vary with the DOI and
+can be treated as a normalization factor. The theoretical
+efficiency of cathode1st +2nd varies significantly with
+the DOI, and the experimental ratio can also be very
+sensitive to the DOI. In addition, the reconstructed en-
+ergy and the cathode1st+2nd energy are experimentally
+less susceptible to the electrical noise of the strip or
+the given event threshold because they are su fficiently
+higher than the values of the noise or the threshold. Fig-
+ure 8 shows the functions to estimate the DOI from the
+ratio of the cathode1st+2nd energy to the reconstructed
+8
+
+--- PAGE 9 ---
+Space	charge		[	1/cm3	]	0.0-6.0	×1010 --1.0	×1011
+Energy	Ratio
+DOI	[mm]
+Energy	Ratio=𝐂𝐚𝐭𝐡𝐨𝐝𝐞	𝐄𝐧𝐞𝐫𝐠𝐲𝐑𝐞𝐜𝐨𝐧𝐬𝐭.𝐄𝐧𝐞𝐫𝐠𝐲
+Figure 8: Theoretically-calculated functions to determine the DOI from a DOI index (the ratio of the cathode1st +2nd energy (see text) to the
+reconstructed energy) for each space charge density shown in Table 1.
+356	keV(133Ba) 122	keV(57Co)
+Count
+Count
+DOI	[	mm	]DOI	[	mm	]
+Space	charge	[	1/cm3	]	0.0-6.0	×1010-1.0	×1011Theoretical	Expectation	photoelectric	absorption
+Space	charge	[	1/cm3	]	0.0-6.0	×1010-1.0	×1011Theoretical	Expectation	photoelectric	absorption
+Figure 9: Reconstructed DOIs for each nsp and the theoretical expectations of (right) 122 keV from57Co and (left) 356 keV from 133Ba. The points
+are the result of the data, and the black line is the simulated result with the Geant4 simulation tool kit.
+energy.
+We applied formulated functions to the experimental
+data. Figure 9 shows the result for events for 122 keV
+from 57Co and 356 keV from133Ba for the three selected
+space charge densities (Table 1) and the theoretical ex-
+pectations. We extracted the events of the experimen-
+tal data around each peak in the range of 3 ∆EFWHM of
+the energy resolution shown in Figure 5. We performed
+a simulation for the theoretical expectations, using the
+Geant4 simulation tool kit [35] to obtain the reaction
+positions for events where only photoelectric absorption
+occurred.
+The reconstructed DOIs were found to be consistent
+with the theoretical expectations at both 122 keV and
+356 keV for nsp = −6.0 × 1010 cm−3. The values of µτh
+and µτe are consistent with results reported in the liter-
+9
+
+--- PAGE 10 ---
+atures [36]. The derived space-charge density is almost
+consistent with the homogeneous distribution of all ion-
+ized acceptors except for the deep-lying acceptors as re-
+ported in the literature [37].
+Our finding implies that the DOI can be determined
+with an accuracy of about 100 µm except for those
+at the edges of the detector. The accuracy is deter-
+mined from the energy resolutions of reconstructed en-
+ergy and cathode1st+2nd energy (or the breadth of the
+extended structure for arbitrary energy of the incident
+photon). However, there is a significant di fference be-
+tween the results of 122 keV and 356 keV for nsp =
+−6.0 × 10−10 cm−3 and the theoretical expectations at
+z = 2.0 mm. We attributed this difference most likely to
+further spreading around the left edge of the extended
+structure shown in Figure 2 or 7. The spreading implies
+poor energy resolution, resulting in reduced sensitivity
+to DOI.
+5. Imaging Performance and Response Uniformity
+of the CdTe-DSD
+5.1. Imaging Performance
+We evaluated the imaging performance of the CdTe-
+DSD with a test target of a 0.1-mm-thick lead (Pb) X-
+ray test chart, which accommodates 8 di fferent interval
+pitches between the apertures and masks. The widths
+of the apertures and masks are the same and are equal
+to a half of the interval pitches. The experiment was
+set up as follows. The distances of the detection sur-
+face to the test chart and to a radioisotope 133Ba source,
+whose diameter is ∼ 10 mm, were 30 and 330 mm, re-
+spectively. The sources were small and su fficiently far
+apart to the extent that the width of the aperture and that
+in the image at the detection plane was approximately
+the same. We used X-ray lines of 30.6 and 31.0 keV
+from the 133Ba source, for which almost all photons are
+stopped by the 0.1-mm-thick lead (Pb).
+We reconstructed the image, assuming that the inci-
+dent position of the photon at each strip follows a Gaus-
+sian probability distribution [19] with the mean position
+being at the center of the strip. The sigma of the Gaus-
+sian was calculated with the percentage of the charge-
+shared events; the percentage of single-strip events at
+∼31 keV were about 70% and 80% for the anode and
+cathode sides, respectively, and accordingly, the two
+sigmas were 250 µm× 70% = 175 µm and 250 µm×
+80% = 200 µm.
+Figure 10 shows a photograph of the test chart and
+the acquired image in combination with 0.5, 0.66, 1.0,
+and 2.0 mm pitches of the slits and its cross-section pro-
+file. We confirmed that a structure of 250 µm can be
+resolved, as expected from the design value of 250 µm
+for the spatial resolution of the CdTe-DSD.
+Cross-section
+cross	section	[mm]
+Count
+Aperture0.25	mmAperture0.33	mmAperture0.5	mmAperture	1	mm
+A B
+Figure 10: (upper right) A picture of a 0.1-mm-thick lead (Pb) X-ray
+test chart, (upper left) an acquired image with 0.5, 0.66, 1.0, and 2.0-
+mm pitch of the chart using the 31-keV-X-ray line from133Ba. (lower
+panel) Cross-section profile from points A to B on the image (upper-
+right). The yellow square on the picture shows the imaging area.
+5.2. Uniformity of the CdTe-DSD
+We evaluated the potential positional variances of the
+detection efficiency and energy resolution of the CdTe-
+DSD. To make quantitative measurements in various ap-
+plications, uniformity across the entire detector is a crit-
+ical element, as well as the high spatial resolution. Since
+the edge areas are a ffected by electrical noise anyway,
+the events in the central 30 × 30 mm2 area were used
+for evaluation.
+The experiment was set up as follows. The distance
+of the detection surface to a radioisotope was∼ 300 mm.
+An error for the number of incident photons due to the
+difference in length d from the source to the detection
+surface was estimated to be ( a/d)2 = (30/300)2 ∼ 1%,
+where a = 30 mm is the size of the detection area. We
+used an X-ray line of 122.1 ( ±3∆EFWHM) keV from a
+57Co source whose average penetration was 2 mm, and
+therefore the photons from the source hit the entire CdTe
+diode sensitive volume.
+Figure 11 shows the percentage di fference between
+the integrated value of the peak at 122.1 keV in each
+10
+
+--- PAGE 11 ---
+of the nine divided detection regions (normalized by the
+average counts of the whole integrated values) and the
+comparison of the spectra with the maximum and mini-
+mum counts among the sample. The standard deviation
+of the counts in each region was about 1%, and the sta-
+tistical variance of the average value is∼0.1%, which is
+negligible compared with the standard deviation of the
+counts. The standard deviation is comparable to the es-
+timated error. In other words, the positional-dependent
+variation across the detector is less than 1%. The energy
+resolutions of the spectra from the two regions with the
+maximum and minimum counts (designated as regions
+A and B, respectively, in Figure 11 and of the overall
+spectrum were 2.7, 2.9, and 2.8 keV , respectively, which
+could be caused by differences in the wiring length from
+CdTe-DSD to ASICs. Considering that there was no
+significant positional variation in the energy resolutions,
+we concluded that our energy reconstruction was appro-
+priate regardless of the regions and guaranteed a good
+spectroscopic response uniformity.
+Cathode(Pt)	side	[mm]
+Anode(Al)	side	[mm]
++1.48	%+0.89	%+0.37	%
+-0.42	%-1.74	%-1.39	%
+-0.33	%-0.01	%+1.15	%
+Region	B
+Region	A
+ Region	B:	FWHM:	2.9	keVRegion	A:	FWHM:	2.7	keV
+Reconstructed	Energy	[keV]
+Figure 11: (left) Di fferences between the integrated values in the
+range of 122.1 ±3 × 2.8 keV ( = 3∆EFWHM shown in Figure 5) in
+nine divided detection regions (normalized by the average value of
+the whole integrated values). (right) Comparison of the spectra with
+the maximum (Region A, red line) and minimum counts (Region B,
+blue line). The respective spectral resolutions are 2.7 and 2.9 keV
+(FWHM).
+6. Conclusion
+We have developed a 2-mm-thick CdTe double-sided
+strip detector (CdTe-DSD). The detector has high spa-
+tial resolution with a uniform large area and high en-
+ergy resolution with high detection efficiency in tens to
+hundreds of keV . The detector was successfully oper-
+ated at a temperature of -20 ◦C and with an applied bias
+voltage of 500 V , and its energy resolution is stable in
+20 hours. The increased thickness exacerbated the poor
+carrier transport properties, which is an intrinsic weak
+point of the CdTe. The detected energy depends on the
+depth of interaction (DOI).
+We reconstructed the low-energy tails that exacer-
+bate the loss in the energy resolutions from informa-
+tion obtained from both the cathode and anode sides
+of the detector and determined an energy resolution to
+be 4.3 keV at 356 keV . We also developed a theoretical
+model of the detector response. Using it, we derived
+the optimal mobility-lifetime product ( µτ) of carriers
+µτe,h = (4 ± 1) × 10−3, (1.15 ± 0.05) × 10−4 [cm2/V]
+with the space charge density of nsp = −6.0 × 1010
+[1/cm−3] in this CdTe detector and reconstructed the
+DOIs for 122 keV and 356 keV incoming photons with
+an accuracy of 100 µm using the ratio of the significant
+detected energy on the cathode side (cathode1st +2nd)
+to the reconstructed energy. The results were consis-
+tent with their expected penetration depths. For the
+DSD detectors, our reconstruction method of DOI us-
+ing Ecathode1st+2nd/Ereconst is more sensitive to DOI than
+the well-known method ofEcathode/Eanode. Both induced
+charge efficiencies on the anode and the cathode side
+in the Ecathode/Eanode ratio decrease when the DOI is
+around the anode surface because the hole contribution
+and the e ffect of hole trapping become larger simulta-
+neously, resulting in low sensitivity to the DOI near the
+anode surface. On the other hand, the Ecathode1st+2nd sig-
+nificantly depends on the DOI, and theEreconst is the nor-
+malization factor.
+We also evaluated the spatial resolution demonstrat-
+ing to resolve patterns of 250-µm-width slits in an X-ray
+test chart and the positional-dependent variation across
+the detector to be smaller than 1%.
+The 2 mm thick CdTe DSD we have developed with
+the reconstruction method of the incident photon en-
+ergy and the DOI, resulting in acquiring high-resolution
+information of energy and three-dimensional interac-
+tion positions with uniform large imaging area, is op-
+timal for quantitative observation of hard X-ray and
+soft gamma-ray with spectroscopic imaging. To realize
+more detailed imaging, the compact readout due to the
+DSD configuration is an advantage, and our new meth-
+ods could be applicable to thick double-sided strip de-
+tectors with fine-pitch strips of CdTe or CdZnTe.
+Acknowledgment
+This work was supported by JSPS, Japan KAKENHI
+Grant Numbers 21H00163, 21K18049, 22KJ0873 and
+22J12583. S.N. is also supported by FoPM (WINGS
+Program) and JSR Fellowship, the University of Tokyo,
+Japan. The authors wish to thank Olivier Limousin for
+fruitful discussions.
+11
+
+--- PAGE 12 ---
+References
+[1] T. Takahashi, M. Kokubun, K. Mitsuda, R. Kelley, T. Ohashi,
+F. Aharonian, H. Akamatsu, F. Akimoto, S. Allen, N. Anabuki,
+et al., The ASTRO-H (Hitomi) x-ray astronomy satellite, in: J.-
+W. A. den Herder, T. Takahashi, M. Bautz (Eds.), Space Tele-
+scopes and Instrumentation 2016: Ultraviolet to Gamma Ray,
+V ol. 9905, International Society for Optics and Photonics, SPIE,
+2016, p. 99050U. doi:10.1117/12.2232379.
+[2] F. A. Harrison, W. W. Craig, F. E. Christensen, C. J. Hailey,
+W. W. Zhang, S. E. Boggs, D. Stern, W. R. Cook, K. Forster,
+P. Giommi, et al., THE NUCLEAR SPECTROSCOPIC TELE-
+SCOPE ARRAY (NuSTAR) HIGH-ENERGY X-RAY MIS-
+SION, The Astrophysical Journal 770 (2) (2013) 103. doi:
+10.1088/0004-637X/770/2/103.
+[3] T. Osawa, S. Nagasawa, K. Ninomiya, T. Takahashi, T. Naka-
+mura, T. Wada, A. Taniguchi, I. Umegaki, K. M. Kubo, K. Ter-
+ada, et al., Development of Nondestructive Elemental Analy-
+sis System for Hayabusa2 Samples Using Muonic X-rays, ACS
+Earth and Space Chemistry 7 (4) (2023) 699–711. doi:10.
+1021/acsearthspacechem.2c00303.
+[4] S. Takeda, M. Katsuragawa, T. Orita, F. Moriyama, Y . Arai,
+H. Sugawara, S. Oshita, G. Yabu, S. Watanabe, T. Takahashi,
+L. R. Furenlid, A high-resolution CdTe imaging detector with
+multi-pinhole optics for in-vivo molecular imaging, Nuclear
+Inst. and Methods in Physics Research, A 912 (2018) 57–60.
+doi:10.1016/j.nima.2017.10.037.
+[5] T. Takahashi, S. Watanabe, Recent progress in CdTe and
+CdZnTe detectors, IEEE Transactions on Nuclear Science 48 (4)
+(2001) 950–959. doi:10.1109/23.958705.
+[6] M. Funaki, T. Ozaki, K. Satoh, R. Ohno, Growth and character-
+ization of CdTe single crystals for radiation detectors, Nuclear
+Instruments and Methods in Physics Research Section A: Ac-
+celerators, Spectrometers, Detectors and Associated Equipment
+436 (1) (1999) 120–126. doi:10.1016/S0168-9002(99)
+00607-5.
+[7] T. Takahashi, B. Paul, K. Hirose, C. Matsumoto, R. Ohno,
+T. Ozaki, K. Mori, Y . Tomita, High-resolution Schottky CdTe
+diode for hard X-ray and gamma-ray astronomy, Nuclear In-
+struments and Methods in Physics Research Section A: Ac-
+celerators, Spectrometers, Detectors and Associated Equipment
+436 (1) (1999) 111–119. doi:10.1016/S0168-9002(99)
+00606-3.
+[8] H. Toyama, A. Nishihira, M. Yamazato, A. Higa, T. Maehama,
+R. Ohno, M. Toguchi, Formation of Aluminum Schottky Con-
+tact on Plasma-Treated Cadmium Telluride Surface, Japanese
+Journal of Applied Physics 43 (9R) (2004) 6371. doi:10.
+1143/JJAP.43.6371.
+[9] L. Abbene, G. Gerardi, A. Turturici, S. Del Sordo, F. Prin-
+cipato, Experimental results from Al /p-CdTe/Pt X-ray detec-
+tors, Nuclear Instruments and Methods in Physics Research Sec-
+tion A: Accelerators, Spectrometers, Detectors and Associated
+Equipment 730 (2013) 135–140, proceedings of the 9th Interna-
+tional Conference on Radiation E ffects on Semiconductor Ma-
+terials Detectors and Devices. doi:10.1016/j.nima.2013.
+03.016.
+[10] S. Watanabe, S.-n. Ishikawa, H. Aono, S. Takeda, H. Odaka,
+M. Kokubun, T. Takahashi, K. Nakazawa, H. Tajima, M. Onishi,
+Y . Kuroda, High Energy Resolution Hard X-Ray and Gamma-
+Ray Imagers Using CdTe Diode Devices, IEEE Transactions on
+Nuclear Science 56 (3) (2009) 777–782. doi:10.1109/TNS.
+2008.2008806.
+[11] T. Takahashi, K. Nakazawa, S. Watanabe, G. Sato, T. Mi-
+tani, T. Tanaka, K. Oonuki, K. Tamura, H. Tajima, T. Kamae,
+et al., Application of CdTe for the NeXT mission, Nuclear In-
+struments and Methods in Physics Research Section A: Ac-
+celerators, Spectrometers, Detectors and Associated Equipment
+541 (1) (2005) 332–341, development and Application of Semi-
+conductor Tracking Detectors. doi:10.1016/j.nima.2005.
+01.073.
+[12] L. Glesener, S. Krucker, S. Christe, S. nosuke Ishikawa,
+J. C. Buitrago-Casas, B. Ramsey, M. Gubarev, T. Takahashi,
+S. Watanabe, S. Takeda, et al., The FOXSI solar sounding rocket
+campaigns, in: J.-W. A. den Herder, T. Takahashi, M. Bautz
+(Eds.), Space Telescopes and Instrumentation 2016: Ultravi-
+olet to Gamma Ray, V ol. 9905, International Society for Op-
+tics and Photonics, SPIE, 2016, p. 99050E. doi:10.1117/12.
+2232262.
+[13] M. Katsuragawa, M. Tampo, K. Hamada, A. Harayama,
+Y . Miyake, S. Oshita, G. Sato, T. Takahashi, S. Takeda,
+S. Watanabe, G. Yabu, A compact imaging system with a
+CdTe double-sided strip detector for non-destructive analysis
+using negative muonic X-rays, Nuclear Instruments and Meth-
+ods in Physics Research Section A: Accelerators, Spectrome-
+ters, Detectors and Associated Equipment 912 (2018) 140–143,
+new Developments In Photodetection 2017. doi:10.1016/j.
+nima.2017.11.004.
+[14] A. Yagishita, S. Takeda, M. Katsuragawa, T. Kawamura,
+H. Matsumura, T. Orita, I. O. Umeda, G. Yabu, P. Caradonna,
+T. Takahashi, et al., Simultaneous visualization of multiple ra-
+dionuclides in vivo, Nature Biomedical Engineering 6 (5) (2022)
+640–647. doi:10.1038/s41551-022-00866-6 .
+[15] T. Fukuchi, S. Takeda, M. Katsuragawa, G. Yabu, S. Watanabe,
+T. Takahashi, Y . Watanabe, Gamma-ray computed tomography
+system with a double-sided strip detector, Journal of Instrumen-
+tation 18 (01) (2023) P01030. doi:10.1088/1748-0221/18/
+01/P01030.
+[16] M. Kokubun, K. Nakazawa, T. Enoto, Y . Fukazawa, K. Gilmore,
+J. Kataoka, M. Kawaharada, P. Laurent, F. Lebrun, O. Limousin,
+et al., The Hard X-ray Imager (HXI) for the ASTRO-H Mission,
+in: T. Takahashi, S. S. Murray, J.-W. A. den Herder (Eds.), Space
+Telescopes and Instrumentation 2012: Ultraviolet to Gamma
+Ray, V ol. 8443, International Society for Optics and Photonics,
+SPIE, 2012, p. 844325. doi:10.1117/12.857933.
+[17] H. Fujii, K. Ohnuki, S. Takeda, M. Katsuragawa, A. Yagishita,
+G. Yabu, S. Watanabe, T. Takahashi, A Pure Tungsten Collima-
+tor Manufactured Using 3D Printing Technology for the Eval-
+uation of 211At Radionuclide Therapy, RADIOISOTOPES 71
+(2022) 141–151. doi:10.3769/radioisotopes.71.141.
+[18] S. Meikle, P. Kench, M. Kassiou, R. Banati, Small animal
+SPECT and its place in the matrix of molecular imaging tech-
+nologies, Physics in medicine and biology 50 (2005) R45–61.
+doi:10.1088/0031-9155/50/22/R01.
+[19] K. Furukawa, S. Nagasawa, L. Glesener, M. Katsuragawa,
+S. Takeda, S. Watanabe, T. Takahashi, Imaging and spectral
+performance of a 60 µm pitch CdTe Double-Sided Strip Detec-
+tor, Nuclear Instruments and Methods in Physics Research Sec-
+tion A: Accelerators, Spectrometers, Detectors and Associated
+Equipment 978 (2020) 164378. doi:10.1016/j.nima.2020.
+164378.
+[20] E. Salc ¸ın, H. H. Barrett, H. B. Barber, S. Takeda, S. Watan-
+abe, T. Takahashi, L. R. Furenlid, Fisher information analysis of
+depth-of-interaction estimation in double-sided strip detectors,
+IEEE transactions on nuclear science 61 (3) (2014) 1243–1251.
+doi:10.1109/TNS.2014.2317454.
+[21] A. Bolotnikov, G. Camarda, Y . Cui, G. De Geronimo, J. Eger,
+A. Emerick, J. Fried, A. Hossain, U. Roy, C. Salwen, et al.,
+Use of high-granularity cdznte pixelated detectors to correct re-
+sponse non-uniformities caused by defects in crystals, Nuclear
+Instruments and Methods in Physics Research Section A: Ac-
+12
+
+--- PAGE 13 ---
+celerators, Spectrometers, Detectors and Associated Equipment
+805 (2016) 41–54, special Issue in memory of Glenn F. Knoll.
+doi:10.1016/j.nima.2015.08.051.
+[22] M. van Pamelen, C. Budtz-Jørgensen, Novel electrode geome-
+try to improve performance of CdZnTe detectors, Nuclear In-
+struments and Methods in Physics Research Section A: Ac-
+celerators, Spectrometers, Detectors and Associated Equipment
+403 (2) (1998) 390–398. doi:10.1016/S0168-9002(97)
+01120-0.
+[23] J. C. Kim, W. R. Kaye, Z. He, Signal modeling of charge
+sharing effect in simple pixelated CdZnTe detector, Journal of
+the Korean Physical Society 64 (9) (2014) 1336–1345. doi:
+10.3938/jkps.64.13360.
+[24] C. Budtz-Jørgensen, I. Kuvvetli, New Position Algorithms for
+the 3-D CZT Drift Detector, IEEE Transactions on Nuclear
+Science 64 (6) (2017) 1611–1618. doi:10.1109/TNS.2017.
+2696574.
+[25] Y . Yin, X. Chen, H. Wu, S. Komarov, A. Garson, Q. Li, Q. Guo,
+H. Krawczynski, L.-J. Meng, Y .-C. Tai, 3-D Spatial Resolution
+of 350 /spl mu/m Pitch Pixelated CdZnTe Detectors for Imag-
+ing Applications, IEEE Transactions on Nuclear Science 60 (1)
+(2013) 9–15. doi:10.1109/TNS.2012.2213611.
+[26] L. Verger, E. Gros d’Aillon, O. Monnet, G. Mont ´emont, B. Pel-
+liciari, New trends inγ-ray imaging with CdZnTe/CdTe at CEA-
+Leti, Nuclear Instruments and Methods in Physics Research
+Section A: Accelerators, Spectrometers, Detectors and Asso-
+ciated Equipment 571 (1) (2007) 33–43, proceedings of the
+1st International Conference on Molecular Imaging Technology.
+doi:10.1016/j.nima.2006.10.023.
+[27] S. Watanabe, H. Tajima, Y . Fukazawa, Y . Ichinohe, S. Takeda,
+T. Enoto, T. Fukuyama, S. Furui, K. Genba, K. Hagino, et al.,
+The Si/CdTe semiconductor Compton camera of the ASTRO-
+H Soft Gamma-ray Detector (SGD), Nuclear Instruments and
+Methods in Physics Research Section A: Accelerators, Spec-
+trometers, Detectors and Associated Equipment 765 (2014)
+192–201, hSTD-9 2013 - Proceedings of the 9th International
+”Hiroshima” Symposium on Development and Application of
+Semiconductor Tracking Detectors. doi:10.1016/j.nima.
+2014.05.127.
+[28] G. Sato, K. Hagino, S. Watanabe, K. Genba, A. Harayama,
+H. Kanematsu, J. Kataoka, M. Katsuragawa, M. Kawaharada,
+S. Kobayashi, et al., The Si /CdTe semiconductor camera of the
+ASTRO-H Hard X-ray Imager (HXI), Nuclear Instruments and
+Methods in Physics Research Section A: Accelerators, Spec-
+trometers, Detectors and Associated Equipment 831 (2016)
+235–241, proceedings of the 10th International “Hiroshima”
+Symposium on the Development and Application of Semicon-
+ductor Tracking Detectors. doi:10.1016/j.nima.2016.03.
+038.
+[29] B.Delaunay, Sur la sph `ere vide. A la m ´emoire de Georges
+V orono, Bulletin de l’Acad´emie des Sciences de l’URSS. Classe
+des sciences math´ematiques et na 6 (1934) 793–800.
+[30] Z. He, Review of the Shockley–Ramo theorem and its appli-
+cation in semiconductor gamma-ray detectors, Nuclear Instru-
+ments and Methods in Physics Research Section A: Accel-
+erators, Spectrometers, Detectors and Associated Equipment
+463 (1) (2001) 250–267. doi:10.1016/S0168-9002(01)
+00223-6.
+[31] K. Hagino, H. Odaka, G. Sato, S. Watanabe, S. Takeda,
+M. Kokubun, T. Fukuyama, S. Saito, T. Sato, Y . Ichinohe, et al.,
+Imaging and spectral performance of CdTe double-sided strip
+detectors for the Hard X-ray Imager onboard ASTRO-H, in:
+T. Takahashi, S. S. Murray, J.-W. A. den Herder (Eds.), Space
+Telescopes and Instrumentation 2012: Ultraviolet to Gamma
+Ray, V ol. 8443, International Society for Optics and Photonics,
+SPIE, 2012, p. 844355. doi:10.1117/12.926052.
+[32] S. Nagasawa, T. Minami, S. Watanabe, T. Takahashi, Wide-
+gap CdTe strip detectors for high-resolution imaging in hard
+X-rays, Nuclear Instruments and Methods in Physics Research
+Section A: Accelerators, Spectrometers, Detectors and Associ-
+ated Equipment 1050 (2023) 168175. doi:10.1016/j.nima.
+2023.168175.
+[33] H. Toyama, A. Higa, M. Yamazato, T. Maehama, R. Ohno,
+M. Toguchi, Quantitative Analysis of Polarization Phenom-
+ena in CdTe Radiation Detectors, Japanese Journal of Applied
+Physics 45 (11R) (2006) 8842. doi:10.1143/JJAP.45.8842.
+[34] A. Cola, I. Farella, Electric fields and dominant carrier trans-
+port mechanisms in CdTe Schottky detectors, Applied Physics
+Letters 102 (11) (2013) 113502. doi:10.1063/1.4795942.
+[35] S. Agostinelli, J. Allison, K. Amako, J. Apostolakis, H. Araujo,
+P. Arce, M. Asai, D. Axen, S. Banerjee, G. Barrand, et al.,
+Geant4—a simulation toolkit, Nuclear Instruments and Meth-
+ods in Physics Research Section A: Accelerators, Spectrome-
+ters, Detectors and Associated Equipment 506 (3) (2003) 250–
+303. doi:10.1016/S0168-9002(03)01368-8 .
+[36] G. Ari ˜no-Estrada, M. Chmeissani, G. de Lorenzo, M. Kolstein,
+C. Puigdengoles, J. Garc ´ıa, E. Cabruja, Measurement of mo-
+bility and lifetime of electrons and holes in a Schottky CdTe
+diode, Journal of Instrumentation 9 (12) (2014) C12032. doi:
+10.1088/1748-0221/9/12/C12032.
+[37] K. Suzuki, T. Sawada, K. Imai, S. Seto, Time-of-Flight Mea-
+surements on Schottky CdTe Detectors, IEEE Transactions on
+Nuclear Science 59 (4) (2012) 1522–1525. doi:10.1109/
+TNS.2012.2193599.
+13

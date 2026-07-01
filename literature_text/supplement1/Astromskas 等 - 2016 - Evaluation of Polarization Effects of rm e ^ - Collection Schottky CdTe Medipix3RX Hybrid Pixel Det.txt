@@ -1,0 +1,502 @@
+
+
+--- PAGE 1 ---
+252 IEEE TRANSACTIONS ON NUCLEAR SCIENCE, VOL. 63, NO. 1, FEBRUARY 2016
+Evaluation of Polarization Effects of Collection
+Schottky CdTe Medipix3RX Hybrid Pixel Detector
+V ytautas Astromskas, Eva N. Gimenez, Annika Lohstroh, and Nicola Tartoni , Member , IEEE
+Abstract—This paper focuses on the evaluation of operational
+conditions such as temperature, exposure time and ﬂux on the
+polarization of a Schottky electron collection CdTe detector. A
+Schottky collection CdTe Medipix3RX hybrid pixel detector
+was developed as a part of the CALIPSO-HIZPAD2 EU project.
+The pixel matrix and 0.75 mm thick CdTe sensor
+bump-bonded to Medipix3RX readout chips enabled the study
+of the polarization effects. Single and quad module Medipix3RX
+chips were used which had
+and pixel
+matrices, respectively. This study reports the sensor-level and
+pixel-level polarization effects of the detector obtained from a
+laboratory X-ray source. We report that the sensor-level polar-
+ization is highly dependent on temperature, ﬂux and exposure
+time. Furthermore, the study of pixel-level polarization effects led
+to identiﬁcation of a new type of pixel behaviour that is charac-
+terised by three distinct phases and, thus, named “tri-phase” (3-P)
+pixels. The 3-P pixels were the dominant cause of degradation
+of the ﬂat-ﬁeld image uniformity under high ﬂux operation. A
+new method of identifying the optimum operational conditions
+that utilises a criterion related to the 3-P pixels is proposed. A
+generated optimum operational c onditions chart under the new
+method is reported. The criterion is used for bias voltage reset de-
+polarization of the detector. The method successfully represented
+the dependency of polarization o n temperature, ﬂux and exposure
+time and was reproducible for multiple sensors. Operating the de-
+tector under the 3-P pixel criterion resulted in the total efﬁciency
+not falling below 95%.
+Index Terms— Medipix, polarization, Schottky CdTe, semicon-
+ductor radiation detectors, tri-phase pixels.
+I. I NTRODUCTION
+C
+ADMIUM TELLURIDE’s (CdTe) attractive properties
+such as high resistivity at room temperature and large
+linear attenuation coefﬁcient make it a prospective semicon-
+ductor for room-temperature X- and gamma-ray radiation de-
+tectors. Recent improvements in c rystal growth techniques al-
+lows the manufacturing of large area homogeneous crystals with
+electrical properties suitable f or applications such as medical
+Manuscript received July 16, 2015; r evised November 06, 2015; accepted
+January 03, 2016. Date of publication February 03, 2016; date of current ve rsion
+February 16, 2016. This project was supported by SEPnet and the HIZPAD2
+Joint Research Activity, part of the Eu ropean funded CALIPSO project, gra nt
+agreement 312284.
+V. Astromskas and A. Lohstroh are with the University of Surrey, Guild-
+ford GU2 7XH, U.K. (e-mail: v.astromskas@surrey.ac.uk; a.lohstroh@sur rey.
+ac.uk).
+E. N. Gimenez and N. Tartoni are with Diamond Light Source Ltd.,
+Didcot, Oxfordshire OX11 0DE, U.K. (e-mail: nicola.tartoni@diamond.ac .uk;
+eva.gimenez-navarro@diamond.ac.uk).
+Color versions of one or more of the ﬁgures in this paper are available onlin e
+at http://ieeexplore.ieee.org.
+Digital Object Identiﬁer 10.1109/TNS.2016.2516827
+imaging, material science, sync hrotron, and ast rophysical ap-
+plications [1], [2]. However, Cd Te detectors, especially those
+with Schottky contacts, suffer fr om “polarization” effects that
+strongly affect the imaging performance of the detector, and in
+some cases cannot be suitably corrected by applying ﬂat-ﬁeld
+corrections [3].
+Polarization causes a change in the detector’s performance
+after biasing the sensor, and l e a d st oar e d u c t i o ni nc o u n tr a t e
+over time and loss of charge coll ection efﬁciency. Polarization
+arises from trapping and de-tr apping of ionized deep-level ac-
+ceptors inside the crystal which affects the space-charge and
+electric ﬁeld distribution [4]. The rate of polarization is inﬂu-
+enced by operational conditions such as temperature, radiation
+ﬂux, and duration of illumination [5]. Application of high bias
+voltages and operation at low temperatures can help to stabilize
+the detector’s performance [4]. The most common method of
+depolarizing a detector is to reset the applied bias voltage which
+completely recovers the detector ’s performance [6]. However,
+to date no standardized procedure for depolarization has been
+established that identiﬁes th e optimum operational conditions
+the detector should be operated at in order to minimize the reset
+duration dead time in addition to minimizing the degradation
+of imaging quality. Hybrid small-pixel detectors can provide
+insight into the space-charge uni formity of the sensor. In hy-
+brid detectors each pixel is individually connected to its elec-
+tronic chain [7]. Previous studi es of CdTe pixelated detectors
+have identiﬁed three types of pixel behaviour. Firstly, the ma-
+jority of pixels follow the whole sensor’s behaviour, i.e. exhibit
+a steady decrease of counts over time. Secondly, some pixels’
+counting performance remains stable. The third type of pixel
+behaviour shows a steady increase in counts over time. The in-
+crease in counts is usually observed in the pixels adjacent to a
+pixel without a contact, thus, the charge that would have been
+collected by a contactless pixel d rifts to the adjacent ones [7].
+In this study we present the evaluation of polarization effects
+on several Schottky
+collection CdTe Medipix3RX pixelated
+detector systems, and the effect of operational conditions on the
+polarization. We report a new type of pixel behaviour that was
+used as a criterion for optimum bias voltage reset.
+II. M
+ETHODS
+CdTe Schottky collection senso rs bump-bonded to
+Medipix3RX chips were used in this study in order to evaluate
+the polarization effects and determine the optimised operational
+conditions. CdTe sensors were manufactured by Acrorad [8].
+Five single and ﬁve quad asse mblies were manufactured as
+a part of the European CALIPS O-HIZP AD2 project. Single
+0018-9499 © 2016 British Crown Copyright
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 05:42:43 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 2 ---
+ASTROMSKAS et al.: EV ALUA TION OF POLARIZA TION EFFECTS OF COLLECTION 253
+Fig. 1. The linearity of the registered counts per pixel per second with res pect
+to the current of the X-ray tube. The errors were extracted from the linear ﬁ t.
+assemblies had m m pixel pitch with a
+pixel matrix, with dimensions of mm mm mm.
+Quad assemblies had the same pixel pitch but pixel
+matrix, with dimensions of mm mm mm.
+The crystals were bump-bonded using InSn bump-bonds by
+Advacam [9]. The details on the Medipix3RX chip can be
+found in [10]. The MERLIN readout system, developed by
+the Diamond Light Source [11], was used for readout, control
+of bias voltage reset, and monitoring the temperature of the
+detector [12]. The results presented in this paper were obtained
+using the single pixel counting mode of the Medipix3RX chip.
+All of the experiments were performed using a Molybdenum
+target laboratory X-ray tube with a maximum voltage of 50 kVp
+and a maximum current of 50 mA. A direct X-ray beam was
+used to uniformly illuminate the detector placed approximately
+70 cm from the X-ray tube. The Medipix3RX chip was inside
+a 2 mm thick Al casing. The A l casing had a window which
+only revealed the CdTe crystal . The incoming 25 keV X-rays
+were 100% absorbed by the CdTe crystal [2], thus protecting
+the metal bonding between the ASIC and the crystal. The chip
+itself had a
+m thick Al layer deposited on it. The circuitry
+in the periphery of the CdTe crystal is digital, i.e. any radiation
+damage on the circuitry would register as digital errors due to
+the fact that the impact of radiation would be seen as a change
+of the timing properties of the circuit. This is not the case for the
+results presented in this paper. The detectors were tested under
+several temperatures and radiation ﬂuxes. The thermal stability
+of the detector was ensured using a water chiller and a copper
+plate at the back of the detector assembly. The temperatures for
+measurements ranged from
+to . The ﬂuxes of the
+direct X-ray beam at the position of the detector ranged from
+9 kcps per pixel to 300 kcps per pixel. The relationship between
+the current of the X-ray tube and t he registered counts per pixel
+per second is displayed in Fig. 1. The applied bias voltage was
+set to
+V for all measurements.
+III. R ESULTS AND DISCUSSION
+A. Sensor-level Polarization Effects
+Figs. 2 and 3 show the reduction of mean counts per frame
+over time with respect to temper ature and ﬂux respectively.
+Fig. 2. Polarization dependency over time for different temperatures. Th ed e -
+tector was illuminated under the same conditions of 9 kcps per pixel ﬂux fro m
+the Molybdenum target X-ray tube.
+Fig. 3. Polarization dependency over time for different photon ﬂuxes. The de-
+tector was cooled to for all measurements.
+Each point in these ﬁgures was obtained by summing the counts
+of each pixel of a sensor in a frame and normalizing to the ﬁrst
+frame’s count value. The detect or was exposed to radiation for
+90 minutes without a bias voltage reset applied. The acquisition
+time of each frame (i.e. frame rate) in Fig. 2. was 300 ms. In
+Fig. 3. the frame rate was 30 s, 300 ms and 100 ms for 100 cps,
+9 kcps and 24 kcps per pixel, res pectively. Observations from
+single and quad module detectors agree with previously pub-
+lished results, i.e. cooling the detector reduces the rate of ef-
+ﬁciency degradation [4]. The degradation with higher temper-
+ature arises as the number of th ermally generated charge car-
+riers increases. Also, the results show that the polarization is
+highly dependent on ﬂux and the duration of radiation illumi-
+nation. The slopes of time dependencies of normalized number
+of counts in each sensor of a quad module detector slightly
+differ depending on the defects. No pixels were excluded in
+the analysis. Radiation ﬂux incr eases the ionization rate of elec-
+tron-hole pairs inside the semiconductor. This results in an in-
+creased number of free charge carriers which can be trapped by
+the defects and impurities causing polarization to occur sooner.
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 05:42:43 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 3 ---
+254 IEEE TRANSACTIONS ON NUCLEAR SCIENCE, VOL. 63, NO. 1, FEBRUARY 2016
+Fig. 4. Flat-ﬁeld images of a quadrant of a quad detector. The detector was c ooled to . Flat-ﬁeld image of the ﬁrst frame of exposure (a). Flat-ﬁeld after a
+10 minute exposure at 9 kcps per pixel ﬂux (b). Flat-ﬁeld after 90 minute exp osure at 9 kcps per pixel ﬂux (c). Flat-ﬁeld image after a 10 minute exposure at 300
+kcps per pixel (d). The 24-bit counter was used to obtain ﬂat ﬁeld images (a) and (d). The 12-bit counter was used to obtain ﬂat ﬁeld images (b) and (c).
+The degradation of the sensor’s performance arising from po-
+larization is typically identiﬁe d as a loss of counts, appearance
+of dislocation lines, and reduction in the total uniformity of re-
+sponse [4]. Fig. 4. shows four ﬂat-ﬁeld images of a sensor ob-
+tained under different conditions. The detector was operated at
+temperature. The frame rate was 500 ms. Fig. 4(a) shows
+an initial frame of the illumination under 300 kcps per pixel ﬂux.
+Fig. 4(b) displays the degradation of the sensor after a 10 min-
+utes of 9 kcps radiation ﬂux. Fig. 4(c) displays the degradation
+of the sensor after a 90 minute illumination of 9 kcps ﬂux of
+X-rays. Fig. 4(d) shows the degradation of the sensor after a 10
+minute exposure of 300 kcps ﬂux of X-rays. The difference in
+the total number of counts in the frame differs due to one (12 bit)
+or two (24 bit) counters being enabled during the acquisition.
+Fig. 4(a) and Fig. 4(d) used a 24 bit counter, while Fig. 4(b) and
+Fig. 4(c) used the 12 bit counter.
+Fig. 4 shows that the dominating polarization effect of the
+sensor, i.e. having the greatest impact on the uniformity of
+sensor’s response, differs with ﬂux. As shown in Fig. 4(c),
+the dominating defects under low ﬂux and long exposure are
+loss of total counts and dislocation lines, and saturated pixels
+which appear in white. With the 12 bit counter, a saturated
+pixel recorded a maximum of 4095 counts per frame. Under
+the high ﬂux operation, as shown in Fig. 4(d), the dominating
+effect is the tri-phase (3-P) pixels which count zero. The 3-P
+pixel’s behaviour is discussed in Section III-B. For comparison,
+Fig. 4(b) and Fig. 4(d) show the difference in degradation after
+10 minute exposure but for 9 kcps and 300 kcps ﬂux respec-
+tively. It is worth noting that depolarizing the detector using
+bias voltage reset restored the response of all the pixels to the
+original state as shown in Fig. 4(a) for all detectors including
+the 3-P pixels which is discussed later in Section III-C.
+The uniformity of response was evaluated using ﬂat-ﬁeld
+coefﬁcient histograms. The ﬂat-ﬁeld coefﬁcient values are
+obtained by dividing each pixel’s count value by the mean
+count value of the whole sensor. This resulted in a histogram of
+ﬂat-ﬁeld coefﬁcients as shown in Fig. 5. The ﬂat-ﬁeld coefﬁ-
+cient values in Fig. 5(a) were obt ained from the ﬂat-ﬁeld image
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 05:42:43 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 4 ---
+ASTROMSKAS et al.: EV ALUA TION OF POLARIZA TION EFFECTS OF COLLECTION 255
+Fig. 5. Flat-ﬁeld coefﬁcient histogram showing the uniformity of pixel
+response on the sensor. The detector was operated under temperature
+and 300 kcps count rate. First frame’s uniformity is represented in (a). De tector
+uniformity after a 10 minute exposure is shown in (b).
+of Fig. 4(a), while the Fig. 5(b) histogram coefﬁcient values
+were obtained from the ﬂat-ﬁeld of Fig. 4(d). Due to the polar-
+ization effects, the total unifor mity of the detector’s response
+to radiation decreases over time as the width of the histogram
+increased. The skew of the distribution towards higher ﬂat-ﬁeld
+coefﬁcient values in both histograms arises from the reduction
+of efﬁciency of the detector due t o polarization. The reduction
+of the registered counts requir es a ﬂat-ﬁeld coefﬁcient value
+greater than 1 in order to corr ect the pixel’s counts to the
+mean counts of the sensor. A Gaussian distribution of the
+ﬂat-ﬁeld coefﬁcients is expected in the ﬁrst frame as a Gaussian
+pixel-threshold calibration was performed on all the sensors
+around the noise edge. The skew in the Fig. 5(a) shows that the
+polarization effect is alread y observed in the ﬁrst frame.
+B. Pixel-level Polarization Effects
+All three previously reported types of pixel behaviours (men-
+tioned in Section I) were observe d in our detectors. Further-
+more, a fourth type of pixel behaviour was observed in our
+single and quad assemblies that dominated the degradation of
+the ﬂat-ﬁeld images under high ﬂux which has not been reported
+before. The tri-phase pixel behaviour is shown in Fig. 6. The
+Fig. 6. A typical tri-phase pixel behaviour with the three main phases iden ti-
+ﬁed.
+Fig. 7. 3-P pixels’ behaviour from each of the quadrants from a quad assembly.
+ﬁrst phase was identiﬁed as a steady increase of counts. In the
+second phase, there is a more ra pid increase of counts up to a
+certain value of counts. The maximum number of counts slightly
+varied for every pixel as seen in Fig. 7. During the third phase,
+the total number of counts decr eased at different rates but al-
+ways reached zero within 30 seconds, which left the pixel not
+counting until the bias voltage reset was applied. Fig. 7 shows
+the counts as a function of tim e for two example pixels in each
+quadrant of a quad module. The pixels were neither adjacent to
+each other nor near underperform ing pixels. These pixels were
+identiﬁed as the zero counts pixels at the end of a 10 minute
+cycle as seen in Fig. 4(d). The to tal number of this type of pixel
+increased over time and they all showed a similar behaviour to
+that shown in Fig. 7. Furthermore, these pixels were consistently
+observed in each of the sensors tested in the ﬁrst and third quad
+assemblies (i.e. 8 different sensors), and exhibited the same be-
+haviour over multiple cycles as shown in Fig. 9. The second and
+fourth quad assemblies were not t e s t e da st h e yw e r ei n o p e r a b l e
+due to faults during the d etector’s assembly.
+The physics behind the 3-P pixel’s behaviour is not currently
+understood and has not yet been investigated in sufﬁcient detail.
+From a preliminary evaluation of the performance of the 3-P
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 05:42:43 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 5 ---
+256 IEEE TRANSACTIONS ON NUCLEAR SCIENCE, VOL. 63, NO. 1, FEBRUARY 2016
+Fig. 8. Increase of the total number of 3-P pixels in the sensor over time. Th e
+criterion is met when the total number of 3-P pixels is above the baseline va lue.
+Fig. 9. A single 3-P pixel’s reproducible behaviour over nine 10 minute cyc les.
+pixels and their neighbours it can be deduced that the underlying
+mechanisms are limited to the 3-P pixel as in most cases the
+nearby pixels are not affected. This suggests that the effect is
+near the surface of the crystal. If the origin was located deep in
+the crystal, diffusion of the gen erated charge would cause it to
+drift to the electrodes of multiple pixels.
+C. Criterion for Bias V oltage Reset
+There is not a standard criterion under which the bias voltage
+should be reset that speciﬁes how often it may occur and for
+how long the “off-time” should last. The identiﬁcation of pixels
+that behave as described in Sectio n III-B provide a criterion for
+bias voltage reset, since the 3-P pixels dominated the sensor’s
+degradation of uniformity under high ﬂux.
+Fig. 8. shows the increase of the total number of 3-P pixels as
+a function of time under differen t count rates. The detector was
+cooled to
+and the data was collected for 10 minutes with a
+500 ms frame rate and no bias voltage reset applied. Three fea-
+tures can be observed in this ﬁgure. First, there is a baseline, i.e.
+the sensor has some pixels that constantly count zero. These are
+the inactive pixels due to either contact issues or being masked,
+i.e. the electronics behind it were deactivated. The total number
+of inactive pixels is different for each sensor. Secondly, there is
+a stable plateau where the total number of 3-P pixels does not
+change or ﬂuctuate by
+. The plateau fundamentally corre-
+sponds to the duration the detector is stable with respect to 3-P
+pixels. The duration of the plateau region was dependent on ﬂux
+and temperature. Thirdly, a steady increase of the total number
+of 3-P pixels. The rate of increase was dependent on both ﬂux
+and temperature. These features suggest a criterion which quan-
+tiﬁes the time at which the plateau region ends.
+In order to determine the criterion for each sensor a different
+baseline deﬁnition is required. The baseline is determined by the
+total number of inactive pixel s in the ﬁrst frame and adding an
+offset of a standard deviation of the inactive pixels. The addition
+of this offset is required in order to ignore the minor ﬂuctuations
+in the number of 3-P pixels as shown in the 40 kcps per pixel
+dataset in Fig. 8. This way the criterion takes into account the
+whole sensor’s behaviour. The cr iterion identiﬁes the instance
+in time where the total number of 3-P pixels is higher than the
+deﬁned baseline, i.e. the end of the stable plateau. The extracted
+time value was used as the bias voltage reset time. This process
+was repeated for each of the ﬂuxes and the temperatures tested.
+The generated criteria produced an optimum operational condi-
+tions (OOC) chart as seen in Fig. 10. The ﬁgure shows the time
+at which the bias voltage should be reset for different operating
+temperatures and incident average ﬂux, and should be read as a
+chart. The X-axis denotes the time when the detector should be
+depolarized according to the criterion. The Y-axis displays the
+ﬂux under which the detector was illuminated from the X-ray
+tube. The corresponding regist ered number of counts for each
+of the X-ray tube currents is shown in Fig. 1. The criterion en-
+sures that ﬂat-ﬁeld image quality is kept at the best (optimal)
+state as the moment in time when the 3-P pixels start appearing
+in the ﬂat-ﬁeld image, the detector is re-set. As the 3-P pixel be-
+haviour cannot be compensated for by ﬂat-ﬁeld corrections, we
+consider the optimum condition to re-set the detector as soon as
+the 3-P pixels begin to increase in number, in order to minimise
+their effect on the corrected im age quality. The OOC charts are
+reproducible for all sensors despite their different polarization
+responses.
+An empirical approach to ﬁt the data shown in Fig. 10. with
+double exponential was chosen as a single exponential did not
+ﬁt the data correctly. The double exponential could suggest that
+the polarization has a fast and a slow component. The extracted
+time decay constants were in the range of
+s and
+s for the ﬁrst and second exponential respec-
+tively, within the limitations of the precision of the individual
+ﬁts. It was not possible to identify any further systematic depen-
+dency on the operating conditions with conﬁdence. As shown in
+Fig. 10, the colder the detector the longer it can operate before
+the criterion is met, which agrees with previously published data
+[5]. In addition, the total efﬁciency of the detector did not de-
+grade below 95% when applying t he extracted depolarization
+time from the criterion.
+D. Bias V oltage Reset Duration
+A common way of depolarizing the detector is to reset the
+applied bias voltage on the detector. The applied bias voltage
+is ramped down from
+V to 0 V over a period of 5 s in all
+measurements. The longer the bias voltage remains switched off
+f o l l o w i n gt h ee n do ft h er a m p i n gt i m et h em o r et r a p p e dc h a r g e
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 05:42:43 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 6 ---
+ASTROMSKAS et al.: EV ALUA TION OF POLARIZA TION EFFECTS OF COLLECTION 257
+Fig. 10. Optimum Operational Conditions (OOC) charts for each of the senso r
+of a quad assembly: for the 1st quadrant (a), 2nd quadrant (b), 3rd quadrant
+(c) and 4th quadrant (d). Each point of each line represents the time instan ce,
+where the criterion is met, and its depe ndence on ﬂux and temperature. The
+corresponding registered counts per pi xel per second to the ﬂux are shown i n
+Fig. 1.
+Fig. 11. Mean values for each frame dur ing several refres hing bias cycles f or
+three quadrants of a quad assembly and for different bias refresh times: wi th a
+1sr e f r e s ht i m e( a ) ,1 0s( b ) ,1 5s( c )a n d2 0s( d ) .T h eh o r i z o n t a ll i n ei ss e tto
+one for a clear display of the overshoots.
+is released. This was observed by investigating the 3-P pixels’
+behaviour when the bias voltage was being reset. While the bias
+voltage was ramping down towards zero volts, the pixel was
+activated and counted more than the nearby pixels, which sug-
+gested that the trapped charge was being released.
+We have investigated the effect of the duration of the bias
+voltage remaining switched off. Fig. 11. shows the loss of the
+total number of counts for each of the sensors of the quad as-
+sembly with different durations of bias voltage being switched
+off.
+The tested “off time” durations i.e. after the bias voltage
+reached 0 V , were 1, 10, 15 and 20 seconds. The detector was
+operated under 300 kcps per pixel ﬂux and cooled to
+.T h e
+frame rate was 500 ms. Note the mean pixel value of the ﬁnal
+frame of each cycle decreased when the bias reset time was too
+short. This effect is visible in the Fig. 11(a) and Fig. 11(b) plo ts.
+This arises from the sensor not fu lly depolarizing, hence, taking
+less time for polarization to bui ld up. However, Fig. 11(c) and
+Fig. 11(d) show that the bias reset duration was long enough to
+keep the detector stable in between the cycles. The behaviour
+of the fourth quadrant followed the same trend as the other
+three but it has been excluded from the Fig. 11. as it ha dn o i s y
+pixels which disrupted the plot. Additionally, a small overshoot
+is observed after the bias reset was applied. The overshoot
+is caused by the sensor needing some time to stabilise. The
+overshoot is of approximately 2% of the total number of counts
+and lasts less than three seconds. The horizontal line is set to
+one for a clear display of the overshoo ts.
+The duration of the bias voltage to be switched off was depen-
+dent on the degradation of performance of the detector and the
+operational conditions. For low ﬂux measurements it has been
+observed that a shorter “off time” was sufﬁcient to completely
+depolarize the detector and keep it stable over multiple cycles.
+IV . C
+ONCLUSION
+A Schottky collection CdTe sensor bump-bonded to a
+Medipix3RX chip was used to evaluate the effects of opera-
+tional conditions onto polarization. The results showed that in
+single and quad assemblies the polarization is highly dependent
+on temperature, ﬂux and radiation exposure time. These opera-
+tional conditions must be taken into consideration when oper-
+ating the system. Furthermore , an identiﬁcation of a new type
+of pixel behaviour led to deﬁnition of 3-P pixels. The 3-P pixels
+cannot be easily corrected using ﬂat-ﬁeld correction as they ex-
+hibit non-linear behaviour over time. The underlying mecha-
+nism behind the 3-P pixels should be fully investigated in future.
+The 3-P pixels were used as a criterion in order to determine
+the optimal time to apply high voltage reset for stabilising the
+detector’s performance using an Optimal Operational Condi-
+tions (OOC) chart. The 3-P pixels were the dominant ﬂat-ﬁeld
+defect under high ﬂux conditions. Under the proposed method
+the applied bias voltage is reset as soon as the 3-P pixels appear
+in the ﬂat-ﬁeld image. This eliminates any 3-P pixels and only
+linearly degrading pixels rem ain which can be easily corrected
+using ﬂat-ﬁeld corrections. Whe n applying the optimal depolar-
+ization time the detector’s efﬁciency did not reduce below 95%.
+The proposed method is performed on the whole sensor and was
+found to be reproducible for mu ltiple sensors. The generated
+OOC chart would assist users of the detector in maintaining the
+best ﬂat-ﬁeld quality as it allows extracting the optimal depola r-
+ization time for a range of operational conditions.
+A
+CKNOWLEDGMENT
+The authors would like to thank Ian Horswell, David Omar,
+and Richard Plackett at the Diamond Light Source for assistance
+with the operation of the MERLIN system.
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 05:42:43 UTC from IEEE Xplore.  Restrictions apply. 
+
+--- PAGE 7 ---
+258 IEEE TRANSACTIONS ON NUCLEAR SCIENCE, VOL. 63, NO. 1, FEBRUARY 2016
+REFERENCES
+[1] H. Shiraki, M. Funaki, Y. Ando, S. Kominami, K. Amemiya, and R.
+Ohno, “Improvement of the productivity in the THM growth of CdTe
+single crystal as nuclear radiation detector,” IEEE Trans. Nucl. Sci. ,
+vol. 57, no. 1, pp. 395–399, Feb. 2010.
+[2] S. D. Sordo, L. Abbene, E. Caroli, A. M. Mancini, A. Zappettini, and P.
+Ubertini, “Progress in the development of CdTe and CdZnTe semicon-
+ductor radiation detectors for astr ophysical and medical applications, ”
+Sensors (Basel, Switzerland) , vol. 9, pp. 3491–3526, May 2009.
+[ 3 ] R .A a m i r ,S .P .L a n s l e y ,R .Z a i n o n ,M .F i e d e r l e ,A .F a u l e r ,D .G r e i f f -
+enberg, P. H. Butler, and A. P. H. Butler, “Pixel sensitivity variations
+in a CdTe-Medipix2 detector using poly-energetic x-rays,” J. Instrum.,
+vol. 6, p. C01059, Jan. 2011.
+[ 4 ] M .N i r a u l a ,A .N a k a m u r a ,T .A o k i ,Y .T o m i t a ,a n dY .H a t a n a k a ,“ S t a -
+bility issues of high-energy resolution diode type CdTe nuclear radia-
+tion detectors in a long-term operation,” Nucl. Instrum. Methods Phys.
+Res. A , vol. 491, pp. 168–175, Sep. 2002.
+[5] I. Farella, G. Montagna, A. Mancini, and A. Cola, “Study on instability
+phenomena in CdTe diode-like detectors,” in Proc. IEEE Nuclear Sci-
+ence Symp. Conf. Rec. , Oct. 2008, pp. 154–161.
+[6] R. O. Bell, G. Entine, and H. B. Se rreze, “Time-dependent polarization
+of CdTe gamma-ray detectors,” Nucl. Instrum. Methods , vol. 117, pp.
+267–271, May 1974.
+[ 7 ] C .B u t o n ,A .D a w i e c ,J .G r a b e r - B o l i s ,K .A r n a u d ,J .F .B r a r ,N .B l a n c ,
+N .B o u d e t ,J .C .C l m e n s ,F .D e b a r b i e u x ,P .D e l p i e r r e ,B .D i n k e s p i l e r ,
+T. Gastaldi, S. Hustache, C. Morel, P. Pangaud, H. Perez-Ponce, and
+E. Vigeolas, “Comparison of three types of XPAD3.2/CdTe single chip
+hybrids for hard X-ray applications in material science and biomedical
+imaging,” Nucl. Instrum. Methods Phys. Res. A , vol. 758, pp. 44–56,
+Sep. 2014.
+[8] Acrorad - CdTeŁ [Online]. Available: http://www.acrorad.co.jp/us/ ,
+Accessed: 2015-06-25
+[9] Advacam - Imaging the unseen - Home [Online]. Available: http://
+www.advacam.com/en/, Accessed: 2015-06-25
+[10] R. Ballabriga, J. Alozy, G. Blaj, M. Campbell, M. Fiederle, E. Frojdh,
+E. H. M. Heijne, X. Llopart, M. Pichotka, S. Procz, L. Tlustos, and W.
+Wong, “The Medipix3rx: A high resolution, zero dead-time pixel de-
+tector readout chip allowing spectroscopic imaging,” J. Instrum. , vol.
+8, p. C02016, Feb. 2013.
+[11] Diamond light source [Online]. Available: http://www.diamond.ac. uk/
+Home.html, Accessed: 2015-06-25
+[12] R. Plackett, I. Horswell, E. N. Gimenez, J. Marchal, D. Omar, and N.
+Tartoni, “Merlin: A fast versatile readout system for Medipix3,” J. In-
+strum., vol. 8, p. C01038, Jan. 2013.
+Authorized licensed use limited to: Tsinghua University. Downloaded on June 30,2026 at 05:42:43 UTC from IEEE Xplore.  Restrictions apply. 
