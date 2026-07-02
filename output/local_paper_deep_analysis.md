@@ -19,6 +19,34 @@
    - 降温通常降低热激发漏电流和电子噪声，有助于峰位/基线稳定，尤其对 CdTe 更明显。
    - 但过低温度会带来凝露风险、TEC 功耗、热梯度、机械体积、封装复杂度和便携性下降；并且部分陷阱/去陷阱动力学并非单调有利。高通量 CdZnTe 文献中更常采用 18-28 C、20 C 或 22±1 C 这种“工程控温”而非深冷。
 
+## 0.1 温度口径索引：温度是环境、板卡/ASIC、模块还是晶体？
+
+下表补充 `output/local_literature_extraction.tsv` 中新增的两列。原则是：文献只报告 ASIC、模块、冷板或温控箱温度时，不把它改写为“晶体本身温度”；只有出现 sensor temperature、Peltier stage sample temperature、thermostatic chamber sample temperature 等更接近样品温度的表述时，才按探测器/样品温度理解。
+
+| 编号 | 文献 | 温度对象/测温位置 | 温度测量/控制说明 |
+|---|---|---|---|
+| L01 | Veale 2020 | ASIC/DAQ 温控点；可视为探测器头/读出链路温度，不是直接晶体温度 | HEXITEC GigE DAQ 温控 ASIC 至室温；28 C 和 18 C 应按 ASIC/系统设定温度理解，晶体实际温度未直接给出 |
+| L02 | Cline 2024 | ASIC 温度/板卡温度为主；探测器安装在 Peltier 上，不是裸晶体直接读数 | LOKI/PCB 传感器监测温湿度，电源反馈维持稳定温度；主要结果写作 ASIC temperature 20 C，低于环境时用 solid-state dehumidifiers 防凝露 |
+| L03 | Montemont 2013 | 模块温度/模块调节温度；不是单独晶体温度 | 模块被 regulated to 25 C；温控细节与后续 XDi 冷却板路线一致，提取材料未给独立晶体温度传感位置 |
+| L04 | Kosciesza 2013 | 模块内部温度；由模块内 dedicated sensor 读出，不是冷板设定值本身 | 长冷却板从下方控温；改变 cooling-plate temperature 约 0.5 C 步进，并用模块内 dedicated sensor 测模块温度；系统目标 22 C、工作 20-25 C |
+| L05 | Greenberg 2014 | 未给实验温度；模型参数中未定义温度测点 | CZT detector modeling，不是温控实验；温度只可作为漏电/噪声/分辨率的潜在影响因素理解 |
+| L06 | Greenberg 2016 | 室温/热隔离语境；未给具体温度测点 | 强调 ASIC 发热与 temperature-sensitive CZT 之间需要 thermal/structural isolation，但未披露温度传感器、环境温度或晶体温度数值 |
+| L07 | Stryker 2021 | 未披露探测器温度；非 CdZnTe/CdTe 能谱探测器 | 使用能量积分平板作为 fan-beam CAXI 样机；没有可整理的 CdZnTe/CdTe 温度测点 |
+| L08 | Minami 2023 | CdTe DSD 探测器低温工作点；具体测温位置未在提取材料中详述 | -20 C、500 V 作为探测器运行条件；低温平台/TEC 结构和温度传感位置需回原文核对 |
+| L09 | Franklin 2024 | sensor temperature；较接近探测器/晶体温度口径 | CdTe 位于 evacuated housing 内，TEC 把 sensor temperature 控制到 ±0.1 C；真空窗口隔离环境，0 C/20 C 应按传感器温度理解 |
+| L10 | Greiffenberg 2025 | 测试平台/传感器设定温度；具体测温硬件未在提取表中详述 | 0/15/30 C 用于高 Z 传感器稳定性比较；作者称 temperature 对 pixel gain 影响可忽略，提取材料未给温度传感器具体位置 |
+| L11 | Thomas 2017 | 探测器外壳/受控温湿环境温度；不是明确晶体内部温度 | 303±1 K、RH<10%；探测器外壳可由 Peltier/chiller/dehumidifier 制冷除湿，主要保证 ASIC、漏电补偿和输运测试可重复 |
+| L12 | Prokesch 2016 | 室温环境/实验室温度 | 23-28 C 室温测试，未使用深冷，也未给直接晶体或板卡测温方式 |
+| L13 | Baussens 2022 | 样品/探测器平台温度；Pt100 测温，较接近样品座温度 | Julabo FL300 循环冷却器控温，Pt100 测温，氮气流防凝露；20 C 暗电流和高通量测试应按样品/平台温度理解 |
+| L14 | Bettelli 2023 | 温控屏蔽盒/样品测试温度；20 C 光谱近似为室温样品温度 | 温度相关 I-V 在氮气保护的温控屏蔽盒中进行；提取材料未说明 Pt100 是否直接贴近晶体 |
+| L15 | Astromskas 2016 | 探测器模块/冷板温度；MERLIN 监测温度，不是明确晶体内部温度 | water chiller + copper plate 控温，MERLIN 系统监测温度并控制 bias reset；温度数值应按模块/冷板附近读数理解 |
+| L16 | Becker 2017 | 探测器/heat-sink 工作温度；具体传感器位置未在提取材料中详述 | 主要 0 C 运行，并做 -30 C 到 +20 C persistence 温度扫描；低温和高电压影响稳定时间，测温点需回原文核对 |
+| L17 | Cola 2009 | CdTe Schottky 样品温度；具体控温硬件未在提取材料中详述 | Pockels effect 测电场剖面随时间和温度变化；Arrhenius 拟合说明样品温度控制存在，但提取材料未记录测温位置 |
+| L18 | Meyer 2022 | 探测器/前端模块设定温度；水冷系统控制，接近传感器模块温度 | 水冷系统控制 0-30 C，稳定度 ±0.1 K；前端模块通氮气防凝露；0/15/30 C 应按模块/传感器工作温度理解 |
+| L19 | Toyama 2006 | 恒温箱环境中的 CdTe 探测器样品温度 | thermostatic chamber + temperature controller，稳定度 ±0.2 C；样品置于恒温环境，I-V 温度 0-50 C，谱测试 20 C |
+| L20 | Principato 2012 | Peltier thermal stage 上的 CdTe 样品/探测器温度 | Peltier thermal stage 控制 ±0.1 C，氮气防凝露；I-V 温度 -25 到 40 C，温度口径较明确为样品台/探测器温度 |
+| L21 | Bale & Szeles 2008 | 温度稳定的 CdZnTe 探测器阵列温度 | 验证实验固定 900 V 并改变 15-45 C；temperature-stabilized detector arrays，具体传感器位置未在提取材料中详述 |
+
 ## 1. Redlen HF-CdZnTe + HEXITEC：室温稳定与高通量新问题
 
 ### 1.1 Veale et al. 2020, Characterization of the Uniformity of High-Flux CdZnTe Material
